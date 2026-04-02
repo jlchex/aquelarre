@@ -1,0 +1,211 @@
+{
+  "Actor": {
+    "character": {
+      "bio": {
+        "kingdom": "",
+        "ethnicity": "",
+        "socialClass": "",
+        "profession": "",
+        "fatherProfession": "",
+        "sex": "",
+        "age": "",
+        "height": "",
+        "weight": "",
+        "description": "",
+        "history": ""
+      },
+      "creation": {
+       "skillPoints": 0,
+       "allowedSkills": [],
+       "professionKey": "",
+       "kingdom": "",
+       "society": "",
+       "ethnicityKey": "",
+       "socialClassKey": "",
+       "fatherProfessionKey": "",
+       "validProfessionKeys": []
+      },
+      "characteristics": {
+        "fue": { "label": "FUE", "value": 10 },
+        "agi": { "label": "AGI", "value": 10 },
+        "hab": { "label": "HAB", "value": 10 },
+        "res": { "label": "RES", "value": 10 },
+        "per": { "label": "PER", "value": 10 },
+        "com": { "label": "COM", "value": 10 },
+        "cul": { "label": "CUL", "value": 10 }
+      },
+      "secondary": {
+        "luck": { "label": "Suerte", "value": 30 },
+        "luckCurrent": { "label": "Suerte actual", "value": 30 },
+        "temperance": { "label": "Templanza", "value": 0 },
+        "rr": { "label": "RR", "value": 50 },
+        "irr": { "label": "IRR", "value": 50 },
+        "pf": { "label": "PF", "value": 0 },
+        "pc": { "label": "PC", "value": 0 },
+        "pv": { "label": "PV", "value": 10, "max": 10 },
+        "aspect": { "label": "Aspecto", "value": 0, "text": "" }
+      },
+      "combat": {
+        "actions": { "current": 2, "max": 2 },
+        "attackModifier": 0,
+        "defenseModifier": 0,
+        "difficulty": "normal",
+        "defenseMode": "skill",
+        "defenseSkill": "esquivar",
+        "defenseWeaponId": "",
+        "defenseShieldId": "",
+        "armorTotal": 0,
+        "initiative": 0,
+        "lastFumble": "",
+        "lastCritical": "",
+        "lastHitLocation": "",
+        "lastArmorAbsorbed": 0,
+        "lastRawDamage": 0,
+        "lastFinalDamage": 0,
+        "activeWeaponId": ""
+      },
+      "skills": {
+        "alquimia": { "label": "Alquimia", "base": "cul", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
+        "astrologia": { "label": "Astrología", "base": "cul", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
+        "descubrir": { "label": "Descubrir", "base": "per", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
+        "esquivar": { "label": "Esquivar", "base": "agi", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
+        "leerEscribir": { "label": "Leer y escribir", "base": "cul", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
+        "medicina": { "label": "Medicina", "base": "cul", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
+        "persuasion": { "label": "Persuasión", "base": "com", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
+        "sigilo": { "label": "Sigilo", "base": "agi", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
+        "culto": { "label": "Culto", "base": "cul", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
+
+        "arcos": { "label": "Arcos", "base": "per", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" },
+        "ballestas": { "label": "Ballestas", "base": "per", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" },
+        "cuchillos": { "label": "Cuchillos", "base": "hab", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" },
+        "escudos": { "label": "Escudos", "base": "hab", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" },
+        "espadas": { "label": "Espadas", "base": "hab", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" },
+        "espadones": { "label": "Espadones", "base": "fue", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" },
+        "hachas": { "label": "Hachas", "base": "fue", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" },
+        "hondas": { "label": "Hondas", "base": "per", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" },
+        "lanzas": { "label": "Lanzas", "base": "agi", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" },
+        "mazas": { "label": "Mazas", "base": "fue", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" },
+        "palos": { "label": "Palos", "base": "agi", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" },
+        "pelea": { "label": "Pelea", "base": "agi", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" }
+      },
+      "economy": {
+        "money": "",
+        "monthlyIncome": "",
+        "weeklyExpense": ""
+      },
+      "inventory": {
+        "possessions": "",
+        "carriedEquipment": ""
+      },
+      "magic": {
+        "spellsNotes": "",
+        "ritualsNotes": ""
+      }
+    },
+
+    "npc": {
+      "bio": {
+        "role": "",
+        "description": ""
+      },
+      "creation": {
+        "skillPoints": 0,
+        "allowedSkills": [],
+        "professionKey": ""
+      },
+      "characteristics": {
+        "fue": { "label": "FUE", "value": 10 },
+        "agi": { "label": "AGI", "value": 10 },
+        "hab": { "label": "HAB", "value": 10 },
+        "res": { "label": "RES", "value": 10 },
+        "per": { "label": "PER", "value": 10 },
+        "com": { "label": "COM", "value": 10 },
+        "cul": { "label": "CUL", "value": 10 }
+      },
+      "secondary": {
+        "luck": { "label": "Suerte", "value": 30 },
+        "luckCurrent": { "label": "Suerte actual", "value": 30 },
+        "temperance": { "label": "Templanza", "value": 0 },
+        "rr": { "label": "RR", "value": 50 },
+        "irr": { "label": "IRR", "value": 50 },
+        "pf": { "label": "PF", "value": 0 },
+        "pc": { "label": "PC", "value": 0 },
+        "pv": { "label": "PV", "value": 10, "max": 10 },
+        "aspect": { "label": "Aspecto", "value": 0, "text": "" }
+      },
+      "combat": {
+        "actions": { "current": 2, "max": 2 },
+        "attackModifier": 0,
+        "defenseModifier": 0,
+        "difficulty": "normal",
+        "defenseMode": "skill",
+        "defenseSkill": "esquivar",
+        "defenseWeaponId": "",
+        "defenseShieldId": "",
+        "armorTotal": 0,
+        "initiative": 0,
+        "lastFumble": "",
+        "lastCritical": "",
+        "lastHitLocation": "",
+        "lastArmorAbsorbed": 0,
+        "lastRawDamage": 0,
+        "lastFinalDamage": 0,
+        "activeWeaponId": ""
+      },
+      "skills": {
+        "esquivar": { "label": "Esquivar", "base": "agi", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
+        "escudos": { "label": "Escudos", "base": "hab", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" },
+        "espadas": { "label": "Espadas", "base": "hab", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" },
+        "pelea": { "label": "Pelea", "base": "agi", "baseValue": 0, "invested": 0, "total": 0, "group": "armas" }
+      }
+    }
+  },
+
+  "Item": {
+    "weapon": {
+      "skill": "espadas",
+      "damage": "1d6",
+      "range": "",
+      "equipped": false,
+      "hands": 1,
+      "kind": "melee",
+      "defensive": true,
+      "parryBonus": 0,
+      "notes": ""
+    },
+    "shield": {
+      "skill": "escudos",
+      "protection": 1,
+      "equipped": false,
+      "defenseBonus": 0,
+      "notes": ""
+    },
+    "armor": {
+      "protection": 1,
+      "location": "torso",
+      "equipped": false,
+      "notes": ""
+    },
+    "spell": {
+      "skill": "alquimia",
+      "cost": "",
+      "difficultyMod": 0,
+      "effect": "",
+      "components": "",
+      "notes": ""
+    },
+    "ritual": {
+      "skill": "culto",
+      "cost": "",
+      "difficultyMod": 0,
+      "effect": "",
+      "requirements": "",
+      "notes": ""
+    },
+    "gear": {
+      "quantity": 1,
+      "equipped": false,
+      "notes": ""
+    }
+  }
+}

@@ -1,0 +1,257 @@
+.aquelarre.sheet.actor,
+.aquelarre.sheet.item {
+  min-width: 900px;
+  min-height: 700px;
+}
+
+.aquelarre-sheet,
+.aquelarre-item-sheet {
+  background: #efe3c0;
+  color: #2e2218;
+  padding: 10px;
+}
+
+.aquelarre-sheet input,
+.aquelarre-sheet textarea,
+.aquelarre-sheet button,
+.aquelarre-item-sheet input,
+.aquelarre-item-sheet textarea,
+.aquelarre-item-sheet button {
+  font-size: 14px;
+}
+
+.aquelarre-sheet .sheet-header {
+  margin-bottom: 10px;
+}
+
+.aquelarre-sheet .header-main {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.aquelarre-sheet .profile-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid #5f1d14;
+  border-radius: 8px;
+}
+
+.aquelarre-sheet .charname input {
+  font-size: 28px;
+  font-weight: bold;
+  height: 42px;
+}
+
+.aquelarre-sheet .bio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.aquelarre-sheet .sheet-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 12px;
+  border-bottom: 2px solid #5f1d14;
+}
+
+.aquelarre-sheet .sheet-tabs .item {
+  padding: 8px 12px;
+  background: #d7c39a;
+  border: 1px solid #5f1d14;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+}
+
+.aquelarre-sheet .sheet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.aquelarre-sheet .card,
+.aquelarre-item-sheet .card {
+  background: rgba(255, 248, 230, 0.75);
+  border: 2px solid #5f1d14;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.aquelarre-sheet h2 {
+  margin: 0 0 10px;
+  border-bottom: 1px solid #5f1d14;
+  padding-bottom: 4px;
+}
+
+.aquelarre-sheet .characteristics-grid,
+.aquelarre-sheet .secondary-grid,
+.aquelarre-sheet .combat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.aquelarre-sheet .stat-box {
+  display: grid;
+  grid-template-columns: 1fr 70px 40px;
+  gap: 6px;
+  align-items: center;
+}
+
+.aquelarre-sheet .skills-table {
+  display: grid;
+  gap: 6px;
+}
+
+.aquelarre-sheet .skills-head,
+.aquelarre-sheet .skills-row {
+  display: grid;
+  grid-template-columns: 1.5fr 70px 70px 50px;
+  gap: 8px;
+  align-items: center;
+}
+
+.aquelarre-sheet .skills-head {
+  font-weight: bold;
+  border-bottom: 1px solid #5f1d14;
+  padding-bottom: 4px;
+}
+
+.aquelarre-sheet .button-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.aquelarre-sheet .list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aquelarre-sheet .item-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr auto;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(95, 29, 20, 0.3);
+  align-items: center;
+}
+
+.aquelarre-sheet .item-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.aquelarre-sheet textarea,
+.aquelarre-item-sheet textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.aquelarre-roll {
+  padding: 8px;
+}
+.aquelarre-sheet .target-hint {
+  margin: 6px 0 10px;
+  font-style: italic;
+  opacity: 0.85;
+}
+/* ===== FONDO GENERAL ===== */
+.aquelarre-sheet {
+  background: url("../assets/ui/parchment.jpg");
+  background-size: cover;
+  color: #2b1a0f;
+}
+
+/* ===== HEADER ILUSTRADO ===== */
+.aquelarre-sheet .sheet-header {
+  position: relative;
+  border-bottom: 2px solid #5a3b1a;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.aquelarre-sheet .sheet-header::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: url("../assets/ui/header-illustration.png") center no-repeat;
+  background-size: contain;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* ===== TARJETAS ===== */
+.aquelarre-sheet .card {
+  background: rgba(255, 248, 220, 0.85);
+  border: 2px solid #5a3b1a;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* ===== TÍTULOS ===== */
+.aquelarre-sheet h2 {
+  font-family: "Georgia", serif;
+  border-bottom: 1px solid #5a3b1a;
+  margin-bottom: 5px;
+}
+
+/* ===== DIVISORES DECORATIVOS ===== */
+.aquelarre-sheet h2::after {
+  content: "";
+  display: block;
+  height: 20px;
+  background: url("../assets/ui/divider.png") center no-repeat;
+  background-size: contain;
+  margin-top: 4px;
+  opacity: 0.7;
+}
+
+/* ===== INPUTS ===== */
+.aquelarre-sheet input,
+.aquelarre-sheet textarea,
+.aquelarre-sheet select {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid #5a3b1a;
+}
+
+/* ===== BOTONES ===== */
+.aquelarre-sheet button {
+  background: #5a3b1a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.aquelarre-sheet button:hover {
+  background: #7a5228;
+}
+
+/* ===== WATERMARK OPCIONAL ===== */
+.aquelarre-sheet::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  height: 200px;
+  background: url("../assets/ui/watermark.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.aquelarre-sheet.dark {
+  background: #1e1a16;
+  color: #e0d3b8;
+}

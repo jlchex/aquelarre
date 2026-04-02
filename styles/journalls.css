@@ -1,0 +1,61 @@
+aq-journal {
+  background: url("../assets/ui/parchment-page.png") center top / cover no-repeat;
+  color: var(--aq-color-ink);
+  font-family: var(--aq-font-body);
+  padding: 36px 42px;
+  min-height: 100%;
+}
+
+.aq-journal__title {
+  font-family: var(--aq-font-title);
+  font-size: 34px;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.aq-journal__subtitle {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.aq-journal h2,
+.aq-journal h3 {
+  font-family: var(--aq-font-title);
+  margin-top: 22px;
+  margin-bottom: 8px;
+}
+
+.aq-journal p {
+  text-align: justify;
+  line-height: 1.55;
+  margin: 8px 0;
+}
+
+.aq-journal .dramatis {
+  margin-top: 20px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(90,59,26,0.45);
+  border-radius: 8px;
+}
+.aq-dropcap {
+  position: relative;
+  min-height: 56px;
+}
+
+.aq-dropcap::before {
+  content: "";
+  float: left;
+  width: 54px;
+  height: 54px;
+  margin-right: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.aq-dropcap[data-letter="A"]::before { background-image: url("../assets/letters/LETRA-A.png"); }
+.aq-dropcap[data-letter="B"]::before { background-image: url("../assets/letters/LETRA-B.png"); }
+.aq-dropcap[data-letter="C"]::before { background-image: url("../assets/letters/LETRA-C.png"); }
+/* ... seguir hasta Z */

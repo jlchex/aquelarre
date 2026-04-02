@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "AquelarreBody";
+  src: url("../fonts/book-antiqua.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AquelarreBody";
+  src: url("../fonts/book-antiqua-italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "AquelarreTitle";
+  src: url("../fonts/1483-rotunda-lyon.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AquelarreDisplay";
+  src: url("../fonts/goudy-mediaeval-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AquelarreDisplay";
+  src: url("../fonts/goudy-mediaeval-demibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+:root {
+  --aq-font-body: "AquelarreBody", "Book Antiqua", serif;
+  --aq-font-title: "AquelarreTitle", "AquelarreDisplay", serif;
+  --aq-color-ink: #2b1a12;
+  --aq-color-red: #8e1414;
+  --aq-color-border: #5a3b1a;
+  --aq-bg-paper: url("../assets/ui/parchment-page.png");
+  --aq-bg-paper-alt: url("../assets/ui/parchment-page-alt.png");
+}
+.aquelarre-sheet,
+.aquelarre-item-sheet {
+  background: var(--aq-bg-paper) center/cover no-repeat;
+  font-family: var(--aq-font-body);
+  color: var(--aq-color-ink);
+}
+
+.aquelarre-sheet h1,
+.aquelarre-sheet h2,
+.aquelarre-sheet h3,
+.aquelarre-item-sheet h1,
+.aquelarre-item-sheet h2,
+.aquelarre-item-sheet h3 {
+  font-family: var(--aq-font-title);
+  color: #1f120c;
+  letter-spacing: 0.3px;
+}
+
+.aquelarre-sheet .charname input {
+  font-family: var(--aq-font-title);
+  font-size: 30px;
+  color: #1d120b;
+}
+
+.aquelarre-sheet .sheet-tabs .item {
+  font-family: var(--aq-font-title);
+  font-size: 18px;
+}
+
+.aquelarre-sheet label,
+.aquelarre-item-sheet label,
+.aquelarre-sheet p,
+.aquelarre-item-sheet p,
+.aquelarre-sheet input,
+.aquelarre-sheet textarea,
+.aquelarre-sheet select,
+.aquelarre-item-sheet input,
+.aquelarre-item-sheet textarea,
+.aquelarre-item-sheet select {
+  font-family: var(--aq-font-body);
+}
+.aquelarre-chat,
+.aquelarre-roll {
+  background: rgba(255, 248, 230, 0.94);
+  border: 2px solid var(--aq-color-border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: var(--aq-color-ink);
+  font-family: var(--aq-font-body);
+}
+
+.aquelarre-chat h3,
+.aquelarre-roll h3 {
+  margin: 0 0 8px;
+  font-family: var(--aq-font-title);
+  font-size: 22px;
+  color: #23150f;
+  border-bottom: 1px solid #5f1d14;
+  padding-bottom: 4px;
+}
+
+.aquelarre-chat p,
+.aquelarre-roll p {
+  margin: 4px 0;
+}

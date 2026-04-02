@@ -1,0 +1,140 @@
+{
+  "Actor": {
+    "character": {
+      "bio": {
+        "kingdom": "",
+        "ethnicity": "",
+        "socialClass": "",
+        "profession": "",
+        "fatherProfession": "",
+        "sex": "",
+        "age": "",
+        "height": "",
+        "weight": "",
+        "description": "",
+        "history": ""
+      },
+      "characteristics": {
+        "fue": { "label": "FUE", "value": 10 },
+        "agi": { "label": "AGI", "value": 10 },
+        "hab": { "label": "HAB", "value": 10 },
+        "res": { "label": "RES", "value": 10 },
+        "per": { "label": "PER", "value": 10 },
+        "com": { "label": "COM", "value": 10 },
+        "cul": { "label": "CUL", "value": 10 }
+      },
+      "secondary": {
+        "luck": { "label": "Suerte", "value": 30 },
+        "luckCurrent": { "label": "Suerte actual", "value": 30 },
+        "temperance": { "label": "Templanza", "value": 0 },
+        "rr": { "label": "RR", "value": 50 },
+        "irr": { "label": "IRR", "value": 50 },
+        "pf": { "label": "PF", "value": 0 },
+        "pc": { "label": "PC", "value": 0 },
+        "pv": { "label": "PV", "value": 10, "max": 10 },
+        "aspect": { "label": "Aspecto", "value": 0, "text": "" }
+      },
+      "combat": {
+        "actions": { "current": 2, "max": 2 },
+        "defenseSkill": "esquivar",
+        "armorTotal": 0,
+        "initiative": 0
+      },
+      "skills": {
+        "alquimia": { "label": "Alquimia", "base": "cul", "value": 0, "group": "general" },
+        "astrologia": { "label": "Astrología", "base": "cul", "value": 0, "group": "general" },
+        "descubrir": { "label": "Descubrir", "base": "per", "value": 0, "group": "general" },
+        "esquivar": { "label": "Esquivar", "base": "agi", "value": 0, "group": "general" },
+        "leerEscribir": { "label": "Leer y escribir", "base": "cul", "value": 0, "group": "general" },
+        "medicina": { "label": "Medicina", "base": "cul", "value": 0, "group": "general" },
+        "persuasion": { "label": "Persuasión", "base": "com", "value": 0, "group": "general" },
+        "sigilo": { "label": "Sigilo", "base": "agi", "value": 0, "group": "general" },
+
+        "arcos": { "label": "Arcos", "base": "per", "value": 0, "group": "armas" },
+        "ballestas": { "label": "Ballestas", "base": "per", "value": 0, "group": "armas" },
+        "cuchillos": { "label": "Cuchillos", "base": "hab", "value": 0, "group": "armas" },
+        "escudos": { "label": "Escudos", "base": "hab", "value": 0, "group": "armas" },
+        "espadas": { "label": "Espadas", "base": "hab", "value": 0, "group": "armas" },
+        "espadones": { "label": "Espadones", "base": "fue", "value": 0, "group": "armas" },
+        "hachas": { "label": "Hachas", "base": "fue", "value": 0, "group": "armas" },
+        "hondas": { "label": "Hondas", "base": "per", "value": 0, "group": "armas" },
+        "lanzas": { "label": "Lanzas", "base": "agi", "value": 0, "group": "armas" },
+        "mazas": { "label": "Mazas", "base": "fue", "value": 0, "group": "armas" },
+        "palos": { "label": "Palos", "base": "agi", "value": 0, "group": "armas" },
+        "pelea": { "label": "Pelea", "base": "agi", "value": 0, "group": "armas" }
+      },
+      "economy": {
+        "money": "",
+        "monthlyIncome": "",
+        "weeklyExpense": ""
+      },
+      "inventory": {
+        "possessions": "",
+        "carriedEquipment": ""
+      },
+      "magic": {
+        "spellsNotes": ""
+      }
+    },
+    "npc": {
+      "bio": {
+        "role": "",
+        "description": ""
+      },
+      "characteristics": {
+        "fue": { "label": "FUE", "value": 10 },
+        "agi": { "label": "AGI", "value": 10 },
+        "hab": { "label": "HAB", "value": 10 },
+        "res": { "label": "RES", "value": 10 },
+        "per": { "label": "PER", "value": 10 },
+        "com": { "label": "COM", "value": 10 },
+        "cul": { "label": "CUL", "value": 10 }
+      },
+      "secondary": {
+        "pv": { "label": "PV", "value": 10, "max": 10 },
+        "rr": { "label": "RR", "value": 50 },
+        "irr": { "label": "IRR", "value": 50 }
+      },
+      "combat": {
+        "actions": { "current": 2, "max": 2 },
+        "defenseSkill": "esquivar",
+        "armorTotal": 0,
+        "initiative": 0
+      },
+      "skills": {
+        "esquivar": { "label": "Esquivar", "base": "agi", "value": 0, "group": "general" },
+        "espadas": { "label": "Espadas", "base": "hab", "value": 0, "group": "armas" },
+        "pelea": { "label": "Pelea", "base": "agi", "value": 0, "group": "armas" }
+      }
+    }
+  },
+  "Item": {
+    "weapon": {
+      "skill": "espadas",
+      "damage": "1d6",
+      "range": "",
+      "equipped": false,
+      "hands": 1,
+      "kind": "melee",
+      "notes": ""
+    },
+    "armor": {
+      "protection": 1,
+      "location": "torso",
+      "equipped": false,
+      "notes": ""
+    },
+    "spell": {
+      "level": "",
+      "cost": "",
+      "roll": "",
+      "effect": "",
+      "notes": ""
+    },
+    "gear": {
+      "quantity": 1,
+      "equipped": false,
+      "notes": ""
+    }
+  }
+}
