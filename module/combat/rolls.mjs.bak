@@ -1,0 +1,113 @@
+export function clampPercent(value) {
+  const n = Number(value ?? 0);
+  if (!Number.isFinite(n)) return 0;
+  return Math.max(0, Math.min(100, n));
+}
+
+export async function rollPercent(actor, target, label) {
+  const cleanTarget = clampPercent(target);
+  const roll = await (new Roll("1d100")).evaluate();
+  const result = roll.total;
+
+  const critical = result <= Math.max(1, Math.floor(cleanTarget / 10));
+  const fumble = result >= 100 || (cleanTarget < 100 && result >= 96 && result > cleanTarget);
+  const success = result <= cleanTarget && !fumble;
+
+  return { actor, roll, result, target: cleanTarget, success, critical, fumble, label };
+}
+
+export async function rollFormula(actor, formula, label) {
+  const safeFormula = String(formula || "1d3").trim() || "1d3";
+  const roll = await (new Roll(safeFormula)).evaluate();
+  return { actor, roll, total: roll.total, formula: safeFormula, label };
+}
+
+export function getHitLocation(d100) {
+  const n = Number(d100);
+
+  if (n <= 10) return "cabeza";
+  if (n <= 20) return "brazo-izquierdo";
+  if (n <= 30) return "brazo-derecho";
+  if (n <= 60) return "torso";
+  if (n <= 80) return "pierna-izquierda";
+  return "pierna-derecha";
+}
+
+export function compareAttackDefense(attackRoll, defenseRoll) {
+  if (attackRoll.fumble) return { hit: false, reason: "pifia-ataque" };
+  if (defenseRoll?.fumble) return { hit: true, reason: "pifia-defensa" };
+
+  if (attackRoll.success && !defenseRoll?.success) return { hit: true, reason: "ataque-supera" };
+  if (!attackRoll.success) return { hit: false, reason: "ataque-falla" };
+
+  if (attackRoll.critical && !defenseRoll?.critical) return { hit: true, reason: "critico-supera" };
+  if (defenseRoll?.critical && !attackRoll.critical) return { hit: false, reason: "defensa-critica" };
+
+  if (attackRoll.success && defenseRoll?.success) {
+    if (attackRoll.result > defenseRoll.result) return { hit: true, reason: "exito-mayor" };
+    return { hit: false, reason: "defensa-empata-o-supera" };
+  }
+
+  return { hit: false, reason: "sin-impacto" };
+}
+
+export async function postCombatMessage({
+  attacker,
+  defender,
+  weapon,
+  attackRoll,
+  defenseRoll,
+  hit,
+  reason,
+  location,
+  damageRoll,
+  armor,
+  netDamage,
+  remainingPV,
+  attackBase,
+  attackModifier,
+  defenseBase,
+  defenseModifier,
+  defenseLabel
+}) {
+  let content = `
+    <div class="aquelarre-roll">
+      <h3>Combate: ${attacker.name} vs ${defender.name}</h3>
+      <p><strong>Arma:</strong> ${weapon.name}</p>
+      <hr/>
+      <p><strong>Ataque:</strong> ${attackRoll.result}/${attackRoll.target}
+      ${attackRoll.success ? "✅" : "❌"}
+      ${attackRoll.critical ? " (Crítico)" : ""}
+      ${attackRoll.fumble ? " (Pifia)" : ""}</p>
+      <p><strong>Ataque base:</strong> ${attackBase} | <strong>Modificador:</strong> ${attackModifier >= 0 ? "+" : ""}${attackModifier}</p>
+  `;
+
+  if (defenseRoll) {
+    content += `
+      <p><strong>Defensa (${defenseLabel}):</strong> ${defenseRoll.result}/${defenseRoll.target}
+      ${defenseRoll.success ? "✅" : "❌"}
+      ${defenseRoll.critical ? " (Crítico)" : ""}
+      ${defenseRoll.fumble ? " (Pifia)" : ""}</p>
+      <p><strong>Defensa base:</strong> ${defenseBase} | <strong>Modificador:</strong> ${defenseModifier >= 0 ? "+" : ""}${defenseModifier}</p>
+    `;
+  }
+
+  content += `<p><strong>Resultado:</strong> ${hit ? "IMPACTA" : "NO IMPACTA"} [${reason}]</p>`;
+
+  if (hit) {
+    content += `
+      <p><strong>Localización:</strong> ${location}</p>
+      <p><strong>Daño bruto:</strong> ${damageRoll.total}</p>
+      <p><strong>Armadura:</strong> ${armor}</p>
+      <p><strong>Daño neto:</strong> ${netDamage}</p>
+      <p><strong>PV restantes del defensor:</strong> ${remainingPV}</p>
+    `;
+  }
+
+  content += `</div>`;
+
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor: attacker }),
+    content
+  });
+}

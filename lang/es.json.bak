@@ -1,0 +1,23 @@
+{
+  "AQUELARRE.Roll": "Tirada",
+  "AQUELARRE.Success": "Éxito",
+  "AQUELARRE.Failure": "Fallo",
+  "AQUELARRE.CharacterSheet": "Ficha de Personaje",
+  "AQUELARRE.Characteristics": "Características",
+  "AQUELARRE.Secondary": "Secundarias",
+  "AQUELARRE.Skills": "Competencias",
+  "AQUELARRE.GeneralSkills": "Competencias Generales",
+  "AQUELARRE.WeaponSkills": "Competencias de Armas",
+  "AQUELARRE.Bio": "Datos",
+  "AQUELARRE.Inventory": "Equipo y Notas",
+  "AQUELARRE.Reference": "Referencia",
+  "AQUELARRE.Combat": "Combate",
+  "AQUELARRE.Items": "Objetos",
+  "AQUELARRE.RollSkill": "Tirar competencia",
+  "AQUELARRE.RollCharacteristic": "Tirar característica",
+  "AQUELARRE.Attack": "Atacar",
+  "AQUELARRE.Defend": "Defender",
+  "AQUELARRE.Damage": "Daño",
+  "AQUELARRE.Equip": "Equipar",
+  "AQUELARRE.Unequip": "Desequipar"
+}
