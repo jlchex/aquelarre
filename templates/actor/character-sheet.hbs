@@ -1,0 +1,710 @@
+<form class="aquelarre-sheet flexcol" autocomplete="off">
+  <header class="sheet-header">
+    <div class="header-main">
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+      <div class="header-fields">
+        <h1 class="charname">
+          <input name="name" type="text" value="{{actor.name}}" placeholder="Nombre del personaje" />
+        </h1>
+
+        <div class="bio-grid">
+          <label>Reino
+  <select name="system.creation.kingdom" data-creation-kingdom>
+    <option value="">--</option>
+    {{#each kingdomOptions as |opt|}}
+      <option value="{{opt.[0]}}" {{#if (eq ../system.creation.kingdom opt.[0])}}selected{{/if}}>
+        {{opt.[1]}}
+      </option>
+    {{/each}}
+  </select>
+</label>
+ 
+<label>Grupo étnico
+  <select name="system.creation.ethnicityKey" data-creation-ethnicity>
+    <option value="">--</option>
+    {{#each ethnicityOptions as |opt|}}
+      <option value="{{opt.[0]}}" {{#if (eq ../system.creation.ethnicityKey opt.[0])}}selected{{/if}}>
+        {{opt.[1]}}
+      </option>
+    {{/each}}
+  </select>
+</label>
+
+<label>Clase social
+  <select name="system.creation.socialClassKey" data-creation-social-class>
+    <option value="">--</option>
+    {{#each socialClassOptions as |opt|}}
+      <option value="{{opt.[0]}}" {{#if (eq ../system.creation.socialClassKey opt.[0])}}selected{{/if}}>
+        {{opt.[1]}}
+      </option>
+    {{/each}}
+  </select>
+</label>
+<label>Sociedad
+  <input type="text" value="{{creationSocietyLabel}}" disabled />
+</label>
+
+<label>Profesión
+  <input type="text" value="{{system.bio.profession}}" disabled />
+</label>
+
+
+          <label>Profesión paterna <input type="text" name="system.bio.fatherProfession" value="{{system.bio.fatherProfession}}" /></label>
+          <label>Sexo
+            <select name="system.bio.sex">
+              <option value="">--</option>
+              <option value="male" {{#if (eq system.bio.sex "male")}}selected{{/if}}>Hombre</option>
+              <option value="female" {{#if (eq system.bio.sex "female")}}selected{{/if}}>Mujer</option>
+            </select>
+          </label>
+          <label>Edad <input type="text" name="system.bio.age" value="{{system.bio.age}}" /></label>
+          <label>Altura <input type="text" name="system.bio.height" value="{{system.bio.height}}" /></label>
+          <label>Peso <input type="text" name="system.bio.weight" value="{{system.bio.weight}}" /></label>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="ficha">Ficha</a>
+    <a class="item" data-tab="inventario">Inventario</a>
+    <a class="item" data-tab="equipo">Equipo y Notas</a>
+    <a class="item" data-tab="referencia">Referencia</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="tab" data-group="primary" data-tab="ficha">
+      <div class="sheet-grid">
+
+        <section class="card">
+          <h2>Creación RAW</h2>
+
+          <div class="button-row">
+            <button type="button" data-generate-characteristics="true">Tirar características</button>
+            <button type="button" data-randomize-origin="true">Origen aleatorio</button>
+            <button type="button" data-generate-backstory="true">Generar trasfondo</button>
+          </div>
+
+          <div class="combat-grid" style="margin-top:10px;">
+           
+            <label>Profesión RAW
+              <select name="system.creation.professionKey" data-creation-profession>
+                <option value="">--</option>
+                  {{#each professionOptions as |opt|}}
+                <option
+                  value="{{opt.key}}"
+                  {{#if (eq ../system.creation.professionKey opt.key)}}selected{{/if}}
+                  {{#unless opt.valid}}disabled{{/unless}}
+                  title="{{opt.reasonText}}">
+                  {{opt.label}}{{#unless opt.valid}} — bloqueada{{/unless}}
+                </option>
+                 {{/each}}
+             </select>
+            </label>
+          </div>
+            <p><strong>Profesiones válidas:</strong> {{validProfessionsText}}</p>
+              {{#if invalidProfessionHints.length}}
+               <div class="creation-hints">
+                 <p><strong>Bloqueos actuales:</strong></p>
+                <ul>
+               {{#each invalidProfessionHints as |hint|}}
+              <li>{{hint}}</li>
+              {{/each}}
+               </ul>
+              </div>
+            {{/if}}
+
+{{#if selectedProfession}}
+  <div class="profession-panel {{#if selectedProfession.valid}}profession-panel--ok{{else}}profession-panel--blocked{{/if}}">
+    <div class="profession-panel__header">
+      <h3>{{selectedProfession.label}}</h3>
+      <div class="profession-badges">
+        {{#each selectedProfessionBadges as |badge|}}
+          <span class="profession-badge profession-badge--{{badge.type}}">{{badge.label}}</span>
+        {{/each}}
+      </div>
+    </div>
+
+    <p>
+      <strong>Estado:</strong>
+      {{#if selectedProfession.valid}}Disponible{{else}}Bloqueada{{/if}}
+    </p>
+
+    {{#unless selectedProfession.valid}}
+      <p><strong>Motivos:</strong> {{selectedProfession.reasonText}}</p>
+    {{/unless}}
+
+    <div class="profession-panel__grid">
+      <div class="card-subsection">
+        <h4>Requisitos</h4>
+        <p><strong>Sociedad:</strong> {{#if selectedProfession.society.length}}{{selectedProfession.society}}{{else}}Cualquiera{{/if}}</p>
+        <p><strong>Clase social:</strong> {{#if selectedProfession.socialClass.length}}{{selectedProfession.socialClass}}{{else}}Cualquiera{{/if}}</p>
+        <p><strong>Reinos:</strong> {{#if selectedProfession.kingdoms.length}}{{selectedProfession.kingdoms}}{{else}}Cualquiera{{/if}}</p>
+        <p><strong>Sexo:</strong>
+          {{#if selectedProfession.sex.length}}
+            {{#each selectedProfession.sex as |sx|}}
+              {{#if (eq sx "male")}}Hombre{{else if (eq sx "female")}}Mujer{{else}}{{sx}}{{/if}}
+            {{/each}}
+          {{else}}
+            Cualquiera
+          {{/if}}
+        </p>
+      </div>
+
+      <div class="card-subsection">
+        <h4>Mínimos</h4>
+        {{#if selectedProfession.minStats.length}}
+          <div class="profession-stats">
+            {{#each selectedProfession.minStats as |stat|}}
+              <div class="profession-stat {{#if stat.ok}}profession-stat--ok{{else}}profession-stat--fail{{/if}}">
+                <span class="profession-stat__label">{{stat.label}}</span>
+                <span class="profession-stat__values">{{stat.current}} / {{stat.required}}</span>
+              </div>
+            {{/each}}
+          </div>
+        {{else}}
+          <p>Sin mínimos especiales.</p>
+        {{/if}}
+      </div>
+    </div>
+
+    <div class="profession-panel__grid">
+      <div class="card-subsection">
+        <h4>Ventajas de creación</h4>
+        <p><strong>Puntos de competencia:</strong> {{selectedProfession.skillPoints}}</p>
+        <p><strong>Dinero:</strong> {{selectedProfession.money}}</p>
+      </div>
+
+      <div class="card-subsection">
+        <h4>Competencias permitidas</h4>
+        {{#if selectedProfession.allowedSkills.length}}
+          <div class="profession-skill-tags">
+            {{#each selectedProfession.allowedSkills as |skill|}}
+              <span class="profession-badge profession-badge--skill">{{skill}}</span>
+            {{/each}}
+          </div>
+        {{else}}
+          <p>No definidas.</p>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+{{/if}}
+
+          <div class="button-row">
+            <button type="button" data-apply-profession-raw="true">Aplicar profesión RAW</button>
+          </div>
+
+
+          <div class="skill-points-summary">
+  <div class="skill-points-box">
+    <span class="label">Totales</span>
+    <span class="value">{{skillPointSummary.total}}</span>
+  </div>
+  <div class="skill-points-box">
+    <span class="label">Gastados</span>
+    <span class="value">{{skillPointSummary.spent}}</span>
+  </div>
+  <div class="skill-points-box skill-points-box--remaining">
+    <span class="label">Restantes</span>
+    <span class="value">{{skillPointSummary.remaining}}</span>
+  </div>
+</div>
+
+<p><strong>Competencias permitidas:</strong> {{allowedSkillsText}}</p>
+
+{{#if skillInvestmentBreakdown.length}}
+  <div class="skill-breakdown-panel">
+    <p><strong>Desglose de gasto:</strong></p>
+    <div class="skill-breakdown-tags">
+      {{#each skillInvestmentBreakdown as |entry|}}
+        <span class="skill-breakdown-tag" title="{{entry.label}}: invertido {{entry.invested}}, total {{entry.total}}">
+          {{entry.label}}: {{entry.spent}}
+        </span>
+      {{/each}}
+    </div>
+  </div>
+{{/if}}
+        </section>
+
+        <section class="card">
+          <h2>Características</h2>
+          <div class="characteristics-grid">
+            {{#each system.characteristics as |char key|}}
+              <div class="stat-box">
+                <label>{{char.label}}</label>
+                <input type="number" name="system.characteristics.{{key}}.value" value="{{char.value}}" />
+                <button type="button" data-roll-characteristic="{{key}}">🎲</button>
+              </div>
+            {{/each}}
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Secundarias</h2>
+          <div class="secondary-grid">
+            <label>Suerte <input type="number" name="system.secondary.luck.value" value="{{system.secondary.luck.value}}" disabled /></label>
+            <label>Suerte actual <input type="number" name="system.secondary.luckCurrent.value" value="{{system.secondary.luckCurrent.value}}" /></label>
+            <label>Templanza <input type="number" name="system.secondary.temperance.value" value="{{system.secondary.temperance.value}}" /></label>
+            <label>RR <input type="number" name="system.secondary.rr.value" value="{{system.secondary.rr.value}}" /></label>
+            <label>IRR <input type="number" name="system.secondary.irr.value" value="{{system.secondary.irr.value}}" /></label>
+            <label>PF <input type="number" name="system.secondary.pf.value" value="{{system.secondary.pf.value}}" /></label>
+            <label>PC <input type="number" name="system.secondary.pc.value" value="{{system.secondary.pc.value}}" /></label>
+            <label>PV actuales <input type="number" name="system.secondary.pv.value" value="{{system.secondary.pv.value}}" /></label>
+            <label>PV máximos <input type="number" name="system.secondary.pv.max" value="{{system.secondary.pv.max}}" disabled /></label>
+          </div>
+          <div class="status-effects">
+  <h3>Estados</h3>
+
+  {{#if system.combat.statusEffects.length}}
+    {{#each system.combat.statusEffects}}
+      <div class="status-effect">
+        <strong>{{this.type}}</strong> ({{this.location}})
+      </div>
+    {{/each}}
+  {{else}}
+    <p>Sin efectos</p>
+  {{/if}}
+</div>
+        </section>
+
+        <section class="card">
+          <h2>Combate</h2>
+          <div class="combat-grid">
+            <label>Acciones actuales
+              <input type="number" name="system.combat.actions.current" value="{{system.combat.actions.current}}" />
+            </label>
+            <label>Acciones máximas
+              <input type="number" name="system.combat.actions.max" value="{{system.combat.actions.max}}" disabled />
+            </label>
+
+            <label>Dificultad
+              <select name="system.combat.difficulty">
+                {{#each difficultyOptions as |opt|}}
+                  <option value="{{opt.[0]}}" {{#if (eq ../system.combat.difficulty opt.[0])}}selected{{/if}}>{{opt.[1]}}</option>
+                {{/each}}
+              </select>
+            </label>
+
+            <label>Modo de defensa
+              <select name="system.combat.defenseMode">
+                <option value="skill" {{#if (eq system.combat.defenseMode "skill")}}selected{{/if}}>Competencia</option>
+                <option value="weapon" {{#if (eq system.combat.defenseMode "weapon")}}selected{{/if}}>Parada con arma</option>
+                <option value="shield" {{#if (eq system.combat.defenseMode "shield")}}selected{{/if}}>Escudo</option>
+              </select>
+            </label>
+
+            <label>Competencia de defensa
+              <select name="system.combat.defenseSkill">
+                {{#each defenseSkillOptions as |opt|}}
+                  <option value="{{opt.[0]}}" {{#if (eq ../system.combat.defenseSkill opt.[0])}}selected{{/if}}>{{opt.[1]}}</option>
+                {{/each}}
+              </select>
+            </label>
+<label>Arma activa
+  <select name="system.combat.activeWeaponId">
+    <option value="">--</option>
+    {{#each weaponOptions as |opt|}}
+      <option value="{{opt.[0]}}" {{#if (eq ../system.combat.activeWeaponId opt.[0])}}selected{{/if}}>
+        {{opt.[1]}}
+      </option>
+    {{/each}}
+  </select>
+</label>
+
+<button type="button" data-combat-attack="true">Atacar objetivo</button>
+
+
+            <label>Arma de parada
+              <select name="system.combat.defenseWeaponId">
+                <option value="">--</option>
+                {{#each weaponOptions as |opt|}}
+                  <option value="{{opt.[0]}}" {{#if (eq ../system.combat.defenseWeaponId opt.[0])}}selected{{/if}}>{{opt.[1]}}</option>
+                {{/each}}
+              </select>
+            </label>
+
+            <label>Escudo
+              <select name="system.combat.defenseShieldId">
+                <option value="">--</option>
+                {{#each shieldOptions as |opt|}}
+                  <option value="{{opt.[0]}}" {{#if (eq ../system.combat.defenseShieldId opt.[0])}}selected{{/if}}>{{opt.[1]}}</option>
+                {{/each}}
+              </select>
+            </label>
+
+            <label>Modificador de ataque
+              <input type="number" name="system.combat.attackModifier" value="{{system.combat.attackModifier}}" />
+            </label>
+            <label>Modificador de defensa
+              <input type="number" name="system.combat.defenseModifier" value="{{system.combat.defenseModifier}}" />
+            </label>
+            <label>Armadura total
+              <input type="number" name="system.combat.armorTotal" value="{{system.combat.armorTotal}}" disabled />
+            </label>
+            <label>Iniciativa
+              <input type="number" name="system.combat.initiative" value="{{system.combat.initiative}}" />
+            </label>
+          </div>
+          <div class="card-subsection">
+  <h4>Último impacto</h4>
+  <p><strong>Localización:</strong> {{system.combat.lastHitLocation}}</p>
+  <p><strong>Armadura absorbida:</strong> {{system.combat.lastArmorAbsorbed}}</p>
+  <p><strong>Daño bruto:</strong> {{system.combat.lastRawDamage}}</p>
+  <p><strong>Daño final:</strong> {{system.combat.lastFinalDamage}}</p>
+</div>
+
+          <p><strong>Última pifia:</strong> {{system.combat.lastFumble}}</p>
+          <p><strong>Último crítico:</strong> {{system.combat.lastCritical}}</p>
+
+          <div class="button-row">
+            <button type="button" data-roll-defense="true">Defender</button>
+            <button type="button" data-roll-initiative="true">Iniciativa</button>
+            <button type="button" data-consume-action="true">Gastar acción</button>
+            <button type="button" data-reset-actions="true">Reiniciar acciones</button>
+          </div>
+        </section>
+
+	<section class="card card--full">
+  	 <h2>Competencias Generales</h2>
+     
+     <div class="skills-table">
+    	  <div class="skills-head skills-grid-extended">
+      		<span>Competencia</span>
+      		<span>Base</span>
+      		<span>Inv.</span>
+      		<span>Total</span>
+      		<span>Máx.</span>
+      		<span>Coste</span>
+      		<span>Ajuste</span>
+    	</div>
+
+    	{{#each generalSkills as |skill|}}
+   <div class="skills-row skills-grid-extended {{skill.rowClasses}}" title="{{skill.rowTooltip}}">
+  <span class="skill-name">
+    {{skill.label}}
+
+    <span class="skill-meta">
+      {{#if skill.allowed}}
+        <small class="skill-tag skill-tag--allowed">permitida</small>
+      {{else}}
+        <small class="skill-tag">no permitida</small>
+      {{/if}}
+
+      {{#if skill.spent}}
+        <small class="skill-tag skill-tag--spent" title="{{skill.spentTooltip}}">
+          gastado {{skill.spent}}
+        </small>
+      {{/if}}
+    </span>
+  </span>
+
+  <span>{{skill.baseValue}}</span>
+  <span>{{skill.invested}}</span>
+  <span>{{skill.total}}</span>
+  <span>{{skill.max}}</span>
+
+  <span class="skill-cost" title="{{skill.costTooltip}}">
+    {{skill.cost}}
+  </span>
+
+  <span class="item-actions skill-actions">
+      <button
+        type="button"
+        data-skill-dec="{{skill.key}}"
+        title="{{skill.minusTooltip}}"
+        {{#unless skill.canDecrease}}disabled{{/unless}}>
+        -
+    </button>
+
+      <button
+       type="button"
+       data-skill-inc="{{skill.key}}"
+       title="{{skill.plusTooltip}}"
+        {{#unless skill.canIncrease}}disabled{{/unless}}>
+      +{{skill.cost}}
+    </button>
+<button
+    type="button"
+    data-roll-skill="{{skill.key}}"
+    title="{{skill.rollTooltip}}">
+    🎲
+  </button>
+  
+  </span>
+</div>
+      {{/each}}
+  		</div>
+	</section>
+ 
+ <section class="card card--full">
+  <h2>Competencias de Armas</h2> 
+  <div class="skills-table">
+    <div class="skills-head skills-grid-extended">
+      <span>Competencia</span>
+      <span>Base</span>
+      <span>Inv.</span>
+      <span>Total</span>
+      <span>Máx.</span>
+      <span>Coste</span>
+      <span>Ajuste</span>
+    </div>
+
+    {{#each weaponSkills as |skill|}}
+   <div class="skills-row skills-grid-extended {{skill.rowClasses}}" title="{{skill.rowTooltip}}">
+  <span class="skill-name">
+    {{skill.label}}
+
+    <span class="skill-meta">
+      {{#if skill.allowed}}
+        <small class="skill-tag skill-tag--allowed">permitida</small>
+      {{else}}
+        <small class="skill-tag">no permitida</small>
+      {{/if}}
+
+      {{#if skill.spent}}
+        <small class="skill-tag skill-tag--spent" title="{{skill.spentTooltip}}">
+          gastado {{skill.spent}}
+        </small>
+      {{/if}}
+    </span>
+  </span>
+
+  <span>{{skill.baseValue}}</span>
+  <span>{{skill.invested}}</span>
+  <span>{{skill.total}}</span>
+  <span>{{skill.max}}</span>
+
+  <span class="skill-cost" title="{{skill.costTooltip}}">
+    {{skill.cost}}
+  </span>
+
+  <span class="item-actions skill-actions">
+    <button
+      type="button"
+      data-skill-dec="{{skill.key}}"
+      {{#unless skill.canDecrease}}disabled{{/unless}}>
+      -
+    </button>
+
+    <button
+      type="button"
+      data-skill-inc="{{skill.key}}"
+      title="{{#if skill.canIncrease}}{{skill.costTooltip}}{{else}}{{skill.blockReason}}{{/if}}"
+      {{#unless skill.canIncrease}}disabled{{/unless}}>
+      +{{skill.cost}}
+    </button>
+
+    <button
+      type="button"
+      data-roll-skill="{{skill.key}}"
+      title="Tirar {{skill.label}}">
+      🎲
+    </button>
+  </span>
+</div>
+
+    {{/each}}
+  </div>
+</section>
+      </div>
+    </div>
+
+    <div class="tab" data-group="primary" data-tab="inventario">
+      <div class="sheet-grid">
+        <section class="card">
+          <div class="list-header">
+            <h2>Armas</h2>
+            <button type="button" class="item-create" data-type="weapon">+ Arma</button>
+          </div>
+          <p class="target-hint">Objetivo actual: {{#if currentTargetName}}{{currentTargetName}}{{else}}ninguno{{/if}}</p>
+
+          {{#each weapons as |item|}}
+            <div class="item-row">
+              <strong>{{item.name}}</strong>
+              <span>{{item.system.skill}}</span>
+              <span>{{item.system.damage}}</span>
+              <span>{{#if item.system.equipped}}Equipada{{else}}No{{/if}}</span>
+              <div class="item-actions">
+                <button type="button" data-roll-attack="{{item.id}}">Ataque</button>
+                <button type="button" data-roll-damage="{{item.id}}">Daño</button>
+                <button type="button" data-resolve-attack="{{item.id}}">Atacar objetivo</button>
+                <button type="button" data-toggle-equipped="{{item.id}}">Equipar</button>
+                <button type="button" class="item-edit" data-item-id="{{item.id}}">Editar</button>
+                <button type="button" class="item-delete" data-item-id="{{item.id}}">🗑</button>
+              </div>
+            </div>
+          {{/each}}
+        </section>
+
+        <section class="card">
+          <div class="list-header">
+            <h2>Escudos</h2>
+            <button type="button" class="item-create" data-type="shield">+ Escudo</button>
+          </div>
+
+          {{#each shields as |item|}}
+            <div class="item-row">
+              <strong>{{item.name}}</strong>
+              <span>Prot: {{item.system.protection}}</span>
+              <span>Def: {{item.system.defenseBonus}}</span>
+              <span>{{#if item.system.equipped}}Equipado{{else}}No{{/if}}</span>
+              <div class="item-actions">
+                <button type="button" data-toggle-equipped="{{item.id}}">Equipar</button>
+                <button type="button" class="item-edit" data-item-id="{{item.id}}">Editar</button>
+                <button type="button" class="item-delete" data-item-id="{{item.id}}">🗑</button>
+              </div>
+            </div>
+          {{/each}}
+        </section>
+
+        <section class="card">
+          <div class="list-header">
+            <h2>Armaduras</h2>
+            <button type="button" class="item-create" data-type="armor">+ Armadura</button>
+          </div>
+
+          {{#each armors as |item|}}
+            <div class="item-row">
+              <strong>{{item.name}}</strong>
+              <span>Prot: {{item.system.protection}}</span>
+              <span>{{item.system.location}}</span>
+              <span>{{#if item.system.equipped}}Equipada{{else}}No{{/if}}</span>
+              <div class="item-actions">
+                <button type="button" data-toggle-equipped="{{item.id}}">Equipar</button>
+                <button type="button" class="item-edit" data-item-id="{{item.id}}">Editar</button>
+                <button type="button" class="item-delete" data-item-id="{{item.id}}">🗑</button>
+              </div>
+            </div>
+          {{/each}}
+        </section>
+
+        <section class="card">
+          <div class="list-header">
+            <h2>Hechizos</h2>
+            <button type="button" class="item-create" data-type="spell">+ Hechizo</button>
+          </div>
+
+          {{#each spells as |item|}}
+            <div class="item-row">
+              <strong>{{item.name}}</strong>
+              <span>{{item.system.skill}}</span>
+              <span>{{item.system.cost}}</span>
+              <span>{{item.system.difficultyMod}}</span>
+              <div class="item-actions">
+                <button type="button" data-cast-spell="{{item.id}}">Lanzar</button>
+                <button type="button" class="item-edit" data-item-id="{{item.id}}">Editar</button>
+                <button type="button" class="item-delete" data-item-id="{{item.id}}">🗑</button>
+              </div>
+            </div>
+          {{/each}}
+        </section>
+
+        <section class="card">
+          <div class="list-header">
+            <h2>Rituales</h2>
+            <button type="button" class="item-create" data-type="ritual">+ Ritual</button>
+          </div>
+
+          {{#each rituals as |item|}}
+            <div class="item-row">
+              <strong>{{item.name}}</strong>
+              <span>{{item.system.skill}}</span>
+              <span>{{item.system.cost}}</span>
+              <span>{{item.system.difficultyMod}}</span>
+              <div class="item-actions">
+                <button type="button" data-invoke-ritual="{{item.id}}">Invocar</button>
+                <button type="button" class="item-edit" data-item-id="{{item.id}}">Editar</button>
+                <button type="button" class="item-delete" data-item-id="{{item.id}}">🗑</button>
+              </div>
+            </div>
+          {{/each}}
+        </section>
+
+        <section class="card">
+          <div class="list-header">
+            <h2>Objetos</h2>
+            <button type="button" class="item-create" data-type="gear">+ Objeto</button>
+          </div>
+
+          {{#each gear as |item|}}
+            <div class="item-row">
+              <strong>{{item.name}}</strong>
+              <span>Cant: {{item.system.quantity}}</span>
+              <span>{{#if item.system.equipped}}Equipado{{else}}No{{/if}}</span>
+              <div class="item-actions">
+                <button type="button" data-toggle-equipped="{{item.id}}">Equipar</button>
+                <button type="button" class="item-edit" data-item-id="{{item.id}}">Editar</button>
+                <button type="button" class="item-delete" data-item-id="{{item.id}}">🗑</button>
+              </div>
+            </div>
+          {{/each}}
+        </section>
+      </div>
+    </div>
+
+    <div class="tab" data-group="primary" data-tab="equipo">
+      <div class="sheet-grid">
+        <section class="card">
+          <h2>Economía</h2>
+          <label>Dinero <textarea name="system.economy.money">{{system.economy.money}}</textarea></label>
+          <label>Ingreso mensual <textarea name="system.economy.monthlyIncome">{{system.economy.monthlyIncome}}</textarea></label>
+          <label>Gasto semanal <textarea name="system.economy.weeklyExpense">{{system.economy.weeklyExpense}}</textarea></label>
+        </section>
+
+        <section class="card">
+          <h2>Posesiones</h2>
+          <textarea name="system.inventory.possessions">{{system.inventory.possessions}}</textarea>
+        </section>
+
+        <section class="card">
+          <h2>Equipo transportado</h2>
+          <textarea name="system.inventory.carriedEquipment">{{system.inventory.carriedEquipment}}</textarea>
+        </section>
+
+        <section class="card">
+          <h2>Hechizos y notas</h2>
+          <textarea name="system.magic.spellsNotes">{{system.magic.spellsNotes}}</textarea>
+        </section>
+
+        <section class="card">
+          <h2>Rituales y notas</h2>
+          <textarea name="system.magic.ritualsNotes">{{system.magic.ritualsNotes}}</textarea>
+        </section>
+
+        <section class="card">
+          <h2>Descripción</h2>
+          <textarea name="system.bio.description">{{system.bio.description}}</textarea>
+        </section>
+
+        <section class="card">
+          <h2>Historia</h2>
+          <textarea name="system.bio.history">{{system.bio.history}}</textarea>
+        </section>
+      </div>
+    </div>
+
+    <div class="tab" data-group="primary" data-tab="referencia">
+      <div class="sheet-grid">
+        <section class="card">
+          <h2>Dificultades</h2>
+          <ul>
+            <li>Infalible: +60</li>
+            <li>Muy fácil: +40</li>
+            <li>Fácil: +20</li>
+            <li>Normal: 0</li>
+            <li>Difícil: -20</li>
+            <li>Muy difícil: -40</li>
+            <li>Imposible: -60</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Notas rápidas</h2>
+          <p>v0.3.0 RAW: las competencias usan Base + Invertido = Total.</p>
+          <p>La profesión RAW define puntos disponibles, competencias permitidas y equipo base.</p>
+        </section>
+      </div>
+    </div>
+  </section>
+</form>

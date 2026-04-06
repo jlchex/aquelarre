@@ -1,0 +1,47 @@
+{
+  "id": "aquelarre",
+  "title": "Aquelarre",
+  "description": "Sistema no oficial para Foundry VTT inspirado en Aquelarre",
+  "version": "0.3.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13.351"
+  },
+  "authors": [
+    {
+      "name": "Chechu"
+    }
+  ],
+  "esmodules": [
+    "module/aquelarre.mjs"
+  ],
+  "styles": [
+    "styles/system.css",
+    "styles/theme-aquelarre.css",
+    "styles/journals.css"
+
+  ],
+  "languages": [
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "character": {},
+      "npc": {}
+    },
+    "Item": {
+      "weapon": {},
+      "shield": {},
+      "armor": {},
+      "spell": {},
+      "ritual": {},
+      "gear": {}
+    }
+  },
+  "primaryTokenAttribute": "secondary.pv",
+  "secondaryTokenAttribute": "combat.actions.current"
+}
