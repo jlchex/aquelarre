@@ -134,7 +134,7 @@
 }
 
 .aquelarre-sheet {
-  padding-top: 190px;
+  padding-top: 142px;
 }
 
 .aquelarre-sheet::before {
@@ -143,7 +143,7 @@
   top: 10px;
   left: 0;
   right: 0;
-  height: 170px;
+  height: 132px;
   pointer-events: none;
   opacity: 0.95;
   background: var(--aq-bg-cenefa) left center / 100% auto no-repeat;
@@ -656,7 +656,7 @@
 
 .aquelarre-sheet .sheet-body {
   position: relative;
-  padding-bottom: 138px;
+  padding-bottom: 28px;
   box-sizing: border-box;
 }
 
@@ -676,19 +676,6 @@
   opacity: 0.045;
   background: var(--aq-bg-header) center / contain no-repeat;
   filter: sepia(0.6) contrast(0.95);
-}
-
-.aquelarre-sheet .sheet-body::after {
-  left: -42px;
-  bottom: -72px;
-  width: 620px;
-  height: 340px;
-  opacity: 0.78;
-  background: var(--aq-bg-inkblot) left bottom / 100% auto no-repeat;
-  mix-blend-mode: multiply;
-  filter: sepia(0.62) saturate(1.45) contrast(1.22) brightness(0.8);
-  transform: rotate(-3deg);
-  z-index: 2;
 }
 
 .aquelarre-sheet .tab {
