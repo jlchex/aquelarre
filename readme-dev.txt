@@ -24,6 +24,12 @@ Compendios de magia activos
 - `packs/aquelarre-magic-advanced.db`
 - `packs/aquelarre-magic-items.db`
 
+Compendio de tablas roleables
+
+- `packs/aquelarre-rolltables.db`
+- Incluye tablas RAW de creación (reino, etnia, clase social, profesión paterna).
+- Incluye tabla de localización de impacto y variantes por reino.
+
 Compendios retirados por redundancia
 
 - `packs/aquelarre-spells.db`
@@ -55,6 +61,12 @@ Compendios mantenidos en Git
 
 - `packs/*.db` sí se versiona.
 - `packs/*/` no se versiona.
+
+Notas de UI recientes
+
+- La ficha de personaje usa decoración superior con `assets/ui/cenefa.png`.
+- El footer visual de la ficha usa `assets/ui/manchastinta.png` con transparencia real.
+- Journals usan `assets/ui/background.png` como fondo principal.
 
 Antes de tocar lógica o contenido
 

@@ -80,6 +80,8 @@
   --aq-bg-divider: url("../assets/ui/divider.svg");
   --aq-bg-watermark: url("../assets/ui/watermark.svg");
   --aq-bg-header: url("../assets/ui/header-illustration.svg");
+  --aq-bg-cenefa: url("../assets/ui/cenefa.png");
+  --aq-bg-inkblot: url("../assets/ui/manchastinta.png");
 }
 
 /* =========================================
@@ -131,6 +133,23 @@
   background-size: cover;
 }
 
+.aquelarre-sheet {
+  padding-top: 190px;
+}
+
+.aquelarre-sheet::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  height: 170px;
+  pointer-events: none;
+  opacity: 0.95;
+  background: var(--aq-bg-cenefa) left center / 100% auto no-repeat;
+  background-color: transparent;
+}
+
 .aquelarre-sheet::after {
   background: var(--aq-bg-watermark) no-repeat center;
   background-size: contain;
@@ -142,20 +161,19 @@
 }
 
 .aquelarre-sheet .sheet-header::before {
-  background: var(--aq-bg-header) center no-repeat;
-  background-size: contain;
+  content: none;
 }
 
 .aquelarre-sheet .sheet-header::after {
   content: "";
   position: absolute;
-  top: -2px;
-  right: -4px;
-  width: 260px;
-  height: 260px;
+  top: -4px;
+  right: -6px;
+  width: 240px;
+  height: 240px;
   pointer-events: none;
-  opacity: 1;
-  background: url("../assets/ui/demon-medieval.png") top right / contain no-repeat;
+  opacity: 0.9;
+  background: url("../assets/ui/NewDaimon.png") top right / contain no-repeat;
   filter: sepia(0.82) saturate(1.05) contrast(1.18) drop-shadow(0 6px 14px rgba(52, 19, 10, 0.32));
   transform: rotate(-1deg);
   mix-blend-mode: multiply;
@@ -638,6 +656,8 @@
 
 .aquelarre-sheet .sheet-body {
   position: relative;
+  padding-bottom: 138px;
+  box-sizing: border-box;
 }
 
 .aquelarre-sheet .sheet-body::before,
@@ -659,13 +679,16 @@
 }
 
 .aquelarre-sheet .sheet-body::after {
-  right: 8px;
-  bottom: 16px;
-  width: 180px;
-  height: 180px;
-  opacity: 0.045;
-  background: var(--aq-bg-watermark) center / contain no-repeat;
-  transform: rotate(-4deg);
+  left: -42px;
+  bottom: -72px;
+  width: 620px;
+  height: 340px;
+  opacity: 0.78;
+  background: var(--aq-bg-inkblot) left bottom / 100% auto no-repeat;
+  mix-blend-mode: multiply;
+  filter: sepia(0.62) saturate(1.45) contrast(1.22) brightness(0.8);
+  transform: rotate(-3deg);
+  z-index: 2;
 }
 
 .aquelarre-sheet .tab {

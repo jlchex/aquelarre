@@ -10,6 +10,8 @@ Estado actual
 - Creación de personaje basada en reinos, etnias, clases sociales y profesiones.
 - Compendios base de armas, armaduras, escudos, hechizos, rituales, equipo, NPCs y personajes ejemplo.
 - Compendios ampliados con precios oficiales y objetos mágicos extraídos de PDFs de referencia.
+- Compendio de tablas roleables para creación y localización de impacto.
+- Actualización visual de ficha de personaje y journals con nuevo arte de cabecera, footer envejecido y fondos temáticos.
 
 Subsistemas implementados
 
@@ -34,6 +36,7 @@ Subsistemas implementados
 - Compendios de juego: armas, armaduras, escudos, hechizos, rituales, equipo.
 - Compendio adicional de objetos mágicos.
 - Compendios auxiliares de ropa, comida, servicios y equipo variado.
+- Compendio de tablas roleables de creación RAW y combate.
 - Pack de NPCs y personajes pregenerados.
 
 Compendios incluidos
@@ -53,6 +56,7 @@ Compendios incluidos
 - Aquelarre - Reinos
 - Aquelarre - Etnias
 - Aquelarre - Clases Sociales
+- Aquelarre - Tablas Roleables
 - Aquelarre - NPCs
 - Aquelarre - Personajes Ejemplo
 

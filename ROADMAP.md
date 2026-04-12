@@ -23,6 +23,11 @@ Pulido, migraciones y distribución
 - [x] Crear packs de magia `basic` y `advanced`.
 - [x] Añadir componentes/requisitos de hechizos y rituales al pack de objetos mágicos.
 - [x] Limpiar packs redundantes de magia y duplicados exactos no mágicos.
+- [x] Ajustar cabecera de ficha con cenefa superior y composición visual renovada.
+- [x] Añadir footer envejecido con manchas de tinta y transparencia real.
+- [x] Cambiar fondo de journals a `assets/ui/background.png`.
+- [x] Crear compendio `aquelarre-rolltables` con tablas roleables base de creación y combate.
+- [x] Añadir tablas roleables por reino (etnias y clases sociales permitidas).
 ## Fase 0 — Preparación y control del proyecto
 - [x ] Hacer backup o commit del estado actual
 - [x ] Crear estructura objetivo de carpetas

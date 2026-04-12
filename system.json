@@ -149,6 +149,13 @@
       "system": "aquelarre"
     },
     {
+      "name": "aquelarre-rolltables",
+      "label": "Aquelarre - Tablas Roleables",
+      "path": "packs/aquelarre-rolltables.db",
+      "type": "RollTable",
+      "system": "aquelarre"
+    },
+    {
       "name": "aquelarre-npcs",
       "label": "Aquelarre - NPCs",
       "path": "packs/aquelarre-npcs.db",
