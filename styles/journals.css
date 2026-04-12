@@ -1,4 +1,4 @@
-aq-journal {
+.aq-journal {
   background: url("../assets/ui/parchment-page.png") center top / cover no-repeat;
   color: var(--aq-color-ink);
   font-family: var(--aq-font-body);
@@ -58,4 +58,25 @@ aq-journal {
 .aq-dropcap[data-letter="A"]::before { background-image: url("../assets/letters/LETRA-A.png"); }
 .aq-dropcap[data-letter="B"]::before { background-image: url("../assets/letters/LETRA-B.png"); }
 .aq-dropcap[data-letter="C"]::before { background-image: url("../assets/letters/LETRA-C.png"); }
-/* ... seguir hasta Z */
+.aq-dropcap[data-letter="D"]::before { background-image: url("../assets/letters/LETRA-D.png"); }
+.aq-dropcap[data-letter="E"]::before { background-image: url("../assets/letters/LETRA-E.png"); }
+.aq-dropcap[data-letter="F"]::before { background-image: url("../assets/letters/LETRA-F.png"); }
+.aq-dropcap[data-letter="G"]::before { background-image: url("../assets/letters/LETRA-G.png"); }
+.aq-dropcap[data-letter="H"]::before { background-image: url("../assets/letters/LETRA-H.png"); }
+.aq-dropcap[data-letter="I"]::before { background-image: url("../assets/letters/LETRA-I.png"); }
+.aq-dropcap[data-letter="J"]::before { background-image: url("../assets/letters/LETRA-J.png"); }
+.aq-dropcap[data-letter="K"]::before { background-image: url("../assets/letters/LETRA-K.png"); }
+.aq-dropcap[data-letter="L"]::before { background-image: url("../assets/letters/LETRA-L.png"); }
+.aq-dropcap[data-letter="M"]::before { background-image: url("../assets/letters/LETRA-M.png"); }
+.aq-dropcap[data-letter="N"]::before { background-image: url("../assets/letters/LETRA-N.png"); }
+.aq-dropcap[data-letter="O"]::before { background-image: url("../assets/letters/LETRA-O.png"); }
+.aq-dropcap[data-letter="P"]::before { background-image: url("../assets/letters/LETRA-P.png"); }
+.aq-dropcap[data-letter="Q"]::before { background-image: url("../assets/letters/LETRA-Q.png"); }
+.aq-dropcap[data-letter="R"]::before { background-image: url("../assets/letters/LETRA-R.png"); }
+.aq-dropcap[data-letter="S"]::before { background-image: url("../assets/letters/LETRA-S.png"); }
+.aq-dropcap[data-letter="T"]::before { background-image: url("../assets/letters/LETRA-T.png"); }
+.aq-dropcap[data-letter="U"]::before { background-image: url("../assets/letters/LETRA-U.png"); }
+.aq-dropcap[data-letter="W"]::before { background-image: url("../assets/letters/LETRA-W.png"); }
+.aq-dropcap[data-letter="X"]::before { background-image: url("../assets/letters/LETRA-X.png"); }
+.aq-dropcap[data-letter="Y"]::before { background-image: url("../assets/letters/LETRA-Y.png"); }
+.aq-dropcap[data-letter="Z"]::before { background-image: url("../assets/letters/LETRA-Z.png"); }

@@ -39,7 +39,7 @@
   --aq-color-red: #8e1414;
   --aq-color-border: #5a3b1a;
   --aq-bg-paper: url("../assets/ui/parchment-page.png");
-  --aq-bg-paper-alt: url("../assets/ui/parchment-page-alt.png");
+  --aq-bg-paper-alt: url("../assets/ui/parchment-page.png");
 }
 .aquelarre-sheet,
 .aquelarre-item-sheet {

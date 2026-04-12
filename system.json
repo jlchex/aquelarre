@@ -9,7 +9,7 @@
   },
   "authors": [
     {
-      "name": "Chechu
+      "name": "Chechu"
     }
   ],
   "esmodules": [
@@ -43,5 +43,5 @@
     }
   },
   "primaryTokenAttribute": "secondary.pv",
-  "secondaryTokenAttribute": "combat.actions.current",
+  "secondaryTokenAttribute": "combat.actions.current"
 }

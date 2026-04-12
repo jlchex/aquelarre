@@ -26,8 +26,6 @@ export class AquelarreActorSheet extends foundry.appv1.sheets.ActorSheet {
   }
 
   async getData(options = {}) {
-    await this.actor.ensureActorDefaults?.();
-
     const context = await super.getData(options);
     context.system = this.actor.system;
 

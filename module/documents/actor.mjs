@@ -469,28 +469,45 @@ async resolveWeaponAttack({
   const attackRoll = await rollPercent(this, attackTarget, `Ataque con ${weapon.name}`);
 
   let defenseRoll = null;
-  const defenderSkillKey = defenseSkillKey || targetActor.system.combat?.defenseSkill || "esquivar";
-  const defenderSkill = targetActor.system.skills?.[defenderSkillKey];
-if (defenderSkill) {
-  const defMod = Number(
-    defenseModifier ?? targetActor.system.combat?.defenseModifier ?? 0
-  );
+  const defenseDifficultyMod = Number(targetActor.getDifficultyMod?.() ?? 0);
 
-  const equipmentDefenseBonus = targetActor.getDefenseBonusFromEquipment(defenderSkillKey);
+  if (defenseSkillKey) {
+    const defenderSkill = targetActor.system.skills?.[defenseSkillKey];
+    if (defenderSkill) {
+      const defMod = Number(
+        defenseModifier ?? targetActor.system.combat?.defenseModifier ?? 0
+      );
 
-  
-  const defenseTarget = clampPercent(
-    Number(defenderSkill.total ?? 0) + defMod + equipmentDefenseBonus
-  );
-  defenseRoll = await rollPercent(
-    targetActor,
-    defenseTarget,
-    `Defensa: ${defenderSkill.label}`
-  );
+      const equipmentDefenseBonus = targetActor.getDefenseBonusFromEquipment(defenseSkillKey);
+      const defenseTarget = clampPercent(
+        Number(defenderSkill.total ?? 0) + defMod + equipmentDefenseBonus + defenseDifficultyMod
+      );
 
-}
-const comparison = compareAttackDefense(attackRoll, defenseRoll);
-await this.spendCombatAction(1);
+      defenseRoll = await rollPercent(
+        targetActor,
+        defenseTarget,
+        `Defensa: ${defenderSkill.label}`
+      );
+    }
+  } else {
+    const defenseSource = targetActor.getDefenseSourceData?.();
+    if (defenseSource?.valid) {
+      const sourceModifier = Number(defenseSource.modifier ?? 0);
+      const defMod = Number(defenseModifier ?? sourceModifier);
+      const defenseTarget = clampPercent(
+        Number(defenseSource.target ?? 0) + defMod + defenseDifficultyMod
+      );
+
+      defenseRoll = await rollPercent(
+        targetActor,
+        defenseTarget,
+        `Defensa: ${defenseSource.label}`
+      );
+    }
+  }
+
+  const comparison = compareAttackDefense(attackRoll, defenseRoll);
+  await this.spendCombatAction(1);
   if (!comparison.hit) {
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: this }),
@@ -833,6 +850,35 @@ getTotalSpentSkillPoints() {
   }, 0);
 }
 
+getSkillPointSummary() {
+  const total = Number(this.system.creation?.skillPoints ?? 0);
+  const spent = this.getTotalSpentSkillPoints();
+  const remaining = Math.max(0, total - spent);
+
+  return { total, spent, remaining };
+}
+
+getSkillInvestmentBreakdown() {
+  return Object.entries(this.system.skills ?? {})
+    .map(([key, skill]) => {
+      const invested = Number(skill?.invested ?? 0);
+      if (invested <= 0) return null;
+
+      return {
+        key,
+        label: skill?.label ?? key,
+        invested,
+        total: Number(skill?.total ?? 0),
+        spent: this.getSkillSpentPoints(key)
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => {
+      if (b.spent !== a.spent) return b.spent - a.spent;
+      return String(a.label).localeCompare(String(b.label), "es");
+    });
+}
+
 canIncreaseSkill(skillKey) {
   const key = normalizeSkillKey(skillKey, skillKey);
   const skill = this.system.skills?.[key];
@@ -907,6 +953,24 @@ async decreaseSkill(skillKey) {
   skill.total = Number(skill.baseValue ?? 0) + Number(skill.invested ?? 0);
 
   await this.update({ "system.skills": skills });
+}
+
+async consumeAction() {
+  if (!this.canSpendCombatAction(1)) {
+    ui.notifications?.warn("No te quedan acciones de combate.");
+    return Number(this.system.combat?.actions?.current ?? 0);
+  }
+
+  return this.spendCombatAction(1);
+}
+
+async resetActions() {
+  await this.resetCombatActions();
+  return Number(this.system.combat?.actions?.current ?? 2);
+}
+
+async resolveAttackAgainst(targetActor, weaponId = "") {
+  return this.resolveWeaponAttack({ targetActor, weaponId });
 }
 
   async generateCharacteristics() {

@@ -70,16 +70,7 @@
 }
 
 .aquelarre-sheet .sheet-header::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -8px;
-  height: 115px;
-  background: url("../assets/ui/header-illustration.svg") center no-repeat;
-  background-size: contain;
-  opacity: 0.18;
-  pointer-events: none;
+  content: none;
 }
 
 .aquelarre-sheet .header-main {
@@ -476,8 +467,3 @@
 .aquelarre-chat p {
   margin: 4px 0;
 }
-"styles": [
-  "styles/system.css",
-  "styles/theme-aquelarre.css",
-  "styles/journals.css"
-]
