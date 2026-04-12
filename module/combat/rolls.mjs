@@ -1,199 +1,244 @@
 export const DIFFICULTY_MODS = {
-  infalible: 60,
-  muyfacil: 40,
+  muy_facil: 40,
   facil: 20,
   normal: 0,
   dificil: -20,
-  muydificil: -40,
-  imposible: -60
+  muy_dificil: -40
 };
 
 export function clampPercent(value) {
   const n = Number(value ?? 0);
   if (!Number.isFinite(n)) return 0;
-  return Math.max(0, Math.min(100, n));
+  return Math.max(0, Math.min(200, Math.trunc(n)));
 }
 
-export async function showRoll3D(roll) {
-  try {
-    if (game.modules.get("dice-so-nice")?.active && game.dice3d?.showForRoll) {
-      await game.dice3d.showForRoll(roll, game.user, true);
-    }
-  } catch (err) {
-    console.warn("Aquelarre | Dice So Nice no pudo mostrar la tirada", err);
-  }
-}
-
-
-export async function rollHitLocation(actor, label = "Localización") {
-  const roll = await (new Roll("1d100")).evaluate();
-  await showRoll3D(roll);
-
-  return {
-    actor,
-    roll,
-    total: roll.total,
-    location: getHitLocation(roll.total),
-    label
-  };
-}
-
-
-export async function rollPercent(actor, target, label) {
-  const cleanTarget = clampPercent(target);
-  const roll = await (new Roll("1d100")).evaluate();
-  await showRoll3D(roll);
-
-  const result = roll.total;
-  const critical = result <= Math.max(1, Math.floor(cleanTarget / 10));
-  const fumble = result >= 100 || (cleanTarget < 100 && result >= 96 && result > cleanTarget);
-  const success = result <= cleanTarget && !fumble;
-
-  return { actor, roll, result, target: cleanTarget, success, critical, fumble, label };
-}
-
-export async function rollFormula(actor, formula, label) {
-  const safeFormula = String(formula || "1d3").trim() || "1d3";
-  const roll = await (new Roll(safeFormula)).evaluate();
-  await showRoll3D(roll);
-  return { actor, roll, total: roll.total, formula: safeFormula, label };
-}
-
-export function getHitLocation(d100) {
-  const n = Number(d100);
-  if (n <= 10) return "cabeza";
-  if (n <= 20) return "brazo-izquierdo";
-  if (n <= 30) return "brazo-derecho";
-  if (n <= 60) return "torso";
-  if (n <= 80) return "pierna-izquierda";
-  return "pierna-derecha";
-}
-
-export function compareAttackDefense(attackRoll, defenseRoll) {
-  if (attackRoll.fumble) return { hit: false, reason: "pifia-ataque" };
-  if (defenseRoll?.fumble) return { hit: true, reason: "pifia-defensa" };
-
-  if (attackRoll.success && !defenseRoll?.success) return { hit: true, reason: "ataque-supera" };
-  if (!attackRoll.success) return { hit: false, reason: "ataque-falla" };
-
-  if (attackRoll.critical && !defenseRoll?.critical) return { hit: true, reason: "critico-supera" };
-  if (defenseRoll?.critical && !attackRoll.critical) return { hit: false, reason: "defensa-critica" };
-
-  if (attackRoll.success && defenseRoll?.success) {
-    if (attackRoll.result > defenseRoll.result) return { hit: true, reason: "exito-mayor" };
-    return { hit: false, reason: "defensa-empata-o-supera" };
-  }
-
-  return { hit: false, reason: "sin-impacto" };
-}
-
-export function applyCriticalDamageBonus(baseDamage) {
-  const dmg = Number(baseDamage || 0);
-  return Math.max(1, Math.floor(dmg / 2));
-}
-
-export function getFumbleEffect() {
-  const table = [
-    "Pierdes el equilibrio.",
-    "Dejas la guardia abierta.",
-    "El arma se te escapa de la línea de ataque.",
-    "Necesitas recolocarte antes de volver a atacar."
-  ];
-  return table[Math.floor(Math.random() * table.length)];
-}
-
-export function getCriticalEffect() {
-  const table = [
-    "Golpe especialmente certero.",
-    "Ataque muy bien colocado.",
-    "Presionas al enemigo con ventaja.",
-    "El impacto atraviesa mejor la defensa."
-  ];
-  return table[Math.floor(Math.random() * table.length)];
+function getSpeakerData(actor = null) {
+  return actor ? ChatMessage.getSpeaker({ actor }) : {};
 }
 
 export async function postSimpleMessage(actor, title, lines = []) {
+  const safeLines = Array.isArray(lines) ? lines : [String(lines ?? "")];
+
   const content = `
-    <div class="aquelarre-roll">
+    <div class="aquelarre-chat">
       <h3>${title}</h3>
-      ${lines.map(line => `<p>${line}</p>`).join("")}
+      ${safeLines.map(line => `<p>${line}</p>`).join("")}
     </div>
   `;
-  await ChatMessage.create({
-    speaker: ChatMessage.getSpeaker({ actor }),
+
+  return ChatMessage.create({
+    speaker: getSpeakerData(actor),
     content
   });
 }
 
-export async function postCombatMessage({
-  attacker,
-  defender,
-  weapon,
-  attackRoll,
-  defenseRoll,
-  hit,
-  reason,
-  location,
-  damageRoll,
-  armor,
-  netDamage,
-  remainingPV,
-  attackBase,
-  attackModifier,
-  defenseBase,
-  defenseModifier,
-  defenseLabel,
-  criticalBonus,
-  criticalEffect,
-  fumbleEffect
-}) {
-  let content = `
-    <div class="aquelarre-roll">
-      <h3>Combate: ${attacker.name} vs ${defender.name}</h3>
-      <p><strong>Arma:</strong> ${weapon.name}</p>
-      <hr/>
-      <p><strong>Ataque:</strong> ${attackRoll.result}/${attackRoll.target}
-      ${attackRoll.success ? "✅" : "❌"}
-      ${attackRoll.critical ? " (Crítico)" : ""}
-      ${attackRoll.fumble ? " (Pifia)" : ""}</p>
-      <p><strong>Ataque base:</strong> ${attackBase} | <strong>Modificador:</strong> ${attackModifier >= 0 ? "+" : ""}${attackModifier}</p>
-  `;
+export async function rollFormula(actor, formula = "1d100", label = "Tirada") {
+  const roll = await (new Roll(formula)).evaluate({ async: true });
 
-  if (defenseRoll) {
-    content += `
-      <p><strong>Defensa (${defenseLabel}):</strong> ${defenseRoll.result}/${defenseRoll.target}
-      ${defenseRoll.success ? "✅" : "❌"}
-      ${defenseRoll.critical ? " (Crítico)" : ""}
-      ${defenseRoll.fumble ? " (Pifia)" : ""}</p>
-      <p><strong>Defensa base:</strong> ${defenseBase} | <strong>Modificador:</strong> ${defenseModifier >= 0 ? "+" : ""}${defenseModifier}</p>
-    `;
-  }
-
-  content += `<p><strong>Resultado:</strong> ${hit ? "IMPACTA" : "NO IMPACTA"} [${reason}]</p>`;
-
-  if (criticalEffect) {
-    content += `<p><strong>Efecto crítico:</strong> ${criticalEffect}</p>`;
-  }
-
-  if (fumbleEffect) {
-    content += `<p><strong>Efecto pifia:</strong> ${fumbleEffect}</p>`;
-  }
-
-  if (hit) {
-    content += `
-      <p><strong>Localización:</strong> ${location}</p>
-      <p><strong>Daño bruto:</strong> ${damageRoll.total}</p>
-      <p><strong>Bono crítico:</strong> ${criticalBonus}</p>
-      <p><strong>Armadura:</strong> ${armor}</p>
-      <p><strong>Daño neto:</strong> ${netDamage}</p>
-      <p><strong>PV restantes del defensor:</strong> ${remainingPV}</p>
-    `;
-  }
-
-  content += `</div>`;
-
-  await ChatMessage.create({
-    speaker: ChatMessage.getSpeaker({ actor: attacker }),
-    content
+  await roll.toMessage({
+    speaker: getSpeakerData(actor),
+    flavor: label
   });
+
+  return {
+    roll,
+    total: Number(roll.total ?? 0),
+    formula
+  };
+}
+
+export async function rollPercent(actor, target = 0, label = "Tirada porcentual") {
+  const clampedTarget = clampPercent(target);
+  const roll = await (new Roll("1d100")).evaluate({ async: true });
+  const result = Number(roll.total ?? 0);
+
+  const critical = result <= 5 && result <= clampedTarget;
+  const fumble = result >= 96 && result > clampedTarget;
+  const success = result <= clampedTarget;
+
+  await roll.toMessage({
+    speaker: getSpeakerData(actor),
+    flavor: `${label} (${clampedTarget}%)`
+  });
+
+  return {
+    roll,
+    target: clampedTarget,
+    result,
+    success,
+    critical,
+    fumble,
+    margin: clampedTarget - result
+  };
+}
+
+export function getHitLocation(d100) {
+  const n = Number(d100 ?? 0);
+
+  if (n <= 0) return "torso";
+  if (n <= 10) return "cabeza";
+  if (n <= 20) return "brazo_izquierdo";
+  if (n <= 30) return "brazo_derecho";
+  if (n <= 50) return "torso";
+  if (n <= 70) return "abdomen";
+  if (n <= 80) return "pierna_izquierda";
+  return "pierna_derecha";
+}
+
+function getOutcomeRank(rollData) {
+  if (!rollData) return 0;
+  if (rollData.fumble) return -2;
+  if (!rollData.success) return -1;
+  if (rollData.critical) return 2;
+  return 1;
+}
+
+export function compareAttackDefense(attackRoll, defenseRoll = null) {
+  if (!attackRoll) {
+    return {
+      hit: false,
+      reason: "No hay tirada de ataque"
+    };
+  }
+
+  if (attackRoll.fumble) {
+    return {
+      hit: false,
+      reason: "Pifia del atacante"
+    };
+  }
+
+  if (!attackRoll.success) {
+    return {
+      hit: false,
+      reason: "El ataque falla"
+    };
+  }
+
+  if (!defenseRoll) {
+    return {
+      hit: true,
+      reason: attackRoll.critical ? "Impacto crítico sin defensa" : "Impacto sin defensa"
+    };
+  }
+
+  if (defenseRoll.fumble) {
+    return {
+      hit: true,
+      reason: attackRoll.critical ? "Impacto crítico por pifia en defensa" : "La defensa pifia"
+    };
+  }
+
+  if (!defenseRoll.success) {
+    return {
+      hit: true,
+      reason: attackRoll.critical ? "Impacto crítico; la defensa falla" : "La defensa falla"
+    };
+  }
+
+  const attackRank = getOutcomeRank(attackRoll);
+  const defenseRank = getOutcomeRank(defenseRoll);
+
+  if (attackRank > defenseRank) {
+    return {
+      hit: true,
+      reason: attackRoll.critical ? "El crítico supera la defensa" : "El ataque supera la defensa"
+    };
+  }
+
+  if (defenseRank > attackRank) {
+    return {
+      hit: false,
+      reason: defenseRoll.critical ? "La defensa crítica anula el ataque" : "La defensa supera el ataque"
+    };
+  }
+
+  const attackMargin = Number(attackRoll.margin ?? -9999);
+  const defenseMargin = Number(defenseRoll.margin ?? -9999);
+
+  if (attackMargin > defenseMargin) {
+    return {
+      hit: true,
+      reason: "El ataque gana por mejor margen"
+    };
+  }
+
+  return {
+    hit: false,
+    reason: "La defensa gana por empate o mejor margen"
+  };
+}
+
+export function applyCriticalDamageBonus(baseDamage) {
+  const dmg = Math.max(0, Number(baseDamage ?? 0));
+  return Math.max(1, Math.ceil(dmg / 2));
+}
+
+export function resolveCriticalEffect(location, finalDamage) {
+  const hitLocation = String(location ?? "").trim().toLowerCase().replaceAll("-", "_");
+  const damage = Math.max(0, Number(finalDamage ?? 0));
+
+  if (damage <= 0) {
+    return {
+      location: hitLocation,
+      severity: "sin_efecto",
+      label: "Sin efecto crítico adicional",
+      description: "El impacto crítico no causa daño suficiente para un efecto adicional."
+    };
+  }
+
+  switch (hitLocation) {
+    case "cabeza":
+      return {
+        location: hitLocation,
+        severity: damage >= 8 ? "grave" : "moderado",
+        label: damage >= 8 ? "Trauma severo en la cabeza" : "Golpe aturdidor en la cabeza",
+        description: damage >= 8
+          ? "El objetivo queda incapacitado o en estado extremadamente comprometido."
+          : "El objetivo queda desorientado o aturdido brevemente."
+      };
+
+    case "brazo_derecho":
+    case "brazo_izquierdo":
+      return {
+        location: hitLocation,
+        severity: damage >= 6 ? "grave" : "leve",
+        label: damage >= 6 ? "Brazo inutilizado" : "Brazo dolorido",
+        description: damage >= 6
+          ? "El brazo queda temporalmente inutilizado para acciones exigentes."
+          : "El brazo sufre una penalización narrativa o menor."
+      };
+
+    case "pierna_derecha":
+    case "pierna_izquierda":
+      return {
+        location: hitLocation,
+        severity: damage >= 6 ? "grave" : "leve",
+        label: damage >= 6 ? "Pierna inutilizada" : "Pierna resentida",
+        description: damage >= 6
+          ? "La movilidad del objetivo queda muy reducida."
+          : "El objetivo cojea o pierde estabilidad."
+      };
+
+    case "abdomen":
+      return {
+        location: hitLocation,
+        severity: damage >= 7 ? "grave" : "moderado",
+        label: damage >= 7 ? "Herida profunda en abdomen" : "Golpe doloroso en abdomen",
+        description: damage >= 7
+          ? "La herida compromete seriamente el combate y la resistencia."
+          : "El objetivo queda dolorido y pierde fuelle."
+      };
+
+    case "torso":
+    default:
+      return {
+        location: hitLocation,
+        severity: damage >= 7 ? "grave" : "moderado",
+        label: damage >= 7 ? "Impacto severo en torso" : "Impacto sólido en torso",
+        description: damage >= 7
+          ? "El golpe compromete seriamente la capacidad de seguir luchando."
+          : "El objetivo queda muy tocado, aunque aún operativo."
+      };
+  }
 }

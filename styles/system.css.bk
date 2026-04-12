@@ -6,22 +6,88 @@
 
 .aquelarre-sheet,
 .aquelarre-item-sheet {
-  background: #efe3c0;
-  color: #2e2218;
-  padding: 10px;
+  position: relative;
+  background: url("../assets/ui/parchment.svg");
+  background-size: cover;
+  color: #2b1a0f;
+  padding: 12px;
+}
+
+.aquelarre-sheet::after {
+  content: "";
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  width: 180px;
+  height: 180px;
+  background: url("../assets/ui/watermark.svg") no-repeat center;
+  background-size: contain;
+  opacity: 0.07;
+  pointer-events: none;
 }
 
 .aquelarre-sheet input,
 .aquelarre-sheet textarea,
+.aquelarre-sheet select,
 .aquelarre-sheet button,
 .aquelarre-item-sheet input,
 .aquelarre-item-sheet textarea,
+.aquelarre-item-sheet select,
 .aquelarre-item-sheet button {
   font-size: 14px;
 }
 
+.aquelarre-sheet input,
+.aquelarre-sheet textarea,
+.aquelarre-sheet select,
+.aquelarre-item-sheet input,
+.aquelarre-item-sheet textarea,
+.aquelarre-item-sheet select {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid #5a3b1a;
+  border-radius: 4px;
+}
+
+.aquelarre-sheet button,
+.aquelarre-item-sheet button {
+  background: #5a3b1a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.aquelarre-sheet button:hover,
+.aquelarre-item-sheet button:hover {
+  background: #7a5228;
+}
+
+.aquelarre-sheet {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
 .aquelarre-sheet .sheet-header {
-  margin-bottom: 10px;
+  position: relative;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #5a3b1a;
+  flex: 0 0 auto;
+}
+
+.aquelarre-sheet .sheet-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -8px;
+  height: 115px;
+  background: url("../assets/ui/header-illustration.svg") center no-repeat;
+  background-size: contain;
+  opacity: 0.18;
+  pointer-events: none;
 }
 
 .aquelarre-sheet .header-main {
@@ -37,6 +103,7 @@
   object-fit: cover;
   border: 2px solid #5f1d14;
   border-radius: 8px;
+  z-index: 2;
 }
 
 .aquelarre-sheet .charname input {
@@ -56,6 +123,7 @@
   gap: 8px;
   margin: 8px 0 12px;
   border-bottom: 2px solid #5f1d14;
+  flex: 0 0 auto;
 }
 
 .aquelarre-sheet .sheet-tabs .item {
@@ -66,24 +134,77 @@
   border-radius: 8px 8px 0 0;
 }
 
+.aquelarre-sheet .sheet-tabs .item.active {
+  background: #f3e4bf;
+  font-weight: 700;
+}
+
+.aquelarre-sheet .sheet-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.aquelarre-sheet .tab {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
 .aquelarre-sheet .sheet-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
-.aquelarre-sheet .card,
-.aquelarre-item-sheet .card {
-  background: rgba(255, 248, 230, 0.75);
-  border: 2px solid #5f1d14;
-  border-radius: 10px;
-  padding: 10px;
+.aquelarre-sheet .sheet-grid--summary {
+  display: grid;
+  grid-template-columns: minmax(420px, 1fr) minmax(420px, 1fr);
+  gap: 12px;
+  align-items: start;
 }
 
-.aquelarre-sheet h2 {
+.aquelarre-sheet .summary-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.aquelarre-sheet .summary-right-column > .card {
+  margin: 0;
+}
+
+.aquelarre-sheet .card,
+.aquelarre-item-sheet .card {
+  background: rgba(255, 248, 230, 0.82);
+  border: 2px solid #5a3b1a;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.aquelarre-sheet .card.card--full {
+  grid-column: 1 / -1;
+}
+
+.aquelarre-sheet h2,
+.aquelarre-item-sheet h2 {
   margin: 0 0 10px;
   border-bottom: 1px solid #5f1d14;
   padding-bottom: 4px;
+  font-family: Georgia, serif;
+}
+
+.aquelarre-sheet h2::after,
+.aquelarre-item-sheet h2::after {
+  content: "";
+  display: block;
+  height: 18px;
+  background: url("../assets/ui/divider.svg") center no-repeat;
+  background-size: contain;
+  opacity: 0.7;
+  margin-top: 3px;
 }
 
 .aquelarre-sheet .characteristics-grid,
@@ -101,29 +222,11 @@
   align-items: center;
 }
 
-.aquelarre-sheet .skills-table {
-  display: grid;
-  gap: 6px;
-}
-
-.aquelarre-sheet .skills-head,
-.aquelarre-sheet .skills-row {
-  display: grid;
-  grid-template-columns: 1.5fr 70px 70px 50px;
-  gap: 8px;
-  align-items: center;
-}
-
-.aquelarre-sheet .skills-head {
-  font-weight: bold;
-  border-bottom: 1px solid #5f1d14;
-  padding-bottom: 4px;
-}
-
 .aquelarre-sheet .button-row {
   display: flex;
   gap: 8px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .aquelarre-sheet .list-header {
@@ -134,14 +237,14 @@
 
 .aquelarre-sheet .item-row {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr auto;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr auto;
   gap: 8px;
   padding: 8px 0;
   border-bottom: 1px solid rgba(95, 29, 20, 0.3);
   align-items: center;
 }
 
-.aquelarre-sheet .item-actions {
+.aquelarre-sheet .item-actions:not(.skill-actions) {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
@@ -150,108 +253,327 @@
 
 .aquelarre-sheet textarea,
 .aquelarre-item-sheet textarea {
-  min-height: 100px;
+  min-height: 90px;
   resize: vertical;
 }
 
-.aquelarre-roll {
-  padding: 8px;
-}
 .aquelarre-sheet .target-hint {
   margin: 6px 0 10px;
   font-style: italic;
   opacity: 0.85;
 }
-/* ===== FONDO GENERAL ===== */
-.aquelarre-sheet {
-  background: url("../assets/ui/parchment.jpg");
-  background-size: cover;
+
+.aquelarre-roll {
+  padding: 8px;
+}
+
+.creation-hints {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: rgba(120, 30, 30, 0.08);
+  border-left: 4px solid #8f1d1d;
+  border-radius: 6px;
+}
+
+.creation-hints ul {
+  margin: 6px 0 0 18px;
+}
+
+.creation-hints li {
+  margin-bottom: 4px;
+}
+
+.profession-panel {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #5a3b1a;
+  background: rgba(255, 248, 230, 0.78);
+}
+
+.profession-panel--ok {
+  border-left: 6px solid #2f7a3e;
+}
+
+.profession-panel--blocked {
+  border-left: 6px solid #9b2c2c;
+}
+
+.profession-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.profession-panel__header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.profession-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.profession-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1.2;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.profession-badge--ok {
+  background: rgba(58, 143, 76, 0.18);
+  border-color: #2f7a3e;
+  color: #1d5a2a;
+}
+
+.profession-badge--error {
+  background: rgba(180, 50, 50, 0.18);
+  border-color: #9b2c2c;
+  color: #7a1f1f;
+}
+
+.profession-badge--warning {
+  background: rgba(210, 160, 40, 0.2);
+  border-color: #c28a1c;
+  color: #8a5a00;
+}
+
+.profession-badge--neutral {
+  background: rgba(90, 59, 26, 0.1);
+  border-color: #5a3b1a;
+  color: #5a3b1a;
+}
+
+.profession-badge--skill {
+  background: rgba(95, 29, 20, 0.1);
+  border-color: #5f1d14;
+  color: #5f1d14;
+}
+
+.profession-panel__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card-subsection {
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(90, 59, 26, 0.25);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.card-subsection h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #5a3b1a;
+}
+
+.profession-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profession-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+.profession-stat--ok {
+  background: rgba(58, 143, 76, 0.14);
+  border-left: 4px solid #2f7a3e;
+}
+
+.profession-stat--fail {
+  background: rgba(180, 50, 50, 0.14);
+  border-left: 4px solid #9b2c2c;
+}
+
+.profession-stat__label {
+  font-weight: bold;
+}
+
+.profession-stat__values {
+  font-variant-numeric: tabular-nums;
+}
+
+.profession-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.aquelarre-chat {
+  background: rgba(255, 248, 230, 0.92);
+  border: 2px solid #5a3b1a;
+  border-radius: 10px;
+  padding: 10px;
   color: #2b1a0f;
 }
 
-/* ===== HEADER ILUSTRADO ===== */
-.aquelarre-sheet .sheet-header {
-  position: relative;
-  border-bottom: 2px solid #5a3b1a;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+.aquelarre-chat h3 {
+  margin: 0 0 8px;
+  font-family: Georgia, serif;
+  border-bottom: 1px solid #5f1d14;
+  padding-bottom: 4px;
 }
 
-.aquelarre-sheet .sheet-header::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 0;
-  right: 0;
-  height: 120px;
-  background: url("../assets/ui/header-illustration.png") center no-repeat;
-  background-size: contain;
-  opacity: 0.25;
-  pointer-events: none;
+.aquelarre-chat p {
+  margin: 4px 0;
 }
 
-/* ===== TARJETAS ===== */
-.aquelarre-sheet .card {
-  background: rgba(255, 248, 220, 0.85);
-  border: 2px solid #5a3b1a;
-  border-radius: 8px;
-  padding: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+/* ===== COMPETENCIAS ===== */
+
+.aquelarre-sheet .skills-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
 }
 
-/* ===== TÍTULOS ===== */
-.aquelarre-sheet h2 {
-  font-family: "Georgia", serif;
-  border-bottom: 1px solid #5a3b1a;
-  margin-bottom: 5px;
+.aquelarre-sheet .skills-layout > .card {
+  min-width: 0;
+}
+.aquelarre-sheet .skills-table {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* ===== DIVISORES DECORATIVOS ===== */
-.aquelarre-sheet h2::after {
-  content: "";
+.aquelarre-sheet .skills-head.skills-grid-extended,
+.aquelarre-sheet .skills-row.skills-grid-extended {
+  display: grid;
+  grid-template-columns: 1fr 44px 44px 44px 150px;
+  gap: 4px;
+  align-items: center;
+}
+.aquelarre-sheet .skills-head.skills-grid-extended {
+  font-weight: bold;
+  border-bottom: 1px solid #5f1d14;
+  padding: 0 0 4px 0;
+}
+
+
+.aquelarre-sheet .skills-row.skills-grid-extended {
+  min-height: 42px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  border-bottom: 1px solid rgba(122, 44, 26, 0.12);
+  width: 100%;
+  box-sizing: border-box;
+}
+.aquelarre-sheet .skills-head.skills-grid-extended > span,
+.aquelarre-sheet .skills-row.skills-grid-extended > span,
+.aquelarre-sheet .skills-row.skills-grid-extended > div {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  justify-content: center;
+}
+.aquelarre-sheet .skills-head.skills-grid-extended > span:first-child,
+.aquelarre-sheet .skills-row.skills-grid-extended > span.skill-name {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.aquelarre-sheet .skill-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+  width: 100%;
+  line-height: 1.05;
+  overflow: hidden;
+}
+
+.aquelarre-sheet .skill-name > :first-child,
+.aquelarre-sheet .skill-meta {
+  min-width: 0;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.aquelarre-sheet .skill-meta {
   display: block;
-  height: 20px;
-  background: url("../assets/ui/divider.png") center no-repeat;
-  background-size: contain;
-  margin-top: 4px;
-  opacity: 0.7;
+  font-size: 10px;
+  line-height: 1;
+  opacity: 0.85;
 }
 
-/* ===== INPUTS ===== */
-.aquelarre-sheet input,
-.aquelarre-sheet textarea,
-.aquelarre-sheet select {
-  background: rgba(255,255,255,0.7);
-  border: 1px solid #5a3b1a;
+.aquelarre-sheet .item-actions.skill-actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  padding-left: 2px;
 }
 
-/* ===== BOTONES ===== */
-.aquelarre-sheet button {
-  background: #5a3b1a;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
+.aquelarre-sheet .item-actions.skill-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  min-width: 40px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+.aquelarre-sheet .skill-tag {
+  font-size: 0.75rem;
+  line-height: 1.1;
 }
 
-.aquelarre-sheet button:hover {
-  background: #7a5228;
+.aquelarre-sheet .skills-row button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
-/* ===== WATERMARK OPCIONAL ===== */
-.aquelarre-sheet::after {
-  content: "";
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 200px;
-  height: 200px;
-  background: url("../assets/ui/watermark.png") no-repeat center;
-  background-size: contain;
-  opacity: 0.08;
-  pointer-events: none;
+.skill-row--normal {
+  background: rgba(255, 248, 230, 0.35);
 }
 
-.aquelarre-sheet.dark {
-  background: #1e1a16;
-  color: #e0d3b8;
+.skill-row--warning {
+  background: rgba(210, 160, 40, 0.2);
+  border-left: 4px solid #c28a1c;
+}
+
+.skill-row--expensive {
+  background: rgba(179, 97, 26, 0.22);
+  border-left: 4px solid #9b4f12;
+}
+
+.skill-row--blocked {
+  background: rgba(160, 40, 40, 0.18);
+  border-left: 4px solid #8f1d1d;
+  opacity: 0.92;
+}
+
+@media (max-width: 1200px) {
+  .aquelarre-sheet .skills-layout {
+    grid-template-columns: 1fr;
+  }
 }

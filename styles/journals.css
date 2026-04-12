@@ -1,44 +1,150 @@
-.aq-journal {
-  background: url("../assets/ui/parchment-page.png") center top / cover no-repeat;
+/* =========================================
+   Aquelarre - Journal Atmosphere
+========================================= */
+
+.aq-journal,
+.journal-sheet .journal-entry-content,
+.journal-sheet .editor-content {
+  position: relative;
   color: var(--aq-color-ink);
   font-family: var(--aq-font-body);
-  padding: 36px 42px;
   min-height: 100%;
+  padding: 34px 40px 42px;
+  background:
+    url("../assets/ui/journal-bg.png") center / cover no-repeat;
+  border: 1px solid rgba(96, 49, 25, 0.55);
+  border-radius: 14px 11px 13px 9px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 244, 210, 0.2),
+    0 6px 16px rgba(26, 11, 7, 0.18);
 }
 
-.aq-journal__title {
+.aq-journal::before,
+.journal-sheet .journal-entry-content::before,
+.journal-sheet .editor-content::before {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border: 1px dashed rgba(91, 43, 25, 0.45);
+  border-radius: 8px 10px 7px 12px;
+  pointer-events: none;
+  opacity: 0.36;
+}
+
+.aq-journal::after,
+.journal-sheet .journal-entry-content::after,
+.journal-sheet .editor-content::after {
+  content: "nota: revisar signos\A+  margen  +";
+  position: absolute;
+  right: 16px;
+  top: 48px;
+  white-space: pre;
+  line-height: 1.3;
   font-family: var(--aq-font-title);
-  font-size: 34px;
-  text-align: center;
-  margin: 0 0 8px;
+  font-size: 12px;
+  color: rgba(89, 36, 25, 0.24);
+  transform: rotate(-3deg);
+  pointer-events: none;
 }
 
-.aq-journal__subtitle {
-  text-align: center;
-  font-style: italic;
-  margin-bottom: 24px;
+.aq-journal h1,
+.aq-journal h2,
+.aq-journal h3,
+.journal-sheet .editor-content h1,
+.journal-sheet .editor-content h2,
+.journal-sheet .editor-content h3 {
+  font-family: var(--aq-font-title);
+  color: #2b170f;
+  letter-spacing: 0.3px;
 }
 
 .aq-journal h2,
-.aq-journal h3 {
-  font-family: var(--aq-font-title);
-  margin-top: 22px;
+.aq-journal h3,
+.journal-sheet .editor-content h2,
+.journal-sheet .editor-content h3 {
+  margin-top: 20px;
   margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed rgba(86, 39, 24, 0.6);
 }
 
-.aq-journal p {
-  text-align: justify;
-  line-height: 1.55;
+.aq-journal h2::before,
+.aq-journal h3::before,
+.journal-sheet .editor-content h2::before,
+.journal-sheet .editor-content h3::before {
+  content: "+";
+  margin-right: 8px;
+  color: rgba(92, 41, 24, 0.65);
+}
+
+.aq-journal p,
+.journal-sheet .editor-content p {
   margin: 8px 0;
+  line-height: 1.64;
+  text-align: justify;
+}
+
+.aq-journal p:nth-of-type(3n),
+.journal-sheet .editor-content p:nth-of-type(4n) {
+  transform: none;
+}
+
+.aq-journal hr,
+.journal-sheet .editor-content hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid rgba(90, 43, 24, 0.6);
+  border-bottom: 1px solid rgba(255, 244, 214, 0.38);
+  margin: 14px 0;
+}
+
+.aq-journal blockquote,
+.journal-sheet .editor-content blockquote {
+  margin: 12px 0;
+  padding: 10px 12px;
+  border-left: 4px solid rgba(106, 51, 29, 0.72);
+  border-radius: 4px 8px 7px 5px;
+  background: rgba(238, 223, 183, 0.34);
+}
+
+.aq-journal table,
+.journal-sheet .editor-content table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.aq-journal td,
+.aq-journal th,
+.journal-sheet .editor-content td,
+.journal-sheet .editor-content th {
+  border: 1px solid rgba(96, 48, 27, 0.5);
+  padding: 7px 8px;
+  background: rgba(245, 233, 202, 0.4);
 }
 
 .aq-journal .dramatis {
   margin-top: 20px;
   padding: 12px 14px;
-  background: rgba(255,255,255,0.2);
-  border: 1px solid rgba(90,59,26,0.45);
-  border-radius: 8px;
+  border: 1px solid rgba(90, 59, 26, 0.45);
+  border-radius: 9px 6px 10px 7px;
+  background: rgba(255, 243, 214, 0.28);
 }
+
+.aq-journal .aq-journal__title {
+  font-family: var(--aq-font-title);
+  font-size: 34px;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.aq-journal .aq-journal__subtitle {
+  text-align: center;
+  font-style: italic;
+  margin: 0 0 24px;
+}
+
 .aq-dropcap {
   position: relative;
   min-height: 56px;
@@ -53,6 +159,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  filter: sepia(0.3);
 }
 
 .aq-dropcap[data-letter="A"]::before { background-image: url("../assets/letters/LETRA-A.png"); }

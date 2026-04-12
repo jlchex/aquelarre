@@ -54,6 +54,9 @@
         "defenseSkill": "esquivar",
         "defenseWeaponId": "",
         "defenseShieldId": "",
+        "meleeMode": false,
+        "aimLocation": "",
+        "aimModifier": -25,
         "armorTotal": 0,
         "initiative": 0,
         "lastFumble": "",
@@ -62,14 +65,15 @@
         "lastArmorAbsorbed": 0,
         "lastRawDamage": 0,
         "lastFinalDamage": 0,
-        "activeWeaponId": ""
+        "activeWeaponId": "",
+        "statusEffects": []
       },
       "skills": {
         "alquimia": { "label": "Alquimia", "base": "cul", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
         "astrologia": { "label": "Astrología", "base": "cul", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
         "descubrir": { "label": "Descubrir", "base": "per", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
         "esquivar": { "label": "Esquivar", "base": "agi", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
-        "leerEscribir": { "label": "Leer y escribir", "base": "cul", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
+        "leer_y_escribir": { "label": "Leer y escribir", "base": "cul", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
         "medicina": { "label": "Medicina", "base": "cul", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
         "persuasion": { "label": "Persuasión", "base": "com", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
         "sigilo": { "label": "Sigilo", "base": "agi", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
@@ -142,6 +146,9 @@
         "defenseSkill": "esquivar",
         "defenseWeaponId": "",
         "defenseShieldId": "",
+        "meleeMode": false,
+        "aimLocation": "",
+        "aimModifier": -25,
         "armorTotal": 0,
         "initiative": 0,
         "lastFumble": "",
@@ -150,7 +157,8 @@
         "lastArmorAbsorbed": 0,
         "lastRawDamage": 0,
         "lastFinalDamage": 0,
-        "activeWeaponId": ""
+        "activeWeaponId": "",
+        "statusEffects": []
       },
       "skills": {
         "esquivar": { "label": "Esquivar", "base": "agi", "baseValue": 0, "invested": 0, "total": 0, "group": "general" },
@@ -165,10 +173,13 @@
     "weapon": {
       "skill": "espadas",
       "damage": "1d6",
+      "price": 100,
+      "currency": "mr",
       "range": "",
       "equipped": false,
       "hands": 1,
       "kind": "melee",
+      "size": "media",
       "defensive": true,
       "parryBonus": 0,
       "notes": ""
@@ -176,34 +187,52 @@
     "shield": {
       "skill": "escudos",
       "protection": 1,
+      "resistance": 10,
+      "maxResistance": 10,
+      "price": 120,
+      "currency": "mr",
       "equipped": false,
       "defenseBonus": 0,
       "notes": ""
     },
     "armor": {
       "protection": 1,
+      "price": 180,
+      "currency": "mr",
       "location": "torso",
       "equipped": false,
       "notes": ""
     },
     "spell": {
       "skill": "alquimia",
+      "price": 0,
+      "currency": "mr",
       "cost": "",
       "difficultyMod": 0,
+      "school": "",
+      "tradition": "",
+      "tags": "",
       "effect": "",
       "components": "",
       "notes": ""
     },
     "ritual": {
       "skill": "culto",
+      "price": 0,
+      "currency": "mr",
       "cost": "",
       "difficultyMod": 0,
+      "school": "",
+      "tradition": "",
+      "tags": "",
       "effect": "",
       "requirements": "",
       "notes": ""
     },
     "gear": {
       "quantity": 1,
+      "price": 10,
+      "currency": "mr",
       "equipped": false,
       "notes": ""
     }

@@ -1,28 +1,33 @@
+/* =========================================
+   Aquelarre - Theme CSS
+   Tipografías, colores, fondos y chat
+========================================= */
+
 @font-face {
   font-family: "AquelarreBody";
   src: url("../fonts/book-antiqua.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "AquelarreBody";
   src: url("../fonts/book-antiqua-italic.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "AquelarreTitle";
   src: url("../fonts/1483-rotunda-lyon.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "AquelarreDisplay";
   src: url("../fonts/goudy-mediaeval-regular.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -32,42 +37,73 @@
   font-weight: 600;
   font-style: normal;
 }
+
 :root {
   --aq-font-body: "AquelarreBody", "Book Antiqua", serif;
   --aq-font-title: "AquelarreTitle", "AquelarreDisplay", serif;
+
   --aq-color-ink: #2b1a12;
-  --aq-color-red: #8e1414;
+  --aq-color-ink-soft: #4a3327;
+  --aq-color-title: #1f120c;
+
   --aq-color-border: #5a3b1a;
+  --aq-color-border-soft: rgba(90, 59, 26, 0.25);
+  --aq-color-border-mid: rgba(95, 29, 20, 0.35);
+
+  --aq-color-surface: rgba(255, 248, 230, 0.82);
+  --aq-color-surface-strong: rgba(255, 248, 230, 0.92);
+  --aq-color-surface-soft: rgba(255, 255, 255, 0.35);
+  --aq-color-input: rgba(255, 255, 255, 0.78);
+
+  --aq-color-tab: #d7c39a;
+  --aq-color-tab-active: #f3e4bf;
+
+  --aq-color-button: #5a3b1a;
+  --aq-color-button-hover: #7a5228;
+  --aq-color-button-text: #ffffff;
+
+  --aq-color-ok: #2f7a3e;
+  --aq-color-ok-bg: rgba(58, 143, 76, 0.18);
+
+  --aq-color-error: #9b2c2c;
+  --aq-color-error-bg: rgba(180, 50, 50, 0.18);
+
+  --aq-color-warning: #c28a1c;
+  --aq-color-warning-bg: rgba(210, 160, 40, 0.2);
+
+  --aq-color-expensive: #9b4f12;
+  --aq-color-expensive-bg: rgba(179, 97, 26, 0.22);
+
   --aq-bg-paper: url("../assets/ui/parchment-page.png");
-  --aq-bg-paper-alt: url("../assets/ui/parchment-page.png");
+  --aq-bg-paper-alt: url("../assets/ui/parchment-page-alt.png");
+  --aq-bg-sheet: url("../assets/ui/parchment.svg");
+  --aq-bg-divider: url("../assets/ui/divider.svg");
+  --aq-bg-watermark: url("../assets/ui/watermark.svg");
+  --aq-bg-header: url("../assets/ui/header-illustration.svg");
 }
+
+/* =========================================
+   BASE
+========================================= */
+
 .aquelarre-sheet,
 .aquelarre-item-sheet {
-  background: var(--aq-bg-paper) center/cover no-repeat;
-  font-family: var(--aq-font-body);
+  background: var(--aq-bg-paper) center / cover no-repeat;
   color: var(--aq-color-ink);
+  font-family: var(--aq-font-body);
 }
 
 .aquelarre-sheet h1,
 .aquelarre-sheet h2,
 .aquelarre-sheet h3,
+.aquelarre-sheet h4,
 .aquelarre-item-sheet h1,
 .aquelarre-item-sheet h2,
-.aquelarre-item-sheet h3 {
+.aquelarre-item-sheet h3,
+.aquelarre-item-sheet h4 {
   font-family: var(--aq-font-title);
-  color: #1f120c;
-  letter-spacing: 0.3px;
-}
-
-.aquelarre-sheet .charname input {
-  font-family: var(--aq-font-title);
-  font-size: 30px;
-  color: #1d120b;
-}
-
-.aquelarre-sheet .sheet-tabs .item {
-  font-family: var(--aq-font-title);
-  font-size: 18px;
+  color: var(--aq-color-title);
+  letter-spacing: 0.2px;
 }
 
 .aquelarre-sheet label,
@@ -79,30 +115,665 @@
 .aquelarre-sheet select,
 .aquelarre-item-sheet input,
 .aquelarre-item-sheet textarea,
-.aquelarre-item-sheet select {
+.aquelarre-item-sheet select,
+.aquelarre-sheet button,
+.aquelarre-item-sheet button {
   font-family: var(--aq-font-body);
 }
+
+/* =========================================
+   FONDOS Y DECORACIÓN
+========================================= */
+
+.aquelarre-sheet,
+.aquelarre-item-sheet {
+  background: var(--aq-bg-sheet);
+  background-size: cover;
+}
+
+.aquelarre-sheet::after {
+  background: var(--aq-bg-watermark) no-repeat center;
+  background-size: contain;
+}
+
+.aquelarre-sheet .sheet-header {
+  border-bottom: 2px solid var(--aq-color-border);
+  overflow: visible;
+}
+
+.aquelarre-sheet .sheet-header::before {
+  background: var(--aq-bg-header) center no-repeat;
+  background-size: contain;
+}
+
+.aquelarre-sheet .sheet-header::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  width: 260px;
+  height: 260px;
+  pointer-events: none;
+  opacity: 1;
+  background: url("../assets/ui/demon-medieval.png") top right / contain no-repeat;
+  filter: sepia(0.82) saturate(1.05) contrast(1.18) drop-shadow(0 6px 14px rgba(52, 19, 10, 0.32));
+  transform: rotate(-1deg);
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.aquelarre-sheet .profile-img {
+  border: 2px solid #5f1d14;
+  border-radius: 8px;
+}
+
+.aquelarre-sheet .charname input {
+  font-family: var(--aq-font-title);
+  font-size: 30px;
+  color: #1d120b;
+}
+
+.aquelarre-sheet h2,
+.aquelarre-item-sheet h2 {
+  margin: 0 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #5f1d14;
+}
+
+.aquelarre-sheet h2::after,
+.aquelarre-item-sheet h2::after {
+  content: "";
+  display: block;
+  height: 18px;
+  margin-top: 3px;
+  opacity: 0.7;
+  background: var(--aq-bg-divider) center no-repeat;
+  background-size: contain;
+}
+
+/* =========================================
+   FORM ELEMENTS
+========================================= */
+
+.aquelarre-sheet input,
+.aquelarre-sheet textarea,
+.aquelarre-sheet select,
+.aquelarre-item-sheet input,
+.aquelarre-item-sheet textarea,
+.aquelarre-item-sheet select {
+  background: var(--aq-color-input);
+  border: 1px solid var(--aq-color-border);
+  border-radius: 4px;
+  color: var(--aq-color-ink);
+}
+
+.aquelarre-sheet button,
+.aquelarre-item-sheet button {
+  background: var(--aq-color-button);
+  color: var(--aq-color-button-text);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.aquelarre-sheet button:hover,
+.aquelarre-item-sheet button:hover {
+  background: var(--aq-color-button-hover);
+}
+
+.aquelarre-sheet .sheet-tabs {
+  border-bottom: 2px solid #5f1d14;
+}
+
+.aquelarre-sheet .sheet-tabs .item {
+  background: var(--aq-color-tab);
+  border: 1px solid #5f1d14;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  font-family: var(--aq-font-title);
+  font-size: 18px;
+  color: var(--aq-color-title);
+}
+
+.aquelarre-sheet .sheet-tabs .item.active {
+  background: var(--aq-color-tab-active);
+  font-weight: 700;
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.aquelarre-sheet .card,
+.aquelarre-item-sheet .card {
+  background: var(--aq-color-surface);
+  border: 2px solid var(--aq-color-border);
+}
+
+.card-subsection {
+  background: var(--aq-color-surface-soft);
+  border: 1px solid var(--aq-color-border-soft);
+}
+
+.card-subsection h4 {
+  color: var(--aq-color-border);
+}
+
+/* =========================================
+   CREACIÓN / PROFESIONES
+========================================= */
+
+.creation-hints {
+  background: rgba(120, 30, 30, 0.08);
+  border-left: 4px solid #8f1d1d;
+}
+
+.profession-panel {
+  background: rgba(255, 248, 230, 0.78);
+  border: 2px solid var(--aq-color-border);
+}
+
+.profession-panel--ok {
+  border-left: 6px solid var(--aq-color-ok);
+}
+
+.profession-panel--blocked {
+  border-left: 6px solid var(--aq-color-error);
+}
+
+.profession-badge {
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.profession-badge--ok {
+  background: var(--aq-color-ok-bg);
+  border-color: var(--aq-color-ok);
+  color: #1d5a2a;
+}
+
+.profession-badge--error {
+  background: var(--aq-color-error-bg);
+  border-color: var(--aq-color-error);
+  color: #7a1f1f;
+}
+
+.profession-badge--warning {
+  background: var(--aq-color-warning-bg);
+  border-color: var(--aq-color-warning);
+  color: #8a5a00;
+}
+
+.profession-badge--neutral {
+  background: rgba(90, 59, 26, 0.1);
+  border-color: var(--aq-color-border);
+  color: var(--aq-color-border);
+}
+
+.profession-badge--skill {
+  background: rgba(95, 29, 20, 0.1);
+  border-color: #5f1d14;
+  color: #5f1d14;
+}
+
+.profession-stat--ok {
+  background: rgba(58, 143, 76, 0.14);
+  border-left: 4px solid var(--aq-color-ok);
+}
+
+.profession-stat--fail {
+  background: rgba(180, 50, 50, 0.14);
+  border-left: 4px solid var(--aq-color-error);
+}
+
+/* =========================================
+   LISTAS / FILAS / HINTS
+========================================= */
+
+.aquelarre-sheet .item-row {
+  border-bottom: 1px solid rgba(95, 29, 20, 0.3);
+}
+
+.status-effect {
+  background: rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(90, 59, 26, 0.18);
+}
+
+.skill-breakdown-tag,
+.skill-tag {
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(90, 59, 26, 0.18);
+  color: var(--aq-color-ink-soft);
+}
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.aquelarre-sheet .skills-head.skills-grid-extended {
+  border-bottom: 1px solid #5f1d14;
+}
+
+.aquelarre-sheet .skills-row.skills-grid-extended {
+  border-bottom: 1px solid rgba(122, 44, 26, 0.12);
+}
+
+.skill-row--normal {
+  background: rgba(255, 248, 230, 0.35);
+}
+
+.skill-row--warning {
+  background: var(--aq-color-warning-bg);
+  border-left: 4px solid var(--aq-color-warning);
+}
+
+.skill-row--expensive {
+  background: var(--aq-color-expensive-bg);
+  border-left: 4px solid var(--aq-color-expensive);
+}
+
+.skill-row--blocked {
+  background: var(--aq-color-error-bg);
+  border-left: 4px solid #8f1d1d;
+  opacity: 0.92;
+}
+
+/* =========================================
+   CHAT / TIRADAS
+========================================= */
+
 .aquelarre-chat,
 .aquelarre-roll {
-  background: rgba(255, 248, 230, 0.94);
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(255, 248, 230, 0.95), rgba(244, 232, 206, 0.96)),
+    var(--aq-bg-paper) center / cover no-repeat;
   border: 2px solid var(--aq-color-border);
   border-radius: 10px;
-  padding: 10px 12px;
+  padding: 12px 14px;
   color: var(--aq-color-ink);
   font-family: var(--aq-font-body);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+}
+
+.aquelarre-chat::before,
+.aquelarre-roll::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--aq-bg-watermark) no-repeat right 12px bottom 10px;
+  background-size: 90px;
+  opacity: 0.05;
+  pointer-events: none;
 }
 
 .aquelarre-chat h3,
 .aquelarre-roll h3 {
-  margin: 0 0 8px;
+  margin: 0 0 10px;
+  padding-bottom: 6px;
   font-family: var(--aq-font-title);
   font-size: 22px;
   color: #23150f;
-  border-bottom: 1px solid #5f1d14;
-  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(95, 29, 20, 0.7);
+  letter-spacing: 0.2px;
 }
 
 .aquelarre-chat p,
 .aquelarre-roll p {
-  margin: 4px 0;
+  margin: 5px 0;
+  line-height: 1.3;
+}
+
+.aquelarre-chat strong,
+.aquelarre-roll strong {
+  color: #2a1810;
+}
+
+.aquelarre-chat.success,
+.aquelarre-roll.success {
+  border-left: 6px solid #2e7d32;
+  background:
+    linear-gradient(rgba(236, 247, 232, 0.96), rgba(224, 241, 219, 0.96)),
+    var(--aq-bg-paper) center / cover no-repeat;
+}
+
+.aquelarre-chat.failure,
+.aquelarre-roll.failure {
+  border-left: 6px solid #a12626;
+  background:
+    linear-gradient(rgba(252, 236, 233, 0.96), rgba(247, 222, 217, 0.96)),
+    var(--aq-bg-paper) center / cover no-repeat;
+}
+
+.aquelarre-chat .roll-label,
+.aquelarre-roll .roll-label {
+  display: inline-block;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  border: 1px solid rgba(90, 59, 26, 0.35);
+  border-radius: 999px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.aquelarre-chat .roll-total,
+.aquelarre-roll .roll-total {
+  display: inline-block;
+  min-width: 56px;
+  margin: 6px 0;
+  padding: 4px 10px;
+  border: 2px solid rgba(90, 59, 26, 0.55);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.55);
+  font-family: var(--aq-font-title);
+  font-size: 28px;
+  line-height: 1;
+  color: #1f120c;
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+.aquelarre-chat .roll-detail,
+.aquelarre-roll .roll-detail {
+  font-size: 13px;
+  opacity: 0.92;
+}
+
+.aquelarre-chat .roll-detail small,
+.aquelarre-roll .roll-detail small {
+  opacity: 0.8;
+}
+
+.aquelarre-chat .critical,
+.aquelarre-roll .critical {
+  margin: 6px 0 0;
+  color: #9c6a00;
+  font-weight: 700;
+  text-shadow: 0 0 2px rgba(255, 215, 0, 0.18);
+}
+
+.aquelarre-chat .fumble,
+.aquelarre-roll .fumble {
+  margin: 6px 0 0;
+  color: #8b0000;
+  font-weight: 700;
+  text-shadow: 0 0 2px rgba(180, 0, 0, 0.15);
+}
+
+.aquelarre-chat .roll-section,
+.aquelarre-roll .roll-section {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border: 1px solid rgba(90, 59, 26, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.aquelarre-chat .combat-details,
+.aquelarre-roll .combat-details {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.aquelarre-chat .combat-details th,
+.aquelarre-chat .combat-details td,
+.aquelarre-roll .combat-details th,
+.aquelarre-roll .combat-details td {
+  padding: 8px 10px;
+  border: 1px solid rgba(90, 59, 26, 0.15);
+  text-align: left;
+  vertical-align: top;
+}
+
+.aquelarre-chat .combat-details th,
+.aquelarre-roll .combat-details th {
+  width: 35%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.aquelarre-chat .status-summary,
+.aquelarre-roll .status-summary {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px dashed rgba(46, 125, 50, 0.35);
+  border-radius: 10px;
+  background: rgba(236, 247, 232, 0.5);
+}
+
+.aquelarre-chat.failure .status-summary,
+.aquelarre-roll.failure .status-summary {
+  border-color: rgba(161, 38, 38, 0.35);
+  background: rgba(252, 236, 233, 0.45);
+}
+
+.aquelarre-chat .status-summary strong,
+.aquelarre-roll .status-summary strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.aquelarre-chat .status-summary ul,
+.aquelarre-roll .status-summary ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.aquelarre-chat hr,
+.aquelarre-roll hr {
+  border: none;
+  border-top: 1px solid rgba(95, 29, 20, 0.35);
+  margin: 10px 0;
+}
+
+.aquelarre-chat .dice-roll,
+.aquelarre-roll .dice-roll {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.34);
+  border: 1px solid rgba(90, 59, 26, 0.2);
+}
+
+.aquelarre-chat .dice-tooltip,
+.aquelarre-roll .dice-tooltip {
+  background: rgba(255, 248, 230, 0.98);
+  border: 1px solid rgba(90, 59, 26, 0.25);
+  border-radius: 8px;
+}
+/* =========================================
+   THEME - TOOLTIP
+========================================= */
+
+.aq-tooltip-trigger {
+  color: #5a3b1a;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(90, 59, 26, 0.35);
+}
+
+.aq-tooltip-trigger:hover,
+.aq-tooltip-trigger:focus {
+  background: rgba(255, 248, 230, 0.9);
+  border-color: #5a3b1a;
+}
+
+.aq-tooltip-trigger::after {
+  color: var(--aq-color-ink);
+  background:
+    linear-gradient(rgba(255, 248, 230, 0.98), rgba(244, 232, 206, 0.98)),
+    var(--aq-bg-paper) center / cover no-repeat;
+  border: 1px solid rgba(90, 59, 26, 0.45);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+/* =========================================
+   THEME - BADGES / REQUISITOS TOOLTIP
+========================================= */
+
+.aq-tooltip-badge::after {
+  color: var(--aq-color-ink);
+  background:
+    linear-gradient(rgba(255, 248, 230, 0.98), rgba(244, 232, 206, 0.98)),
+    var(--aq-bg-paper) center / cover no-repeat;
+  border: 1px solid rgba(90, 59, 26, 0.45);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================
+   AIRE A QUELARRE - SHEET ATMOSPHERE
+========================================= */
+
+.aquelarre-sheet {
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255, 247, 220, 0.24), transparent 45%),
+    radial-gradient(circle at 78% 75%, rgba(110, 53, 28, 0.07), transparent 40%),
+    radial-gradient(circle at 40% 85%, rgba(70, 32, 18, 0.05), transparent 35%),
+    var(--aq-bg-sheet);
+  background-size: cover;
+}
+
+.aquelarre-sheet .sheet-body {
+  position: relative;
+}
+
+.aquelarre-sheet .sheet-body::before,
+.aquelarre-sheet .sheet-body::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.aquelarre-sheet .sheet-body::before {
+  left: 10px;
+  top: 12px;
+  width: 220px;
+  height: 220px;
+  opacity: 0.045;
+  background: var(--aq-bg-header) center / contain no-repeat;
+  filter: sepia(0.6) contrast(0.95);
+}
+
+.aquelarre-sheet .sheet-body::after {
+  right: 8px;
+  bottom: 16px;
+  width: 180px;
+  height: 180px;
+  opacity: 0.045;
+  background: var(--aq-bg-watermark) center / contain no-repeat;
+  transform: rotate(-4deg);
+}
+
+.aquelarre-sheet .tab {
+  position: relative;
+  z-index: 1;
+}
+
+.aquelarre-sheet .tab::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    linear-gradient(120deg, rgba(120, 66, 39, 0.025), rgba(245, 229, 188, 0.02) 32%, rgba(93, 46, 26, 0.025) 100%),
+    repeating-linear-gradient(8deg, rgba(83, 43, 25, 0.01) 0 2px, transparent 2px 8px);
+  border-radius: 12px;
+}
+
+.aquelarre-sheet .card,
+.aquelarre-item-sheet .card {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(170deg, rgba(249, 236, 198, 0.94), rgba(236, 215, 170, 0.88)),
+    var(--aq-bg-paper-alt) center / cover no-repeat;
+  border: 1px solid rgba(94, 50, 27, 0.72);
+  border-radius: 10px 8px 12px 7px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 250, 234, 0.25),
+    0 4px 12px rgba(33, 16, 9, 0.14);
+}
+
+.aquelarre-sheet .card::before,
+.aquelarre-item-sheet .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 22% 26%, rgba(105, 45, 24, 0.04), transparent 34%),
+    radial-gradient(circle at 82% 16%, rgba(95, 34, 25, 0.035), transparent 30%),
+    radial-gradient(circle at 65% 82%, rgba(60, 30, 17, 0.03), transparent 28%);
+}
+
+.aquelarre-sheet .card::after,
+.aquelarre-item-sheet .card::after {
+  content: "+  o  +";
+  position: absolute;
+  right: 10px;
+  bottom: 6px;
+  font-family: var(--aq-font-title);
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: rgba(78, 36, 22, 0.2);
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+.aquelarre-sheet h2,
+.aquelarre-item-sheet h2 {
+  border-bottom: 1px dashed rgba(95, 29, 20, 0.75);
+}
+
+.aquelarre-sheet h2::before,
+.aquelarre-item-sheet h2::before {
+  content: "[+ ]";
+  margin-right: 8px;
+  font-size: 12px;
+  color: rgba(85, 39, 23, 0.65);
+  vertical-align: middle;
+}
+
+.aquelarre-sheet input,
+.aquelarre-sheet textarea,
+.aquelarre-sheet select,
+.aquelarre-item-sheet input,
+.aquelarre-item-sheet textarea,
+.aquelarre-item-sheet select {
+  background: rgba(250, 239, 208, 0.76);
+  border: 1px solid rgba(90, 53, 30, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 253, 240, 0.38);
+}
+
+.aquelarre-sheet textarea,
+.aquelarre-item-sheet textarea {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(112, 62, 39, 0.08) 0,
+    rgba(112, 62, 39, 0.08) 1px,
+    transparent 1px,
+    transparent 24px
+  );
+}
+
+.aquelarre-sheet .sheet-tabs .item {
+  border-radius: 11px 10px 0 0;
+  transform: none;
+}
+
+.aquelarre-sheet .sheet-tabs .item:nth-child(even) {
+  transform: none;
+}
+
+.aquelarre-sheet .item-row {
+  border-bottom: 1px dashed rgba(95, 29, 20, 0.4);
+}
+
+.aquelarre-sheet .status-effect {
+  border-radius: 9px 6px 8px 7px;
 }

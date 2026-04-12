@@ -15,7 +15,7 @@ export class AquelarreActorSheet extends foundry.appv1.sheets.ActorSheet {
         {
           navSelector: ".sheet-tabs",
           contentSelector: ".sheet-body",
-          initial: "ficha"
+          initial: "summary"
         }
       ]
     });
@@ -30,19 +30,24 @@ export class AquelarreActorSheet extends foundry.appv1.sheets.ActorSheet {
     context.system = this.actor.system;
 
     const allSkills = Object.entries(this.actor.system.skills ?? {});
-    
-   context.generalSkills = allSkills
-  .filter(([, skill]) => skill.group === "general")
-  .map(entry => enrichSkillRow(this.actor, entry))
-  .sort(sortSkillRows);
 
-context.weaponSkills = allSkills
-  .filter(([, skill]) => skill.group === "armas")
-  .map(entry => enrichSkillRow(this.actor, entry))
-  .sort(sortSkillRows);
+    context.generalSkills = allSkills
+      .filter(([, skill]) => skill.group === "general")
+      .map(entry => enrichSkillRow(this.actor, entry))
+      .sort(sortSkillRows);
 
+    context.weaponSkills = allSkills
+      .filter(([, skill]) => skill.group === "armas")
+      .map(entry => enrichSkillRow(this.actor, entry))
+      .sort(sortSkillRows);
 
+    const activeWeapon =
+      this.actor.getWeaponById?.(this.actor.system.combat?.activeWeaponId) ??
+      this.actor.getPrimaryEquippedWeapon?.() ??
+      null;
 
+    context.activeWeaponName = activeWeapon?.name ?? "";
+    context.activeWeaponFallback = !this.actor.system.combat?.activeWeaponId;
 
     context.weapons = this.actor.items.filter(i => i.type === "weapon");
     context.shields = this.actor.items.filter(i => i.type === "shield");
@@ -55,12 +60,12 @@ context.weaponSkills = allSkills
     context.shieldOptions = context.shields.map(i => [i.id, i.name]);
 
     context.skillPointSummary = this.actor.getSkillPointSummary?.() ?? {
-  total: 0,
-  spent: 0,
-  remaining: 0
-};
+      total: 0,
+      spent: 0,
+      remaining: 0
+    };
 
-context.skillInvestmentBreakdown = this.actor.getSkillInvestmentBreakdown?.() ?? [];
+    context.skillInvestmentBreakdown = this.actor.getSkillInvestmentBreakdown?.() ?? [];
 
     context.defenseSkillOptions = [
       ["esquivar", "Esquivar"],
@@ -76,49 +81,76 @@ context.skillInvestmentBreakdown = this.actor.getSkillInvestmentBreakdown?.() ??
     ];
 
     context.difficultyOptions = [
-      ["infalible", "Infalible"],
-      ["muyfacil", "Muy fácil"],
+      ["muy_facil", "Muy fácil"],
       ["facil", "Fácil"],
       ["normal", "Normal"],
       ["dificil", "Difícil"],
-      ["muydificil", "Muy difícil"],
-      ["imposible", "Imposible"]
+      ["muy_dificil", "Muy difícil"]
+    ];
+
+    context.aimLocationOptions = [
+      ["", "Aleatoria"],
+      ["cabeza", "Cabeza"],
+      ["torso", "Torso"],
+      ["abdomen", "Abdomen"],
+      ["brazo_izquierdo", "Brazo izquierdo"],
+      ["brazo_derecho", "Brazo derecho"],
+      ["pierna_izquierda", "Pierna izquierda"],
+      ["pierna_derecha", "Pierna derecha"]
     ];
 
     const creation = this.actor.system.creation ?? {};
     const kingdomKey = creation.kingdom ?? "";
     const ethnicityKey = creation.ethnicityKey ?? "";
-    const validProfessionKeys = creation.validProfessionKeys ?? [];
 
     context.kingdomOptions = kingdomOptions();
     context.ethnicityOptions = ethnicityOptionsForKingdom(kingdomKey);
     context.socialClassOptions = socialClassOptionsForEthnicity(ethnicityKey);
-    
+
     context.professionOptions = this.actor.getProfessionOptionsForCreation?.() ?? [];
     context.validProfessionsText = context.professionOptions
-     .filter(p => p.valid)
-     .map(p => p.label)
-     .join(", ");
+      .filter(p => p.valid)
+      .map(p => p.label)
+      .join(", ");
     context.invalidProfessionHints = context.professionOptions
-     .filter(p => !p.valid)
-     .map(p => `${p.label}: ${p.reasonText}`);
+      .filter(p => !p.valid)
+      .map(p => `${p.label}: ${p.reasonText}`);
     context.creationSocietyLabel = getSocietyLabel(creation.society ?? "");
-    
+
     context.remainingSkillPoints = this.actor.getRemainingSkillPoints?.() ?? 0;
     context.allowedSkillsText = (this.actor.system.creation?.allowedSkills ?? []).join(", ");
-    
+
     context.selectedProfession = this.actor.getSelectedProfessionData?.() ?? null;
     context.selectedProfessionBadges = this.actor.getProfessionSummaryBadges?.() ?? [];
+    context.fatherProfessionOptions = this.actor.getFatherProfessionOptions?.() ?? [];
+    context.selectedFatherProfessionLabel = this.actor.getFatherProfessionLabel?.() ?? "";
+    context.fatherProfessionBonusText = this.actor.getFatherProfessionBonusSummaryText?.() ?? "";
 
     context.currentTargetName = (canvas?.tokens?.controlled?.length === 1)
       ? canvas.tokens.controlled[0].actor?.name
       : "";
+
+    const combat = this.actor.system.combat ?? {};
+    context.lastHitLocationLabel = getCombatLocationLabel(combat.lastHitLocation ?? "");
+
+    context.displayStatusEffects = (combat.statusEffects ?? []).map(effect => ({
+      ...effect,
+      label: getStatusEffectLabel(effect.type),
+      locationLabel: getCombatLocationLabel(effect.location)
+    }));
+
+    context.combatPenaltySummary = this.actor.getCombatPenaltySummary?.() ?? [];
 
     return context;
   }
 
   activateListeners(html) {
     super.activateListeners(html);
+
+    const rerenderCreation = async () => {
+      await this.actor.refreshCreationTree?.();
+      this.render(false);
+    };
 
     html.find("[data-creation-kingdom]").on("change", async ev => {
       const kingdom = ev.currentTarget.value || "";
@@ -129,12 +161,10 @@ context.skillInvestmentBreakdown = this.actor.getSkillInvestmentBreakdown?.() ??
         "system.creation.socialClassKey": "",
         "system.creation.professionKey": "",
         "system.creation.validProfessionKeys": [],
-        "system.creation.society": "",
-        "system.bio.kingdom": kingdom
+        "system.creation.society": ""
       });
 
-      await this.actor.refreshCreationTree?.();
-      this.render(false);
+      await rerenderCreation();
     });
 
     html.find("[data-creation-ethnicity]").on("change", async ev => {
@@ -147,34 +177,9 @@ context.skillInvestmentBreakdown = this.actor.getSkillInvestmentBreakdown?.() ??
         "system.creation.validProfessionKeys": []
       });
 
-      await this.actor.refreshCreationTree?.();
-      this.render(false);
+      await rerenderCreation();
     });
-    html.find("[data-combat-attack]").on("click", async ev => {
-  ev.preventDefault();
 
-  const controlled = canvas?.tokens?.controlled ?? [];
-  if (controlled.length !== 1) {
-    ui.notifications.warn("Debes seleccionar exactamente un token objetivo.");
-    return;
-  }
-
-  const targetActor = controlled[0]?.actor;
-  if (!targetActor) {
-    ui.notifications.warn("El token seleccionado no tiene actor.");
-    return;
-  }
-
-  if (targetActor.id === this.actor.id) {
-    ui.notifications.warn("No puedes atacarte a ti mismo.");
-    return;
-  }
-
-  await this.actor.resolveWeaponAttack({
-    targetActor,
-    weaponId: this.actor.system.combat?.activeWeaponId || ""
-  });
-});
     html.find("[data-creation-social-class]").on("change", async ev => {
       const socialClassKey = ev.currentTarget.value || "";
 
@@ -183,8 +188,85 @@ context.skillInvestmentBreakdown = this.actor.getSkillInvestmentBreakdown?.() ??
         "system.creation.professionKey": ""
       });
 
-      await this.actor.refreshCreationTree?.();
+      await rerenderCreation();
+    });
+
+    html.find("[data-creation-profession]").on("change", async ev => {
+      const professionKey = ev.currentTarget.value || "";
+
+      await this.actor.update({
+        "system.creation.professionKey": professionKey
+      });
+
+      await rerenderCreation();
+    });
+
+    html.find("[data-creation-father-profession]").on("change", async ev => {
+      const fatherProfessionKey = ev.currentTarget.value || "";
+      const options = this.actor.getFatherProfessionOptions?.() ?? [];
+      const selected = options.find(opt => opt.key === fatherProfessionKey);
+
+      await this.actor.update({
+        "system.creation.fatherProfessionKey": fatherProfessionKey,
+        "system.bio.fatherProfession": selected?.label ?? ""
+      });
+
       this.render(false);
+    });
+
+    html.find('input[name="system.bio.sex"], select[name="system.bio.sex"]').on("change", async ev => {
+      const sex = ev.currentTarget.value || "";
+
+      await this.actor.update({
+        "system.bio.sex": sex,
+        "system.creation.professionKey": ""
+      });
+
+      await rerenderCreation();
+    });
+
+    html.find('[data-action="reset-combat-actions"]').on("click", async ev => {
+      ev.preventDefault();
+      await this.actor.resetCombatActions();
+      this.render(false);
+    });
+
+    html.find('[data-action="reset-combat-state"]').on("click", async ev => {
+      ev.preventDefault();
+      await this.actor.resetCombatState();
+      this.render(false);
+    });
+
+    html.find('[data-action="clear-combat-status-effects"]').on("click", async ev => {
+      ev.preventDefault();
+      await this.actor.clearCombatStatusEffects();
+      this.render(false);
+    });
+
+    html.find("[data-combat-attack]").on("click", async ev => {
+      ev.preventDefault();
+
+      const controlled = canvas?.tokens?.controlled ?? [];
+      if (controlled.length !== 1) {
+        ui.notifications?.warn("Debes seleccionar exactamente un token objetivo.");
+        return;
+      }
+
+      const targetActor = controlled[0]?.actor;
+      if (!targetActor) {
+        ui.notifications?.warn("El token seleccionado no tiene actor.");
+        return;
+      }
+
+      if (targetActor.id === this.actor.id) {
+        ui.notifications?.warn("No puedes atacarte a ti mismo.");
+        return;
+      }
+
+      await this.actor.resolveWeaponAttack({
+        targetActor,
+        weaponId: this.actor.system.combat?.activeWeaponId || ""
+      });
     });
 
     html.find("[data-roll-characteristic]").on("click", async ev => {
@@ -214,25 +296,10 @@ context.skillInvestmentBreakdown = this.actor.getSkillInvestmentBreakdown?.() ??
 
     html.find("[data-roll-damage]").on("click", async ev => {
       ev.preventDefault();
-      await this.actor.rollWeaponDamage(ev.currentTarget.dataset.rollDamage);
-    });
-
-    html.find("[data-resolve-attack]").on("click", async ev => {
-      ev.preventDefault();
-
-      const controlled = canvas?.tokens?.controlled ?? [];
-      if (controlled.length !== 1) {
-        ui.notifications?.warn("Selecciona exactamente 1 token objetivo en la escena.");
-        return;
-      }
-
-      const targetActor = controlled[0].actor;
-      if (!targetActor) {
-        ui.notifications?.warn("El token seleccionado no tiene actor.");
-        return;
-      }
-
-      await this.actor.resolveAttackAgainst(targetActor, ev.currentTarget.dataset.resolveAttack);
+      const itemId = ev.currentTarget.dataset.rollDamage;
+      const weapon = this.actor.items.get(itemId);
+      if (!weapon) return;
+      await this.actor.rollWeaponDamage(weapon);
     });
 
     html.find("[data-cast-spell]").on("click", async ev => {
@@ -248,6 +315,13 @@ context.skillInvestmentBreakdown = this.actor.getSkillInvestmentBreakdown?.() ??
     html.find("[data-toggle-equipped]").on("click", async ev => {
       ev.preventDefault();
       await this.actor.toggleItemEquipped(ev.currentTarget.dataset.toggleEquipped);
+      this.render(false);
+    });
+
+    html.find("[data-set-active-weapon]").on("click", async ev => {
+      ev.preventDefault();
+      await this.actor.setActiveWeapon(ev.currentTarget.dataset.setActiveWeapon);
+      this.render(false);
     });
 
     html.find("[data-skill-inc]").on("click", async ev => {
@@ -264,7 +338,27 @@ context.skillInvestmentBreakdown = this.actor.getSkillInvestmentBreakdown?.() ??
 
     html.find("[data-generate-characteristics]").on("click", async ev => {
       ev.preventDefault();
-      await this.actor.generateCharacteristics();
+
+      const choice = await new Promise(resolve => {
+        new Dialog({
+          title: "Tirar características",
+          content: "<p>¿Cómo quieres generar las características?</p>",
+          buttons: {
+            all: { label: "Todas a la vez", callback: () => resolve("all") },
+            oneByOne: { label: "Una a una", callback: () => resolve("oneByOne") },
+            cancel: { label: "Cancelar", callback: () => resolve(null) }
+          },
+          default: "all",
+          close: () => resolve(null)
+        }).render(true);
+      });
+
+      if (!choice) return;
+      if (choice === "all") {
+        await this.actor.generateCharacteristics();
+      } else {
+        await this.actor.generateCharacteristicsOneByOne();
+      }
       this.render(false);
     });
 
@@ -295,13 +389,7 @@ context.skillInvestmentBreakdown = this.actor.getSkillInvestmentBreakdown?.() ??
 
     html.find("[data-consume-action]").on("click", async ev => {
       ev.preventDefault();
-      await this.actor.consumeAction();
-      this.render(false);
-    });
-
-    html.find("[data-reset-actions]").on("click", async ev => {
-      ev.preventDefault();
-      await this.actor.resetActions();
+      await this.actor.spendCombatAction(1);
       this.render(false);
     });
 
@@ -332,18 +420,6 @@ context.skillInvestmentBreakdown = this.actor.getSkillInvestmentBreakdown?.() ??
       if (!itemId) return;
       await this.actor.deleteEmbeddedDocuments("Item", [itemId]);
     });
-  html.find('input[name="system.bio.sex"], select[name="system.bio.sex"]').on("change", async ev => {
-  const sex = ev.currentTarget.value || "";
-
-  await this.actor.update({
-    "system.bio.sex": sex,
-    "system.creation.professionKey": ""
-  });
-
-  await this.actor.refreshCreationTree?.();
-  this.render(false);
-});
-
   }
 }
 
@@ -353,13 +429,13 @@ function sortSkillRows(a, b) {
   return String(a.label ?? "").localeCompare(String(b.label ?? ""), "es");
 }
 
-
 function enrichSkillRow(actor, [key, skill]) {
   const max = actor.getSkillMax?.(key) ?? 100;
   const cost = actor.getSkillCost?.(key) ?? 1;
   const canIncrease = actor.canIncreaseSkill?.(key) ?? false;
   const canDecrease = actor.canDecreaseSkill?.(key) ?? (Number(skill.invested ?? 0) > 0);
   const spent = actor.getSkillSpentPoints?.(key) ?? 0;
+  const trainingTotal = actor.getSkillTrainingTotal?.(key) ?? (Number(skill.baseValue ?? 0) + Number(skill.invested ?? 0));
 
   const allowedSkills = actor.system.creation?.allowedSkills ?? [];
   const allowed = !allowedSkills.length || allowedSkills.includes(key);
@@ -372,7 +448,7 @@ function enrichSkillRow(actor, [key, skill]) {
 
   const reasons = [];
   if (!allowed) reasons.push("No permitida por la profesión");
-  if (Number(skill.total ?? 0) >= max) reasons.push("Has alcanzado el máximo");
+  if (Number(trainingTotal ?? 0) >= max) reasons.push("Has alcanzado el máximo");
   if (remaining < cost) reasons.push(`No quedan puntos suficientes (faltan ${cost - remaining})`);
 
   const blockReason = reasons.join(" · ");
@@ -381,6 +457,8 @@ function enrichSkillRow(actor, [key, skill]) {
     `${skill.label}`,
     `Base: ${skill.baseValue}`,
     `Invertido: ${skill.invested}`,
+    `Bono paterno: ${skill.fatherBonus ?? 0}`,
+    `Entrenable: ${trainingTotal}`,
     `Total: ${skill.total}`,
     `Máximo: ${max}`,
     `Coste actual: ${cost}`,
@@ -408,6 +486,10 @@ function enrichSkillRow(actor, [key, skill]) {
     max,
     cost,
     spent,
+    fatherBonus: Number(skill.fatherBonus ?? 0),
+    adjustmentLabel: Number(skill.fatherBonus ?? 0) >= 0
+      ? `+${Number(skill.fatherBonus ?? 0)}`
+      : `${Number(skill.fatherBonus ?? 0)}`,
     allowed,
     canIncrease,
     canDecrease,
@@ -425,4 +507,36 @@ function enrichSkillRow(actor, [key, skill]) {
     costTooltip: `Coste actual: ${cost} punto${cost === 1 ? "" : "s"}`,
     spentTooltip: `Has gastado ${spent} punto${spent === 1 ? "" : "s"} en esta competencia`
   };
+}
+
+function getCombatLocationLabel(locationKey) {
+  const key = String(locationKey ?? "").trim().toLowerCase().replaceAll("-", "_");
+
+  const labels = {
+    "": "—",
+    cabeza: "Cabeza",
+    torso: "Torso",
+    abdomen: "Abdomen",
+    brazo_izquierdo: "Brazo izquierdo",
+    brazo_derecho: "Brazo derecho",
+    pierna_izquierda: "Pierna izquierda",
+    pierna_derecha: "Pierna derecha",
+    general: "General"
+  };
+
+  return labels[key] ?? key;
+}
+
+function getStatusEffectLabel(type) {
+  const key = String(type ?? "").trim().toLowerCase();
+
+  const labels = {
+    aturdido: "Aturdido",
+    brazo_inutilizado: "Brazo inutilizado",
+    pierna_inutilizada: "Pierna inutilizada",
+    incapacitado: "Incapacitado",
+    moribundo: "Moribundo"
+  };
+
+  return labels[key] ?? key;
 }

@@ -1,0 +1,12 @@
+{"_id":"barbero","name":"Barbero","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"mr","notes":"Muela, barba, cabeza, sangría"}}
+{"_id":"barquero","name":"Barquero","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":1,"currency":"mr","notes":"Paso de río para persona"}}
+{"_id":"bufo","name":"Bufón","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":40,"currency":"mr","notes":"Por mes de servicio"}}
+{"_id":"curandero","name":"Curandero","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":15,"currency":"mr","notes":"Por tirada de Medicina"}}
+{"_id":"escriba","name":"Escriba","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"mr","notes":"Por carta o escrito redactado"}}
+{"_id":"guia","name":"Guía","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":5,"currency":"mr","notes":"Por día acompañando personajes"}}
+{"_id":"herrero","name":"Herrero","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":60,"currency":"mr","notes":"Por mes de servicio"}}
+{"_id":"maestro","name":"Maestro","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":10,"currency":"mr","notes":"Por semana de enseñanza"}}
+{"_id":"medico","name":"Médico","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":40,"currency":"mr","notes":"Por tirada de Medicina"}}
+{"_id":"peon","name":"Peón","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"mr","notes":"Por día trabajado"}}
+{"_id":"soldado-bisono","name":"Soldado Bisoño","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":36,"currency":"mr","notes":"Por mes de servicio"}}
+{"_id":"soldado-experto","name":"Soldado Experto","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":72,"currency":"mr","notes":"Por mes de servicio"}}

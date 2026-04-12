@@ -2,6 +2,9 @@ import { AquelarreActor } from "./documents/actor.mjs";
 import { AquelarreItem } from "./documents/item.mjs";
 import { AquelarreActorSheet } from "./sheets/actor-sheet.mjs";
 import { AquelarreItemSheet } from "./sheets/item-sheet.mjs";
+
+import "./hooks/combat-hooks.mjs";
+
 Hooks.once("init", function () {
   console.log("Aquelarre | Inicializando sistema v0.3.0 RAW");
 

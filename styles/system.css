@@ -1,16 +1,63 @@
+/* =========================================
+   Aquelarre - System CSS
+   Estructura, layout y componentes
+   Sin tema visual duplicado
+========================================= */
+
+:root {
+  --aq-sheet-min-width: 900px;
+  --aq-sheet-min-height: 700px;
+
+  --aq-space-1: 4px;
+  --aq-space-2: 8px;
+  --aq-space-3: 12px;
+  --aq-space-4: 16px;
+
+  --aq-radius-sm: 4px;
+  --aq-radius-md: 8px;
+  --aq-radius-lg: 10px;
+
+  --aq-border-width: 1px;
+  --aq-border-width-strong: 2px;
+
+  --aq-profile-size: 120px;
+  --aq-stat-input-width: 70px;
+  --aq-stat-button-width: 40px;
+
+  --aq-skill-col-base: 44px;
+  --aq-skill-col-total: 44px;
+  --aq-skill-col-max: 44px;
+  --aq-skill-col-adjust: 56px;
+  --aq-skill-col-actions: 150px;
+
+  --aq-skill-btn-width: 42px;
+  --aq-skill-btn-height: 36px;
+
+  --aq-card-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   CONTENEDORES BASE
+========================================= */
+
 .aquelarre.sheet.actor,
 .aquelarre.sheet.item {
-  min-width: 900px;
-  min-height: 700px;
+  min-width: var(--aq-sheet-min-width);
+  min-height: var(--aq-sheet-min-height);
 }
 
 .aquelarre-sheet,
 .aquelarre-item-sheet {
   position: relative;
-  background: url("../assets/ui/parchment.svg");
-  background-size: cover;
-  color: #2b1a0f;
-  padding: 12px;
+  padding: var(--aq-space-3);
+  box-sizing: border-box;
+}
+
+.aquelarre-sheet {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
 }
 
 .aquelarre-sheet::after {
@@ -20,11 +67,13 @@
   right: 18px;
   width: 180px;
   height: 180px;
-  background: url("../assets/ui/watermark.svg") no-repeat center;
-  background-size: contain;
   opacity: 0.07;
   pointer-events: none;
 }
+
+/* =========================================
+   FORM ELEMENTS
+========================================= */
 
 .aquelarre-sheet input,
 .aquelarre-sheet textarea,
@@ -35,182 +84,7 @@
 .aquelarre-item-sheet select,
 .aquelarre-item-sheet button {
   font-size: 14px;
-}
-
-.aquelarre-sheet input,
-.aquelarre-sheet textarea,
-.aquelarre-sheet select,
-.aquelarre-item-sheet input,
-.aquelarre-item-sheet textarea,
-.aquelarre-item-sheet select {
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid #5a3b1a;
-  border-radius: 4px;
-}
-
-.aquelarre-sheet button,
-.aquelarre-item-sheet button {
-  background: #5a3b1a;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 4px 8px;
-}
-
-.aquelarre-sheet button:hover,
-.aquelarre-item-sheet button:hover {
-  background: #7a5228;
-}
-
-.aquelarre-sheet .sheet-header {
-  position: relative;
-  margin-bottom: 12px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #5a3b1a;
-}
-
-.aquelarre-sheet .sheet-header::before {
-  content: none;
-}
-
-.aquelarre-sheet .header-main {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 12px;
-  align-items: start;
-}
-
-.aquelarre-sheet .profile-img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border: 2px solid #5f1d14;
-  border-radius: 8px;
-  z-index: 2;
-}
-
-.aquelarre-sheet .charname input {
-  font-size: 28px;
-  font-weight: bold;
-  height: 42px;
-}
-
-.aquelarre-sheet .bio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-.aquelarre-sheet .sheet-tabs {
-  display: flex;
-  gap: 8px;
-  margin: 8px 0 12px;
-  border-bottom: 2px solid #5f1d14;
-}
-
-.aquelarre-sheet .sheet-tabs .item {
-  padding: 8px 12px;
-  background: #d7c39a;
-  border: 1px solid #5f1d14;
-  border-bottom: none;
-  border-radius: 8px 8px 0 0;
-}
-
-.aquelarre-sheet .sheet-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.aquelarre-sheet .card,
-.aquelarre-item-sheet .card {
-  background: rgba(255, 248, 230, 0.82);
-  border: 2px solid #5a3b1a;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.15);
-}
-
-.aquelarre-sheet h2,
-.aquelarre-item-sheet h2 {
-  margin: 0 0 10px;
-  border-bottom: 1px solid #5f1d14;
-  padding-bottom: 4px;
-  font-family: Georgia, serif;
-}
-
-.aquelarre-sheet h2::after,
-.aquelarre-item-sheet h2::after {
-  content: "";
-  display: block;
-  height: 18px;
-  background: url("../assets/ui/divider.svg") center no-repeat;
-  background-size: contain;
-  opacity: 0.7;
-  margin-top: 3px;
-}
-
-.aquelarre-sheet .characteristics-grid,
-.aquelarre-sheet .secondary-grid,
-.aquelarre-sheet .combat-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-}
-
-.aquelarre-sheet .stat-box {
-  display: grid;
-  grid-template-columns: 1fr 70px 40px;
-  gap: 6px;
-  align-items: center;
-}
-
-.aquelarre-sheet .skills-table {
-  display: grid;
-  gap: 6px;
-}
-
-.aquelarre-sheet .skills-head,
-.aquelarre-sheet .skills-row {
-  display: grid;
-  grid-template-columns: 1.5fr 70px 70px 50px;
-  gap: 8px;
-  align-items: center;
-}
-
-.aquelarre-sheet .skills-head {
-  font-weight: bold;
-  border-bottom: 1px solid #5f1d14;
-  padding-bottom: 4px;
-}
-
-.aquelarre-sheet .button-row {
-  display: flex;
-  gap: 8px;
-  margin-top: 10px;
-  flex-wrap: wrap;
-}
-
-.aquelarre-sheet .list-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.aquelarre-sheet .item-row {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr auto;
-  gap: 8px;
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(95, 29, 20, 0.3);
-  align-items: center;
-}
-
-.aquelarre-sheet .item-actions {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  box-sizing: border-box;
 }
 
 .aquelarre-sheet textarea,
@@ -219,85 +93,272 @@
   resize: vertical;
 }
 
+/* =========================================
+   HEADER
+========================================= */
+
+.aquelarre-sheet .sheet-header {
+  position: relative;
+  margin-bottom: var(--aq-space-3);
+  padding-bottom: 10px;
+  flex: 0 0 auto;
+}
+
+.aquelarre-sheet .sheet-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -8px;
+  height: 115px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.aquelarre-sheet .header-main {
+  display: grid;
+  grid-template-columns: var(--aq-profile-size) 1fr;
+  gap: var(--aq-space-3);
+  align-items: start;
+}
+
+.aquelarre-sheet .profile-img {
+  width: var(--aq-profile-size);
+  height: var(--aq-profile-size);
+  object-fit: cover;
+  z-index: 2;
+}
+
+.aquelarre-sheet .charname input {
+  height: 42px;
+  width: 100%;
+}
+
+.aquelarre-sheet .bio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--aq-space-2);
+}
+
+/* =========================================
+   TABS Y CUERPO
+========================================= */
+
+.aquelarre-sheet .sheet-tabs {
+  display: flex;
+  gap: var(--aq-space-2);
+  margin: var(--aq-space-2) 0 var(--aq-space-3);
+  flex: 0 0 auto;
+}
+
+.aquelarre-sheet .sheet-tabs .item {
+  padding: var(--aq-space-2) var(--aq-space-3);
+  display: inline-flex;
+  align-items: center;
+}
+
+.aquelarre-sheet .sheet-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.aquelarre-sheet .tab {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: var(--aq-space-1);
+}
+
+/* =========================================
+   GRID GENERALES
+========================================= */
+
+.aquelarre-sheet .sheet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--aq-space-3);
+}
+
+.aquelarre-sheet .sheet-grid--full {
+  grid-template-columns: 1fr;
+  width: 100%;
+  justify-items: stretch;
+}
+
+.aquelarre-sheet .sheet-grid--full > .card {
+  width: 100%;
+}
+
+.aquelarre-sheet .sheet-grid--summary {
+  display: grid;
+  grid-template-columns: minmax(420px, 1fr) minmax(420px, 1fr);
+  gap: var(--aq-space-3);
+  align-items: start;
+}
+
+.aquelarre-sheet .combat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: var(--aq-space-3);
+  align-items: start;
+}
+
+.aquelarre-sheet .combat-grid > .target-hint,
+.aquelarre-sheet .combat-grid .button-row {
+  grid-column: 1 / -1;
+}
+
+.aquelarre-sheet .combat-grid label {
+  display: block;
+  min-width: 0;
+}
+
+.aquelarre-sheet .summary-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--aq-space-3);
+  min-width: 0;
+}
+
+.aquelarre-sheet .summary-right-column > .card {
+  margin: 0;
+}
+
+.aquelarre-sheet .characteristics-grid,
+.aquelarre-sheet .secondary-grid,
+.aquelarre-sheet .combat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--aq-space-2);
+}
+
+@media (min-width: 1280px) {
+  .aquelarre-sheet .combat-grid {
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+  }
+}
+
+/* =========================================
+   CARDS Y SUBSECCIONES
+========================================= */
+
+.aquelarre-sheet .card,
+.aquelarre-item-sheet .card {
+  border-radius: var(--aq-radius-lg);
+  padding: 10px;
+  box-shadow: var(--aq-card-shadow);
+}
+
+.aquelarre-sheet .card.card--full {
+  grid-column: 1 / -1;
+}
+
+.card-subsection {
+  border-radius: var(--aq-radius-md);
+  padding: var(--aq-space-2);
+}
+
+.card-subsection h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+/* =========================================
+   BOTONES / FILAS / LISTAS
+========================================= */
+
+.aquelarre-sheet .button-row {
+  display: flex;
+  gap: var(--aq-space-2);
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.aquelarre-sheet .button-row button {
+  width: auto;
+  min-width: auto;
+  white-space: nowrap;
+  padding: 6px 12px;
+  flex-shrink: 0;
+}
+
+.combat-actions-row {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0 0;
+  align-items: center;
+}
+
+.combat-actions-row button {
+  padding: 4px 10px;
+  font-size: 13px;
+}
+
+.combat-actions-row button.primary-action {
+  padding: 6px 14px;
+  font-weight: 600;
+}
+
+.combat-actions-row .button-icon {
+  margin-right: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.aquelarre-sheet .list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--aq-space-2);
+}
+
+.aquelarre-sheet .list-header .inventory-create-btn {
+  width: fit-content;
+  min-width: 0;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding: 4px 10px;
+  line-height: 1.2;
+}
+
+.aquelarre-sheet .item-row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr auto;
+  gap: var(--aq-space-2);
+  padding: var(--aq-space-2) 0;
+  align-items: center;
+}
+
+.aquelarre-sheet .item-actions:not(.skill-actions) {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.aquelarre-sheet .stat-box {
+  display: grid;
+  grid-template-columns: 1fr var(--aq-stat-input-width) var(--aq-stat-button-width);
+  gap: 6px;
+  align-items: center;
+}
+
 .aquelarre-sheet .target-hint {
   margin: 6px 0 10px;
   font-style: italic;
   opacity: 0.85;
 }
 
-.aquelarre-roll {
-  padding: 8px;
-}
-.skills-grid-extended {
-  display: grid;
-  grid-template-columns: 1.6fr 60px 60px 60px 60px 60px 140px;
-  gap: 6px;
-  align-items: center;
-}
+/* =========================================
+   CREACIÓN / PROFESIONES
+========================================= */
 
-.skill-actions {
-  display: flex;
-  gap: 4px;
-  justify-content: flex-end;
-}
-
-.skill-name {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.skill-tag {
-  font-size: 11px;
-  color: #7a1f1f;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.skill-cost {
-  font-weight: bold;
-  text-align: center;
-}
-
-.skill-row--normal {
-  background: rgba(255, 248, 230, 0.35);
-}
-
-.skill-row--warning {
-  background: rgba(210, 160, 40, 0.20);
-  border-left: 4px solid #c28a1c;
-}
-
-.skill-row--expensive {
-  background: rgba(179, 97, 26, 0.22);
-  border-left: 4px solid #9b4f12;
-}
-
-.skill-row--blocked {
-  background: rgba(160, 40, 40, 0.18);
-  border-left: 4px solid #8f1d1d;
-  opacity: 0.92;
-}
-
-.skills-row button:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-  filter: grayscale(0.2);
-}
-
-.skills-row {
-  padding: 6px 8px;
-  border-radius: 6px;
-  margin-bottom: 4px;
-}
-.aquelarre-sheet .card.card--full {
-  grid-column: 1 / -1;
-}
 .creation-hints {
-  margin-top: 8px;
-  padding: 8px 10px;
-  background: rgba(120, 30, 30, 0.08);
-  border-left: 4px solid #8f1d1d;
+  margin-top: var(--aq-space-2);
+  padding: var(--aq-space-2) 10px;
   border-radius: 6px;
 }
 
@@ -310,19 +371,9 @@
 }
 
 .profession-panel {
-  margin-top: 12px;
-  padding: 12px;
-  border-radius: 10px;
-  border: 2px solid #5a3b1a;
-  background: rgba(255, 248, 230, 0.78);
-}
-
-.profession-panel--ok {
-  border-left: 6px solid #2f7a3e;
-}
-
-.profession-panel--blocked {
-  border-left: 6px solid #9b2c2c;
+  margin-top: var(--aq-space-3);
+  padding: var(--aq-space-3);
+  border-radius: var(--aq-radius-lg);
 }
 
 .profession-panel__header {
@@ -330,59 +381,12 @@
   justify-content: space-between;
   align-items: start;
   gap: 10px;
-  margin-bottom: 8px;
+  margin-bottom: var(--aq-space-2);
 }
 
 .profession-panel__header h3 {
   margin: 0;
   font-size: 18px;
-}
-
-.profession-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  justify-content: flex-end;
-}
-
-.profession-badge {
-  display: inline-block;
-  padding: 3px 8px;
-  border-radius: 999px;
-  font-size: 12px;
-  line-height: 1.2;
-  border: 1px solid rgba(0, 0, 0, 0.18);
-  background: rgba(255,255,255,0.7);
-}
-
-.profession-badge--ok {
-  background: rgba(58, 143, 76, 0.18);
-  border-color: #2f7a3e;
-  color: #1d5a2a;
-}
-
-.profession-badge--error {
-  background: rgba(180, 50, 50, 0.18);
-  border-color: #9b2c2c;
-  color: #7a1f1f;
-}
-
-.profession-badge--warning {
-  background: rgba(210, 160, 40, 0.20);
-  border-color: #c28a1c;
-  color: #8a5a00;
-}
-
-.profession-badge--neutral {
-  background: rgba(90, 59, 26, 0.10);
-  border-color: #5a3b1a;
-  color: #5a3b1a;
-}
-
-.profession-badge--skill {
-  background: rgba(95, 29, 20, 0.10);
-  border-color: #5f1d14;
-  color: #5f1d14;
 }
 
 .profession-panel__grid {
@@ -392,17 +396,23 @@
   margin-top: 10px;
 }
 
-.card-subsection {
-  background: rgba(255,255,255,0.35);
-  border: 1px solid rgba(90, 59, 26, 0.25);
-  border-radius: 8px;
-  padding: 8px;
+.profession-badges,
+.profession-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-.card-subsection h4 {
-  margin: 0 0 6px;
-  font-size: 14px;
-  color: #5a3b1a;
+.profession-badges {
+  justify-content: flex-end;
+}
+
+.profession-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1.2;
 }
 
 .profession-stats {
@@ -420,16 +430,6 @@
   font-size: 13px;
 }
 
-.profession-stat--ok {
-  background: rgba(58, 143, 76, 0.14);
-  border-left: 4px solid #2f7a3e;
-}
-
-.profession-stat--fail {
-  background: rgba(180, 50, 50, 0.14);
-  border-left: 4px solid #9b2c2c;
-}
-
 .profession-stat__label {
   font-weight: bold;
 }
@@ -438,32 +438,310 @@
   font-variant-numeric: tabular-nums;
 }
 
-.profession-skill-tags {
+/* =========================================
+   ESTADOS / PENALES / TAGS
+========================================= */
+
+.status-effects {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status-effect {
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.skill-breakdown-panel {
+  margin-top: 10px;
+}
+
+.skill-breakdown-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 
-@media (max-width: 1100px) {
-  .profession-panel__grid {
+.skill-breakdown-tag,
+.skill-tag {
+  display: inline-block;
+  line-height: 1.1;
+}
+
+.skill-tag {
+  font-size: 0.75rem;
+}
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.aquelarre-sheet .skills-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--aq-space-3);
+  align-items: start;
+}
+
+.aquelarre-sheet .skills-layout > .card,
+.aquelarre-sheet .skills-card-body {
+  min-width: 0;
+}
+
+.aquelarre-sheet .skills-table {
+  display: grid;
+  gap: var(--aq-space-1);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.aquelarre-sheet .skills-head.skills-grid-extended,
+.aquelarre-sheet .skills-row.skills-grid-extended {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    var(--aq-skill-col-base)
+    var(--aq-skill-col-total)
+    var(--aq-skill-col-max)
+    var(--aq-skill-col-adjust)
+    var(--aq-skill-col-actions);
+  gap: var(--aq-space-1);
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.aquelarre-sheet .skills-head.skills-grid-extended {
+  font-weight: 700;
+  padding: 0 0 4px;
+}
+
+.aquelarre-sheet .skills-row.skills-grid-extended {
+  min-height: 42px;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.aquelarre-sheet .skills-head.skills-grid-extended > span,
+.aquelarre-sheet .skills-row.skills-grid-extended > span,
+.aquelarre-sheet .skills-row.skills-grid-extended > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.aquelarre-sheet .skills-head.skills-grid-extended > span:first-child,
+.aquelarre-sheet .skills-row.skills-grid-extended > .skill-name {
+  justify-content: flex-start;
+  justify-self: stretch;
+  text-align: left;
+}
+
+.aquelarre-sheet .skill-head-name {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding-left: 6px;
+  box-sizing: border-box;
+}
+
+.aquelarre-sheet .skill-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+  min-width: 0;
+  padding-left: 4px;
+  line-height: 1;
+  overflow: hidden;
+}
+
+.aquelarre-sheet .skill-label,
+.aquelarre-sheet .skill-meta {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.aquelarre-sheet .skill-meta {
+  font-size: 10px;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.aquelarre-sheet .item-actions.skill-actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.aquelarre-sheet .item-actions.skill-actions button,
+.aquelarre-sheet .skill-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--aq-skill-btn-width);
+  min-width: var(--aq-skill-btn-width);
+  height: var(--aq-skill-btn-height);
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+.aquelarre-sheet .skills-row button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* estados de fila */
+.skill-row--normal {}
+.skill-row--warning {}
+.skill-row--expensive {}
+.skill-row--blocked {}
+
+/* =========================================
+   ITEM SHEET
+========================================= */
+
+.aquelarre-item-sheet .sheet-header {
+  margin-bottom: var(--aq-space-3);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+  .aquelarre-sheet .skills-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .aquelarre-sheet .sheet-grid,
+  .aquelarre-sheet .sheet-grid--summary,
+  .aquelarre-sheet .profession-panel__grid,
+  .aquelarre-sheet .bio-grid,
+  .aquelarre-sheet .characteristics-grid,
+  .aquelarre-sheet .secondary-grid,
+  .aquelarre-sheet .combat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aquelarre-sheet .header-main {
     grid-template-columns: 1fr;
   }
 }
-.aquelarre-chat {
-  background: rgba(255, 248, 230, 0.92);
-  border: 2px solid #5a3b1a;
-  border-radius: 10px;
-  padding: 10px;
-  color: #2b1a0f;
+/* =========================================
+   TOOLTIP - PROFESIONES RAW
+========================================= */
+
+.aq-field-with-tooltip {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
 }
 
-.aquelarre-chat h3 {
-  margin: 0 0 8px;
-  font-family: Georgia, serif;
-  border-bottom: 1px solid #5f1d14;
-  padding-bottom: 4px;
+.aq-label-with-tooltip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
 }
 
-.aquelarre-chat p {
-  margin: 4px 0;
+.aq-tooltip-trigger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  cursor: help;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  user-select: none;
 }
+
+.aq-tooltip-trigger::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 280px;
+  min-width: 180px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 40;
+  white-space: normal;
+  text-align: left;
+  line-height: 1.25;
+  transition: opacity 120ms ease;
+  box-sizing: border-box;
+}
+
+.aq-tooltip-trigger:hover::after,
+.aq-tooltip-trigger:focus::after {
+  opacity: 1;
+  visibility: visible;
+}
+/* =========================================
+   TOOLTIP - BADGES / REQUISITOS
+========================================= */
+
+.aq-tooltip-badge {
+  position: relative;
+  cursor: help;
+}
+
+.aq-tooltip-badge::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 280px;
+  min-width: 180px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 50;
+  white-space: normal;
+  text-align: left;
+  line-height: 1.25;
+  transition: opacity 120ms ease;
+  box-sizing: border-box;
+}
+
+.aq-tooltip-badge:hover::after,
+.aq-tooltip-badge:focus::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.aq-requirement-ok {
+  display: inline-block;
+}
+
+

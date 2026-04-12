@@ -9,125 +9,418 @@
 
         <div class="bio-grid">
           <label>Reino
-  <select name="system.creation.kingdom" data-creation-kingdom>
-    <option value="">--</option>
-    {{#each kingdomOptions as |opt|}}
-      <option value="{{opt.[0]}}" {{#if (eq ../system.creation.kingdom opt.[0])}}selected{{/if}}>
-        {{opt.[1]}}
-      </option>
-    {{/each}}
-  </select>
-</label>
- 
-<label>Grupo étnico
-  <select name="system.creation.ethnicityKey" data-creation-ethnicity>
-    <option value="">--</option>
-    {{#each ethnicityOptions as |opt|}}
-      <option value="{{opt.[0]}}" {{#if (eq ../system.creation.ethnicityKey opt.[0])}}selected{{/if}}>
-        {{opt.[1]}}
-      </option>
-    {{/each}}
-  </select>
-</label>
+            <select name="system.creation.kingdom" data-creation-kingdom>
+              <option value="">--</option>
+              {{#each kingdomOptions as |opt|}}
+                <option value="{{opt.[0]}}" {{#if (eq ../system.creation.kingdom opt.[0])}}selected{{/if}}>
+                  {{opt.[1]}}
+                </option>
+              {{/each}}
+            </select>
+          </label>
 
-<label>Clase social
-  <select name="system.creation.socialClassKey" data-creation-social-class>
-    <option value="">--</option>
-    {{#each socialClassOptions as |opt|}}
-      <option value="{{opt.[0]}}" {{#if (eq ../system.creation.socialClassKey opt.[0])}}selected{{/if}}>
-        {{opt.[1]}}
-      </option>
-    {{/each}}
-  </select>
-</label>
-<label>Sociedad
-  <input type="text" value="{{creationSocietyLabel}}" disabled />
-</label>
+          <label>Grupo étnico
+            <select name="system.creation.ethnicityKey" data-creation-ethnicity>
+              <option value="">--</option>
+              {{#each ethnicityOptions as |opt|}}
+                <option value="{{opt.[0]}}" {{#if (eq ../system.creation.ethnicityKey opt.[0])}}selected{{/if}}>
+                  {{opt.[1]}}
+                </option>
+              {{/each}}
+            </select>
+          </label>
 
+          <label>Clase social
+            <select name="system.creation.socialClassKey" data-creation-social-class>
+              <option value="">--</option>
+              {{#each socialClassOptions as |opt|}}
+                <option value="{{opt.[0]}}" {{#if (eq ../system.creation.socialClassKey opt.[0])}}selected{{/if}}>
+                  {{opt.[1]}}
+                </option>
+              {{/each}}
+            </select>
+          </label>
 
-          <label>Profesión <input type="text" name="system.bio.profession" value="{{system.bio.profession}}" /></label>
-          <label>Profesión paterna <input type="text" name="system.bio.fatherProfession" value="{{system.bio.fatherProfession}}" /></label>
-          <label>Sexo <input type="text" name="system.bio.sex" value="{{system.bio.sex}}" /></label>
-          <label>Edad <input type="text" name="system.bio.age" value="{{system.bio.age}}" /></label>
-          <label>Altura <input type="text" name="system.bio.height" value="{{system.bio.height}}" /></label>
-          <label>Peso <input type="text" name="system.bio.weight" value="{{system.bio.weight}}" /></label>
+          <label>Sociedad
+            <input type="text" value="{{creationSocietyLabel}}" disabled />
+          </label>
+
+          <label>Profesión
+            <input type="text" value="{{system.bio.profession}}" disabled />
+          </label>
+
+          <label>Sexo
+            <select name="system.bio.sex">
+              <option value="">--</option>
+              <option value="male" {{#if (eq system.bio.sex "male")}}selected{{/if}}>Hombre</option>
+              <option value="female" {{#if (eq system.bio.sex "female")}}selected{{/if}}>Mujer</option>
+            </select>
+          </label>
+
+          <label>Edad
+            <input type="text" name="system.bio.age" value="{{system.bio.age}}" />
+          </label>
         </div>
       </div>
     </div>
   </header>
 
   <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="ficha">Ficha</a>
-    <a class="item" data-tab="inventario">Inventario</a>
-    <a class="item" data-tab="equipo">Equipo y Notas</a>
-    <a class="item" data-tab="referencia">Referencia</a>
+    <a class="item" data-tab="summary">Resumen</a>
+    <a class="item" data-tab="skills">Competencias</a>
+    <a class="item" data-tab="combat">Combate</a>
+    <a class="item" data-tab="inventory">Inventario</a>
+    <a class="item" data-tab="magic">Magia y notas</a>
+    <a class="item" data-tab="reference">Referencia</a>
   </nav>
 
   <section class="sheet-body">
-    <div class="tab" data-group="primary" data-tab="ficha">
+
+    <div class="tab" data-group="primary" data-tab="summary">
+      <div class="sheet-grid sheet-grid--summary">
+
+<section class="card">
+  <h2>Creación RAW</h2>
+
+  <div class="button-row">
+    <button type="button" data-generate-characteristics="true">Tirar características</button>
+    <button type="button" data-randomize-origin="true">Origen aleatorio</button>
+    <button type="button" data-generate-backstory="true">Generar trasfondo</button>
+  </div>
+
+  <div class="combat-grid" style="margin-top:10px;">
+    <label>Profesión RAW
+      <select name="system.creation.professionKey" data-creation-profession>
+        <option value="">--</option>
+        {{#each professionOptions as |opt|}}
+          <option
+            value="{{opt.key}}"
+            {{#if (eq ../system.creation.professionKey opt.key)}}selected{{/if}}
+            {{#unless opt.valid}}disabled{{/unless}}
+            title="{{opt.reasonText}}">
+            {{opt.label}}{{#unless opt.valid}} — bloqueada{{/unless}}
+          </option>
+        {{/each}}
+      </select>
+    </label>
+  </div>
+
+  <p><strong>Profesiones válidas:</strong> {{validProfessionsText}}</p>
+
+  {{#if invalidProfessionHints.length}}
+    <div class="creation-hints">
+      <p><strong>Bloqueos actuales:</strong></p>
+      <ul>
+        {{#each invalidProfessionHints as |hint|}}
+          <li>{{hint}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+
+  {{#if selectedProfession}}
+    <div class="profession-panel {{#if selectedProfession.valid}}profession-panel--ok{{else}}profession-panel--blocked{{/if}}">
+      <div class="profession-panel__header">
+        <h3>{{selectedProfession.label}}</h3>
+        <div class="profession-badges">
+          {{#each selectedProfessionBadges as |badge|}}
+            <span class="profession-badge profession-badge--{{badge.type}}">{{badge.label}}</span>
+          {{/each}}
+        </div>
+      </div>
+
+      <p>
+        <strong>Estado:</strong>
+        {{#if selectedProfession.valid}}Disponible{{else}}Bloqueada{{/if}}
+      </p>
+
+      {{#unless selectedProfession.valid}}
+        <p><strong>Motivos:</strong> {{selectedProfession.reasonText}}</p>
+      {{/unless}}
+
+      <div class="profession-panel__grid">
+        <div class="card-subsection">
+          <h4>Requisitos</h4>
+          <p><strong>Sociedad:</strong> {{#if selectedProfession.society.length}}{{selectedProfession.society}}{{else}}Cualquiera{{/if}}</p>
+          <p><strong>Clase social:</strong> {{#if selectedProfession.socialClass.length}}{{selectedProfession.socialClass}}{{else}}Cualquiera{{/if}}</p>
+          <p><strong>Reinos:</strong> {{#if selectedProfession.kingdoms.length}}{{selectedProfession.kingdoms}}{{else}}Cualquiera{{/if}}</p>
+          <p><strong>Sexo:</strong>
+            {{#if selectedProfession.sex.length}}
+              {{#each selectedProfession.sex as |sx|}}
+                {{#if (eq sx "male")}}Hombre{{else if (eq sx "female")}}Mujer{{else}}{{sx}}{{/if}}
+              {{/each}}
+            {{else}}
+              Cualquiera
+            {{/if}}
+          </p>
+        </div>
+
+        <div class="card-subsection">
+          <h4>Mínimos</h4>
+          {{#if selectedProfession.minStats.length}}
+            <div class="profession-stats">
+              {{#each selectedProfession.minStats as |stat|}}
+                <div class="profession-stat {{#if stat.ok}}profession-stat--ok{{else}}profession-stat--fail{{/if}}">
+                  <span class="profession-stat__label">{{stat.label}}</span>
+                  <span class="profession-stat__values">{{stat.current}} / {{stat.required}}</span>
+                </div>
+              {{/each}}
+            </div>
+          {{else}}
+            <p>Sin mínimos especiales.</p>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="profession-panel__grid">
+        <div class="card-subsection">
+          <h4>Ventajas de creación</h4>
+          <p><strong>Puntos de competencia:</strong> {{selectedProfession.skillPoints}}</p>
+          <p><strong>Dinero:</strong> {{selectedProfession.money}}</p>
+        </div>
+
+        <div class="card-subsection">
+          <h4>Competencias permitidas</h4>
+          {{#if selectedProfession.allowedSkills.length}}
+            <div class="profession-skill-tags">
+              {{#each selectedProfession.allowedSkills as |skill|}}
+                <span class="profession-badge profession-badge--skill">{{skill}}</span>
+              {{/each}}
+            </div>
+          {{else}}
+            <p>No definidas.</p>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  {{/if}}
+
+  <div class="button-row">
+    <button type="button" data-apply-profession-raw="true">Aplicar profesión RAW</button>
+  </div>
+
+  <div class="skill-points-summary">
+    <div class="skill-points-box">
+      <span class="label">Totales</span>
+      <span class="value">{{skillPointSummary.total}}</span>
+    </div>
+    <div class="skill-points-box">
+      <span class="label">Gastados</span>
+      <span class="value">{{skillPointSummary.spent}}</span>
+    </div>
+    <div class="skill-points-box skill-points-box--remaining">
+      <span class="label">Restantes</span>
+      <span class="value">{{skillPointSummary.remaining}}</span>
+    </div>
+  </div>
+
+  <p><strong>Competencias permitidas:</strong> {{allowedSkillsText}}</p>
+
+  {{#if skillInvestmentBreakdown.length}}
+    <div class="skill-breakdown-panel">
+      <p><strong>Desglose de gasto:</strong></p>
+      <div class="skill-breakdown-tags">
+        {{#each skillInvestmentBreakdown as |entry|}}
+          <span class="skill-breakdown-tag" title="{{entry.label}}: invertido {{entry.invested}}, total {{entry.total}}">
+            {{entry.label}}: {{entry.spent}}
+          </span>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+</section>
+
+<div class="summary-right-column">
+  <section class="card">
+    <h2>Características</h2>
+    <div class="characteristics-grid">
+      {{#each system.characteristics as |char key|}}
+        <div class="stat-box">
+          <label>{{char.label}}</label>
+          <input type="number" name="system.characteristics.{{key}}.value" value="{{char.value}}" />
+          <button type="button" data-roll-characteristic="{{key}}">🎲</button>
+        </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Secundarias</h2>
+    <div class="secondary-grid">
+      <label>Suerte <input type="number" name="system.secondary.luck.value" value="{{system.secondary.luck.value}}" disabled /></label>
+      <label>Suerte actual <input type="number" name="system.secondary.luckCurrent.value" value="{{system.secondary.luckCurrent.value}}" /></label>
+      <label>Templanza <input type="number" name="system.secondary.temperance.value" value="{{system.secondary.temperance.value}}" /></label>
+      <label>RR <input type="number" name="system.secondary.rr.value" value="{{system.secondary.rr.value}}" /></label>
+      <label>IRR <input type="number" name="system.secondary.irr.value" value="{{system.secondary.irr.value}}" /></label>
+      <label>PF <input type="number" name="system.secondary.pf.value" value="{{system.secondary.pf.value}}" /></label>
+      <label>PC <input type="number" name="system.secondary.pc.value" value="{{system.secondary.pc.value}}" /></label>
+      <label>PV actuales <input type="number" name="system.secondary.pv.value" value="{{system.secondary.pv.value}}" /></label>
+      <label>PV máximos <input type="number" name="system.secondary.pv.max" value="{{system.secondary.pv.max}}" disabled /></label>
+    </div>
+
+    <div class="status-effects">
+  <h3>Estados</h3>
+
+  {{#if displayStatusEffects.length}}
+    {{#each displayStatusEffects}}
+      <div class="status-effect">
+        <strong>{{this.label}}</strong> ({{this.locationLabel}})
+      </div>
+    {{/each}}
+  {{else}}
+    <p>Sin efectos</p>
+  {{/if}}
+</div>
+  </section>
+</div>
+      </div>
+
+    </div>
+
+<div class="tab" data-group="primary" data-tab="skills">
+  <div class="skills-layout">
+  <section class="card" style="min-width:0;">
+    <h2>Competencias Generales</h2>
+
+        <div class="skills-card-body">
+  <div class="skills-table">
+          <div class="skills-head skills-grid-extended">
+          <span class="skill-head-name">Competencia</span>
+          <span>Base</span>
+          <span>Total</span>
+          <span>Máx.</span>
+          <span>Ajuste</span>
+        </div>
+
+        {{#each generalSkills as |skill|}}
+          <div class="skills-row skills-grid-extended {{skill.rowClasses}}" title="{{skill.rowTooltip}}" style="width:100%; max-width:100%; box-sizing:border-box;">
+
+<span class="skill-name" style="display:flex; flex-direction:column; align-items:flex-start; justify-content:center; text-align:left; width:100%; min-width:0; padding-left:4px; line-height:1;">
+  <span class="skill-label" style="display:block; width:100%; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{skill.label}}</span>
+  <span class="skill-meta" style="display:block; width:100%; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:10px; line-height:1; opacity:0.85;">
+                {{#if skill.allowed}}
+                  <small class="skill-tag skill-tag--allowed">permitida</small>
+                {{else}}
+                  <small class="skill-tag">no permitida</small>
+                {{/if}}
+
+                {{#if skill.spent}}
+                  <small class="skill-tag skill-tag--spent">
+                    gastado {{skill.spent}}
+                  </small>
+                {{/if}}
+              </span>
+            </span>
+
+            <span>{{skill.baseValue}}</span>
+            <span>{{skill.total}}</span>
+            <span>{{skill.max}}</span>
+
+            <div class="item-actions skill-actions" style="display:flex; flex-direction:row; flex-wrap:nowrap; gap:6px; align-items:center; justify-content:flex-end;">
+              <button
+                type="button"
+                data-skill-dec="{{skill.key}}"
+                title="{{skill.minusTooltip}}"
+                {{#unless skill.canDecrease}}disabled{{/unless}}>
+                -
+              </button>
+
+              <button
+                type="button"
+                data-skill-inc="{{skill.key}}"
+                title="{{skill.plusTooltip}}"
+                {{#unless skill.canIncrease}}disabled{{/unless}}>
+                +{{skill.cost}}
+              </button>
+
+              <button
+                type="button"
+                data-roll-skill="{{skill.key}}"
+                title="{{skill.rollTooltip}}">
+                🎲
+              </button>
+            </div>
+          </div>
+        {{/each}}
+        </div>
+      </div>
+    </section>
+
+  <section class="card" style="min-width:0;">
+    <h2>Competencias de Armas</h2>
+       <div class="skills-card-body">
+  <div class="skills-table">
+    <div class="skills-head skills-grid-extended">
+          <span>Competencia</span>
+          <span>Base</span>
+          <span>Total</span>
+          <span>Máx.</span>
+          <span>Ajuste</span>
+        </div>
+
+        {{#each weaponSkills as |skill|}}
+          <div class="skills-row skills-grid-extended {{skill.rowClasses}}" title="{{skill.rowTooltip}}">
+            <span class="skill-name">
+  <span class="skill-label">{{skill.label}}</span>
+  <span class="skill-meta">
+            {{#if skill.allowed}}
+                  <small class="skill-tag skill-tag--allowed">permitida</small>
+                {{else}}
+                  <small class="skill-tag">no permitida</small>
+                {{/if}}
+
+                {{#if skill.spent}}
+                  <small class="skill-tag skill-tag--spent">
+                    gastado {{skill.spent}}
+                  </small>
+                {{/if}}
+              </span>
+            </span>
+
+            <span>{{skill.baseValue}}</span>
+            <span>{{skill.total}}</span>
+            <span>{{skill.max}}</span>
+
+            
+            <div class="item-actions skill-actions">
+              <button
+                   type="button"
+                    class="skill-action-btn"
+                    data-skill-dec="{{skill.key}}"
+                    title="{{skill.minusTooltip}}"
+                {{#unless skill.canDecrease}}disabled{{/unless}}>
+                -
+              </button>
+              <button
+                    type="button"
+                    class="skill-action-btn"
+                    data-skill-inc="{{skill.key}}"
+                    title="{{#if skill.canIncrease}}{{skill.costTooltip}}{{else}}{{skill.blockReason}}{{/if}}"
+                {{#unless skill.canIncrease}}disabled{{/unless}}>
+                +{{skill.cost}}
+              </button>
+
+              <button
+                type="button"
+                data-roll-skill="{{skill.key}}"
+                title="Tirar {{skill.label}}">
+                🎲
+              </button>
+            </div>
+          </div>
+        {{/each}}
+        </div>
+       </div>
+    </section>
+
+  </div>
+</div>
+
+    <div class="tab" data-group="primary" data-tab="combat">
       <div class="sheet-grid">
-
-        <section class="card">
-          <h2>Creación RAW</h2>
-
-          <div class="button-row">
-            <button type="button" data-generate-characteristics="true">Tirar características</button>
-            <button type="button" data-randomize-origin="true">Origen aleatorio</button>
-            <button type="button" data-generate-backstory="true">Generar trasfondo</button>
-          </div>
-
-          <div class="combat-grid" style="margin-top:10px;">
-            <label>Profesión RAW
-            <select name="system.creation.professionKey" data-creation-profession>
-  <option value="">--</option>
-  {{#each professionOptions as |opt|}}
-    <option value="{{opt.[0]}}" {{#if (eq ../system.creation.professionKey opt.[0])}}selected{{/if}}>
-      {{opt.[1]}}
-    </option>
-  {{/each}}
-</select>
-            </label>
-            <p><strong>Profesiones válidas:</strong> {{validProfessionsText}}</p>
-          </div>
-
-          <div class="button-row">
-            <button type="button" data-apply-profession-raw="true">Aplicar profesión RAW</button>
-          </div>
-
-          <p><strong>Puntos restantes:</strong> {{remainingSkillPoints}}</p>
-          <p><strong>Competencias permitidas:</strong> {{allowedSkillsText}}</p>
-        </section>
-
-        <section class="card">
-          <h2>Características</h2>
-          <div class="characteristics-grid">
-            {{#each system.characteristics as |char key|}}
-              <div class="stat-box">
-                <label>{{char.label}}</label>
-                <input type="number" name="system.characteristics.{{key}}.value" value="{{char.value}}" />
-                <button type="button" data-roll-characteristic="{{key}}">🎲</button>
-              </div>
-            {{/each}}
-          </div>
-        </section>
-
-        <section class="card">
-          <h2>Secundarias</h2>
-          <div class="secondary-grid">
-            <label>Suerte <input type="number" name="system.secondary.luck.value" value="{{system.secondary.luck.value}}" disabled /></label>
-            <label>Suerte actual <input type="number" name="system.secondary.luckCurrent.value" value="{{system.secondary.luckCurrent.value}}" /></label>
-            <label>Templanza <input type="number" name="system.secondary.temperance.value" value="{{system.secondary.temperance.value}}" /></label>
-            <label>RR <input type="number" name="system.secondary.rr.value" value="{{system.secondary.rr.value}}" /></label>
-            <label>IRR <input type="number" name="system.secondary.irr.value" value="{{system.secondary.irr.value}}" /></label>
-            <label>PF <input type="number" name="system.secondary.pf.value" value="{{system.secondary.pf.value}}" /></label>
-            <label>PC <input type="number" name="system.secondary.pc.value" value="{{system.secondary.pc.value}}" /></label>
-            <label>PV actuales <input type="number" name="system.secondary.pv.value" value="{{system.secondary.pv.value}}" /></label>
-            <label>PV máximos <input type="number" name="system.secondary.pv.max" value="{{system.secondary.pv.max}}" disabled /></label>
-          </div>
-        </section>
-
         <section class="card">
           <h2>Combate</h2>
+
           <div class="combat-grid">
             <label>Acciones actuales
               <input type="number" name="system.combat.actions.current" value="{{system.combat.actions.current}}" />
@@ -151,6 +444,10 @@
                 <option value="shield" {{#if (eq system.combat.defenseMode "shield")}}selected{{/if}}>Escudo</option>
               </select>
             </label>
+            
+            <p class="target-hint">
+             La defensa usada dependerá del modo elegido: competencia, arma de parada o escudo.
+            </p>
 
             <label>Competencia de defensa
               <select name="system.combat.defenseSkill">
@@ -159,6 +456,37 @@
                 {{/each}}
               </select>
             </label>
+           
+            <label>Arma activa
+              <select name="system.combat.activeWeaponId">
+                <option value="">--</option>
+                {{#each weaponOptions as |opt|}}
+                  <option value="{{opt.[0]}}" {{#if (eq ../system.combat.activeWeaponId opt.[0])}}selected{{/if}}>
+                    {{opt.[1]}}
+                  </option>
+                {{/each}}
+              </select>
+            </label>
+
+            {{#if activeWeaponName}}
+              <p class="target-hint">
+                Arma usada al atacar: <strong>{{activeWeaponName}}</strong>
+                {{#if activeWeaponFallback}}(automática){{/if}}
+              </p>
+            {{else}}
+              <p class="target-hint">
+                No hay arma activa ni equipada.
+              </p>
+            {{/if}}
+
+            <button type="button" data-combat-attack="true">Atacar objetivo</button>
+            <p class="target-hint">
+  Flujo de ataque: selecciona arma activa, elige un token objetivo y pulsa <strong>Atacar objetivo</strong>.
+</p>
+
+<p class="target-hint">
+  La defensa depende del modo elegido: <strong>Competencia</strong>, <strong>Parada con arma</strong> o <strong>Escudo</strong>.
+</p>
 
             <label>Arma de parada
               <select name="system.combat.defenseWeaponId">
@@ -181,133 +509,65 @@
             <label>Modificador de ataque
               <input type="number" name="system.combat.attackModifier" value="{{system.combat.attackModifier}}" />
             </label>
+
             <label>Modificador de defensa
               <input type="number" name="system.combat.defenseModifier" value="{{system.combat.defenseModifier}}" />
             </label>
+
             <label>Armadura total
               <input type="number" name="system.combat.armorTotal" value="{{system.combat.armorTotal}}" disabled />
             </label>
+
             <label>Iniciativa
               <input type="number" name="system.combat.initiative" value="{{system.combat.initiative}}" />
             </label>
           </div>
 
+          <div class="card-subsection">
+            <h4>Último impacto</h4>
+               <p><strong>Localización:</strong> {{lastHitLocationLabel}}</p>
+               <p><strong>Armadura absorbida:</strong> {{system.combat.lastArmorAbsorbed}}</p>
+               <p><strong>Daño bruto:</strong> {{system.combat.lastRawDamage}}</p>
+               <p><strong>Daño final:</strong> {{system.combat.lastFinalDamage}}</p>
+          </div>
           <p><strong>Última pifia:</strong> {{system.combat.lastFumble}}</p>
           <p><strong>Último crítico:</strong> {{system.combat.lastCritical}}</p>
 
-          <div class="button-row">
-            <button type="button" data-roll-defense="true">Defender</button>
-            <button type="button" data-roll-initiative="true">Iniciativa</button>
-            <button type="button" data-consume-action="true">Gastar acción</button>
-            <button type="button" data-reset-actions="true">Reiniciar acciones</button>
-          </div>
+        <div class="card-subsection">
+  <h4>Penalizadores activos</h4>
+
+  {{#if combatPenaltySummary.length}}
+    <div class="status-effects">
+      {{#each combatPenaltySummary as |entry|}}
+        <div class="status-effect">
+          <strong>{{entry.label}}</strong>
+          <ul>
+            {{#each entry.effects as |effect|}}
+              <li>{{effect}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <p>Sin penalizadores activos.</p>
+  {{/if}}
+</div>
+
+
+         <div class="button-row">
+  <button type="button" data-roll-defense="true">Probar defensa</button>
+  <button type="button" data-roll-initiative="true">Tirar iniciativa</button>
+  <button type="button" data-consume-action="true">Gastar acción</button>
+  <button type="button" data-action="reset-combat-actions">Reiniciar acciones</button>
+  <button type="button" data-action="clear-combat-status-effects">Limpiar estados</button>
+  <button type="button" data-action="reset-combat-state">Reiniciar combate</button>
+</div>
         </section>
-
-	<section class="card card--full">
-  	 <h2>Competencias Generales</h2>
-   	 <div class="skills-table">
-    	  <div class="skills-head skills-grid-extended">
-      		<span>Competencia</span>
-      		<span>Base</span>
-      		<span>Inv.</span>
-      		<span>Total</span>
-      		<span>Máx.</span>
-      		<span>Coste</span>
-      		<span>Ajuste</span>
-    	</div>
-
-    	{{#each generalSkills as |skill|}}
-      		<div class="skills-row skills-grid-extended skill-row--{{skill.state}}" title="{{skill.blockReason}}">
-        		<span class="skill-name">
-          			{{skill.label}}
-          			{{#unless skill.allowed}}
-            				<small class="skill-tag">no permitida</small>
-          			{{/unless}}
-        		</span>
-
-        		<span>{{skill.baseValue}}</span>
-        		<span>{{skill.invested}}</span>
-        		<span>{{skill.total}}</span>
-        		<span>{{skill.max}}</span>
-        		<span class="skill-cost">{{skill.cost}}</span>
-
-        		<span class="item-actions skill-actions">
-          			<button
-            				type="button"
-            				data-skill-dec="{{skill.key}}"
-            				{{#unless skill.canDecrease}}disabled{{/unless}}>
-            				-
-          			</button>
-
-          			<button
-            				type="button"
-            				data-skill-inc="{{skill.key}}"
-            				title="{{#if skill.canIncrease}}Coste actual: {{skill.cost}}{{else}}{{skill.blockReason}}{{/if}}"
-            				{{#unless skill.canIncrease}}disabled{{/unless}}>
-            				+{{skill.cost}}
-          			</button>
-
-          			<button type="button" data-roll-skill="{{skill.key}}">🎲</button>
-        		</span>
-      		</div>
-    		{{/each}}
-  		</div>
-	</section>
- 
- <section class="card card--full">
-  <h2>Competencias de Armas</h2> 
-  <div class="skills-table">
-    <div class="skills-head skills-grid-extended">
-      <span>Competencia</span>
-      <span>Base</span>
-      <span>Inv.</span>
-      <span>Total</span>
-      <span>Máx.</span>
-      <span>Coste</span>
-      <span>Ajuste</span>
-    </div>
-
-    {{#each weaponSkills as |skill|}}
-      <div class="skills-row skills-grid-extended skill-row--{{skill.state}}" title="{{skill.blockReason}}">
-        <span class="skill-name">
-          {{skill.label}}
-          {{#unless skill.allowed}}
-            <small class="skill-tag">no permitida</small>
-          {{/unless}}
-        </span>
-
-        <span>{{skill.baseValue}}</span>
-        <span>{{skill.invested}}</span>
-        <span>{{skill.total}}</span>
-        <span>{{skill.max}}</span>
-        <span class="skill-cost">{{skill.cost}}</span>
-
-        <span class="item-actions skill-actions">
-          <button
-            type="button"
-            data-skill-dec="{{skill.key}}"
-            {{#unless skill.canDecrease}}disabled{{/unless}}>
-            -
-          </button>
-
-          <button
-            type="button"
-            data-skill-inc="{{skill.key}}"
-            title="{{#if skill.canIncrease}}Coste actual: {{skill.cost}}{{else}}{{skill.blockReason}}{{/if}}"
-            {{#unless skill.canIncrease}}disabled{{/unless}}>
-            +{{skill.cost}}
-          </button>
-
-          <button type="button" data-roll-skill="{{skill.key}}">🎲</button>
-        </span>
-      </div>
-    {{/each}}
-  </div>
-</section>
       </div>
     </div>
 
-    <div class="tab" data-group="primary" data-tab="inventario">
+    <div class="tab" data-group="primary" data-tab="inventory">
       <div class="sheet-grid">
         <section class="card">
           <div class="list-header">
@@ -321,11 +581,13 @@
               <strong>{{item.name}}</strong>
               <span>{{item.system.skill}}</span>
               <span>{{item.system.damage}}</span>
-              <span>{{#if item.system.equipped}}Equipada{{else}}No{{/if}}</span>
+              <span>
+                 {{#if item.system.equipped}}Equipada{{else}}No equipada{{/if}}
+                 {{#if (eq ../system.combat.activeWeaponId item.id)}} · Activa{{/if}}
+              </span>
               <div class="item-actions">
                 <button type="button" data-roll-attack="{{item.id}}">Ataque</button>
                 <button type="button" data-roll-damage="{{item.id}}">Daño</button>
-                <button type="button" data-resolve-attack="{{item.id}}">Atacar objetivo</button>
                 <button type="button" data-toggle-equipped="{{item.id}}">Equipar</button>
                 <button type="button" class="item-edit" data-item-id="{{item.id}}">Editar</button>
                 <button type="button" class="item-delete" data-item-id="{{item.id}}">🗑</button>
@@ -440,8 +702,24 @@
       </div>
     </div>
 
-    <div class="tab" data-group="primary" data-tab="equipo">
+    <div class="tab" data-group="primary" data-tab="magic">
       <div class="sheet-grid">
+
+        <section class="card">
+          <h2>Datos personales</h2>
+          <div class="secondary-grid">
+            <label>Profesión paterna
+              <input type="text" name="system.bio.fatherProfession" value="{{system.bio.fatherProfession}}" />
+            </label>
+            <label>Altura
+              <input type="text" name="system.bio.height" value="{{system.bio.height}}" />
+            </label>
+            <label>Peso
+              <input type="text" name="system.bio.weight" value="{{system.bio.weight}}" />
+            </label>
+          </div>
+        </section>
+
         <section class="card">
           <h2>Economía</h2>
           <label>Dinero <textarea name="system.economy.money">{{system.economy.money}}</textarea></label>
@@ -478,30 +756,56 @@
           <h2>Historia</h2>
           <textarea name="system.bio.history">{{system.bio.history}}</textarea>
         </section>
+
       </div>
     </div>
 
-    <div class="tab" data-group="primary" data-tab="referencia">
-      <div class="sheet-grid">
-        <section class="card">
-          <h2>Dificultades</h2>
-          <ul>
-            <li>Infalible: +60</li>
-            <li>Muy fácil: +40</li>
-            <li>Fácil: +20</li>
-            <li>Normal: 0</li>
-            <li>Difícil: -20</li>
-            <li>Muy difícil: -40</li>
-            <li>Imposible: -60</li>
-          </ul>
-        </section>
+    <div class="tab" data-group="primary" data-tab="reference">
+  <div class="sheet-grid">
+    <section class="card">
+      <h2>Dificultades activas</h2>
+      <ul>
+        <li>Muy fácil: +40</li>
+        <li>Fácil: +20</li>
+        <li>Normal: 0</li>
+        <li>Difícil: -20</li>
+        <li>Muy difícil: -40</li>
+      </ul>
+    </section>
 
-        <section class="card">
-          <h2>Notas rápidas</h2>
-          <p>v0.3.0 RAW: las competencias usan Base + Invertido = Total.</p>
-          <p>La profesión RAW define puntos disponibles, competencias permitidas y equipo base.</p>
-        </section>
-      </div>
-    </div>
+    <section class="card">
+      <h2>Flujo de combate</h2>
+      <p><strong>1.</strong> Equipa un arma.</p>
+      <p><strong>2.</strong> Selecciona arma activa en la pestaña Combate.</p>
+      <p><strong>3.</strong> Selecciona un token objetivo en la escena.</p>
+      <p><strong>4.</strong> Pulsa <strong>Atacar objetivo</strong>.</p>
+      <p><strong>5.</strong> El sistema resuelve ataque, defensa, localización, armadura y daño.</p>
+    </section>
+
+    <section class="card">
+      <h2>Defensa</h2>
+      <p><strong>Competencia:</strong> usa la skill elegida en “Competencia de defensa”.</p>
+      <p><strong>Parada con arma:</strong> requiere arma seleccionada, equipada y defensiva.</p>
+      <p><strong>Escudo:</strong> requiere escudo seleccionado y equipado.</p>
+      <p><strong>Esquivar:</strong> puede verse penalizado por estados como pierna inutilizada.</p>
+    </section>
+
+    <section class="card">
+      <h2>Estados implementados</h2>
+      <p><strong>Aturdido:</strong> penaliza ataque y defensa.</p>
+      <p><strong>Brazo inutilizado:</strong> impide parar con arma.</p>
+      <p><strong>Pierna inutilizada:</strong> penaliza esquivar.</p>
+      <p><strong>Incapacitado:</strong> estado al quedar en 0 PV.</p>
+      <p><strong>Moribundo:</strong> estado al quedar por debajo de 0 PV.</p>
+    </section>
+
+    <section class="card">
+      <h2>Notas rápidas</h2>
+      <p>Las competencias usan <strong>Base + Invertido = Total</strong>.</p>
+      <p>La profesión RAW define puntos disponibles, competencias permitidas y equipo base.</p>
+      <p><strong>Armadura total</strong> es solo un resumen visual; la protección real se aplica por localización.</p>
+    </section>
+  </div>
+</div>
   </section>
 </form>

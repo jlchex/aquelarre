@@ -1,0 +1,33 @@
+{"_id":"agujas","name":"Agujas","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":1,"currency":"mr","notes":"20 agujas de coser"}}
+{"_id":"antorchas","name":"Antorchas","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":3,"currency":"mr","notes":"Tres antorchas, duración 2 horas cada"}}
+{"_id":"arcon","name":"Arcón","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":75,"currency":"mr","notes":"Arca de madera con herrajes metálicos"}}
+{"_id":"bacia","name":"Bacía","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":12,"currency":"mr","notes":"Taza de metal para barbero"}}
+{"_id":"baraja-naipes","name":"Baraja de Naipes","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"mr","notes":"Fabricados con pergamino"}}
+{"_id":"bota-vino","name":"Bota de Vino","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":1,"currency":"mr","notes":"Bota de cuero, hasta un azumbre"}}
+{"_id":"caja","name":"Caja","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":12,"currency":"mr","notes":"Cofrecillo de madera con llave"}}
+{"_id":"calamo","name":"Cálamo","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"dineros","notes":"Caña hueca para escribir"}}
+{"_id":"candado","name":"Candado","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"mr","notes":"Candado grande y redondo"}}
+{"_id":"candil","name":"Candil","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":3,"currency":"mr","notes":"Lámpara portátil de aceite"}}
+{"_id":"cirio","name":"Cirio","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"mr","notes":"Vela de cera, dura 24 horas"}}
+{"_id":"clavos","name":"Clavos","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":5,"currency":"mr","notes":"Cincuenta clavos metálicos de gran longitud"}}
+{"_id":"cuerda","name":"Cuerda","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":20,"currency":"mr","notes":"Diez varas de cuerda de cáñamo"}}
+{"_id":"escalera","name":"Escalera","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":20,"currency":"mr","notes":"Escalera de madera, cinco varas"}}
+{"_id":"espejo","name":"Espejo","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":50,"currency":"mr","notes":"Objeto de lujo, metal bruñido o azogado"}}
+{"_id":"ganzuas","name":"Ganzúas","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":50,"currency":"mr","notes":"Llavero con ganzúas y alambres"}}
+{"_id":"garfio","name":"Garfio","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":5,"currency":"mr","notes":"Gancho de metal curvo puntiagudo"}}
+{"_id":"hisopo","name":"Hisopo","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":9,"currency":"mr","notes":"Mango con bola metálica para agua bendita"}}
+{"_id":"incensario","name":"Incensario","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":18,"currency":"mr","notes":"Braserillo con cadenas para incienso"}}
+{"_id":"joyas","name":"Joyas","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":100,"currency":"mr","notes":"Anillos, ajorcas, collares, diademas"}}
+{"_id":"laul","name":"Laúd","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":20,"currency":"mr","notes":"Instrumento de cuerda, habitual islámico"}}
+{"_id":"libro-blanco","name":"Libro en Blanco","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":3,"currency":"mr","notes":"Cuartillas cosidas para notas"}}
+{"_id":"libro-horas","name":"Libro de Horas","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":30,"currency":"mr","notes":"Devocionario barato para iglesia"}}
+{"_id":"lienzos","name":"Lienzos","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"mr","notes":"Por vara de lienzo de lino, limpiar heridas"}}
+{"_id":"navaja-barbero","name":"Navaja de Barbero","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":3,"currency":"mr","notes":"Cuchillo con hoja plegable, afeitar"}}
+{"_id":"odre","name":"Odre","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"mr","notes":"Cuero de cabra, hasta un azumbre"}}
+{"_id":"pergaminos","name":"Pergaminos","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":6,"currency":"mr","notes":"Una resma, ~500 folios"}}
+{"_id":"pluma","name":"Pluma","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":1,"currency":"mr","notes":"Pluma de ave para escribir"}}
+{"_id":"rollos","name":"Rollos de tela","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":3,"currency":"mr","notes":"Para vendaje y aseo"}}
+{"_id":"tenazas-barbero","name":"Tenacillas de Barbero","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"mr","notes":"Para extraer muelas"}}
+{"_id":"tijeras","name":"Tijeras","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":10,"currency":"mr","notes":"Para cortar y arreglar barbas"}}
+{"_id":"tinta","name":"Tinta","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":1,"currency":"mr","notes":"Un cuartillo de tinta negra"}}
+{"_id":"yesquero","name":"Yesquero","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":5,"currency":"mr","notes":"Juego de eslabón y pedernal"}}

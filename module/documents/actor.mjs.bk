@@ -3,27 +3,28 @@ import {
   rollFormula,
   getHitLocation,
   compareAttackDefense,
-  postCombatMessage,
   postSimpleMessage,
   clampPercent,
   DIFFICULTY_MODS,
   applyCriticalDamageBonus,
-  getCriticalEffect,
-  getFumbleEffect
 } from "../combat/rolls.mjs";
 
-import { ETHNICITIES, SOCIAL_CLASSES } from "../chargen/creation-data.mjs";
+import {
+  PROFESSIONS_RAW,
+  getValidProfessionKeys
+} from "../chargen/professions-raw.mjs";
 
 import {
+  KINGDOMS,
+  ETHNICITIES_RAW,
+  SOCIAL_CLASSES,
   getEthnicitySociety,
   getAllowedSocialClassKeysForEthnicity
 } from "../chargen/creation-tree.mjs";
 
-import {
-  PROFESSIONS_RAW,
-  getValidProfessionKeys,
-  professionOptionsRAW
-} from "../chargen/professions-raw.mjs";
+/* -------------------------------------------- */
+/*  Defaults / Pure Helpers                     */
+/* -------------------------------------------- */
 
 function getDefaultCharacteristics() {
   return {
@@ -43,7 +44,7 @@ function getDefaultSkills() {
     astrologia: { label: "Astrología", base: "cul", baseValue: 0, invested: 0, total: 0, group: "general" },
     descubrir: { label: "Descubrir", base: "per", baseValue: 0, invested: 0, total: 0, group: "general" },
     esquivar: { label: "Esquivar", base: "agi", baseValue: 0, invested: 0, total: 0, group: "general" },
-    leerEscribir: { label: "Leer y escribir", base: "cul", baseValue: 0, invested: 0, total: 0, group: "general" },
+    leer_y_escribir: { label: "Leer y escribir", base: "cul", baseValue: 0, invested: 0, total: 0, group: "general" },
     medicina: { label: "Medicina", base: "cul", baseValue: 0, invested: 0, total: 0, group: "general" },
     persuasion: { label: "Persuasión", base: "com", baseValue: 0, invested: 0, total: 0, group: "general" },
     sigilo: { label: "Sigilo", base: "agi", baseValue: 0, invested: 0, total: 0, group: "general" },
@@ -85,13 +86,18 @@ function mergeSkillDefaults(skills = {}) {
   const merged = {};
 
   for (const [key, def] of Object.entries(defaults)) {
+    const legacyKey =
+      key === "leer_y_escribir" && skills.leerEscribir
+        ? "leerEscribir"
+        : key;
+
     merged[key] = {
-      label: skills[key]?.label ?? def.label,
-      base: skills[key]?.base ?? def.base,
-      baseValue: Number.isFinite(Number(skills[key]?.baseValue)) ? Number(skills[key].baseValue) : 0,
-      invested: Number.isFinite(Number(skills[key]?.invested)) ? Number(skills[key].invested) : 0,
-      total: Number.isFinite(Number(skills[key]?.total)) ? Number(skills[key].total) : 0,
-      group: skills[key]?.group ?? def.group
+      label: skills[legacyKey]?.label ?? def.label,
+      base: skills[legacyKey]?.base ?? def.base,
+      baseValue: Number.isFinite(Number(skills[legacyKey]?.baseValue)) ? Number(skills[legacyKey].baseValue) : 0,
+      invested: Number.isFinite(Number(skills[legacyKey]?.invested)) ? Number(skills[legacyKey].invested) : 0,
+      total: Number.isFinite(Number(skills[legacyKey]?.total)) ? Number(skills[legacyKey].total) : 0,
+      group: skills[legacyKey]?.group ?? def.group
     };
   }
 
@@ -186,6 +192,7 @@ function mergeCombatDefaults(combat = {}) {
     attackModifier: Number.isFinite(Number(combat.attackModifier)) ? Number(combat.attackModifier) : 0,
     defenseModifier: Number.isFinite(Number(combat.defenseModifier)) ? Number(combat.defenseModifier) : 0,
     difficulty: combat.difficulty ?? "normal",
+    activeWeaponId: combat.activeWeaponId ?? "",
     defenseMode: combat.defenseMode ?? "skill",
     defenseSkill: combat.defenseSkill ?? "esquivar",
     defenseWeaponId: combat.defenseWeaponId ?? "",
@@ -193,7 +200,12 @@ function mergeCombatDefaults(combat = {}) {
     armorTotal: Number.isFinite(Number(combat.armorTotal)) ? Number(combat.armorTotal) : 0,
     initiative: Number.isFinite(Number(combat.initiative)) ? Number(combat.initiative) : 0,
     lastFumble: combat.lastFumble ?? "",
-    lastCritical: combat.lastCritical ?? ""
+    lastCritical: combat.lastCritical ?? "",
+    lastHitLocation: combat.lastHitLocation ?? "",
+    lastArmorAbsorbed: Number.isFinite(Number(combat.lastArmorAbsorbed)) ? Number(combat.lastArmorAbsorbed) : 0,
+    lastRawDamage: Number.isFinite(Number(combat.lastRawDamage)) ? Number(combat.lastRawDamage) : 0,
+    lastFinalDamage: Number.isFinite(Number(combat.lastFinalDamage)) ? Number(combat.lastFinalDamage) : 0,
+    statusEffects: Array.isArray(combat.statusEffects) ? combat.statusEffects : []
   };
 }
 
@@ -212,25 +224,82 @@ function mergeCreationDefaults(creation = {}) {
 }
 
 function normalizeSkillKey(value, fallback = "espadas") {
-  return String(value ?? fallback).trim().toLowerCase();
+  const normalized = String(value ?? fallback).trim().toLowerCase();
+
+  if (normalized === "leerescribir") return "leer_y_escribir";
+  if (normalized === "leer_escribir") return "leer_y_escribir";
+
+  return normalized;
 }
+
+
+function normalizeLocationKey(value) {
+  return String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .replaceAll("-", "_");
+}
+
+function getLocalizedInjuryFromHit(locationKey, finalDamage) {
+  const location = normalizeLocationKey(locationKey);
+  const damage = Number(finalDamage ?? 0);
+
+  if (location === "cabeza" && damage >= 6) {
+    return { type: "aturdido", label: "Aturdido", location };
+  }
+
+  if (["brazo_izquierdo", "brazo_derecho"].includes(location) && damage >= 5) {
+    return { type: "brazo_inutilizado", label: "Brazo inutilizado", location };
+  }
+
+  if (["pierna_izquierda", "pierna_derecha"].includes(location) && damage >= 5) {
+    return { type: "pierna_inutilizada", label: "Pierna inutilizada", location };
+  }
+
+  return null;
+}
+
+
+
+function getLocationLabel(locationKey) {
+  const key = normalizeLocationKey(locationKey);
+
+  const labels = {
+    cabeza: "Cabeza",
+    torso: "Torso",
+    abdomen: "Abdomen",
+    brazo_izquierdo: "Brazo izquierdo",
+    brazo_derecho: "Brazo derecho",
+    pierna_izquierda: "Pierna izquierda",
+    pierna_derecha: "Pierna derecha"
+  };
+
+  return labels[key] ?? key;
+}
+
 
 function randomChoice(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
 export class AquelarreActor extends Actor {
+  /* -------------------------------------------- */
+  /*  Lifecycle / Derived Data                    */
+  /* -------------------------------------------- */
+
   prepareDerivedData() {
     super.prepareDerivedData();
 
     const system = this.system;
     if (!system) return;
 
+    // Persistente: estructura mínima de datos no contemplados en template
     if (!system.bio) system.bio = {};
     if (!system.economy) system.economy = { money: "", monthlyIncome: "", weeklyExpense: "" };
     if (!system.inventory) system.inventory = { possessions: "", carriedEquipment: "" };
     if (!system.magic) system.magic = { spellsNotes: "", ritualsNotes: "" };
 
+    // Persistente: normalización de bloques guardados
     system.creation = mergeCreationDefaults(system.creation);
     system.characteristics = mergeCharacteristicDefaults(system.characteristics);
     system.skills = mergeSkillDefaults(system.skills);
@@ -242,6 +311,10 @@ export class AquelarreActor extends Actor {
     const cul = Number(ch.cul?.value ?? 10);
     const computedLuck = com + per + cul;
 
+    system.secondary = mergeSecondaryDefaults(system.secondary, res, computedLuck);
+    system.combat = mergeCombatDefaults(system.combat);
+
+    // Derivado: competencias (baseValue y total)
     for (const skill of Object.values(system.skills)) {
       const baseVal = Number(ch?.[skill.base]?.value ?? 0);
       skill.baseValue = baseVal;
@@ -249,12 +322,10 @@ export class AquelarreActor extends Actor {
       skill.total = baseVal + skill.invested;
     }
 
-    system.secondary = mergeSecondaryDefaults(system.secondary, res, computedLuck);
-    system.combat = mergeCombatDefaults(system.combat);
-
     const sec = system.secondary;
     const combat = system.combat;
 
+    // Derivado: secundarias (suerte total, PV máximos, etc.)
     sec.luck.value = computedLuck;
     if (!Number.isFinite(Number(sec.luckCurrent.value))) sec.luckCurrent.value = computedLuck;
 
@@ -264,14 +335,23 @@ export class AquelarreActor extends Actor {
     const rr = Number(sec.rr?.value ?? 50);
     if ((rr + Number(sec.irr?.value ?? 50)) !== 100) sec.irr.value = Math.max(0, 100 - rr);
 
+    // Derivado: combate (acciones máximas y resumen visual de armadura)
     const current = Number(combat.actions.current);
     combat.actions.current = Number.isFinite(current) ? Math.max(0, Math.min(current, 2)) : 2;
     combat.actions.max = 2;
 
+    // Derivado: resumen visual de armadura equipada.
+    // La protección real de impacto se resuelve por localización en getArmorProtectionForLocation().
     const equippedArmor = this.items.filter(i => i.type === "armor" && i.system.equipped);
     combat.armorTotal = equippedArmor.reduce((sum, item) => sum + Number(item.system.protection || 0), 0);
   }
 
+  /**
+   * Utilidad de saneamiento / migración ligera.
+   * Normaliza bloques persistentes y rellena defaults faltantes.
+   * No debe sustituir a prepareDerivedData() como mecanismo principal
+   * de cálculo de valores derivados.
+   */
   async ensureActorDefaults() {
     const currentCharacteristics = mergeCharacteristicDefaults(this.system.characteristics);
     const res = Number(currentCharacteristics.res?.value ?? 10);
@@ -299,275 +379,1002 @@ export class AquelarreActor extends Actor {
       "system.magic": this.system.magic ?? { spellsNotes: "", ritualsNotes: "" }
     });
   }
-getNormalizedSex() {
-  const raw = String(this.system.bio?.sex ?? "").trim().toLowerCase();
 
-  if (!raw) return "";
-  if (["hombre", "varon", "varón", "male", "masculino"].includes(raw)) return "male";
-  if (["mujer", "female", "femenino"].includes(raw)) return "female";
+  /* -------------------------------------------- */
+  /*  Combat                                      */
+  /* -------------------------------------------- */
 
-  return raw;
-}
-
-meetsProfessionMinStats(professionKey) {
-  const prof = PROFESSIONS_RAW[professionKey];
-  if (!prof) return false;
-
-  const minStats = prof.minStats ?? {};
-  const characteristics = this.system.characteristics ?? {};
-
-  for (const [statKey, minValue] of Object.entries(minStats)) {
-    const current = Number(characteristics?.[statKey]?.value ?? 0);
-    if (current < Number(minValue ?? 0)) return false;
+  canSpendCombatAction(cost = 1) {
+    const current = Number(this.system.combat?.actions?.current ?? 0);
+    return current >= cost;
   }
 
-  return true;
-}
+  async spendCombatAction(cost = 1) {
+    const current = Number(this.system.combat?.actions?.current ?? 0);
+    const next = Math.max(0, current - cost);
 
-getProfessionInvalidReasons(professionKey) {
-  const prof = PROFESSIONS_RAW[professionKey];
-  if (!prof) return ["Profesión inexistente"];
+    await this.update({
+      "system.combat.actions.current": next
+    });
 
-  const reasons = [];
-  const creation = this.system.creation ?? {};
-  const society = creation.society || this.getDerivedSociety();
-  const socialClassKey = creation.socialClassKey ?? "";
-  const ethnicityKey = creation.ethnicityKey ?? "";
-  const kingdomKey = creation.kingdom ?? "";
-  const sex = this.getNormalizedSex();
-
-  if (prof.society?.length && society && !prof.society.includes(society)) {
-    reasons.push("Sociedad incompatible");
+    return next;
   }
 
-  if (prof.socialClass?.length && socialClassKey && !prof.socialClass.includes(socialClassKey)) {
-    reasons.push("Clase social incompatible");
+   async clearCombatStatusEffects() {
+    await this.update({
+      "system.combat.statusEffects": [],
+      "system.combat.lastFumble": "",
+      "system.combat.lastCritical": "",
+      "system.combat.lastHitLocation": "",
+      "system.combat.lastArmorAbsorbed": 0,
+      "system.combat.lastRawDamage": 0,
+      "system.combat.lastFinalDamage": 0
+    });
   }
 
-  if (prof.ethnicities?.length && ethnicityKey && !prof.ethnicities.includes(ethnicityKey)) {
-    reasons.push("Grupo étnico incompatible");
+
+  async resetCombatActions() {
+    await this.update({
+      "system.combat.actions.current": 2
+    });
   }
 
-  if (prof.kingdoms?.length && kingdomKey && !prof.kingdoms.includes(kingdomKey)) {
-    reasons.push("Reino incompatible");
+    async resetCombatState() {
+    const maxActions = Number(this.system.combat?.actions?.max ?? 2);
+
+    await this.update({
+      "system.combat.actions.current": maxActions,
+      "system.combat.initiative": 0,
+      "system.combat.statusEffects": [],
+      "system.combat.lastFumble": "",
+      "system.combat.lastCritical": "",
+      "system.combat.lastHitLocation": "",
+      "system.combat.lastArmorAbsorbed": 0,
+      "system.combat.lastRawDamage": 0,
+      "system.combat.lastFinalDamage": 0
+    });
   }
 
-  if (prof.sex?.length && sex && !prof.sex.includes(sex)) {
-    reasons.push("Sexo incompatible");
+  getWeaponById(weaponId) {
+    if (!weaponId) return null;
+    return this.items.get(weaponId) ?? null;
   }
 
-  if (!this.meetsProfessionMinStats(professionKey)) {
-    reasons.push("No cumple mínimos de características");
+  getEquippedWeapons() {
+    return this.items.filter(i => i.type === "weapon" && i.system.equipped);
   }
 
-  return reasons;
-}
+  getPrimaryEquippedWeapon() {
+    return this.getEquippedWeapons()[0] ?? null;
+  }
 
-getProfessionValidationData(professionKey) {
-  const prof = PROFESSIONS_RAW[professionKey];
-  if (!prof) {
+  getEquippedShield() {
+    return this.items.find(i => i.type === "shield" && i.system.equipped) ?? null;
+  }
+
+  getEquippedShields() {
+    return this.items.filter(i => i.type === "shield" && i.system.equipped);
+  }
+
+  getEquippedArmors() {
+    return this.items.filter(i => i.type === "armor" && i.system.equipped);
+  }
+
+  getArmorProtectionForLocation(location) {
+    const armors = this.getEquippedArmors();
+    if (!armors.length) return 0;
+
+    const normalized = normalizeLocationKey(location);
+
+    return armors.reduce((sum, item) => {
+      const protection = Number(item.system.protection ?? 0);
+      const armorLocation = normalizeLocationKey(item.system.location ?? "general");
+
+      const matches =
+        armorLocation === "general" ||
+        armorLocation === normalized ||
+        (armorLocation === "brazos" && ["brazo_izquierdo", "brazo_derecho"].includes(normalized)) ||
+        (armorLocation === "piernas" && ["pierna_izquierda", "pierna_derecha"].includes(normalized));
+
+      return sum + (matches ? protection : 0);
+    }, 0);
+  }
+
+  getDefenseBonusFromEquipment(defenseSkillKey = "") {
+    const skillKey = String(defenseSkillKey ?? "").trim();
+
+    let bonus = 0;
+
+    if (skillKey === "escudos") {
+      const shield = this.getEquippedShield();
+      if (shield) bonus += Number(shield.system.defenseBonus ?? 0);
+    }
+
+    if (skillKey !== "escudos") {
+      const weapon = this.getWeaponById(this.system.combat?.defenseWeaponId) ?? this.getPrimaryEquippedWeapon();
+      if (weapon?.system?.defensive) {
+        bonus += Number(weapon.system.parryBonus ?? 0);
+      }
+    }
+
+    return bonus;
+  }
+
+    addOrReplaceLocalizedStatusEffect(type, location = "general", label = "") {
+    const effects = this.getStatusEffects().filter(effect => {
+      if (effect.type !== type) return true;
+
+      // Para efectos localizados, solo permitimos uno por tipo
+      return false;
+    });
+
+    effects.push(this.buildStatusEffect(type, location, label));
+    return effects;
+  }
+
+  getDifficultyMod() {
+    return Number(DIFFICULTY_MODS[this.system.combat?.difficulty ?? "normal"] ?? 0);
+  }
+
+   getDefenseSourceData() {
+    const mode = String(this.system.combat?.defenseMode ?? "skill");
+    const defenseModifier = Number(this.system.combat?.defenseModifier ?? 0);
+    const statusMods = this.getCombatStatusModifiers();
+
+    if (mode === "weapon") {
+      if (this.hasStatusEffect("brazo_inutilizado")) {
+        return {
+          label: "Arma",
+          target: 0,
+          modifier: defenseModifier,
+          valid: false,
+          reason: "brazo-inutilizado"
+        };
+      }
+
+      const weaponId = this.system.combat?.defenseWeaponId ?? "";
+      if (!weaponId) {
+        return {
+          label: "Arma",
+          target: 0,
+          modifier: defenseModifier,
+          valid: false,
+          reason: "sin-arma-defensa"
+        };
+      }
+
+      const weapon = this.items.get(weaponId);
+      if (!weapon || weapon.type !== "weapon") {
+        return {
+          label: "Arma",
+          target: 0,
+          modifier: defenseModifier,
+          valid: false,
+          reason: "arma-invalida"
+        };
+      }
+
+      if (!weapon.system.equipped) {
+        return {
+          label: weapon.name,
+          target: 0,
+          modifier: defenseModifier,
+          valid: false,
+          reason: "arma-no-equipada"
+        };
+      }
+
+      if (!weapon.system.defensive) {
+        return {
+          label: weapon.name,
+          target: 0,
+          modifier: defenseModifier,
+          valid: false,
+          reason: "arma-no-defensiva"
+        };
+      }
+
+      const skillKey = normalizeSkillKey(weapon.system.skill, "");
+      const data = this.getSkillTarget(skillKey);
+
+      if (!data.skill) {
+        return {
+          label: weapon.name,
+          target: 0,
+          modifier: defenseModifier,
+          valid: false,
+          reason: "skill-arma-invalida"
+        };
+      }
+
+      const parryBonus = Number(weapon.system.parryBonus ?? 0);
+
+      return {
+        label: `${weapon.name}`,
+        target: clampPercent(data.target + parryBonus + statusMods.defenseMod),
+        modifier: defenseModifier,
+        valid: true
+      };
+    }
+
+    if (mode === "shield") {
+      const shieldId = this.system.combat?.defenseShieldId ?? "";
+      if (!shieldId) {
+        return {
+          label: "Escudo",
+          target: 0,
+          modifier: defenseModifier,
+          valid: false,
+          reason: "sin-escudo-defensa"
+        };
+      }
+
+      const shield = this.items.get(shieldId);
+      if (!shield || shield.type !== "shield") {
+        return {
+          label: "Escudo",
+          target: 0,
+          modifier: defenseModifier,
+          valid: false,
+          reason: "escudo-invalido"
+        };
+      }
+
+      if (!shield.system.equipped) {
+        return {
+          label: shield.name,
+          target: 0,
+          modifier: defenseModifier,
+          valid: false,
+          reason: "escudo-no-equipado"
+        };
+      }
+
+      const skillKey = normalizeSkillKey(shield.system.skill, "");
+      const data = this.getSkillTarget(skillKey);
+
+      if (!data.skill) {
+        return {
+          label: shield.name,
+          target: 0,
+          modifier: defenseModifier,
+          valid: false,
+          reason: "skill-escudo-invalida"
+        };
+      }
+
+      const bonus = Number(shield.system.defenseBonus ?? 0);
+
+      return {
+        label: `${shield.name}`,
+        target: clampPercent(data.target + bonus + statusMods.defenseMod),
+        modifier: defenseModifier,
+        valid: true
+      };
+    }
+
+    const defenseSkillKey = String(this.system.combat?.defenseSkill ?? "").trim();
+    if (!defenseSkillKey) {
+      return {
+        label: "Defensa",
+        target: 0,
+        modifier: defenseModifier,
+        valid: false,
+        reason: "sin-skill-defensa"
+      };
+    }
+
+    const data = this.getSkillTarget(defenseSkillKey);
+    if (!data.skill) {
+      return {
+        label: defenseSkillKey,
+        target: 0,
+        modifier: defenseModifier,
+        valid: false,
+        reason: "skill-defensa-invalida"
+      };
+    }
+
+    let target = data.target + statusMods.defenseMod;
+
+    if (data.key === "esquivar") {
+      target += statusMods.dodgeMod;
+    }
+
     return {
-      key: professionKey,
-      label: professionKey,
-      valid: false,
-      reasons: ["Profesión inexistente"],
-      reasonText: "Profesión inexistente"
+      label: data.skill.label ?? "Defensa",
+      target: clampPercent(target),
+      modifier: defenseModifier,
+      valid: true
     };
   }
 
-  const reasons = this.getProfessionInvalidReasons(professionKey);
-  return {
-    key: professionKey,
-    label: prof.label,
-    valid: reasons.length === 0,
-    reasons,
-    reasonText: reasons.join(", ")
-  };
-}
+  async rollInitiative() {
+    const base = Number(this.system.characteristics?.agi?.value ?? 10);
+    const roll = await rollFormula(this, "1d10", "Iniciativa");
+    const total = base + roll.total;
 
+    await this.update({ "system.combat.initiative": total });
 
- getRemainingSkillPoints() {
-  const total = Number(this.system.creation?.skillPoints ?? 0);
-  const spent = this.getTotalSpentSkillPoints();
+    await postSimpleMessage(this, "Iniciativa", [
+      `<strong>AGI base:</strong> ${base}`,
+      `<strong>1d10:</strong> ${roll.total}`,
+      `<strong>Total:</strong> ${total}`
+    ]);
 
-  return Math.max(0, total - spent);
-}
-
-getDerivedSociety() {
-  const ethnicityKey = this.system.creation?.ethnicityKey ?? "";
-  return getEthnicitySociety(ethnicityKey);
-}
-
-getAllowedSocialClasses() {
-  const ethnicityKey = this.system.creation?.ethnicityKey ?? "";
-  return getAllowedSocialClassKeysForEthnicity(ethnicityKey);
-}
-
-getValidProfessionKeys() {
-  const creation = this.system.creation ?? {};
-  const society = creation.society || this.getDerivedSociety();
-  const socialClassKey = creation.socialClassKey ?? "";
-  const ethnicityKey = creation.ethnicityKey ?? "";
-  const kingdomKey = creation.kingdom ?? "";
-  const sex = this.getNormalizedSex();
-
-  return getValidProfessionKeys({
-    society,
-    socialClassKey,
-    ethnicityKey,
-    kingdomKey,
-    sex
-  }).filter(key => this.meetsProfessionMinStats(key));
-}
-
-async refreshCreationTree() {
-  const society = this.getDerivedSociety();
-  const allowedSocialClasses = this.getAllowedSocialClasses();
-
-  let socialClassKey = this.system.creation?.socialClassKey ?? "";
-  if (socialClassKey && !allowedSocialClasses.includes(socialClassKey)) {
-    socialClassKey = "";
+    return total;
   }
 
-  const validProfessionKeys = this.getValidProfessionKeys();
+  async rollDefense() {
+    const defense = this.getDefenseSourceData();
+        if (!defense.valid) {
+      let msg = `${this.name} no tiene una defensa válida configurada.`;
 
-  let professionKey = this.system.creation?.professionKey ?? "";
-  if (professionKey && !validProfessionKeys.includes(professionKey)) {
-    professionKey = "";
+      if (defense.reason === "arma-no-defensiva") {
+        msg = `${this.name} ha seleccionado un arma no defensiva para parar.`;
+      } else if (defense.reason === "brazo-inutilizado") {
+        msg = `${this.name} no puede parar con arma: tiene un brazo inutilizado.`;
+      } else if (defense.reason === "sin-arma-defensa") {
+        msg = `${this.name} no tiene arma de parada seleccionada.`;
+      } else if (defense.reason === "sin-escudo-defensa") {
+        msg = `${this.name} no tiene escudo seleccionado.`;
+      } else if (defense.reason === "escudo-no-equipado") {
+        msg = `${this.name} tiene un escudo seleccionado, pero no está equipado.`;
+      } else if (defense.reason === "arma-no-equipada") {
+        msg = `${this.name} tiene un arma de parada seleccionada, pero no está equipada.`;
+      }
+
+      ui.notifications?.warn(msg);
+      return null;
+    } 
+
+   
+
+    const target = clampPercent(defense.target + defense.modifier + this.getDifficultyMod());
+    return this.rollPercent(target, `Defensa: ${defense.label}`);
   }
 
-  await this.update({
-    "system.creation.society": society,
-    "system.creation.socialClassKey": socialClassKey,
-    "system.creation.professionKey": professionKey,
-    "system.creation.validProfessionKeys": validProfessionKeys
-  });
-}
+    async rollWeaponAttack(itemId) {
+    const weapon = this.items.get(itemId);
+    if (!weapon || weapon.type !== "weapon") return null;
 
+    if (!weapon.system.equipped) {
+      ui.notifications?.warn(`El arma ${weapon.name} no está equipada.`);
+      return null;
+    }
 
-  getSkillMax(skillKey) {
-   const key = normalizeSkillKey(skillKey, skillKey);
-   const skill = this.system.skills?.[key];
-   if (!skill) return 100;
+    const skillKey = String(weapon.system.skill ?? "").trim();
+    const data = this.getSkillTarget(skillKey);
 
-    return Number(skill.baseValue ?? 0) + 50;
- }
+    if (!data.skill) {
+      ui.notifications?.warn(`El arma ${weapon.name} usa una competencia no válida: ${weapon.system.skill}`);
+      return null;
+    }
 
-getSkillStepCostFromTotal(total) {
-  const n = Number(total ?? 0);
-
-  if (n < 50) return 1;
-  if (n < 75) return 2;
-  return 3;
-}
-
-getSkillCost(skillKey) {
-  const key = normalizeSkillKey(skillKey, skillKey);
-  const skill = this.system.skills?.[key];
-  if (!skill) return 1;
-
-  return this.getSkillStepCostFromTotal(Number(skill.total ?? 0));
-}
-
-getSkillSpentPoints(skillKey) {
-  const key = normalizeSkillKey(skillKey, skillKey);
-  const skill = this.system.skills?.[key];
-  if (!skill) return 0;
-
-  const baseValue = Number(skill.baseValue ?? 0);
-  const invested = Number(skill.invested ?? 0);
-
-  let spent = 0;
-
-  for (let i = 0; i < invested; i += 1) {
-    const totalBeforeIncrease = baseValue + i;
-    spent += this.getSkillStepCostFromTotal(totalBeforeIncrease);
-  }
-
-  return spent;
-}
-
-getTotalSpentSkillPoints() {
-  return Object.keys(this.system.skills ?? {}).reduce((sum, skillKey) => {
-    return sum + this.getSkillSpentPoints(skillKey);
-  }, 0);
-}
-
-canIncreaseSkill(skillKey) {
-  const key = normalizeSkillKey(skillKey, skillKey);
-  const skill = this.system.skills?.[key];
-  if (!skill) return false;
-
-  const allowed = this.system.creation?.allowedSkills ?? [];
-  if (allowed.length && !allowed.includes(key)) return false;
-
-  const remaining = this.getRemainingSkillPoints();
-  const cost = this.getSkillCost(key);
-  const max = this.getSkillMax(key);
-
-  if (remaining < cost) return false;
-  if (Number(skill.total ?? 0) >= max) return false;
-
-  return true;
-}
-
-canDecreaseSkill(skillKey) {
-  const key = normalizeSkillKey(skillKey, skillKey);
-  const skill = this.system.skills?.[key];
-  if (!skill) return false;
-
-  return Number(skill.invested ?? 0) > 0;
-}
-
-async increaseSkill(skillKey) {
-  await this.ensureActorDefaults();
-
-  const key = normalizeSkillKey(skillKey, skillKey);
-  const skill = this.system.skills?.[key];
-  if (!skill) return;
-
-  const allowed = this.system.creation?.allowedSkills ?? [];
-  if (allowed.length && !allowed.includes(key)) {
-    ui.notifications?.warn(`La profesión actual no permite invertir puntos en ${skill.label ?? key}.`);
-    return;
-  }
-
-  const max = this.getSkillMax(key);
-  if (Number(skill.total ?? 0) >= max) {
-    ui.notifications?.warn(`Has alcanzado el máximo de ${skill.label ?? key}.`);
-    return;
-  }
-
-  const cost = this.getSkillCost(key);
-  const remaining = this.getRemainingSkillPoints();
-  if (remaining < cost) {
-    ui.notifications?.warn(
-      `No quedan puntos suficientes para subir ${skill.label ?? key}. Coste actual: ${cost}.`
+    const target = clampPercent(
+      data.target + Number(this.system.combat?.attackModifier ?? 0) + this.getDifficultyMod()
     );
-    return;
+
+    return this.rollPercent(target, `Ataque: ${weapon.name} [${data.skill.label}]`);
   }
 
-  const skills = foundry.utils.deepClone(this.system.skills ?? {});
-  skills[key].invested = Number(skills[key].invested ?? 0) + 1;
-  skills[key].total = Number(skills[key].baseValue ?? 0) + Number(skills[key].invested ?? 0);
 
-  await this.update({ "system.skills": skills });
-}
+  async rollWeaponDamage(weapon, { critical = false } = {}) {
+    if (!weapon) {
+      ui.notifications.warn("No hay arma seleccionada.");
+      return null;
+    }
 
-async decreaseSkill(skillKey) {
-  await this.ensureActorDefaults();
+    const formula = String(weapon.system.damage || "1d3").trim() || "1d3";
+    const damageRoll = await rollFormula(this, formula, `Daño: ${weapon.name}`);
 
-  const key = normalizeSkillKey(skillKey, skillKey);
-  if (!this.canDecreaseSkill(key)) return;
+    let total = Number(damageRoll.total ?? 0);
+    let criticalBonus = 0;
 
-  const skills = foundry.utils.deepClone(this.system.skills ?? {});
-  const skill = skills[key];
+    if (critical) {
+      criticalBonus = applyCriticalDamageBonus(total);
+      total += criticalBonus;
+    }
 
-  skill.invested = Math.max(0, Number(skill.invested ?? 0) - 1);
-  skill.total = Number(skill.baseValue ?? 0) + Number(skill.invested ?? 0);
+    return {
+      weapon,
+      formula,
+      roll: damageRoll.roll,
+      baseDamage: Number(damageRoll.total ?? 0),
+      criticalBonus,
+      totalDamage: total
+    };
+  }
 
-  await this.update({ "system.skills": skills });
-}
+     async resolveWeaponAttack({
+    targetActor,
+    weaponId = "",
+    attackSkillKey = "",
+    attackModifier = null,
+    defenseSkillKey = "",
+    defenseModifier = null,
+    difficulty = null
+  } = {}) {
+    if (!this.canSpendCombatAction(1)) {
+      ui.notifications.warn("No te quedan acciones de combate.");
+      return null;
+    }
+
+    if (!targetActor) {
+      ui.notifications.warn("No hay objetivo válido.");
+      return null;
+    }
+
+       const selectedWeaponId = weaponId || this.system.combat?.activeWeaponId || "";
+    const weapon = selectedWeaponId
+      ? this.getWeaponById(selectedWeaponId)
+      : this.getPrimaryEquippedWeapon();
+
+    if (!weapon || weapon.type !== "weapon") {
+      ui.notifications.warn("No tienes un arma válida equipada o seleccionada.");
+      return null;
+    }
+
+    if (!weapon.system.equipped) {
+      ui.notifications.warn(`El arma ${weapon.name} no está equipada.`);
+      return null;
+    }
+
+
+    const skillKey = attackSkillKey || normalizeSkillKey(weapon.system.skill, "espadas");
+    const attackSkill = this.system.skills?.[skillKey];
+    if (!attackSkill) {
+      ui.notifications.warn(`La competencia ${skillKey} no existe en el atacante.`);
+      return null;
+    }
+
+    const difficultyKey = difficulty ?? this.system.combat?.difficulty ?? "normal";
+    const diffMod = Number(DIFFICULTY_MODS[difficultyKey] ?? 0);
+    const atkMod = Number(attackModifier ?? this.system.combat?.attackModifier ?? 0);
+    const statusMods = this.getCombatStatusModifiers();
+
+    const attackTarget = clampPercent(
+      Number(attackSkill.total ?? 0) + atkMod + diffMod + statusMods.attackMod
+    );
+    const attackRoll = await rollPercent(this, attackTarget, `Ataque con ${weapon.name}`);
+
+    let defenseRoll = null;
+    let defenseLabel = "Sin defensa";
+
+    const defenseData = targetActor.getDefenseSourceData();
+
+    if (defenseData?.valid) {
+      const defMod = Number(
+        defenseModifier ?? targetActor.system.combat?.defenseModifier ?? 0
+      );
+
+      const defenseTarget = clampPercent(
+        Number(defenseData.target ?? 0) + defMod
+      );
+
+      defenseLabel = defenseData.label ?? "Defensa";
+
+      defenseRoll = await rollPercent(
+        targetActor,
+        defenseTarget,
+        `Defensa: ${defenseLabel}`
+      );
+    }
+
+    const comparison = compareAttackDefense(attackRoll, defenseRoll);
+    await this.spendCombatAction(1);
+
+    const attackOutcomeText =
+      `${attackRoll.success ? "Éxito" : "Fallo"}`
+      + `${attackRoll.critical ? " (Crítico)" : ""}`
+      + `${attackRoll.fumble ? " (Pifia)" : ""}`;
+
+    const defenseOutcomeText = defenseRoll
+      ? `${defenseRoll.success ? "Éxito" : "Fallo"}`
+        + `${defenseRoll.critical ? " (Crítico)" : ""}`
+        + `${defenseRoll.fumble ? " (Pifia)" : ""}`
+      : "Sin defensa";
+
+    if (!comparison.hit) {
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: this }),
+        content: `
+          <div class="aquelarre-chat">
+            <h3>Resolución de combate</h3>
+
+            <p><strong>Atacante:</strong> ${this.name}</p>
+            <p><strong>Objetivo:</strong> ${targetActor.name}</p>
+            <p><strong>Arma:</strong> ${weapon.name}</p>
+            <p><strong>Dificultad:</strong> ${difficultyKey}</p>
+
+            <hr/>
+
+            <p><strong>Ataque:</strong> ${attackRoll.result} / ${attackRoll.target}</p>
+            <p><strong>Resultado del ataque:</strong> ${attackOutcomeText}</p>
+
+            ${defenseRoll ? `
+              <p><strong>${defenseLabel}:</strong> ${defenseRoll.result} / ${defenseRoll.target}</p>
+              <p><strong>Resultado de la defensa:</strong> ${defenseOutcomeText}</p>
+            ` : `
+              <p><strong>Defensa:</strong> No disponible</p>
+            `}
+
+            <hr/>
+
+            <p><strong>Resolución:</strong> ${comparison.reason}</p>
+            <p><strong>Impacto:</strong> No</p>
+          </div>
+        `
+      });
+
+      return {
+        hit: false,
+        comparison,
+        attackRoll,
+        defenseRoll,
+        defenseLabel,
+        weapon
+      };
+    }
+
+
+    const locationRoll = await rollFormula(this, "1d100", "Localización");
+    const hitLocation = getHitLocation(locationRoll.total);
+
+    const damageData = await this.rollWeaponDamage(weapon, { critical: attackRoll.critical });
+    const applied = await targetActor.applyDamageToLocation(damageData.totalDamage, hitLocation);
+
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this }),
+      content: `
+        <div class="aquelarre-chat">
+          <h3>Impacto</h3>
+          <p><strong>Atacante:</strong> ${this.name}</p>
+          <p><strong>Objetivo:</strong> ${targetActor.name}</p>
+          <p><strong>Arma:</strong> ${weapon.name}</p>
+          <p><strong>Tirada de ataque:</strong> ${attackRoll.result} / ${attackRoll.target}</p>
+          ${defenseRoll ? `<p><strong>${defenseLabel}:</strong> ${defenseRoll.result} / ${defenseRoll.target}</p>` : ""}
+          <p><strong>Localización:</strong> ${hitLocation}</p>
+          <p><strong>Daño base:</strong> ${damageData.baseDamage}</p>
+          ${damageData.criticalBonus ? `<p><strong>Bono crítico:</strong> +${damageData.criticalBonus}</p>` : ""}
+          <p><strong>Daño bruto:</strong> ${applied.rawDamage}</p>
+          <p><strong>Armadura absorbida:</strong> ${applied.armorAbsorbed}</p>
+          <p><strong>Daño final:</strong> ${applied.finalDamage}</p>
+          <p><strong>PV:</strong> ${applied.pvBefore} → ${applied.pvAfter}</p>
+          <p><strong>Estado:</strong> ${applied.state}</p>
+        </div>
+      `
+    });
+
+    return {
+      hit: true,
+      comparison,
+      attackRoll,
+      defenseRoll,
+      defenseLabel,
+      weapon,
+      hitLocation,
+      damageData,
+      applied
+    };
+  }
+
+    hasStatusEffect(type) {
+    return this.getStatusEffects().some(effect => effect.type === type);
+  }
+
+    getCombatPenaltySummary() {
+    const summaries = [];
+
+    if (this.hasStatusEffect("aturdido")) {
+      summaries.push({
+        key: "aturdido",
+        label: "Aturdido",
+        effects: [
+          "-25 al ataque",
+          "-25 a la defensa",
+          "-25 a esquivar"
+        ]
+      });
+    }
+
+    if (this.hasStatusEffect("pierna_inutilizada")) {
+      summaries.push({
+        key: "pierna_inutilizada",
+        label: "Pierna inutilizada",
+        effects: [
+          "-40 a esquivar"
+        ]
+      });
+    }
+
+    if (this.hasStatusEffect("brazo_inutilizado")) {
+      summaries.push({
+        key: "brazo_inutilizado",
+        label: "Brazo inutilizado",
+        effects: [
+          "No puede parar con arma"
+        ]
+      });
+    }
+
+    if (this.hasStatusEffect("incapacitado")) {
+      summaries.push({
+        key: "incapacitado",
+        label: "Incapacitado",
+        effects: [
+          "Estado crítico"
+        ]
+      });
+    }
+
+    if (this.hasStatusEffect("moribundo")) {
+      summaries.push({
+        key: "moribundo",
+        label: "Moribundo",
+        effects: [
+          "Estado crítico"
+        ]
+      });
+    }
+
+    return summaries;
+  }
+
+  getCombatStatusModifiers() {
+    let attackMod = 0;
+    let defenseMod = 0;
+    let dodgeMod = 0;
+
+    if (this.hasStatusEffect("aturdido")) {
+      attackMod -= 25;
+      defenseMod -= 25;
+      dodgeMod -= 25;
+    }
+
+    if (this.hasStatusEffect("pierna_inutilizada")) {
+      dodgeMod -= 40;
+    }
+
+    return {
+      attackMod,
+      defenseMod,
+      dodgeMod
+    };
+  }
+
+  getStatusEffects() {
+    return Array.isArray(this.system.combat?.statusEffects)
+      ? [...this.system.combat.statusEffects]
+      : [];
+  }
+
+  buildStatusEffect(type, location = "general", label = "") {
+    return {
+      type,
+      location,
+      label: label || type
+    };
+  }
+
+  addOrReplaceStatusEffect(type, location = "general", label = "") {
+    const effects = this.getStatusEffects().filter(effect => effect.type !== type);
+
+    effects.push(this.buildStatusEffect(type, location, label));
+
+    return effects;
+  }
+
+  removeStatusEffect(type) {
+    return this.getStatusEffects().filter(effect => effect.type !== type);
+  }
+
+    
+    async applyDamageToLocation(rawDamage, location, { ignoreArmor = false } = {}) {
+    const damage = Math.max(0, Number(rawDamage ?? 0));
+    const hitLocation = normalizeLocationKey(location || "torso");
+
+    const armorAbsorbed = ignoreArmor ? 0 : this.getArmorProtectionForLocation(hitLocation);
+    const finalDamage = Math.max(0, damage - armorAbsorbed);
+
+    const currentPv = Number(this.system.secondary?.pv?.value ?? 0);
+    const maxPv = Number(this.system.secondary?.pv?.max ?? currentPv);
+    const newPv = Math.max(-999, currentPv - finalDamage);
+
+    let state = "ileso";
+    if (finalDamage > 0) state = "herido";
+    if (newPv <= 0) state = "incapacitado";
+    if (newPv < 0) state = "moribundo";
+
+    let statusEffects = this.getStatusEffects();
+
+    // Estados globales por PV
+    if (newPv < 0) {
+      statusEffects = statusEffects.filter(effect => effect.type !== "incapacitado");
+      statusEffects = statusEffects.filter(effect => effect.type !== "moribundo");
+      statusEffects.push(this.buildStatusEffect("moribundo", hitLocation, "Moribundo"));
+    } else if (newPv <= 0) {
+      statusEffects = statusEffects.filter(effect => effect.type !== "moribundo");
+      statusEffects = statusEffects.filter(effect => effect.type !== "incapacitado");
+      statusEffects.push(this.buildStatusEffect("incapacitado", hitLocation, "Incapacitado"));
+    } else {
+      statusEffects = statusEffects.filter(effect => effect.type !== "moribundo");
+      statusEffects = statusEffects.filter(effect => effect.type !== "incapacitado");
+    }
+
+    // Heridas localizadas simples
+    const localizedInjury = getLocalizedInjuryFromHit(hitLocation, finalDamage);
+    if (localizedInjury) {
+      statusEffects = statusEffects.filter(effect => effect.type !== localizedInjury.type);
+      statusEffects.push(
+        this.buildStatusEffect(
+          localizedInjury.type,
+          localizedInjury.location,
+          localizedInjury.label
+        )
+      );
+    }
+
+    await this.update({
+      "system.secondary.pv.value": newPv,
+      "system.combat.lastHitLocation": hitLocation,
+      "system.combat.lastArmorAbsorbed": armorAbsorbed,
+      "system.combat.lastRawDamage": damage,
+      "system.combat.lastFinalDamage": finalDamage,
+      "system.combat.statusEffects": statusEffects
+    });
+
+    return {
+      rawDamage: damage,
+      armorAbsorbed,
+      finalDamage,
+      location: hitLocation,
+      pvBefore: currentPv,
+      pvAfter: newPv,
+      pvMax: maxPv,
+      state,
+      statusEffects,
+      localizedInjury
+    };
+  }
+
+  async toggleItemEquipped(itemId) {
+    const item = this.items.get(itemId);
+    if (!item) return;
+    await item.update({ "system.equipped": !Boolean(item.system.equipped) });
+  }
+
+  /* -------------------------------------------- */
+  /*  Character Creation / Professions            */
+  /* -------------------------------------------- */
+
+  getNormalizedSex() {
+    const raw = String(this.system.bio?.sex ?? "").trim().toLowerCase();
+
+    if (!raw) return "";
+    if (["hombre", "varon", "varón", "male", "masculino"].includes(raw)) return "male";
+    if (["mujer", "female", "femenino"].includes(raw)) return "female";
+
+    return raw;
+  }
+
+  getDerivedSociety() {
+    const ethnicityKey = this.system.creation?.ethnicityKey ?? "";
+    return getEthnicitySociety(ethnicityKey);
+  }
+
+  getAllowedSocialClasses() {
+    const ethnicityKey = this.system.creation?.ethnicityKey ?? "";
+    return getAllowedSocialClassKeysForEthnicity(ethnicityKey);
+  }
+
+  getValidProfessionKeys() {
+    const creation = this.system.creation ?? {};
+    const society = creation.society || this.getDerivedSociety();
+    const socialClassKey = creation.socialClassKey ?? "";
+    const ethnicityKey = creation.ethnicityKey ?? "";
+    const kingdomKey = creation.kingdom ?? "";
+    const sex = this.getNormalizedSex();
+
+    return getValidProfessionKeys({
+      society,
+      socialClassKey,
+      ethnicityKey,
+      kingdomKey,
+      sex
+    }).filter(key => this.meetsProfessionMinStats(key));
+  }
+
+  async refreshCreationTree() {
+    const society = this.getDerivedSociety();
+    const allowedSocialClasses = this.getAllowedSocialClasses();
+
+    let socialClassKey = this.system.creation?.socialClassKey ?? "";
+    if (socialClassKey && !allowedSocialClasses.includes(socialClassKey)) {
+      socialClassKey = "";
+    }
+
+    const validProfessionKeys = this.getValidProfessionKeys();
+
+    let professionKey = this.system.creation?.professionKey ?? "";
+    if (professionKey && !validProfessionKeys.includes(professionKey)) {
+      professionKey = "";
+    }
+
+    await this.update({
+      "system.creation.society": society,
+      "system.creation.socialClassKey": socialClassKey,
+      "system.creation.professionKey": professionKey,
+      "system.creation.validProfessionKeys": validProfessionKeys
+    });
+  }
+
+  meetsProfessionMinStats(professionKey) {
+    const prof = PROFESSIONS_RAW[professionKey];
+    if (!prof) return false;
+
+    const minStats = prof.minStats ?? {};
+
+    for (const [statKey, minValue] of Object.entries(minStats)) {
+      let current = 0;
+
+      if (statKey === "luck") {
+        current = Number(this.system.secondary?.luck?.value ?? 0);
+      } else {
+        current = Number(this.system.characteristics?.[statKey]?.value ?? 0);
+      }
+
+      if (current < Number(minValue ?? 0)) return false;
+    }
+
+    return true;
+  }
+
+  getProfessionInvalidReasons(professionKey) {
+    const prof = PROFESSIONS_RAW[professionKey];
+    if (!prof) return ["Profesión inexistente"];
+
+    const reasons = [];
+    const creation = this.system.creation ?? {};
+    const society = creation.society || this.getDerivedSociety();
+    const socialClassKey = creation.socialClassKey ?? "";
+    const ethnicityKey = creation.ethnicityKey ?? "";
+    const kingdomKey = creation.kingdom ?? "";
+    const sex = this.getNormalizedSex();
+
+    if (prof.society?.length && society && !prof.society.includes(society)) {
+      reasons.push("Sociedad incompatible");
+    }
+
+    if (prof.socialClass?.length && socialClassKey && !prof.socialClass.includes(socialClassKey)) {
+      reasons.push("Clase social incompatible");
+    }
+
+    if (prof.ethnicities?.length && ethnicityKey && !prof.ethnicities.includes(ethnicityKey)) {
+      reasons.push("Grupo étnico incompatible");
+    }
+
+    if (prof.kingdoms?.length && kingdomKey && !prof.kingdoms.includes(kingdomKey)) {
+      reasons.push("Reino incompatible");
+    }
+
+    if (prof.sex?.length && sex && !prof.sex.includes(sex)) {
+      reasons.push("Sexo incompatible");
+    }
+
+    if (!this.meetsProfessionMinStats(professionKey)) {
+      reasons.push("No cumple mínimos de características");
+    }
+
+    return reasons;
+  }
+
+  getProfessionValidationData(professionKey) {
+    const prof = PROFESSIONS_RAW[professionKey];
+    if (!prof) {
+      return {
+        key: professionKey,
+        label: professionKey,
+        valid: false,
+        reasons: ["Profesión inexistente"],
+        reasonText: "Profesión inexistente"
+      };
+    }
+
+    const reasons = this.getProfessionInvalidReasons(professionKey);
+    return {
+      key: professionKey,
+      label: prof.label,
+      valid: reasons.length === 0,
+      reasons,
+      reasonText: reasons.join(", ")
+    };
+  }
+
+  isProfessionValid(key) {
+    return this.getProfessionInvalidReasons(key).length === 0;
+  }
+
+  async applyProfessionRAW(key) {
+    const prof = PROFESSIONS_RAW[key];
+    if (!prof) {
+      ui.notifications?.warn(`Profesión no válida: ${key}`);
+      return;
+    }
+
+    if (!this.isProfessionValid(key)) {
+      const reasonText = this.getProfessionInvalidReasons(key).join(", ");
+      ui.notifications?.warn(`La profesión ${prof.label} no es válida: ${reasonText}`);
+      return;
+    }
+
+    await this.refreshCreationTree();
+    await this.ensureActorDefaults();
+
+    const validProfessionKeys = this.system.creation?.validProfessionKeys ?? [];
+    if (validProfessionKeys.length && !validProfessionKeys.includes(key)) {
+      ui.notifications?.warn(`La profesión ${prof.label} no es válida para el árbol actual de creación.`);
+      return;
+    }
+
+    const skills = foundry.utils.deepClone(this.system.skills ?? {});
+    for (const skill of Object.values(skills)) {
+      skill.invested = 0;
+      skill.total = Number(skill.baseValue ?? 0);
+    }
+
+    await this.update({
+      "system.creation.skillPoints": Number(prof.skillPoints ?? 0),
+      "system.creation.allowedSkills": Array.isArray(prof.allowedSkills) ? [...prof.allowedSkills] : [],
+      "system.creation.professionKey": key,
+      "system.bio.profession": prof.label,
+      "system.skills": skills
+    });
+
+    const existingNames = new Set(this.items.map(i => i.name));
+    const toCreate = (prof.equipment ?? [])
+      .filter(i => !existingNames.has(i.name))
+      .map(i => foundry.utils.deepClone(i));
+
+    if (toCreate.length) {
+      await this.createEmbeddedDocuments("Item", toCreate);
+    }
+
+    ui.notifications?.info(`Profesión RAW aplicada: ${prof.label}`);
+  }
+
+  async randomizeOrigin() {
+    const kingdomKeys = Object.keys(KINGDOMS);
+    if (!kingdomKeys.length) return;
+
+    const kingdomKey = randomChoice(kingdomKeys);
+    const kingdomData = KINGDOMS[kingdomKey];
+    const ethnicityPool = Array.isArray(kingdomData?.ethnicities) ? kingdomData.ethnicities : [];
+    if (!ethnicityPool.length) return;
+
+    const ethnicityKey = randomChoice(ethnicityPool);
+    const ethnicityData = ETHNICITIES_RAW[ethnicityKey] ?? null;
+
+    const socialClassPool = getAllowedSocialClassKeysForEthnicity(ethnicityKey);
+    if (!socialClassPool.length) return;
+
+    const socialClassKey = randomChoice(socialClassPool);
+    const society = getEthnicitySociety(ethnicityKey);
+
+    await this.update({
+      "system.creation.kingdom": kingdomKey,
+      "system.creation.ethnicityKey": ethnicityKey,
+      "system.creation.socialClassKey": socialClassKey,
+      "system.creation.society": society,
+      "system.creation.professionKey": "",
+      "system.creation.validProfessionKeys": [],
+      "system.bio.kingdom": kingdomData?.label ?? kingdomKey,
+      "system.bio.ethnicity": ethnicityData?.label ?? ethnicityKey,
+      "system.bio.socialClass": SOCIAL_CLASSES[socialClassKey] ?? socialClassKey
+    });
+
+    await this.refreshCreationTree();
+  }
 
   async generateCharacteristics() {
     const updates = {};
@@ -585,13 +1392,6 @@ async decreaseSkill(skillKey) {
     ]);
   }
 
-  async randomizeOrigin() {
-    await this.update({
-      "system.bio.ethnicity": randomChoice(ETHNICITIES),
-      "system.bio.socialClass": randomChoice(SOCIAL_CLASSES)
-    });
-  }
-
   async generateBackstory() {
     const bio = this.system.bio ?? {};
     const profession = bio.profession || "oficio incierto";
@@ -605,95 +1405,129 @@ async decreaseSkill(skillKey) {
     await this.update({ "system.bio.history": text });
   }
 
-async applyProfessionRAW(key) {
-  const prof = PROFESSIONS_RAW[key];
+  getSelectedProfessionData() {
+    const key = this.system.creation?.professionKey ?? "";
+    if (!key) return null;
 
-  if (!this.isProfessionValid(key)) {
-  const prof = PROFESSIONS_RAW[key];
-  const reasonText = this.getProfessionInvalidReasons(key).join(", ");
-  ui.notifications?.warn(`La profesión ${prof.label} no es válida: ${reasonText}`);
-  return;
-}
-  await this.refreshCreationTree();
-  await this.ensureActorDefaults();
-
-  const validProfessionKeys = this.system.creation?.validProfessionKeys ?? [];
-  if (validProfessionKeys.length && !validProfessionKeys.includes(key)) {
-    ui.notifications?.warn(`La profesión ${prof.label} no es válida para el árbol actual de creación.`);
-    return;
-  }
-
-  const skills = foundry.utils.deepClone(this.system.skills ?? {});
-  for (const skill of Object.values(skills)) {
-    skill.invested = 0;
-    skill.total = Number(skill.baseValue ?? 0);
-  }
-
-  await this.update({
-    "system.creation.skillPoints": Number(prof.skillPoints ?? 0),
-    "system.creation.allowedSkills": Array.isArray(prof.allowedSkills) ? [...prof.allowedSkills] : [],
-    "system.creation.professionKey": key,
-    "system.bio.profession": prof.label,
-    "system.skills": skills
-  });
-
-  const existingNames = new Set(this.items.map(i => i.name));
-  const toCreate = (prof.equipment ?? [])
-    .filter(i => !existingNames.has(i.name))
-    .map(i => foundry.utils.deepClone(i));
-
-  if (toCreate.length) {
-    await this.createEmbeddedDocuments("Item", toCreate);
-  }
-
-  ui.notifications?.info(`Profesión RAW aplicada: ${prof.label}`);
-}
-
-getProfessionOptionsForCreation() {
-  const creation = this.system.creation ?? {};
-  const society = creation.society || this.getDerivedSociety();
-  const socialClassKey = creation.socialClassKey ?? "";
-  const ethnicityKey = creation.ethnicityKey ?? "";
-  const kingdomKey = creation.kingdom ?? "";
-
-  // Base del árbol: solo por sociedad / clase / etnia / reino
-  // El sexo y los mínimos se usan para marcar inválidas, no para ocultarlas.
-  const treeCompatibleKeys = Object.keys(PROFESSIONS_RAW).filter(key => {
     const prof = PROFESSIONS_RAW[key];
-    if (!prof) return false;
+    if (!prof) return null;
 
-    if (prof.society?.length && society && !prof.society.includes(society)) return false;
-    if (prof.socialClass?.length && socialClassKey && !prof.socialClass.includes(socialClassKey)) return false;
-    if (prof.ethnicities?.length && ethnicityKey && !prof.ethnicities.includes(ethnicityKey)) return false;
-    if (prof.kingdoms?.length && kingdomKey && !prof.kingdoms.includes(kingdomKey)) return false;
+    const validation = this.getProfessionValidationData(key);
+    const minStats = prof.minStats ?? {};
 
-    return true;
-  });
+    const minStatEntries = Object.entries(minStats).map(([statKey, minValue]) => {
+      let current = 0;
+      let label = statKey.toUpperCase();
 
-  return treeCompatibleKeys
-    .map(key => {
-      const validation = this.getProfessionValidationData(key);
+      if (statKey === "luck") {
+        current = Number(this.system.secondary?.luck?.value ?? 0);
+        label = "Suerte";
+      } else {
+        current = Number(this.system.characteristics?.[statKey]?.value ?? 0);
+        label = this.system.characteristics?.[statKey]?.label ?? statKey.toUpperCase();
+      }
+
       return {
-        key,
-        label: validation.label,
-        valid: validation.valid,
-        reasonText: validation.reasonText
+        key: statKey,
+        label,
+        required: Number(minValue ?? 0),
+        current,
+        ok: current >= Number(minValue ?? 0)
       };
-    })
-    .sort((a, b) => a.label.localeCompare(b.label, "es"));
-}
+    });
 
-
-isProfessionValid(key) {
-  return this.getProfessionInvalidReasons(key).length === 0;
-}
- 
-getDifficultyMod() {
-    return Number(DIFFICULTY_MODS[this.system.combat?.difficulty ?? "normal"] ?? 0);
+    return {
+      key,
+      label: prof.label,
+      valid: validation.valid,
+      reasonText: validation.reasonText,
+      reasons: validation.reasons,
+      society: prof.society ?? [],
+      socialClass: prof.socialClass ?? [],
+      ethnicities: prof.ethnicities ?? [],
+      kingdoms: prof.kingdoms ?? [],
+      sex: prof.sex ?? [],
+      minStats: minStatEntries,
+      skillPoints: Number(prof.skillPoints ?? 0),
+      allowedSkills: Array.isArray(prof.allowedSkills) ? [...prof.allowedSkills] : [],
+      money: prof.money ?? ""
+    };
   }
 
-  getSkillTarget(skillKey) {
-    const key = normalizeSkillKey(skillKey, "esquivar");
+  getProfessionSummaryBadges() {
+    const data = this.getSelectedProfessionData();
+    if (!data) return [];
+
+    const badges = [];
+
+    if (data.valid) {
+      badges.push({ label: "Disponible", type: "ok" });
+    } else {
+      badges.push({ label: "Bloqueada", type: "error" });
+    }
+
+    if (data.society.length) {
+      badges.push({ label: `Sociedad: ${data.society.join(", ")}`, type: "neutral" });
+    }
+
+    if (data.sex.length) {
+      const sexLabel = data.sex.map(v => v === "male" ? "Hombre" : v === "female" ? "Mujer" : v).join(", ");
+      badges.push({ label: `Sexo: ${sexLabel}`, type: "neutral" });
+    }
+
+    if (data.kingdoms.length) {
+      badges.push({ label: `Reinos: ${data.kingdoms.join(", ")}`, type: "neutral" });
+    }
+
+    if (data.minStats.some(stat => !stat.ok)) {
+      badges.push({ label: "No cumple mínimos", type: "warning" });
+    }
+
+    return badges;
+  }
+
+  getProfessionOptionsForCreation() {
+    const creation = this.system.creation ?? {};
+    const society = creation.society || this.getDerivedSociety();
+    const socialClassKey = creation.socialClassKey ?? "";
+    const ethnicityKey = creation.ethnicityKey ?? "";
+    const kingdomKey = creation.kingdom ?? "";
+
+    const treeCompatibleKeys = Object.keys(PROFESSIONS_RAW).filter(key => {
+      const prof = PROFESSIONS_RAW[key];
+      if (!prof) return false;
+
+      if (prof.society?.length && society && !prof.society.includes(society)) return false;
+      if (prof.socialClass?.length && socialClassKey && !prof.socialClass.includes(socialClassKey)) return false;
+      if (prof.ethnicities?.length && ethnicityKey && !prof.ethnicities.includes(ethnicityKey)) return false;
+      if (prof.kingdoms?.length && kingdomKey && !prof.kingdoms.includes(kingdomKey)) return false;
+
+      return true;
+    });
+
+    return treeCompatibleKeys
+      .map(key => {
+        const validation = this.getProfessionValidationData(key);
+        return {
+          key,
+          label: validation.label,
+          valid: validation.valid,
+          reasonText: validation.reasonText
+        };
+      })
+      .sort((a, b) => a.label.localeCompare(b.label, "es"));
+  }
+
+  /* -------------------------------------------- */
+  /*  Skills / Advancement                        */
+  /* -------------------------------------------- */
+
+
+    getSkillTarget(skillKey) {
+    const rawKey = String(skillKey ?? "").trim();
+    if (!rawKey) return { key: "", skill: null, target: 0 };
+
+    const key = normalizeSkillKey(rawKey, rawKey);
     const skill = this.system.skills?.[key];
     if (!skill) return { key, skill: null, target: 0 };
 
@@ -701,58 +1535,179 @@ getDifficultyMod() {
     return { key, skill, target };
   }
 
-  getEquippedWeapons() {
-    return this.items.filter(i => i.type === "weapon" && i.system.equipped);
+  getSkillMax(skillKey) {
+    const key = normalizeSkillKey(skillKey, skillKey);
+    const skill = this.system.skills?.[key];
+    if (!skill) return 100;
+
+    return Number(skill.baseValue ?? 0) + 50;
   }
 
-  getEquippedShields() {
-    return this.items.filter(i => i.type === "shield" && i.system.equipped);
+  getSkillStepCostFromTotal(total) {
+    const n = Number(total ?? 0);
+
+    if (n < 50) return 1;
+    if (n < 75) return 2;
+    return 3;
   }
 
-  getDefenseSourceData() {
-    const mode = String(this.system.combat?.defenseMode ?? "skill");
-    const defenseModifier = Number(this.system.combat?.defenseModifier ?? 0);
+  getSkillCost(skillKey) {
+    const key = normalizeSkillKey(skillKey, skillKey);
+    const skill = this.system.skills?.[key];
+    if (!skill) return 1;
 
-    if (mode === "weapon") {
-      const weaponId = this.system.combat?.defenseWeaponId || this.getEquippedWeapons()[0]?.id;
-      const weapon = weaponId ? this.items.get(weaponId) : null;
-      if (!weapon) return { label: "Arma", target: 0, modifier: defenseModifier, valid: false };
+    return this.getSkillStepCostFromTotal(Number(skill.total ?? 0));
+  }
 
-      if (!weapon.system.defensive) {
-        return { label: `${weapon.name}`, target: 0, modifier: defenseModifier, valid: false, reason: "arma-no-defensiva" };
-      }
+  getSkillSpentPoints(skillKey) {
+    const key = normalizeSkillKey(skillKey, skillKey);
+    const skill = this.system.skills?.[key];
+    if (!skill) return 0;
 
-      const skillKey = normalizeSkillKey(weapon.system.skill, "espadas");
-      const data = this.getSkillTarget(skillKey);
-      const parryBonus = Number(weapon.system.parryBonus ?? 0);
+    const baseValue = Number(skill.baseValue ?? 0);
+    const invested = Number(skill.invested ?? 0);
 
-      return {
-        label: `${weapon.name}`,
-        target: clampPercent(data.target + parryBonus),
-        modifier: defenseModifier,
-        valid: !!data.skill
-      };
+    let spent = 0;
+
+    for (let i = 0; i < invested; i += 1) {
+      const totalBeforeIncrease = baseValue + i;
+      spent += this.getSkillStepCostFromTotal(totalBeforeIncrease);
     }
 
-    if (mode === "shield") {
-      const shieldId = this.system.combat?.defenseShieldId || this.getEquippedShields()[0]?.id;
-      const shield = shieldId ? this.items.get(shieldId) : null;
-      if (!shield) return { label: "Escudo", target: 0, modifier: defenseModifier, valid: false };
+    return spent;
+  }
 
-      const data = this.getSkillTarget(normalizeSkillKey(shield.system.skill, "escudos"));
-      const bonus = Number(shield.system.defenseBonus ?? 0);
+  getTotalSpentSkillPoints() {
+    return Object.keys(this.system.skills ?? {}).reduce((sum, skillKey) => {
+      return sum + this.getSkillSpentPoints(skillKey);
+    }, 0);
+  }
 
-      return {
-        label: `${shield.name}`,
-        target: clampPercent(data.target + bonus),
-        modifier: defenseModifier,
-        valid: !!data.skill
-      };
+  getRemainingSkillPoints() {
+    const total = Number(this.system.creation?.skillPoints ?? 0);
+    const spent = this.getTotalSpentSkillPoints();
+
+    return Math.max(0, total - spent);
+  }
+
+  getSkillPointSummary() {
+    const total = Number(this.system.creation?.skillPoints ?? 0);
+    const spent = this.getTotalSpentSkillPoints();
+    const remaining = Math.max(0, total - spent);
+
+    return {
+      total,
+      spent,
+      remaining
+    };
+  }
+
+  getSkillInvestmentBreakdown() {
+    const skills = this.system.skills ?? {};
+    const rows = [];
+
+    for (const [key, skill] of Object.entries(skills)) {
+      const invested = Number(skill.invested ?? 0);
+      const spent = this.getSkillSpentPoints(key);
+
+      if (invested <= 0 && spent <= 0) continue;
+
+      rows.push({
+        key,
+        label: skill.label ?? key,
+        invested,
+        spent,
+        total: Number(skill.total ?? 0),
+        baseValue: Number(skill.baseValue ?? 0)
+      });
     }
 
-    const data = this.getSkillTarget(normalizeSkillKey(this.system.combat?.defenseSkill, "esquivar"));
-    return { label: data.skill?.label ?? "Defensa", target: data.target, modifier: defenseModifier, valid: !!data.skill };
+    return rows.sort((a, b) => {
+      if (b.spent !== a.spent) return b.spent - a.spent;
+      if (b.invested !== a.invested) return b.invested - a.invested;
+      return String(a.label).localeCompare(String(b.label), "es");
+    });
   }
+
+  canIncreaseSkill(skillKey) {
+    const key = normalizeSkillKey(skillKey, skillKey);
+    const skill = this.system.skills?.[key];
+    if (!skill) return false;
+
+    const allowed = this.system.creation?.allowedSkills ?? [];
+    if (allowed.length && !allowed.includes(key)) return false;
+
+    const remaining = this.getRemainingSkillPoints();
+    const cost = this.getSkillCost(key);
+    const max = this.getSkillMax(key);
+
+    if (remaining < cost) return false;
+    if (Number(skill.total ?? 0) >= max) return false;
+
+    return true;
+  }
+
+  canDecreaseSkill(skillKey) {
+    const key = normalizeSkillKey(skillKey, skillKey);
+    const skill = this.system.skills?.[key];
+    if (!skill) return false;
+
+    return Number(skill.invested ?? 0) > 0;
+  }
+
+  async increaseSkill(skillKey) {
+    await this.ensureActorDefaults();
+
+    const key = normalizeSkillKey(skillKey, skillKey);
+    const skill = this.system.skills?.[key];
+    if (!skill) return;
+
+    const allowed = this.system.creation?.allowedSkills ?? [];
+    if (allowed.length && !allowed.includes(key)) {
+      ui.notifications?.warn(`La profesión actual no permite invertir puntos en ${skill.label ?? key}.`);
+      return;
+    }
+
+    const max = this.getSkillMax(key);
+    if (Number(skill.total ?? 0) >= max) {
+      ui.notifications?.warn(`Has alcanzado el máximo de ${skill.label ?? key}.`);
+      return;
+    }
+
+    const cost = this.getSkillCost(key);
+    const remaining = this.getRemainingSkillPoints();
+    if (remaining < cost) {
+      ui.notifications?.warn(
+        `No quedan puntos suficientes para subir ${skill.label ?? key}. Coste actual: ${cost}.`
+      );
+      return;
+    }
+
+    const skills = foundry.utils.deepClone(this.system.skills ?? {});
+    skills[key].invested = Number(skills[key].invested ?? 0) + 1;
+    skills[key].total = Number(skills[key].baseValue ?? 0) + Number(skills[key].invested ?? 0);
+
+    await this.update({ "system.skills": skills });
+  }
+
+  async decreaseSkill(skillKey) {
+    await this.ensureActorDefaults();
+
+    const key = normalizeSkillKey(skillKey, skillKey);
+    if (!this.canDecreaseSkill(key)) return;
+
+    const skills = foundry.utils.deepClone(this.system.skills ?? {});
+    const skill = skills[key];
+
+    skill.invested = Math.max(0, Number(skill.invested ?? 0) - 1);
+    skill.total = Number(skill.baseValue ?? 0) + Number(skill.invested ?? 0);
+
+    await this.update({ "system.skills": skills });
+  }
+
+  /* -------------------------------------------- */
+  /*  Generic Rolls / Magic                       */
+  /* -------------------------------------------- */
 
   async rollPercent(value, label = "Tirada") {
     const result = await rollPercent(this, value, label);
@@ -776,48 +1731,6 @@ getDifficultyMod() {
     const data = this.getSkillTarget(key);
     if (!data.skill) return null;
     return this.rollPercent(data.target, `Competencia: ${data.skill.label}`);
-  }
-
-  async rollDefense() {
-    const defense = this.getDefenseSourceData();
-    if (!defense.valid) {
-      const msg = defense.reason === "arma-no-defensiva"
-        ? `${this.name} ha seleccionado un arma no defensiva para parar.`
-        : `${this.name} no tiene una defensa válida configurada.`;
-      ui.notifications?.warn(msg);
-      return null;
-    }
-
-    const target = clampPercent(defense.target + defense.modifier + this.getDifficultyMod());
-    return this.rollPercent(target, `Defensa: ${defense.label}`);
-  }
-
-  async rollWeaponAttack(itemId) {
-    const weapon = this.items.get(itemId);
-    if (!weapon || weapon.type !== "weapon") return null;
-
-    const data = this.getSkillTarget(normalizeSkillKey(weapon.system.skill, "espadas"));
-    if (!data.skill) {
-      ui.notifications?.warn(`El arma ${weapon.name} usa una competencia no válida: ${weapon.system.skill}`);
-      return null;
-    }
-
-    const target = clampPercent(data.target + Number(this.system.combat?.attackModifier ?? 0) + this.getDifficultyMod());
-    return this.rollPercent(target, `Ataque: ${weapon.name} [${data.skill.label}]`);
-  }
-
-  async rollWeaponDamage(itemId) {
-    const weapon = this.items.get(itemId);
-    if (!weapon || weapon.type !== "weapon") return null;
-
-    const damage = await rollFormula(this, weapon.system.damage || "1d3", `Daño: ${weapon.name}`);
-
-    await postSimpleMessage(this, `Daño: ${weapon.name}`, [
-      `<strong>Fórmula:</strong> ${damage.formula}`,
-      `<strong>Resultado:</strong> ${damage.total}`
-    ]);
-
-    return damage;
   }
 
   async castSpell(itemId) {
@@ -870,180 +1783,5 @@ getDifficultyMod() {
     ]);
 
     return result;
-  }
-
-  async rollInitiative() {
-    const base = Number(this.system.characteristics?.agi?.value ?? 10);
-    const roll = await rollFormula(this, "1d10", "Iniciativa");
-    const total = base + roll.total;
-    await this.update({ "system.combat.initiative": total });
-
-    await postSimpleMessage(this, "Iniciativa", [
-      `<strong>AGI base:</strong> ${base}`,
-      `<strong>1d10:</strong> ${roll.total}`,
-      `<strong>Total:</strong> ${total}`
-    ]);
-
-    return total;
-  }
-
-  async toggleItemEquipped(itemId) {
-    const item = this.items.get(itemId);
-    if (!item) return;
-    await item.update({ "system.equipped": !Boolean(item.system.equipped) });
-  }
-
-  async consumeAction() {
-    const current = Number(this.system.combat?.actions?.current ?? 0);
-    await this.update({ "system.combat.actions.current": Math.max(0, current - 1) });
-  }
-
-  async resetActions() {
-    await this.update({ "system.combat.actions.current": 2 });
-  }
-
-  getArmorForLocation(location) {
-    const equippedArmor = this.items.filter(i => i.type === "armor" && i.system.equipped);
-    const equippedShields = this.items.filter(i => i.type === "shield" && i.system.equipped);
-
-    const armor = equippedArmor
-      .filter(item => {
-        const loc = String(item.system.location || "").toLowerCase();
-        return loc === "general" || loc === String(location).toLowerCase();
-      })
-      .reduce((sum, item) => sum + Number(item.system.protection || 0), 0);
-
-    const shieldProt = equippedShields.reduce((sum, item) => sum + Number(item.system.protection || 0), 0);
-    return armor + shieldProt;
-  }
-
-  async applyDamage(amount) {
-    const currentPV = Number(this.system.secondary?.pv?.value ?? 0);
-    const newPV = Math.max(0, currentPV - Math.max(0, Number(amount || 0)));
-    await this.update({ "system.secondary.pv.value": newPV });
-    return newPV;
-  }
-
-  async resolveAttackAgainst(targetActor, weaponId) {
-    if (!targetActor || !(targetActor instanceof Actor)) return;
-
-    await this.ensureActorDefaults();
-    await targetActor.ensureActorDefaults?.();
-
-    const weapon = this.items.get(weaponId);
-    if (!weapon || weapon.type !== "weapon") return;
-
-    const myActions = Number(this.system.combat?.actions?.current);
-    if (!Number.isFinite(myActions) || myActions <= 0) {
-      ui.notifications?.warn(`${this.name} no tiene acciones disponibles.`);
-      return;
-    }
-
-    const attackData = this.getSkillTarget(normalizeSkillKey(weapon.system.skill, "espadas"));
-    if (!attackData.skill) {
-      ui.notifications?.warn(`El arma ${weapon.name} usa una competencia no válida: ${weapon.system.skill}`);
-      return;
-    }
-
-    const attackModifier = Number(this.system.combat?.attackModifier ?? 0) + this.getDifficultyMod();
-    const finalAttackTarget = clampPercent(attackData.target + attackModifier);
-    const attackRoll = await rollPercent(this, finalAttackTarget, `Ataque: ${weapon.name}`);
-
-    let defenseRoll = null;
-    let defenseBase = 0;
-    let defenseModifier = 0;
-    let defenseLabel = "Sin defensa";
-
-    const targetActions = Number(targetActor.system.combat?.actions?.current ?? 0);
-    if (targetActions > 0) {
-      const defense = targetActor.getDefenseSourceData();
-
-      if (defense.valid) {
-        defenseBase = defense.target;
-        defenseModifier = defense.modifier + targetActor.getDifficultyMod();
-        defenseLabel = defense.label;
-
-        const finalDefenseTarget = clampPercent(defense.target + defenseModifier);
-        defenseRoll = await rollPercent(targetActor, finalDefenseTarget, `Defensa: ${defense.label}`);
-        await targetActor.consumeAction?.();
-      } else if (defense.reason === "arma-no-defensiva") {
-        ui.notifications?.warn(`${targetActor.name} tiene seleccionada un arma no defensiva para parar.`);
-      }
-    }
-
-    const comparison = compareAttackDefense(attackRoll, defenseRoll);
-    await this.consumeAction();
-
-    let criticalEffect = "";
-    let fumbleEffect = "";
-
-    if (attackRoll.critical) {
-      criticalEffect = getCriticalEffect();
-      await this.update({ "system.combat.lastCritical": criticalEffect });
-    }
-
-    if (attackRoll.fumble) {
-      fumbleEffect = getFumbleEffect();
-      await this.update({ "system.combat.lastFumble": fumbleEffect });
-    }
-
-    if (defenseRoll?.fumble && !fumbleEffect) {
-      fumbleEffect = getFumbleEffect();
-      await targetActor.update({ "system.combat.lastFumble": fumbleEffect });
-    }
-
-    if (!comparison.hit) {
-      await postCombatMessage({
-        attacker: this,
-        defender: targetActor,
-        weapon,
-        attackRoll,
-        defenseRoll,
-        hit: false,
-        reason: comparison.reason,
-        attackBase: attackData.target,
-        attackModifier,
-        defenseBase,
-        defenseModifier,
-        defenseLabel,
-        criticalBonus: 0,
-        criticalEffect,
-        fumbleEffect
-      });
-      return;
-    }
-
-    const locRoll = await rollFormula(this, "1d100", "Localización");
-    const location = getHitLocation(locRoll.total);
-
-    const damageRoll = await rollFormula(this, weapon.system.damage || "1d3", `Daño: ${weapon.name}`);
-    const criticalBonus = attackRoll.critical ? applyCriticalDamageBonus(damageRoll.total) : 0;
-    const grossDamage = Number(damageRoll.total) + criticalBonus;
-    const armor = targetActor.getArmorForLocation?.(location) ?? 0;
-    const netDamage = Math.max(0, grossDamage - Number(armor));
-    const remainingPV = await targetActor.applyDamage(netDamage);
-
-    await postCombatMessage({
-      attacker: this,
-      defender: targetActor,
-      weapon,
-      attackRoll,
-      defenseRoll,
-      hit: true,
-      reason: comparison.reason,
-      location,
-      damageRoll: { total: grossDamage },
-      armor,
-      netDamage,
-      remainingPV,
-      attackBase: attackData.target,
-      attackModifier,
-      defenseBase,
-      defenseModifier,
-      defenseLabel,
-      criticalBonus,
-      criticalEffect,
-      fumbleEffect
-    });
   }
 }

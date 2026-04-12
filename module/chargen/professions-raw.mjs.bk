@@ -1,4 +1,4 @@
-// module/chargen/professions-raw.mjs
+// systems/aquelarre/module/chargen/professions-raw.mjs
 
 function clone(data) {
   return foundry.utils.deepClone(data);
@@ -135,22 +135,6 @@ function ritual({
   };
 }
 
-/**
- * Convención usada en este archivo:
- * - society: sociedad cultural/religiosa del personaje
- *   valores sugeridos: "cristiana", "judia", "islamica"
- *
- * - socialClass: clases sociales internas del sistema
- *   valores sugeridos:
- *   "campesinado", "villano", "burguesia", "baja-nobleza",
- *   "alta-nobleza", "clero", "marginado"
- *
- * - ethnicities / kingdoms / sex:
- *   [] = sin restricción específica
- *
- * Esta versión está pensada como base estructural de v0.3.2.
- * No pretende ser todavía un catálogo RAW exhaustivo al 100%.
- */
 export const PROFESSIONS_RAW = {
   labrador: {
     label: "Labrador",
@@ -159,6 +143,7 @@ export const PROFESSIONS_RAW = {
     ethnicities: [],
     kingdoms: [],
     sex: [],
+    minStats: {},
     skillPoints: 100,
     allowedSkills: ["descubrir", "sigilo", "pelea"],
     equipment: [
@@ -166,16 +151,21 @@ export const PROFESSIONS_RAW = {
       gear({ name: "Ropa de trabajo", equipped: true, notes: "Ropa campesina" }),
       gear({ name: "Saco de semillas", notes: "Aperos y simiente" })
     ],
-    money: "Poco"
+    money: "Poco",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
   pastor: {
     label: "Pastor",
-    society: ["cristiana"],
+    society: ["cristiana", "islamica", "judia"],
     socialClass: ["campesinado", "villano"],
     ethnicities: [],
     kingdoms: [],
     sex: [],
+    minStats: { agi: 15, per: 20 },
     skillPoints: 100,
     allowedSkills: ["descubrir", "sigilo", "palos"],
     equipment: [
@@ -190,16 +180,21 @@ export const PROFESSIONS_RAW = {
       gear({ name: "Ropa de lana", equipped: true }),
       gear({ name: "Zurrón", notes: "Útiles de viaje y comida" })
     ],
-    money: "Poco"
+    money: "Poco",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
   cazador: {
     label: "Cazador",
-    society: ["cristiana"],
+    society: ["cristiana", "islamica"],
     socialClass: ["campesinado", "villano", "marginado"],
     ethnicities: [],
     kingdoms: [],
     sex: [],
+    minStats: { per: 20 },
     skillPoints: 105,
     allowedSkills: ["descubrir", "sigilo", "arcos", "cuchillos"],
     equipment: [
@@ -223,16 +218,21 @@ export const PROFESSIONS_RAW = {
       gear({ name: "Carcaj", quantity: 1, notes: "Con varias flechas" }),
       gear({ name: "Trampas sencillas", notes: "Utensilios para la caza menor" })
     ],
-    money: "Poco"
+    money: "Poco",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
   pescador: {
     label: "Pescador",
-    society: ["cristiana"],
+    society: ["cristiana", "islamica"],
     socialClass: ["campesinado", "villano"],
     ethnicities: [],
     kingdoms: ["castilla", "aragon", "portugal", "granada"],
     sex: [],
+    minStats: { hab: 15, agi: 15 },
     skillPoints: 100,
     allowedSkills: ["descubrir", "palos", "pelea"],
     equipment: [
@@ -240,7 +240,11 @@ export const PROFESSIONS_RAW = {
       gear({ name: "Anzuelos y sedal" }),
       gear({ name: "Cuchillo de faena", notes: "Útil para pescado y cuerda" })
     ],
-    money: "Poco"
+    money: "Poco",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
   artesano: {
@@ -250,14 +254,19 @@ export const PROFESSIONS_RAW = {
     ethnicities: [],
     kingdoms: [],
     sex: [],
+    minStats: { hab: 20, per: 15 },
     skillPoints: 105,
-    allowedSkills: ["descubrir", "persuasion", "leerEscribir"],
+    allowedSkills: ["descubrir", "persuasion", "leer_y_escribir"],
     equipment: [
       gear({ name: "Herramientas de oficio", notes: "Útiles propios del taller" }),
       gear({ name: "Ropa de trabajo", equipped: true }),
       gear({ name: "Caja de materiales", notes: "Recambios y piezas" })
     ],
-    money: "Medio"
+    money: "Medio",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
   mercader: {
@@ -267,14 +276,19 @@ export const PROFESSIONS_RAW = {
     ethnicities: [],
     kingdoms: [],
     sex: [],
+    minStats: { com: 20 },
     skillPoints: 110,
-    allowedSkills: ["persuasion", "leerEscribir", "descubrir"],
+    allowedSkills: ["persuasion", "leer_y_escribir", "descubrir"],
     equipment: [
       gear({ name: "Bolsa de monedas", equipped: true, notes: "Capital comercial inicial" }),
       gear({ name: "Libro de cuentas", notes: "Anotaciones de negocio" }),
       gear({ name: "Balanza pequeña", notes: "Para pesar mercancías" })
     ],
-    money: "Medio"
+    money: "Medio",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
   escriba: {
@@ -284,14 +298,19 @@ export const PROFESSIONS_RAW = {
     ethnicities: [],
     kingdoms: [],
     sex: [],
+    minStats: {},
     skillPoints: 115,
-    allowedSkills: ["leerEscribir", "culto", "persuasion"],
+    allowedSkills: ["leer_y_escribir", "culto", "persuasion"],
     equipment: [
       gear({ name: "Estuche de escritura", notes: "Cálamos, tinta y cuchilla" }),
       gear({ name: "Pergaminos", quantity: 3, notes: "Hojas de trabajo" }),
       gear({ name: "Libro devocional o de notas", notes: "Según formación" })
     ],
-    money: "Medio"
+    money: "Medio",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
   soldado: {
@@ -301,6 +320,7 @@ export const PROFESSIONS_RAW = {
     ethnicities: [],
     kingdoms: [],
     sex: [],
+    minStats: { fue: 15, hab: 15 },
     skillPoints: 120,
     allowedSkills: ["espadas", "escudos", "pelea", "esquivar", "lanzas"],
     equipment: [
@@ -324,7 +344,11 @@ export const PROFESSIONS_RAW = {
       }),
       gear({ name: "Mochila militar", notes: "Ración y útiles básicos" })
     ],
-    money: "Medio"
+    money: "Medio",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
   guardia: {
@@ -333,9 +357,10 @@ export const PROFESSIONS_RAW = {
     socialClass: ["villano", "burguesia", "baja-nobleza"],
     ethnicities: [],
     kingdoms: [],
-    sex: [],
+    sex: ["male"],
+    minStats: { agi: 15, hab: 15 },
     skillPoints: 115,
-    allowedSkills: ["espadas", "escudos", "descubrir", "persuasion"],
+    allowedSkills: ["espadas", "escudos", "descubrir", "persuasion", "lanzas"],
     equipment: [
       weapon({
         name: "Lanza corta",
@@ -357,16 +382,21 @@ export const PROFESSIONS_RAW = {
       }),
       gear({ name: "Insignia del concejo", equipped: true })
     ],
-    money: "Medio"
+    money: "Medio",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
   bandolero: {
     label: "Bandolero",
     society: ["cristiana", "islamica"],
-    socialClass: ["marginado"],
+    socialClass: ["marginado", "campesinado", "villano"],
     ethnicities: [],
     kingdoms: [],
     sex: [],
+    minStats: { per: 15, res: 15 },
     skillPoints: 115,
     allowedSkills: ["sigilo", "cuchillos", "esquivar", "descubrir"],
     equipment: [
@@ -381,18 +411,23 @@ export const PROFESSIONS_RAW = {
       gear({ name: "Capucha raída", equipped: true }),
       gear({ name: "Bolsa de botín", notes: "Pertenencias mal habidas" })
     ],
-    money: "Variable"
+    money: "Variable",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
   marinero: {
     label: "Marinero",
-    society: ["cristiana", "islamica"],
-    socialClass: ["villano", "campesinado", "marginado"],
+    society: ["cristiana", "judia", "islamica"],
+    socialClass: ["villano", "campesinado", "burguesia", "marginado"],
     ethnicities: [],
     kingdoms: ["castilla", "aragon", "portugal", "granada"],
     sex: [],
+    minStats: { hab: 15, agi: 15 },
     skillPoints: 105,
-    allowedSkills: ["descubrir", "palos", "pelea", "esquivar"],
+    allowedSkills: ["descubrir", "palos", "pelea", "esquivar", "cuchillos"],
     equipment: [
       weapon({
         name: "Cuchillo marinero",
@@ -405,7 +440,11 @@ export const PROFESSIONS_RAW = {
       gear({ name: "Cuerda y ganchos", notes: "Útiles de cubierta" }),
       gear({ name: "Ropa de mar", equipped: true })
     ],
-    money: "Poco"
+    money: "Poco",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
   clerigo: {
@@ -415,8 +454,9 @@ export const PROFESSIONS_RAW = {
     ethnicities: [],
     kingdoms: [],
     sex: ["male"],
+    minStats: { cul: 15, luck: 50 },
     skillPoints: 120,
-    allowedSkills: ["culto", "leerEscribir", "medicina", "persuasion"],
+    allowedSkills: ["culto", "leer_y_escribir", "medicina", "persuasion"],
     equipment: [
       gear({ name: "Símbolo religioso", equipped: true }),
       gear({ name: "Librito de oraciones", notes: "Devocionario o salterio" }),
@@ -428,204 +468,156 @@ export const PROFESSIONS_RAW = {
         requirements: "Símbolo sagrado"
       })
     ],
-    money: "Medio"
+    money: "Medio",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
   monje: {
     label: "Monje",
     society: ["cristiana"],
-    socialClass: ["clero"],
+    socialClass: ["clero", "burguesia", "baja-nobleza", "villano", "campesinado"],
     ethnicities: [],
     kingdoms: [],
     sex: ["male"],
+    minStats: { cul: 15, luck: 45 },
     skillPoints: 115,
-    allowedSkills: ["culto", "leerEscribir", "medicina"],
+    allowedSkills: ["culto", "leer_y_escribir", "medicina"],
     equipment: [
-      gear({ name: "Hábito monacal", equipped: true }),
-      gear({ name: "Rosario o cuentas", equipped: true }),
-      gear({ name: "Manual copiado", notes: "Texto de estudio o rezos" })
+      gear({ name: "Hábito monástico", equipped: true }),
+      gear({ name: "Rosario de madera" }),
+      gear({ name: "Manual de salmos" })
     ],
-    money: "Poco"
+    money: "Poco",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
-  medico: {
-    label: "Médico",
+  curandero: {
+    label: "Curandero",
     society: ["cristiana", "judia", "islamica"],
-    socialClass: ["burguesia", "clero", "baja-nobleza"],
+    socialClass: ["campesinado", "villano", "marginado", "burguesia"],
     ethnicities: [],
     kingdoms: [],
     sex: [],
-    skillPoints: 120,
-    allowedSkills: ["medicina", "leerEscribir", "descubrir", "persuasion"],
-    equipment: [
-      gear({ name: "Maletín de remedios", notes: "Vendas, ungüentos y útiles" }),
-      gear({ name: "Instrumental médico", notes: "Sondas, cuchillas, agujas" }),
-      gear({ name: "Tratado médico", notes: "Compendio de referencia" })
-    ],
-    money: "Medio"
-  },
-
-  barberoCirujano: {
-    label: "Barbero-cirujano",
-    society: ["cristiana", "judia", "islamica"],
-    socialClass: ["burguesia", "villano"],
-    ethnicities: [],
-    kingdoms: [],
-    sex: [],
+    minStats: { cul: 15, per: 15 },
     skillPoints: 115,
-    allowedSkills: ["medicina", "persuasion", "cuchillos"],
+    allowedSkills: ["medicina", "descubrir", "persuasion", "sigilo"],
     equipment: [
-      gear({ name: "Navajas y cuchillas", notes: "Útiles de barbería y cirugía" }),
-      gear({ name: "Vendas", quantity: 2 }),
-      gear({ name: "Aceites y emplastos", notes: "Preparados básicos" })
+      gear({ name: "Bolsa de hierbas", notes: "Remedios y plantas" }),
+      gear({ name: "Cuchillo de corte", notes: "Para ungüentos y preparación" }),
+      gear({ name: "Vendajes", quantity: 3 })
     ],
-    money: "Medio"
+    money: "Poco",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
   alquimista: {
     label: "Alquimista",
     society: ["cristiana", "judia", "islamica"],
-    socialClass: ["burguesia", "clero", "baja-nobleza", "marginado"],
+    socialClass: ["burguesia", "baja-nobleza", "clero"],
     ethnicities: [],
     kingdoms: [],
     sex: [],
-    skillPoints: 120,
-    allowedSkills: ["alquimia", "leerEscribir", "astrologia", "descubrir"],
+    minStats: { cul: 20 },
+    skillPoints: 125,
+    allowedSkills: ["alquimia", "leer_y_escribir", "descubrir", "medicina"],
     equipment: [
-      gear({ name: "Bolsa de componentes", notes: "Hierbas, polvos y recipientes" }),
-      gear({ name: "Instrumental de laboratorio", notes: "Mortero, frascos y brasero" }),
+      gear({ name: "Redoma y alambique", notes: "Utillaje básico de laboratorio" }),
+      gear({ name: "Cuaderno de fórmulas" }),
       spell({
-        name: "Ungüento de ojos nocturnos",
+        name: "Preparación menor",
         skill: "alquimia",
         cost: "1 preparación",
-        effect: "Mejora la visión en la oscuridad",
-        components: "Hierbas y grasa animal"
+        effect: "Produce una mezcla simple de uso alquímico"
       })
     ],
-    money: "Variable"
+    money: "Medio",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   },
 
-  brujo: {
-    label: "Brujo",
+  bruja: {
+    label: "Bruja",
     society: ["cristiana", "judia", "islamica"],
     socialClass: ["marginado", "campesinado", "villano", "burguesia"],
     ethnicities: [],
     kingdoms: [],
-    sex: [],
-    skillPoints: 120,
-    allowedSkills: ["alquimia", "astrologia", "leerEscribir", "sigilo"],
+    sex: ["female"],
+    minStats: { cul: 15, per: 15, luck: 40 },
+    skillPoints: 125,
+    allowedSkills: ["alquimia", "astrologia", "sigilo", "persuasion"],
     equipment: [
-      gear({ name: "Bolsa de componentes", notes: "Hierbas, velas y polvo ritual" }),
-      gear({ name: "Amuleto tosco", notes: "Talismán o pieza supersticiosa" }),
+      gear({ name: "Bolsa de componentes", notes: "Restos, hierbas y otros ingredientes" }),
+      gear({ name: "Amuleto extraño", equipped: true }),
       spell({
-        name: "Ungüento de ojos nocturnos",
+        name: "Ojo de la noche",
         skill: "alquimia",
         cost: "1 preparación",
-        effect: "Mejora la visión en la oscuridad",
-        components: "Hierbas y grasa animal"
+        effect: "Permite ver mejor en penumbra"
       })
     ],
-    money: "Variable"
-  },
-
-  cortesano: {
-    label: "Cortesano",
-    society: ["cristiana", "islamica"],
-    socialClass: ["baja-nobleza", "alta-nobleza", "burguesia"],
-    ethnicities: [],
-    kingdoms: [],
-    sex: [],
-    skillPoints: 110,
-    allowedSkills: ["persuasion", "leerEscribir", "culto"],
-    equipment: [
-      gear({ name: "Ropas de calidad", equipped: true, notes: "Vestimenta cuidada" }),
-      gear({ name: "Sello personal", notes: "Insignia o distintivo" }),
-      gear({ name: "Perfume o aceite aromático", notes: "Señal de refinamiento" })
-    ],
-    money: "Alto"
-  },
-
-  caballero: {
-    label: "Caballero",
-    society: ["cristiana"],
-    socialClass: ["baja-nobleza", "alta-nobleza"],
-    ethnicities: [],
-    kingdoms: [],
-    sex: ["male"],
-    skillPoints: 130,
-    allowedSkills: ["espadas", "lanzas", "escudos", "esquivar", "persuasion"],
-    equipment: [
-      weapon({
-        name: "Espada de caballero",
-        skill: "espadas",
-        damage: "1d8",
-        hands: 1,
-        defensive: true,
-        parryBonus: 10
-      }),
-      weapon({
-        name: "Lanza de guerra",
-        skill: "lanzas",
-        damage: "1d8",
-        hands: 2,
-        defensive: false
-      }),
-      shield({
-        name: "Escudo de caballero",
-        protection: 2,
-        defenseBonus: 15
-      }),
-      armor({
-        name: "Loriga",
-        protection: 3,
-        location: "torso"
-      }),
-      gear({ name: "Capa heráldica", equipped: true })
-    ],
-    money: "Alto"
-  },
-
-  estudiante: {
-    label: "Estudiante",
-    society: ["cristiana", "judia", "islamica"],
-    socialClass: ["burguesia", "clero", "baja-nobleza"],
-    ethnicities: [],
-    kingdoms: [],
-    sex: [],
-    skillPoints: 110,
-    allowedSkills: ["leerEscribir", "culto", "astrologia"],
-    equipment: [
-      gear({ name: "Cuadernos y notas", notes: "Material de estudio" }),
-      gear({ name: "Manual escolástico", notes: "Texto de referencia" }),
-      gear({ name: "Tintero y pluma", equipped: true })
-    ],
-    money: "Poco"
-  },
-
-  mendigo: {
-    label: "Mendigo",
-    society: ["cristiana", "judia", "islamica"],
-    socialClass: ["marginado"],
-    ethnicities: [],
-    kingdoms: [],
-    sex: [],
-    skillPoints: 95,
-    allowedSkills: ["sigilo", "descubrir", "persuasion"],
-    equipment: [
-      gear({ name: "Manta raída", equipped: true }),
-      gear({ name: "Cuenco de limosna", equipped: true }),
-      gear({ name: "Hatillo miserable", notes: "Pocas pertenencias" })
-    ],
-    money: "Ninguno"
+    money: "Poco",
+    source: {
+      book: "raw_local",
+      note: "Adaptación Foundry"
+    }
   }
 };
 
+/* -------------------------------------------- */
+/*  Normalización / Lectura                      */
+/* -------------------------------------------- */
+
+function normalizeProfessionData(key, data = {}) {
+  return {
+    key,
+    label: data.label ?? key,
+    society: Array.isArray(data.society) ? [...data.society] : [],
+    socialClass: Array.isArray(data.socialClass) ? [...data.socialClass] : [],
+    ethnicities: Array.isArray(data.ethnicities) ? [...data.ethnicities] : [],
+    kingdoms: Array.isArray(data.kingdoms) ? [...data.kingdoms] : [],
+    sex: Array.isArray(data.sex) ? [...data.sex] : [],
+    minStats: foundry.utils.deepClone(data.minStats ?? {}),
+    skillPoints: Number(data.skillPoints ?? 0),
+    allowedSkills: Array.isArray(data.allowedSkills) ? [...data.allowedSkills] : [],
+    equipment: foundry.utils.deepClone(data.equipment ?? []),
+    money: data.money ?? "",
+    source: foundry.utils.deepClone(
+      data.source ?? {
+        book: "raw_local",
+        note: "Profesión RAW para sistema Foundry"
+      }
+    )
+  };
+}
+
 export function getProfessionRaw(key) {
-  return PROFESSIONS_RAW[key] ? clone(PROFESSIONS_RAW[key]) : null;
+  const data = PROFESSIONS_RAW[key];
+  return data ? normalizeProfessionData(key, data) : null;
 }
 
 export function getProfessionKeys() {
   return Object.keys(PROFESSIONS_RAW);
+}
+
+export function getProfessionEntries() {
+  return getProfessionKeys()
+    .map(key => getProfessionRaw(key))
+    .filter(Boolean);
+}
+
+export function getProfessionLabel(key) {
+  return PROFESSIONS_RAW[key]?.label ?? key;
 }
 
 export function professionOptionsRAW(validKeys = null) {
@@ -634,9 +626,16 @@ export function professionOptionsRAW(validKeys = null) {
     : Object.keys(PROFESSIONS_RAW);
 
   return keys
-    .map(key => [key, PROFESSIONS_RAW[key].label])
+    .map(key => {
+      const prof = getProfessionRaw(key);
+      return [key, prof?.label ?? key];
+    })
     .sort((a, b) => a[1].localeCompare(b[1], "es"));
 }
+
+/* -------------------------------------------- */
+/*  Validación                                   */
+/* -------------------------------------------- */
 
 export function professionMatchesTree(professionKey, {
   society = "",
@@ -645,14 +644,14 @@ export function professionMatchesTree(professionKey, {
   kingdomKey = "",
   sex = ""
 } = {}) {
-  const prof = PROFESSIONS_RAW[professionKey];
+  const prof = getProfessionRaw(professionKey);
   if (!prof) return false;
 
-  if (prof.society?.length && society && !prof.society.includes(society)) return false;
-  if (prof.socialClass?.length && socialClassKey && !prof.socialClass.includes(socialClassKey)) return false;
-  if (prof.ethnicities?.length && ethnicityKey && !prof.ethnicities.includes(ethnicityKey)) return false;
-  if (prof.kingdoms?.length && kingdomKey && !prof.kingdoms.includes(kingdomKey)) return false;
-  if (prof.sex?.length && sex && !prof.sex.includes(sex)) return false;
+  if (prof.society.length && society && !prof.society.includes(society)) return false;
+  if (prof.socialClass.length && socialClassKey && !prof.socialClass.includes(socialClassKey)) return false;
+  if (prof.ethnicities.length && ethnicityKey && !prof.ethnicities.includes(ethnicityKey)) return false;
+  if (prof.kingdoms.length && kingdomKey && !prof.kingdoms.includes(kingdomKey)) return false;
+  if (prof.sex.length && sex && !prof.sex.includes(sex)) return false;
 
   return true;
 }
@@ -664,7 +663,7 @@ export function getValidProfessionKeys({
   kingdomKey = "",
   sex = ""
 } = {}) {
-  return Object.keys(PROFESSIONS_RAW).filter(key =>
+  return getProfessionKeys().filter(key =>
     professionMatchesTree(key, {
       society,
       socialClassKey,
@@ -673,4 +672,93 @@ export function getValidProfessionKeys({
       sex
     })
   );
+}
+
+export function validateProfessionForActorData(professionKey, {
+  society = "",
+  socialClassKey = "",
+  ethnicityKey = "",
+  kingdomKey = "",
+  sex = "",
+  stats = {},
+  luck = 0
+} = {}) {
+  const prof = getProfessionRaw(professionKey);
+
+  if (!prof) {
+    return {
+      key: professionKey,
+      label: professionKey,
+      valid: false,
+      reasons: ["Profesión inexistente"],
+      reasonText: "Profesión inexistente",
+      profession: null
+    };
+  }
+
+  const reasons = [];
+
+  if (prof.society.length && society && !prof.society.includes(society)) {
+    reasons.push("Sociedad incompatible");
+  }
+
+  if (prof.socialClass.length && socialClassKey && !prof.socialClass.includes(socialClassKey)) {
+    reasons.push("Clase social incompatible");
+  }
+
+  if (prof.ethnicities.length && ethnicityKey && !prof.ethnicities.includes(ethnicityKey)) {
+    reasons.push("Grupo étnico incompatible");
+  }
+
+  if (prof.kingdoms.length && kingdomKey && !prof.kingdoms.includes(kingdomKey)) {
+    reasons.push("Reino incompatible");
+  }
+
+  if (prof.sex.length && sex && !prof.sex.includes(sex)) {
+    reasons.push("Sexo incompatible");
+  }
+
+  for (const [statKey, minValue] of Object.entries(prof.minStats)) {
+    const currentValue = statKey === "luck"
+      ? Number(luck ?? 0)
+      : Number(stats?.[statKey] ?? 0);
+
+    if (currentValue < Number(minValue ?? 0)) {
+      reasons.push("No cumple mínimos de características");
+      break;
+    }
+  }
+
+  return {
+    key: prof.key,
+    label: prof.label,
+    valid: reasons.length === 0,
+    reasons,
+    reasonText: reasons.join(", "),
+    profession: prof
+  };
+}
+
+/* -------------------------------------------- */
+/*  Construcción de items                        */
+/* -------------------------------------------- */
+
+export function buildProfessionItemsForCreation(professionKey, {
+  markGranted = true
+} = {}) {
+  const prof = getProfessionRaw(professionKey);
+  if (!prof) return [];
+
+  return prof.equipment.map(item => {
+    const cloned = clone(item);
+
+    if (markGranted) {
+      cloned.flags ??= {};
+      cloned.flags.aquelarre ??= {};
+      cloned.flags.aquelarre.grantedByProfession = professionKey;
+      cloned.flags.aquelarre.creationGranted = true;
+    }
+
+    return cloned;
+  });
 }

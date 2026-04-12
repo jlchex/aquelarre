@@ -1,0 +1,6 @@
+﻿{"_id":"arnes","name":"Arnés","type":"armor","img":"icons/svg/item-bag.svg","system":{"protection":6,"price":2700,"currency":"mr","location":"general","equipped":false,"notes":"Coraza completa, muy pesada"}}
+{"_id":"bacinete","name":"Bacinete","type":"armor","img":"icons/svg/item-bag.svg","system":{"protection":2,"price":108,"currency":"mr","location":"cabeza","equipped":false,"notes":"Casco de metal"}}
+{"_id":"coracina","name":"Coracina","type":"armor","img":"icons/svg/item-bag.svg","system":{"protection":5,"price":1200,"currency":"mr","location":"torso","equipped":false,"notes":"Túnica con láminas de metal"}}
+{"_id":"gambeson","name":"Gambesón","type":"armor","img":"icons/svg/item-bag.svg","system":{"protection":2,"price":250,"currency":"mr","location":"general","equipped":false,"notes":"Túnica de cuero o tela rellena"}}
+{"_id":"loriga","name":"Lóriga de Malla","type":"armor","img":"icons/svg/item-bag.svg","system":{"protection":4,"price":900,"currency":"mr","location":"general","equipped":false,"notes":"Cota de malla flexible"}}
+{"_id":"yelmo","name":"Yelmo","type":"armor","img":"icons/svg/item-bag.svg","system":{"protection":3,"price":250,"currency":"mr","location":"cabeza","equipped":false,"notes":"Casco de protección completa"}}

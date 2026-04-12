@@ -1,49 +1,76 @@
-claves internas JS / JSON
+Notas de desarrollo
 
-Usa camelCase cuando ya lo tienes así:
+Reglas rápidas
 
-leerEscribir
-activeWeaponId
-lastRawDamage
-claves de skills “simples”
+- Mantener `system.*` en camelCase.
+- Mantener keys de localización y datasets en snake_case.
+- No introducir nuevos tipos de item sin necesidad real.
+- No usar `bio.*` como fuente de verdad para lógica de creación.
+- Tratar los compendios `.db` como contenido versionado.
+- Ignorar las carpetas internas que Foundry genera dentro de `packs/`.
 
-Mantén una sola forma y no mezcles:
+Tipos de item activos
 
-espadas
-escudos
-esquivar
-leerEscribir
-localizaciones de impacto
+- weapon
+- shield
+- armor
+- spell
+- ritual
+- gear
 
-Déjalas cerradas y estables:
+Compendios de magia activos
 
-cabeza
-brazo-izquierdo
-brazo-derecho
-torso
-pierna-izquierda
-pierna-derecha
-general
-brazos
-piernas
-tipos de item
+- `packs/aquelarre-magic-basic.db`
+- `packs/aquelarre-magic-advanced.db`
+- `packs/aquelarre-magic-items.db`
 
-No renombres los actuales salvo necesidad fuerte:
+Compendios retirados por redundancia
 
-weapon
-shield
-armor
-spell
-ritual
-gear
+- `packs/aquelarre-spells.db`
+- `packs/aquelarre-rituals.db`
+- `packs/aquelarre-magic-compendium.db`
 
-Tu sistema ya usa estos tipos oficialmente.
-#############deuda técnica actual recomendada######################
-ensureActorDefaults() llamado desde getData() del sheet
-prepareDerivedData() muy grande
-defaults duplicados entre template.json y helpers de actor
-chat de combate aún mejorable
-capitulares con fondo incorrecto
-item logic todavía muy básica
-falta migración formal de cambios de esquema
-professions/content aún mezclados con lógica del sistema
+Campos de combate relevantes
+
+- system.combat.activeWeaponId
+- system.combat.defenseMode
+- system.combat.defenseSkill
+- system.combat.defenseWeaponId
+- system.combat.defenseShieldId
+- system.combat.actions.current
+- system.combat.attackModifier
+- system.combat.defenseModifier
+- system.combat.difficulty
+- system.combat.meleeMode
+- system.combat.aimLocation
+- system.combat.aimModifier
+
+Economía e items
+
+- Todos los items soportados deben usar `system.price` y `system.currency`.
+- Escudos usan `system.resistance` y `system.maxResistance`.
+- Las entradas importadas de fuentes externas deben normalizarse al schema real del sistema.
+
+Compendios mantenidos en Git
+
+- `packs/*.db` sí se versiona.
+- `packs/*/` no se versiona.
+
+Antes de tocar lógica o contenido
+
+- Revisar `docs/naming-conventions.md`.
+- Revisar `docs/data-model.md`.
+- Revisar `docs/tech-debt.md`.
+- Revisar `ROADMAP.md`.
+
+Deuda técnica activa
+
+- `actor.mjs` sigue concentrando demasiada lógica.
+- Falta migración formal de esquema para contenido y actores antiguos.
+- Los compendios importados desde PDFs siguen necesitando una pasada de validación semántica completa.
+- Parte del contenido adicional se ha normalizado como `gear` para compatibilidad y todavía puede refinarse.
+
+Creación de personaje (estado actual)
+
+- `system.creation.fatherProfessionKey` se usa para aplicar bonificadores automáticos a competencias.
+- El texto de `system.bio.fatherProfession` se mantiene como presentación y se sincroniza desde la selección canónica.

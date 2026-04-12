@@ -42,6 +42,127 @@
       "gear": {}
     }
   },
+  "packs": [
+    {
+      "name": "aquelarre-weapons",
+      "label": "Aquelarre - Armas",
+      "path": "packs/aquelarre-weapons.db",
+      "type": "Item",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-armors",
+      "label": "Aquelarre - Armaduras",
+      "path": "packs/aquelarre-armors.db",
+      "type": "Item",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-shields",
+      "label": "Aquelarre - Escudos",
+      "path": "packs/aquelarre-shields.db",
+      "type": "Item",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-magic-basic",
+      "label": "Aquelarre - Magia Basica",
+      "path": "packs/aquelarre-magic-basic.db",
+      "type": "Item",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-magic-advanced",
+      "label": "Aquelarre - Magia Avanzada",
+      "path": "packs/aquelarre-magic-advanced.db",
+      "type": "Item",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-gear",
+      "label": "Aquelarre - Equipo",
+      "path": "packs/aquelarre-gear.db",
+      "type": "Item",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-magic-items",
+      "label": "Aquelarre - Objetos Mágicos",
+      "path": "packs/aquelarre-magic-items.db",
+      "type": "Item",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-clothing",
+      "label": "Aquelarre - Ropas y Vestimenta",
+      "path": "packs/aquelarre-clothing.db",
+      "type": "Item",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-food",
+      "label": "Aquelarre - Comida y Alojamiento",
+      "path": "packs/aquelarre-food.db",
+      "type": "Item",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-services",
+      "label": "Aquelarre - Servicios Profesionales",
+      "path": "packs/aquelarre-services.db",
+      "type": "Item",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-miscellaneous",
+      "label": "Aquelarre - Equipo Variado",
+      "path": "packs/aquelarre-miscellaneous.db",
+      "type": "Item",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-professions",
+      "label": "Aquelarre - Profesiones",
+      "path": "packs/aquelarre-professions.db",
+      "type": "JournalEntry",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-kingdoms",
+      "label": "Aquelarre - Reinos",
+      "path": "packs/aquelarre-kingdoms.db",
+      "type": "JournalEntry",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-ethnicities",
+      "label": "Aquelarre - Etnias",
+      "path": "packs/aquelarre-ethnicities.db",
+      "type": "JournalEntry",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-social-classes",
+      "label": "Aquelarre - Clases Sociales",
+      "path": "packs/aquelarre-social-classes.db",
+      "type": "JournalEntry",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-npcs",
+      "label": "Aquelarre - NPCs",
+      "path": "packs/aquelarre-npcs.db",
+      "type": "Actor",
+      "system": "aquelarre"
+    },
+    {
+      "name": "aquelarre-pregens",
+      "label": "Aquelarre - Personajes Ejemplo",
+      "path": "packs/aquelarre-pregens.db",
+      "type": "Actor",
+      "system": "aquelarre"
+    }
+  ],
   "primaryTokenAttribute": "secondary.pv",
   "secondaryTokenAttribute": "combat.actions.current"
 }

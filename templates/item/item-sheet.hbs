@@ -23,12 +23,32 @@
     </label>
 
     <label>Daño <input type="text" name="system.damage" value="{{system.damage}}" /></label>
-    <label>Tipo <input type="text" name="system.kind" value="{{system.kind}}" /></label>
+    <label>Precio <input type="number" name="system.price" value="{{system.price}}" /></label>
+    <label>Moneda <input type="text" name="system.currency" value="{{system.currency}}" /></label>
+    <label>Tipo
+      <select name="system.kind">
+        <option value="melee" {{#if (eq system.kind "melee")}}selected{{/if}}>Cuerpo a cuerpo</option>
+        <option value="ranged" {{#if (eq system.kind "ranged")}}selected{{/if}}>A distancia</option>
+      </select>
+    </label>
+    <label>Tamaño
+      <select name="system.size">
+        <option value="ligera" {{#if (eq system.size "ligera")}}selected{{/if}}>Ligera (cuchillos, dagas…)</option>
+        <option value="media" {{#if (eq system.size "media")}}selected{{/if}}>Media (espadas, hachas…)</option>
+        <option value="pesada" {{#if (eq system.size "pesada")}}selected{{/if}}>Pesada (espadones, lanzas…)</option>
+      </select>
+    </label>
     <label>Manos <input type="number" name="system.hands" value="{{system.hands}}" /></label>
     <label>Alcance <input type="text" name="system.range" value="{{system.range}}" /></label>
     <label>Defensiva <input type="checkbox" name="system.defensive" {{checked system.defensive}} /></label>
     <label>Bono de parada <input type="number" name="system.parryBonus" value="{{system.parryBonus}}" /></label>
-    <label>Equipada <input type="checkbox" name="system.equipped" {{checked system.equipped}} /></label>
+
+    <div class="button-row">
+      <button type="button" data-action="toggle-equipped">
+        {{#if isEquipped}}Desequipar{{else}}Equipar{{/if}}
+      </button>
+    </div>
+
     <label>Notas <textarea name="system.notes">{{system.notes}}</textarea></label>
   </div>
 {{/if}}
@@ -42,8 +62,18 @@
     </label>
 
     <label>Protección <input type="number" name="system.protection" value="{{system.protection}}" /></label>
+    <label>Precio <input type="number" name="system.price" value="{{system.price}}" /></label>
+    <label>Moneda <input type="text" name="system.currency" value="{{system.currency}}" /></label>
     <label>Bono defensivo <input type="number" name="system.defenseBonus" value="{{system.defenseBonus}}" /></label>
-    <label>Equipado <input type="checkbox" name="system.equipped" {{checked system.equipped}} /></label>
+    <label>RES actual <input type="number" name="system.resistance" value="{{system.resistance}}" /></label>
+    <label>RES máxima <input type="number" name="system.maxResistance" value="{{system.maxResistance}}" /></label>
+
+    <div class="button-row">
+      <button type="button" data-action="toggle-equipped">
+        {{#if isEquipped}}Desequipar{{else}}Equipar{{/if}}
+      </button>
+    </div>
+
     <label>Notas <textarea name="system.notes">{{system.notes}}</textarea></label>
   </div>
 {{/if}}
@@ -51,20 +81,28 @@
   {{#if (eq item.type "armor")}}
     <div class="card">
       <label>Protección <input type="number" name="system.protection" value="{{system.protection}}" /></label>
+      <label>Precio <input type="number" name="system.price" value="{{system.price}}" /></label>
+      <label>Moneda <input type="text" name="system.currency" value="{{system.currency}}" /></label>
       <label>Localización
         <select name="system.location">
           <option value="general" {{#if (eq system.location "general")}}selected{{/if}}>General</option>
           <option value="cabeza" {{#if (eq system.location "cabeza")}}selected{{/if}}>Cabeza</option>
           <option value="torso" {{#if (eq system.location "torso")}}selected{{/if}}>Torso</option>
-          <option value="brazo-izquierdo" {{#if (eq system.location "brazo-izquierdo")}}selected{{/if}}>Brazo izquierdo</option>
-          <option value="brazo-derecho" {{#if (eq system.location "brazo-derecho")}}selected{{/if}}>Brazo derecho</option>
-          <option value="pierna-izquierda" {{#if (eq system.location "pierna-izquierda")}}selected{{/if}}>Pierna izquierda</option>
-          <option value="pierna-derecha" {{#if (eq system.location "pierna-derecha")}}selected{{/if}}>Pierna derecha</option>
+          <option value="brazo_izquierdo" {{#if (eq system.location "brazo_izquierdo")}}selected{{/if}}>Brazo izquierdo</option>
+          <option value="brazo_derecho" {{#if (eq system.location "brazo_derecho")}}selected{{/if}}>Brazo derecho</option>
+          <option value="pierna_izquierda" {{#if (eq system.location "pierna_izquierda")}}selected{{/if}}>Pierna izquierda</option>
+          <option value="pierna_derecha" {{#if (eq system.location "pierna_derecha")}}selected{{/if}}>Pierna derecha</option>
            <option value="brazos" {{#if (eq system.location "brazos")}}selected{{/if}}>Ambos brazos</option>
         <option value="piernas" {{#if (eq system.location "piernas")}}selected{{/if}}>Ambas piernas</option>
         </select>
       </label>
-      <label>Equipada <input type="checkbox" name="system.equipped" {{checked system.equipped}} /></label>
+
+      <div class="button-row">
+        <button type="button" data-action="toggle-equipped">
+          {{#if isEquipped}}Desequipar{{else}}Equipar{{/if}}
+        </button>
+      </div>
+
       <label>Notas <textarea name="system.notes">{{system.notes}}</textarea></label>
     </div>
   {{/if}}
@@ -72,8 +110,13 @@
   {{#if (eq item.type "spell")}}
     <div class="card">
       <label>Competencia <input type="text" name="system.skill" value="{{system.skill}}" /></label>
+      <label>Precio <input type="number" name="system.price" value="{{system.price}}" /></label>
+      <label>Moneda <input type="text" name="system.currency" value="{{system.currency}}" /></label>
       <label>Coste <input type="text" name="system.cost" value="{{system.cost}}" /></label>
       <label>Mod. dificultad <input type="number" name="system.difficultyMod" value="{{system.difficultyMod}}" /></label>
+      <label>Escuela <input type="text" name="system.school" value="{{system.school}}" /></label>
+      <label>Tradicion <input type="text" name="system.tradition" value="{{system.tradition}}" /></label>
+      <label>Etiquetas (csv) <input type="text" name="system.tags" value="{{system.tags}}" /></label>
       <label>Componentes <textarea name="system.components">{{system.components}}</textarea></label>
       <label>Efecto <textarea name="system.effect">{{system.effect}}</textarea></label>
       <label>Notas <textarea name="system.notes">{{system.notes}}</textarea></label>
@@ -83,8 +126,13 @@
   {{#if (eq item.type "ritual")}}
     <div class="card">
       <label>Competencia <input type="text" name="system.skill" value="{{system.skill}}" /></label>
+      <label>Precio <input type="number" name="system.price" value="{{system.price}}" /></label>
+      <label>Moneda <input type="text" name="system.currency" value="{{system.currency}}" /></label>
       <label>Coste <input type="text" name="system.cost" value="{{system.cost}}" /></label>
       <label>Mod. dificultad <input type="number" name="system.difficultyMod" value="{{system.difficultyMod}}" /></label>
+      <label>Escuela <input type="text" name="system.school" value="{{system.school}}" /></label>
+      <label>Tradicion <input type="text" name="system.tradition" value="{{system.tradition}}" /></label>
+      <label>Etiquetas (csv) <input type="text" name="system.tags" value="{{system.tags}}" /></label>
       <label>Requisitos <textarea name="system.requirements">{{system.requirements}}</textarea></label>
       <label>Efecto <textarea name="system.effect">{{system.effect}}</textarea></label>
       <label>Notas <textarea name="system.notes">{{system.notes}}</textarea></label>
@@ -94,7 +142,15 @@
   {{#if (eq item.type "gear")}}
     <div class="card">
       <label>Cantidad <input type="number" name="system.quantity" value="{{system.quantity}}" /></label>
-      <label>Equipado <input type="checkbox" name="system.equipped" {{checked system.equipped}} /></label>
+      <label>Precio <input type="number" name="system.price" value="{{system.price}}" /></label>
+      <label>Moneda <input type="text" name="system.currency" value="{{system.currency}}" /></label>
+
+      <div class="button-row">
+        <button type="button" data-action="toggle-equipped">
+          {{#if isEquipped}}Desequipar{{else}}Equipar{{/if}}
+        </button>
+      </div>
+
       <label>Notas <textarea name="system.notes">{{system.notes}}</textarea></label>
     </div>
   {{/if}}

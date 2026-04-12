@@ -1,0 +1,14 @@
+{"_id":"agua","name":"Agua","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":0,"currency":"mr","notes":"Agua potable"}}
+{"_id":"alojamiento-completo","name":"Alojamiento Completo","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":5,"currency":"mr","notes":"Noche, comida, fuego"}}
+{"_id":"alojamiento-medio","name":"Alojamiento Medio","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":1,"currency":"mr","notes":"Pasa noche en estancia común"}}
+{"_id":"carne-asada","name":"Asado de Carnero","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"mr","notes":"Ración de carne asada"}}
+{"_id":"cerveza","name":"Jarra de Aguapié","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"dineros","notes":"Orujo de vino con agua"}}
+{"_id":"establo","name":"Establo","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":1,"currency":"mr","notes":"Alimento y resguardo caballo"}}
+{"_id":"habitacion-privada","name":"Habitación Privada","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":15,"currency":"mr","notes":"Noche en habitación con puerta"}}
+{"_id":"habitacion-privada-completa","name":"Habitación Privada Completa","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":20,"currency":"mr","notes":"Noche, comida, fuego"}}
+{"_id":"pan","name":"Pan","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":4,"currency":"dineros","notes":"Hogaza abundante de pan blanco"}}
+{"_id":"pescado-salado","name":"Pescado en Salazón","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"mr","notes":"Una libra de pescado conservado"}}
+{"_id":"potaje","name":"Potaje","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":2,"currency":"mr","notes":"Guiso de legumbres y verduras"}}
+{"_id":"queso-cabra","name":"Queso de Cabra","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":1,"currency":"mr","notes":"Queso curado"}}
+{"_id":"raciones-viaje","name":"Raciones de Viaje","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":15,"currency":"mr","notes":"Cecina, queso, pescado, pan. Dura 1 semana"}}
+{"_id":"vino","name":"Jarra de Vino","type":"gear","img":"icons/containers/bags/pouch-simple-leather-tan.webp","system":{"quantity":1,"price":3,"currency":"dineros","notes":"Un cuartillo de vino"}}
