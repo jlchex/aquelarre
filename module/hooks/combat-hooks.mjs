@@ -1,6 +1,29 @@
-Hooks.on("updateCombat", async (combat, changed, options, userId) => {
-  // Solo cuando cambia el turno
-  if (!("turn" in changed)) return;
+const processedTurnByCombat = new Map();
+
+Hooks.on("updateCombat", async (combat, changed) => {
+  if (!game.user?.isGM) return;
+
+  // Dependiendo de la vía de cambio (siguiente turno, cambio manual o ronda),
+  // Foundry puede actualizar turn, round o combatant.
+  const turnChanged = Object.prototype.hasOwnProperty.call(changed, "turn");
+  const roundChanged = Object.prototype.hasOwnProperty.call(changed, "round");
+  const combatantChanged = Object.prototype.hasOwnProperty.call(changed, "combatant");
+
+  if (!turnChanged && !roundChanged && !combatantChanged) return;
+  await handleCombatTurnStart(combat);
+});
+
+Hooks.on("combatTurn", async (combat) => {
+  if (!game.user?.isGM) return;
+  await handleCombatTurnStart(combat);
+});
+
+Hooks.on("deleteCombat", async (combat) => {
+  processedTurnByCombat.delete(combat.id);
+});
+
+async function handleCombatTurnStart(combat) {
+  if (!combat) return;
 
   const combatant = combat.combatant;
   if (!combatant) return;
@@ -8,11 +31,19 @@ Hooks.on("updateCombat", async (combat, changed, options, userId) => {
   const actor = combatant.actor;
   if (!actor) return;
 
-  console.log("🔥 TURNO NUEVO:", actor.name);
+  const turnKey = `${combat.round}:${combat.turn}:${combatant.id}`;
+  if (processedTurnByCombat.get(combat.id) === turnKey) return;
+  processedTurnByCombat.set(combat.id, turnKey);
 
-  // 👉 aplicar efectos
+  // Aplicar efectos de inicio de turno (sangrado, PV negativos, etc.)
   await applyStartOfTurnEffects(actor);
-});
+
+  // Reiniciar acciones del turno según estado del actor.
+  // Si está incapacitado/moribundo, el propio actor las dejará a 0.
+  if (typeof actor.resetCombatActions === "function") {
+    await actor.resetCombatActions();
+  }
+}
 
 async function applyStartOfTurnEffects(actor) {
   const effects = actor.system.combat?.statusEffects ?? [];
@@ -20,8 +51,6 @@ async function applyStartOfTurnEffects(actor) {
   await applyNegativePvDrain(actor);
 
   if (!effects.length) return;
-
-  console.log("Aplicando efectos a", actor.name, effects);
 
   for (const effect of effects) {
 

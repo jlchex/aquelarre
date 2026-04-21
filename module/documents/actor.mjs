@@ -447,6 +447,7 @@ export class AquelarreActor extends Actor {
   /* -------------------------------------------- */
 
   canSpendCombatAction(cost = 1) {
+    if (this.isUnableToActInCombat()) return false;
     const current = Number(this.system.combat?.actions?.current ?? 0);
     return current >= cost;
   }
@@ -475,16 +476,20 @@ export class AquelarreActor extends Actor {
   }
 
   async resetCombatActions() {
+    const maxActions = Number(this.system.combat?.actions?.max ?? 2);
+    const nextActions = this.isUnableToActInCombat() ? 0 : Math.max(0, maxActions);
+
     await this.update({
-      "system.combat.actions.current": 2
+      "system.combat.actions.current": nextActions
     });
   }
 
   async resetCombatState() {
     const maxActions = Number(this.system.combat?.actions?.max ?? 2);
+    const nextActions = this.isUnableToActInCombat() ? 0 : Math.max(0, maxActions);
 
     await this.update({
-      "system.combat.actions.current": maxActions,
+      "system.combat.actions.current": nextActions,
       "system.combat.initiative": 0,
       "system.combat.statusEffects": [],
       "system.combat.lastFumble": "",
@@ -822,6 +827,11 @@ export class AquelarreActor extends Actor {
   }
 
   async rollInitiative() {
+    if (this.isUnableToActInCombat()) {
+      ui.notifications?.warn(`${this.name} no puede actuar en combate en su estado actual.`);
+      return null;
+    }
+
     const base = Number(this.system.characteristics?.agi?.value ?? 10);
     const roll = await rollFormula(this, "1d10", "Iniciativa");
     const total = base + roll.total;
@@ -838,6 +848,11 @@ export class AquelarreActor extends Actor {
   }
 
   async rollDefense() {
+    if (this.isUnableToActInCombat()) {
+      ui.notifications?.warn(`${this.name} no puede defenderse en su estado actual.`);
+      return null;
+    }
+
     const defense = this.getDefenseSourceData();
 
     if (!defense.valid) {
@@ -875,6 +890,11 @@ export class AquelarreActor extends Actor {
   }
 
   async rollWeaponAttack(itemId) {
+    if (this.isUnableToActInCombat()) {
+      ui.notifications?.warn(`${this.name} no puede atacar en su estado actual.`);
+      return null;
+    }
+
     const weapon = this.items.get(itemId);
     if (!weapon || weapon.type !== "weapon") return null;
 
@@ -941,6 +961,11 @@ export class AquelarreActor extends Actor {
     defenseModifier = null,
     difficulty = null
   } = {}) {
+    if (this.isUnableToActInCombat()) {
+      ui.notifications?.warn(`${this.name} no puede atacar en su estado actual.`);
+      return null;
+    }
+
     if (!this.canSpendCombatAction(1)) {
       ui.notifications?.warn("No te quedan acciones de combate.");
       return null;
@@ -1011,10 +1036,13 @@ export class AquelarreActor extends Actor {
 
     if (defenseData?.valid) {
       defenseLabel = defenseData.label ?? "Defensa";
-      const canDefend = targetActor.canSpendCombatAction?.(1) ?? false;
+      const canDefend = (targetActor.canSpendCombatAction?.(1) ?? false)
+        && !(targetActor.isUnableToActInCombat?.() ?? false);
 
       if (!canDefend) {
-        defenseStateText = "No se defiende (sin acciones)";
+        defenseStateText = targetActor.isUnableToActInCombat?.()
+          ? "No se defiende (incapacitado)"
+          : "No se defiende (sin acciones)";
       } else {
         const wantsToDefend = await Dialog.confirm({
           title: "Defensa del objetivo",
@@ -1269,6 +1297,15 @@ export class AquelarreActor extends Actor {
 
   hasStatusEffect(type) {
     return this.getStatusEffects().some(effect => effect.type === type);
+  }
+
+  isUnableToActInCombat() {
+    if (this.hasStatusEffect("incapacitado") || this.hasStatusEffect("moribundo")) {
+      return true;
+    }
+
+    const currentPv = Number(this.system.secondary?.pv?.value ?? 0);
+    return currentPv <= 0;
   }
 
   getCombatPenaltySummary() {
