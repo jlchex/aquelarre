@@ -1,0 +1,1 @@
+el[[:space:]]demonio[[:space:]]de[[:space:]]lavapies/*.pdf filter=lfs diff=lfs merge=lfs -text
