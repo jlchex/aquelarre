@@ -1,0 +1,101 @@
+﻿1	INDICE
+1	3  68
+2	4 9.2. 69
+3	El proceso de Convento de San 9.3. 70
+10	La oportunidad se presenta de nuevo
+10.2	Dos caminos para llegar al mismo
+6.3	La Suprema hace su aparición  El heredero de los Villanueva
+6.5	Alguna pesquisa se puede hacer
+6.6	Un regalo “capital”
+6.7	Una invitación inesperada
+7	3 El Confesor espera
+8	El aviso no fue en balde
+12.3	La Muerte ronda la Villa y Corte
+13	Es de buen cristiano perdonar
+13.1	La visita al marqués de Heliche
+13.2	¿Qué les sucedió a los conspiradores?
+14	Los caballeros no reclaman los
+15	La soldada
+8.6	La visita de Isabel Mendoza al
+19	Elenco de la Compañía
+21	Documentación de Apoyo
+22	Reconocimiento No Comercial
+2	UN RELATO PARA MEJOR ENTENDER
+3	EL PROCESO DEL CONVENTO DE SAN PLACIDO
+3.1	De dimes y diretes sobre lo sucedido
+3.2	Cronología de lo sucedido
+3.3	De los que allí estuvieron
+4	LOS AVISOS DE PEREGRINO
+5	CARNESTOLENDAS
+6	UN MAL DESPERTAR
+6.1	Maldita noche de ronda
+6.2	El alguacil de Lavapiés
+6.3	La Suprema hace su aparición
+6.4	La casa de la plaza
+7	EL CONFESOR ESPERA
+8	EL AVISO NO FUE EN BALDE
+1	Palacio 10. Puerta de Alcalá
+2	Monasterio de San Jerónimo 11. Ermita de la Magdalena
+3	Jardines 12. Estanque Grande
+4	Ermita de San Isidro 13. Ría Grande
+5	Prado Alto o de San Jerónimo 14. Ermita de San Bruno
+6	Juego de Pelota 15. Estanque y jardín ochavado
+7	Ermita de San Juan 16. Ermita de San Pablo
+8	Huerta del Rey 17. Ermita de San Antonio
+9	Ría Pequeña 18. Nuestra Señora de Atocha
+1	Plaza Principal de Palacio 8. Cuarto del Príncipe
+2	Plaza Mayor 9. Jardín del Príncipe
+3	Cuarto del Rey 10. Monasterio de los Jerónimos
+4	Jardín del Rey 11. Plaza de los Oficios
+5	Cuarto de la Reina 12. Salón de los Reinos
+6	Jardín de la Reina 13. Real Coliseo
+7	Estatua ecuestre del Rey Felipe IV 14. Salón de Baile
+8.2	El marqués de Heliche
+8.3	El convento de los Jerónimos
+8.4	Una visita al jardinero
+8.5	Una visita a don Luis Vargas
+8.6	La visita de Isabel Mendoza al alguacil
+8.7	Un nuevo aviso del Peregrino
+8.8	Los viajes del agua de la Villa
+9	LA VERDAD OS HARÁ LIBRES... ¡O NO!
+9.1	Los Mentideros cuentan la verdad...
+9.2	El aviso del Confesor Real
+9.3	La familia Cortizos
+9.4	La monja del convento de San Placido
+9.5	¿No había muerto el Peregrino?
+10	LA OPORTUNIDAD SE PRESENTA DE NUEVO
+10.1	El fénix en la iglesia
+10.2	Dos caminos para llegar al mismo sitio
+11	AUN NO HA TERMINADO
+11.1	Otra vez las malas visitas
+11.2	El espectáculo debe continuar
+1	Salón de los Reinos
+2	Real Coliseo
+3	Galería de los Cuadros
+4	Plaza Principal de Palacio
+5	Salón de Baile
+6	Cuarto del Rey
+7	Cuarto de la Reina
+8	Jardín del Rey
+9	Jardín de la Reina
+10	Estatua ecuestre del Rey Felipe IV
+11	Monasterio de los Jerónimos
+12	Cuarto del Príncipe
+13	Jardín del Príncipe
+11.3	La satisfacción del Rey...
+12	LAS BUENAS COMEDIAS TIENEN FINAL
+12.1	...pero no todos están contentos
+12.2	La última copa...
+1	Arroyo Meaques
+2	Ermita del Santo Ángel de la Guarda
+13	ES DE BUEN CRISTIANO PERDONAR
+13	2. ¿Qué les sucedió a los conspiradores?
+14	LOS CABALLEROS NO RECLAMAN LOS FAVORES
+15	LA SOLDADA
+16	LAS HORAS LAS MARCAN LAS CAMPANAS
+17	QUE HA SUCEDIDO DE UNOS AÑOS A AHORA
+18	ACTORES DE LA COMEDIA
+19	ELENCO DE LA COMPAÑIA
+20	TODA AYUDA ES POCA
+21	DOCUMENTACION DE APOYO
+22	RECONOCIMIENTO – NOCOMERCIAL

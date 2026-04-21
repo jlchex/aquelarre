@@ -190,78 +190,78 @@ Pulido, migraciones y distribución
   - [x] tiradas
   - [x] localización
   - [x] daño
-- [ ] Mejorar legibilidad HTML:
-  - [ ] clases CSS (`aquelarre-chat`)
-- [ ] Unificar estilo de mensajes
-- [ ] Evaluar:
-  - [ ] separar plantilla de chat (futuro)
+- [x] Mejorar legibilidad HTML:
+  - [x] clases CSS (`aquelarre-chat`)
+- [x] Unificar estilo de mensajes
+- [x] Evaluar:
+  - [x] separar plantilla de chat (futuro)
 
 ---
 
 ## 2.6 — Actor Sheet (actor-sheet.mjs)
-- [ ] Revisar eventos:
-  - [ ] botón de ataque
-  - [ ] selección de arma activa
-- [ ] Confirmar uso de:
-  - [ ] `activeWeaponId`
-- [ ] Validar:
-  - [ ] selección de objetivo (target)
-- [ ] Asegurar:
-  - [ ] llamada correcta a `resolveWeaponAttack()`
+- [x] Revisar eventos:
+  - [x] botón de ataque
+  - [x] selección de arma activa
+- [x] Confirmar uso de:
+  - [x] `activeWeaponId`
+- [x] Validar:
+  - [x] selección de objetivo (target)
+- [x] Asegurar:
+  - [x] llamada correcta a `resolveWeaponAttack()`
 
 ---
 
 ## 2.7 — Character Sheet (character-sheet.hbs)
-- [ ] Añadir bloque de combate:
-  - [ ] selector de arma equipada
-  - [ ] indicador de acciones restantes
-  - [ ] botón de ataque
-- [ ] Mostrar:
-  - [ ] modificadores de ataque
-  - [ ] modificadores de defensa
-  - [ ] dificultad actual
-- [ ] Mejorar UX:
-  - [ ] feedback visual (sin acciones, etc.)
-- [ ] Validar bindings con `system.combat`
+- [x] Añadir bloque de combate:
+  - [x] selector de arma equipada
+  - [x] indicador de acciones restantes
+  - [x] botón de ataque
+- [x] Mostrar:
+  - [x] modificadores de ataque
+  - [x] modificadores de defensa
+  - [x] dificultad actual
+- [x] Mejorar UX:
+  - [x] feedback visual (sin acciones, etc.)
+- [x] Validar bindings con `system.combat`
 
 ---
 
 ## 2.8 — UX y validaciones
-- [ ] Mensajes claros para:
-  - [ ] sin arma equipada
+- [x] Mensajes claros para:
+  - [x] sin arma equipada
 - [x] sin acciones
 - [x] defensa inválida
-- [ ] Evitar errores silenciosos
-- [ ] Añadir `ui.notifications.warn()` donde falte
-- [ ] Confirmar que ningún flujo rompe sin feedback
+- [x] Evitar errores silenciosos
+- [x] Añadir `ui.notifications.warn()` donde falte
+- [x] Confirmar que ningún flujo rompe sin feedback
 
 ---
 
 ## 2.9 — Testing funcional
-- [ ] Caso: ataque normal sin defensa
-- [ ] Caso: ataque vs esquivar
-- [ ] Caso: ataque vs arma defensiva
-- [ ] Caso: ataque vs escudo
-- [ ] Caso: crítico
-- [ ] Caso: daño reducido a 0
-- [ ] Caso: armadura alta
-- [ ] Caso: sin acciones
-- [ ] Caso: sin arma equipada
-- [ ] Caso: objetivo inválido
+- [x] Caso: ataque normal sin defensa
+- [x] Caso: ataque vs esquivar
+- [x] Caso: ataque vs arma defensiva
+- [x] Caso: ataque vs escudo
+- [x] Caso: crítico
+- [x] Caso: daño reducido a 0
+- [x] Caso: armadura alta
+- [x] Caso: sin acciones
+- [x] Caso: sin arma equipada
+- [x] Caso: objetivo inválido
 
 ---
 
 ## 2.10 — Limpieza y consistencia
-- [ ] Revisar duplicidades en lógica de combate
-- [ ] Confirmar naming consistente:
-  - [ ] skillKey
-  - [ ] defenseSkillKey
-- [ ] Revisar normalización:
-  - [ ] `normalizeSkillKey()`
-- [ ] Verificar coherencia entre:
-  - [ ] template.json
-  - [ ] actor.mjs
-- [ ] Documentar flujo final de combate
+- [x] Revisar duplicidades en lógica de combate
+- [x] Confirmar naming consistente:
+  - [x] skillKey
+  - [x] defenseSkillKey
+- [x] Revisar normalización:
+  - [x] `normalizeSkillKey()`
+- [x]Verificar coherencia entre:
+  - [x] template.json
+  - [x] actor.mjs
+- [x] Documentar flujo final de combate
 
 ---
 
