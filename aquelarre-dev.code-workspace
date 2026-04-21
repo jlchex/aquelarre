@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "aquelarre-system",
+      "path": "."
+    },
+    {
+      "name": "aquelarre-demonio-lavapies-module",
+      "path": "C:/Users/jlchechu/aquelarre-workspaces/aquelarre-demonio-lavapies-module"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.DS_Store": true
+    }
+  }
+}
