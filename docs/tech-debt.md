@@ -47,6 +47,8 @@ Se han introducido cambios de schema importantes:
 - localizaciones con `_`
 - `price` y `currency` en items
 - `resistance` y `maxResistance` en escudos
+- `resistance` y `maxResistance` en armaduras
+- `system.combat.statusEffects` con objetos enriquecidos (`label`, `remainingTurns`, `notes`)
 - compendios normalizados al schema actual
 
 **Riesgo**
@@ -169,19 +171,47 @@ Ropa, comida, servicios y muchos objetos mágicos se representan como `gear` por
 - estudiar metadatos o subcategorías auxiliares
 - refinar objetos mágicos si pasan a tener mecánicas propias
 
+### 11. Modelo de daño todavía demasiado libre para RAW avanzada
+`weapon.system.damage` sigue siendo una fórmula libre y no separa de forma canónica daño base, bonus por Fuerza ni tipo de arma resolutivo.
+
+**Riesgo**
+- automatizaciones RAW parciales o aproximadas
+- difícil distinguir en reglas de secuelas si el arma es cortante, perforante o contundente cuando el item no lo expresa con suficiente precisión
+
+**Decisión actual**
+- mantener la fórmula libre porque ya sostiene el combate jugable actual
+
+**Futuro deseable**
+- separar daño base y bonus variable
+- reforzar tipado de arma para reglas de secuelas y columna
+
+### 12. Secuelas no numéricas siguen sólo parcialmente automatizadas
+Las secuelas que reducen características numéricas ya modifican el actor. Las no numéricas o globales todavía no siempre alteran todas las competencias o restricciones derivadas que implican las reglas RAW.
+
+**Riesgo**
+- divergencia entre chat, hoja y efecto mecánico real
+- necesidad de arbitraje manual en mesa para casos como ceguera, sordera, manquedad o restricciones amplias de competencias
+
+**Decisión actual**
+- representar parte de estas secuelas mediante estados, notas o texto descriptivo
+
+**Futuro deseable**
+- modelar defectos permanentes y penalizadores globales reutilizables
+- aplicar efectos sistémicos a competencias relacionadas
+
 ## Prioridad baja
 
-### 11. `actor-sheet.mjs` todavía tiene margen de limpieza
+### 13. `actor-sheet.mjs` todavía tiene margen de limpieza
 La sheet es funcional, pero aún puede separarse mejor entre wiring y construcción de contexto.
 
-### 12. Validación documental incompleta de compendios
+### 14. Validación documental incompleta de compendios
 Los datos de PDFs ya están cargados, pero falta una revisión canónica item por item dentro del sistema.
 
 **Riesgo**
 - precios correctos con descripciones todavía resumidas
 - algunos objetos mágicos sin modelado mecánico detallado
 
-### 13. Limpieza de redundancia hecha en compendios de magia
+### 15. Limpieza de redundancia hecha en compendios de magia
 
 Se eliminaron duplicados exactos entre packs de magia y duplicados puntuales no mágicos.
 

@@ -50,11 +50,17 @@ Campos de combate relevantes
 - system.combat.meleeMode
 - system.combat.aimLocation
 - system.combat.aimModifier
+- system.combat.statusEffects
+- system.combat.lastHitLocation
+- system.combat.lastArmorAbsorbed
+- system.combat.lastRawDamage
+- system.combat.lastFinalDamage
 
 Economía e items
 
 - Todos los items soportados deben usar `system.price` y `system.currency`.
 - Escudos usan `system.resistance` y `system.maxResistance`.
+- Armaduras usan `system.resistance` y `system.maxResistance`.
 - Las entradas importadas de fuentes externas deben normalizarse al schema real del sistema.
 
 Compendios mantenidos en Git
@@ -81,6 +87,8 @@ Deuda técnica activa
 - Falta migración formal de esquema para contenido y actores antiguos.
 - Los compendios importados desde PDFs siguen necesitando una pasada de validación semántica completa.
 - Parte del contenido adicional se ha normalizado como `gear` para compatibilidad y todavía puede refinarse.
+- El modelo de daño sigue usando fórmulas libres en `weapon.system.damage`, lo que limita automatizaciones RAW dependientes del tipo de arma o del bonus de daño separado.
+- Algunas secuelas permanentes no numéricas siguen representadas como estado o texto, no como restricciones sistémicas globales.
 
 Creación de personaje (estado actual)
 

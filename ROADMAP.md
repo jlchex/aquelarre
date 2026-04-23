@@ -13,6 +13,17 @@ Journals, aventuras y handouts
 Magia, contenido avanzado y expansiones
 Pulido, migraciones y distribución
 
+## Actualización reciente (2026-04-23)
+- [x] Ajustar estados de salud a RAW: `sano`, `herido`, `malherido`, `inconsciente`, `muerto`.
+- [x] Cambiar críticos para que hagan daño máximo de fórmula e ignoren armadura.
+- [x] Corregir tabla RAW de localización de impacto.
+- [x] Corregir `aturdido` a `-50`.
+- [x] Añadir `resistance` y `maxResistance` a armaduras y aplicar desgaste en combate.
+- [x] Persistir efectos temporales de combate con duración por asaltos.
+- [x] Procesar expiración de efectos al inicio de turno.
+- [x] Implementar secuelas mayores por localización con efectos temporales y cambios permanentes numéricos.
+- [x] Mostrar en chat y hoja detalles de secuelas, duración y desgaste de protección.
+
 ## Actualización reciente (2026-04-12)
 - [x] Crear pestaña de `Creación` y mover ahí el bloque `Creación RAW`.
 - [x] Reordenar `Resumen` en dos columnas: `Características` y `Secundarias`.
@@ -123,7 +134,7 @@ Pulido, migraciones y distribución
   - [x] `defenseModifier`
 - [x] Verificar críticos:
   - [x] `attackRoll.critical`
-  - [x] `applyCriticalDamageBonus()`
+  - [x] daño máximo de fórmula e ignorar armadura
 - [x] Verificar pifias (aunque no estén explotadas aún)
 - [x] Asegurar retorno consistente del método (hit / no hit)
 ---
@@ -162,10 +173,13 @@ Pulido, migraciones y distribución
   - [x] brazos
   - [x] piernas
 - [x] Validar estados:
-  - [x] ileso
+  - [x] sano
   - [x] herido
-  - [x] incapacitado
-  - [x] moribundo
+  - [x] malherido
+  - [x] inconsciente
+  - [x] muerto
+- [x] Añadir desgaste de armadura por localización
+- [x] Añadir secuelas y efectos temporales derivados del daño fuerte
 - [x] Ignorar protecciones inválidas o nulas
 ---
 ## 2.4 — Acciones de combate

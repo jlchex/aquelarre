@@ -33,6 +33,7 @@ Se guarda en actor o item y forma parte del estado real.
 - `system.combat.meleeMode`
 - `system.combat.aimLocation`
 - `system.combat.aimModifier`
+- `system.combat.statusEffects`
 
 Campos persistentes de item:
 
@@ -56,6 +57,8 @@ Campos persistentes de item:
 - `shield.system.notes`
 - `armor.system.protection`
 - `armor.system.location`
+- `armor.system.resistance`
+- `armor.system.maxResistance`
 - `armor.system.notes`
 - `spell.system.skill`
 - `spell.system.cost`
@@ -90,6 +93,7 @@ Se recalcula en `prepareDerivedData()` y no debe tratarse como fuente de verdad.
 - `system.secondary.pv.max`
 - `system.combat.actions.max`
 - `system.combat.armorTotal`
+- estado RAW de salud derivado desde PV actuales y máximos
 - `weapon.system.isRanged`
 - `weapon.system.isMelee`
 
@@ -104,6 +108,33 @@ Se guarda, pero representa resultado reciente o estado auxiliar.
 - `system.combat.lastArmorAbsorbed`
 - `system.combat.lastRawDamage`
 - `system.combat.lastFinalDamage`
+
+## Status effects de combate
+
+`system.combat.statusEffects` se persiste como array de objetos simples.
+
+Campos usados actualmente:
+
+- `type`
+- `location`
+- `label`
+- `remainingTurns`
+- `notes`
+
+Tipos activos relevantes:
+
+- `herido`
+- `malherido`
+- `inconsciente`
+- `muerto`
+- `aturdido`
+- `brazo_inutilizado`
+- `pierna_inutilizada`
+- `incapacitado_temporal`
+- `inconsciente_temporal`
+- `corazon_danado`
+
+Los estados RAW de salud no se guardan en un campo independiente: se recalculan desde PV, pero se reflejan también en `statusEffects` para UI y trazabilidad del combate.
 
 ## Regla
 
@@ -121,18 +152,36 @@ Ejemplo resumido de arma:
 
 ```json
 {
-	"_id": "alfanje",
-	"name": "Alfanje",
-	"type": "weapon",
-	"system": {
-		"skill": "espadas",
-		"damage": "1d10",
-		"price": 138,
-		"currency": "mr",
-		"hands": 1,
-		"kind": "melee",
-		"size": "media"
-	}
+  "_id": "alfanje",
+  "name": "Alfanje",
+  "type": "weapon",
+  "system": {
+    "skill": "espadas",
+    "damage": "1d10",
+    "price": 138,
+    "currency": "mr",
+    "hands": 1,
+    "kind": "melee",
+    "size": "media"
+  }
+}
+```
+
+Ejemplo resumido de armadura:
+
+```json
+{
+  "_id": "loriga",
+  "name": "Loriga",
+  "type": "armor",
+  "system": {
+    "protection": 4,
+    "location": "torso",
+    "resistance": 12,
+    "maxResistance": 12,
+    "price": 250,
+    "currency": "mr"
+  }
 }
 ```
 
