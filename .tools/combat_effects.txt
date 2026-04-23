@@ -1,0 +1,1329 @@
+﻿=== PAGE 150 ===
+ParsV  04/10/13  14:36  Página 148
+Aquelarre: Juego de rol demoníaco medieval
+Tabla de Ganancias de RR/IRR
+Ganancias de RR:
+Ser testigo de un Ritual de Fe de Niveles 1 al 5.                            + 5 RR si se tiene RR 80 o menos
+Ser testigo de un Milagro (Ritual de Fe de Nivel 6).                     + 10 RR
+Ser testigo de un Exorcismo exitoso.                                               + 1D10 RR
+Ver a una criatura angelical (sólo las que pertenecen a una        + 1D10 RR si se falla una tirada de RR
+triada de la jerarquía celestial o a la hueste angélica).
+Eliminar a una criatura irracional utilizando sólo los rituales    + 2D10 RR
+de Confrontación o Exorcismo (sin armas ni magia).
+Resistir los efectos de un hechizo.                                                   + 5 RR
+Ser testigo o partícipe de la eliminación de una criatura             + 1D10 RR
+irracional sin utilizar la magia.
+Ganancias de IRR:
+Ver los efectos de un hechizo de vis 1 ó 2.                                      + 1 IRR si se tiene IRR 40 o menos
+Ver los efectos de un hechizo de vis 3 ó 4.                                      + 3 IRR si se tiene IRR 65 o menos
+Ver los efectos de un hechizo de vis 5.                                            + 5 IRR si se tiene IRR 80 o menos
+Ver los efectos de un hechizo de vis 6.                                            + 10 IRR si se tiene IRR 95 o menos
+Ver los efectos de un hechizo de vis 7.                                            + 15 RR si se tiene IRR 125 o menos
+Ver a una criatura del mundo Irracional.                                       + 1D10 IRR si se falla una tirada de IRR
+Ver a un demonio elemental.                                                            + 1D10 IRR si se falla una tirada de IRR con un penalizador de -50%
+Ver a un engendro del Infierno.                                                       + 1D10+2 IRR si se falla una tirada de IRR con un penalizador de -25%
+Ver a un Demonio Menor.                                                                 +2D10 IRR si se falla una tirada de IRR con un penalizador de -50%
+Ver a un Demonio Superior o al mismísimo Lucifer.                   +2D10 IRR si se falla una tirada de IRR con un penalizador de -100%
+148
+=== PAGE 151 ===
+ParsV  04/10/13  14:36  Página 149
+Pars 5: Mundus Rationalis et Irrationalis
+caso, sí que ganaríamos la IRR que determine la sólo aquéllos que verdaderamente perseveren, po-
+tabla (por ejemplo, algunas meigas pueden tener drán mantener un alto porcentaje en Racionalidad.
+patas de cabra, pero si las ocultan con una falda larga,
+Simplemente, tenlo en cuenta…
+su visión no modificaría nuestra IRR, al menos hasta que esas
+Exemplum: Lope de Navarrete por fin ha averiguado la
+patas fueran visibles).
+identidad de la persona que se encuentra detrás de los
+En segundo lugar, en las pérdidas o ganancias de RR o IRR por
+últimos atentados contra su persona, una misteriosa bruja
+ver a criaturas del mundo irracional o por acabar con ellas no
+cuenta la cantidad de criaturas con la que se tope el personaje conocida como Carmela de Rodrigo y, aunque todavía no sabe
+de una sola vez. Me explico: si ves a un muerto andante y fallas
+los motivos que la llevan a atacarle,  piensa que tiene que ver con
+tu tirada de IRR ganarás 1D10 puntos de IRR; si ves a toda una
+su relación con la ladrona María de Cañas. Tras informar a su
+tropa de veinte muertos que vienen a por ti para comerse tus
+compañero, el alquimista Micael Bonishah —mucho más ducho en
+higadillos y fallas la tirada de IRR también ganarás 1D10, y no
+asuntos de brujos y magos—, el cortesano y el judío deciden visitar
+20D10. Lo impresionante es ver a un muerto andando; que
+a un viejo sabio árabe que habita en la morería de Burgos y que
+luego sean uno o cientos, es mucho menos interesante (al
+menos para nuestro subconsciente…). En el caso de que se tra- responde al nombre de Mijail Al-Aceytun, para averiguar si tiene
+tara de un grupo de criaturas irracionales de diferentes proce-
+alguna información que ofrecerle sobre la bruja.
+dencias (por ejemplo, un demonio menor comandando a una
+Una vez en su casa, recibidos por el venerable anciano, éste les
+tropa de gnomos y de ánimas), tanto la ganancia como la tirada
+indica que conoce a la tal Carmela, pues su fama de mujer cruel
+de IRR se hará utilizando la criatura que produzca la mayor
+y malvada ha llegado hasta sus oídos, y les asegura que no es hu-
+pérdida: en el ejemplo que hemos puesto, haríamos la tirada
+mana, sino meiga, hija del Demonio y de una bruja. Por desgracia,
+de IRR con un penalizador de -50% y si falláramos ganaríamos
+2D10 puntos de IRR, igual que si hubiéramos visto sólo al de- poco más les puede decir el viejo Mijail, pues de repente, una de
+monio menor, ya que esta criatura es la que produce la mayor
+las sombras de la decrépita casa en la que vive el morisco, cobra
+pérdida de todo el grupo que vemos.
+forma y rodea al anciano, asesinándolo sin piedad usando un he-
+Todas estas reglas se aplican igualmente a las ganancias de RR
+chizo de Castigo de Frimost. Lope y Micael asisten horrorizados a
+por acabar con estas criaturas sin magia: da igual que mates a
+lo sucedido y, como consecuencia, lo que contemplan podría variar
+uno o a treinta muertos, ya que ganarás en esa escena sólo
+sus características de RR y de IRR: por un lado, están viendo a
+1D10 RR. Si más adelante, en la aventura, te vuelves a encon-
+una sombra, una entidad demoníaca elemental, así que ambos
+trar con más criaturas irracionales (de ese mismo tipo o de
+deben hacer una tirada de IRR con un penalizador de -50%.
+otro) volverás a ganar o perder IRR de la forma habitual.
+Ambos fallan y tiran cada uno 1D10 para comprobar cuanta IRR
+La última observación es ligeramente más sutil, pues si le
+gana cada uno: el personaje de Lope obtiene un 5 y Micael un 2.
+echas un buen vistazo a la tabla de ganancias de RR/IRR
+Además, han contemplado los efectos de un hechizo de vis 7, como
+comprobarás que los personajes están “condenados” —por
+decirlo de alguna forma— a aumentar con el paso del es Castigo de Frimost, y como ninguno de los dos tiene más de 125
+tiempo su IRR, menoscabando por tanto su RR. Es cierto que
+puntos en IRR, los dos aumentan de forma automática su IRR en
+aquellos PJs que dispongan de acceso a los rituales de fe po-
++15. Así que como resultado de este funesto encuentro, y nada más
+drán evitar mejor que otros personajes —aunque también
+que por contemplar a la sombra asesinando a Mijail, Lope aumenta
+con cierto esfuerzo— esa lenta pero inexorable progresión
+su IRR de 30 a 50 (30+20), reduciendo en la misma cantidad su
+hacia el mundo de la IRR, pero todos ellos sufrirán en mayor
+RR, de 70 a 50, mientras que Micael suma +17 a su IRR de 75 a
+o menor medida sus efectos. No se trata de un error por
+nuestra parte, ya que el mundo en el que se moverán los 92, y su RR se reduce en la misma cantidad, de 25 a 8.
+personajes, el mundo de Aquelarre, se encuentra más allá de
+Ambos amigos, sorprendidos ante lo ocurrido, no pueden hacer otra
+las vivencias cotidianas de las gentes de la época, y poco a
+cosa más que huir de la casa, pues no saben qué demonios —nunca
+poco, todos ellos deberán aceptar, lo quieran o no, que
+mejor dicho— era la sombra y quién puede estar controlándola.
+existe un mundo más allá de las fronteras de la razón, y que
+149
+=== PAGE 152 ===
+ParsVI  04/10/13  14:40  Página 150
+Aquelarre: Juego de rol demoníaco medieval
+Pars 6: 
+Ars Magica
+onde se desvelarán los secretos arcanos de
+la insondable magia, sus misterios, sus
+D enigmas y un extenso grimorio de secretos
+mágicos ocultos y no por ello menos poderosos.
+150
+=== PAGE 153 ===
+ParsVI  04/10/13  14:40  Página 151
+Pars 6: Ars Magica
+los dientes como si de un lobo se tratara…
+Los Peligros de la Magia
+—¿Llegó a morderte?
+No les había mentido el pobre Mijail, que el nombre de Carmela Ro-
+—No, que bien que guardé mi cuerpo de que se acercase
+drigo era harto conocido. Entre los que se atrevían a susurrarlo, hubo
+demasiado, y siempre se encontró con mi acero delante. Pero
+quien les indicó un viejo escondrijo suyo, una cueva donde solía re-
+eso no me liberó de sus garras.
+tirarse a hacer sus hechicerías al abrigo de ojos curiosos. Iban solos,
+—Has salido bien librado entonces, pues era un lobisome, un ser
+pues por mucho que lo había buscado, no había encontrado Lope quien
+poseído por el espíritu salvaje de un lobo, y podría haberte pasado
+le diera razón de Ignotus, cosa que lamentaba. Le hubiera gustado
+la maldición. ¿No crees que es mejor que lances bien lejos ese trozo de
+tener su veterana espada a su vera. Con todo, el judío andaba mucho
+cuerda maldito y que otro apechugue con la maldición?
+más que confiado, pues decía que por su saber (que tampoco era tanto)
+Lope lo miró con fiereza, desde la fiebre de sus heridas:
+no descubría señales recientes de actividad mágica, por lo que el cubil
+—A nadie le deseo la carga que me han dado, pero te juro que esto no
+debía encontrarse abandonado.
+terminará hasta que la bruja me mate… o yo la mate a ella.
+Y lo estaba.
+Aunque mala sería la dueña que no dejara un guardián para proteger
+*    *    *
+su dominio.
+El ser era bajo, costroso, vestido con una especie de harapos que se en-
+Ignotus le salió al paso a Micael en una callejuela, tan quedo que por un
+tremezclaban con su apelmazada pelambrera natural y unas lascas como
+instante el judío lo tomó por un ladrón, y temió tanto por su vida como
+de piedra que parecían brotarle, como si de manchas de lepra se trataran,
+por su bolsa.
+aquí y allá por todo el cuerpo. Surgió de la roca, o quizá poseía la fa-
+—Burgos ya no es segura para ti, Micael Bonishah. El mercader al que
+cultad, al ser él mismo similar a ella, de disimularse con la piedra hasta
+compras los productos que usas para tus magias ha decidido que ya te ha
+tal punto que no se notara diferencia alguna. Al judío lo cogió por sor-
+sacado bastantes dineros, y le ha ido con el cuento de tus actividades a
+presa. Lope, más desconfiado, llegó a distinguir el movimiento y empujó
+los que se dedican a cazar a gentes como tú. 
+a su amigo, librándole de una muerte segura. No había tiempo de pre-
+—¡No puedo dejar a Lope solo ahora! ¡Necesita de mi saber!
+parar hechizos ni estrategias, ni siquiera había tiempo de huir. Lope
+Ignotus enarcó una ceja, sonriendo a medias.
+logró esquivar otro golpe que le hubiera arrancado la cabeza e hincó su
+—Necesita amigos y los necesitará siempre. Y se quedará sin uno si te
+arma en un hueco de las protecciones de su enemigo. Aunque aturdido,
+quedas mucho más. Vete a la frontera con el moro. A una ciudad llamada
+Micael alcanzó a reptar hasta la espalda del ser, sin que éste se fijara
+Eliossanna. En la primera casa a la izquierda entrando por el camino
+en él, furioso como estaba por la herida recibida y concentrado en Lope.
+del norte, llama tres veces y pregunta por Hardeck. Te contestarán que
+Por ello, pudo el judío sacar sin apuros  un  cuchillo largo de media vara
+en esa casa sólo viven gentes con nombres de mártires y de ángeles. Res-
+y hundírselo calmosamente en la espalda a la criatura, que se dolió
+ponde que es un ángel el que te envía, un ángel sin nombre. Te darán
+mucho, dando un aullido que a los dos recordó al sonido de las rocas al
+cobijo y aprenderás mucha de esa magia que ansías conocer…, con una
+desprenderse. Luego, la cosa no terminó en combate, sino en asesinato.
+condición.
+Que no estaban los dos amigos para dar cuartel a quienes trataran de
+—¿Cuál?
+matarles.
+—Que dejes de coquetear con la magia negra. Es más poderosa, sí…,
+Más tarde Micael realizó sus magias. Y no supo si reír o llorar, al en-
+pero su poder no está hecho para seres humanos. Ninguna magia lo está,
+contrar lo que buscaba.
+pero la magia de los demonios puede perderte para siempre. 
+—La muy hija de su madre está en Burgos, Lope. La hemos tenido bajo
+—¿Y qué pasará con Lope?
+las narices todo el rato.
+—Lope es cosa mía.
+—Burgos es grande, Micael… ¿No puedes decirme en qué casa para
+prenderle fuego?
+—Lo siento, pero no. Además, quizá al ser engendro del Infierno el fuego
+UNQUE los judíos aseguren que no debe pisar la
+no le haga daño… en cambio, harías que toda la ciudad ardiera como la
+tierra nadie “que practique adivinación, astrología,
+yesca. No, mejor piensa en otra cosa.
+hechicería o magia, ningún encantador ni consultor
+—Supongo que tendré que esperar a que me envíe otro de sus asesinos, A
+de espectros o adivinos, ni evocador de muertos”
+(Deuteronomio, 18, 10-11); los cristianos recuerden a San Pablo,
+a ver si consigo hacerle hablar antes de que muera…, o que me mate.
+ante cuya presencia “bastantes de los que habían practicado
+la magia reunieron los libros y los quemaron delante de todos”
+*    *    *
+(Hechos, 19, 19); o los musulmanes tengan en mente el sagrado
+Corán, donde se asegura que “el mago no prosperará, venga
+Las palabras del hidalgo resultaron proféticas. No había pasado una se-
+de donde venga” (Corán 20, 69), lo cierto es que en el mundo
+mana cuando Micael recibió la visita de su amigo, tinto de sangre propia
+de Aquelarre la magia es una fuerza viva, poderosa y terrible.
+Recordad pues las palabras del sabio: “La magia abre a tus pies
+y ajena. Mientras curaba sus heridas con remedios tanto naturales como
+dos senderos. Elige el que desees. Si eres digno, serás recom-
+mágicos, éste no paraba de farfullar:
+pensado…”
+—Era un hombre y no lo era, Micael… era peludo y fuerte, y enseñaba
+151
+=== PAGE 154 ===
+ParsVI  04/10/13  14:40  Página 152
+Aquelarre: Juego de rol demoníaco medieval
+Consideraciones Iniciales
+UNQUE para muchos sólo se trata de un cuento de
+PUNTOS DE CONCENTRACIÓN
+viejas, del delirio de una mente enferma o de los des-
+Puncta Mentis
+pojos de una edad pagana ya olvidada, la magia existe.
+A Aunque se encuentre oculta en las páginas de viejos
+En los capítulos 1 y 2 hablamos brevemente de los Puntos de
+manuscritos polvorientos, en los alambiques y retortas de labo-
+Concentración —o, de forma abreviada, PC—, una característica
+ratorios secretos o en los ungüentos y emplastes atesorados en
+secundaria con una tremenda importancia en el lanzamiento de
+una destartalada cabaña del bosque, la magia existe. Y aunque
+hechizos, así que ya es llegada la hora de que nos detengamos
+sus secretos se escondan en las manos de extrañas criaturas, en
+en su explicación. Los PC representan la reserva de energía mís-
+las mentiras que brotan de los labios de los demonios o en las
+tica que posee el personaje, mayor cuanto más crea en la exis-
+desgastadas letras de grimorios abandonados, la magia existe.
+tencia del lado irracional de la vida; por eso, en el ámbito del
+Y, lo que es más importante, está a nuestro alcance…
+juego, un PJ siempre tendrá una cantidad de PC igual al 20% de
+su IRR, redondeando hacia arriba, y aumentarán o disminuirán
+Y en este capítulo te vamos a explicar, paso a paso, cómo.
+al mismo ritmo que lo haga la Irracionalidad.
+Desde cómo aprender hechizos a cómo utilizarlos, pasando
+por la forma de reunir los, en ocasiones, esotéricos elementos
+Exemplum: Como vimos en el capítulo anterior, el alquimista judío, Mi-
+que se necesitan para llevarlos a cabo, la manera de crear y fa-
+cael, aumentó su IRR hasta 92 después de contemplar cómo una som-
+bricar pociones, ungüentos y talismanes de gran poder, los di-
+bra acababa con la vida de un anciano morisco. Eso significa que Micael
+ferentes métodos para invocar demonios en enormes
+dispone de una cantidad de Puntos de Concentración igual a 19 (el
+aquelarres o cómo aprender a lanzar maleficios a tus enemi-
+gos. Pero antes es necesario aclarar algunas nociones básicas, 20% de 92, redondeando hacia arriba).
+y así poder entender el resto del capítulo.
+Días después, él y Lope continúan sus indagaciones en busca del escondite
+de la meiga Carmela de Rodrigo, para lo que han tenido que desplazarse
+BRUJOS Y MAGOS
+hasta una cueva situada en una zona boscosa, a los pies de las montañas
+cántabras, donde algunos lugareños aseguran que vive una bruja de tre-
+Los personajes del mundo de Aquelarre no necesitan ninguna
+característica especial para utilizar la magia; no es necesario
+mendo poder. Tras presentarse en la cueva, que no es más que una oquedad
+llevar sangre de demonio en las venas, ni pertenecer a una
+en la roca de la montaña, los dos amigos descubren decepcionados que hace
+orden secreta de hechiceros, ni siquiera ser el octavo hijo de
+tiempo que se encuentra deshabitada, o al menos eso piensan, pues mien-
+un octavo hijo. Todos los personajes pueden, si así lo desean,
+tras la inspeccionan buena parte del suelo de la cueva se levanta y son
+dedicarse al estudio y la práctica de la magia, siempre y
+atacados por una criatura rechoncha y fornida —se trata de un gnomo,
+cuando cumplan los siguientes requisitos:
+una criatura demoníaca, aunque ellos no lo saben—. Lope y Micael, tras
+a Se deben tener unos conocimientos mínimos sobre la
+una dura batalla, consiguen abatirlo, sin emplear para ello la magia, lo
+magia, el ocultismo y los mecanismos que permiten la uti-
+que significa que ambos aumentan en +1D10 su RR: Lope consigue un 4,
+lización de hechizos. En términos de juego, eso significa
+disminuyendo su IRR de 50 a 46, y Micael obtiene un 7, con lo que su
+que el PJ debe tener, al menos, un 50% en la competencia
+IRR baja de 92 a 85.
+de Conocimiento Mágico.
+Como su IRR ha disminuido, lo mismo ocurre con sus PC, que bajan
+a Además, el personaje debe creer en el aspecto más fantás-
+de 19 a 17 (el 20% de 85).
+tico e irracional del mundo, demostrando firmeza y convic-
+ción en la existencia de dicha visión, lo que significa que
+Para poder lanzar hechizos, un personaje debe gastar una de-
+debe poseer al menos un 50% en Irracionalidad.
+terminada cantidad de PC, mayor cuanta mayor sea la mag-
+nitud o nivel del hechizo, su vis (véase más adelante, pág. 153).
+Si el personaje cumple ambos requisitos, podrá utilizar cual-
+Por ejemplo, un hechizo de vis prima (nivel 1), sólo requiere el
+quier hechizo que haya memorizado. Como se dijo en el capí-
+gasto de 1 Punto de Concentración, mientras que otro de vis
+tulo I, los personajes que comiencen el juego con un 50% en
+septima (nivel 7) necesita 10 PC —más adelante, en la pág. 159,
+Conocimiento Mágico y en IRR, ya habrán aprendido algunos
+te indicaremos el gasto de PC que corresponde a cada vis—.
+hechizos (pág. 48), pero los que alcancen ambos requisitos una
+Debemos tener en cuenta que, ya que los Puntos de Concen-
+vez creado su personaje, deberán aprenderlos durante el trans-
+tración representan el impulso de energía mística que el per-
+curso del juego, ya sea porque los estudien en un grimorio o
+sonaje utiliza para ejecutar la magia, los PC deben gastarse al
+porque otro personaje con conocimientos mágicos se los en-
+comienzo del lanzamiento de un hechizo; que luego tenga
+señe (véase más adelante la sección sobre Aprendizaje de He-
+éxito o no, ya nada tiene que ver con los PC que se gastan en
+chizos, pág. 153).
+cualquiera de los dos casos.
+Por cierto, que a lo largo de todo el capítulo utilizaremos siem-
+Los Puntos de Concentración utilizados en el lanzamiento de he-
+pre la palabra “mago” como sinónimo de “usuario de la
+chizos pueden recuperarse de la siguiente forma: por cada hora
+magia” o “lanzador de hechizos”, sin importar la profesión
+completa (no fracciones) que pase el personaje durmiendo o en un
+real que posea.
+estado de reposo completo, recuperará el 10% de sus PC totales, lo
+152
+=== PAGE 155 ===
+ParsVI  04/10/13  14:40  Página 153
+Pars 6: Ars Magica
+que significa que si pasa una buena noche de sueño
+todas formas los 2 PC. El alquimista no se desanima y lo
+con un total de 10 horas, recuperará todos sus PC.
+vuelve a intentar: gasta otros 2 PC, ejecuta el hechizo y tira
+Exemplum: Tras derrotar al gnomo, Lope y Micael siguen exa- los dados correspondientes. ¡Un éxito! Esta vez, Micael sí
+minando la cueva donde se supone que podría vivir Carmela, pero con que ha conseguido entrar en trance y cuando vuelve a des-
+escaso resultado. Por suerte, Micael aprendió hace tiempo un hechizo que pertar, recuerda haber tenido extrañas visiones en las que podía
+puede ayudarles en su búsqueda, “Visión de Futuro”, y decide que ha lle- vislumbrar la catedral de Burgos.
+gado el momento de utilizarlo. Se trata de un hechizo de vis tertia (nivel Lope y Micael deciden, por tanto, regresar a la corte del rey en
+3), así que gasta 2 PC —bajando de 17 a 15 PC— y lanza el hechizo: Burgos, donde puede ser que se encuentre ahora Carmela, oculta en
+mala suerte, falló y Micael no consigue entrar en trance, perdiendo de la misma ciudad, delante de sus propios ojos.
+Hechizos
+HORA que ya sabes lo que son los Puntos de Concen- una ordenación “artificial” ideada para facilitar su uso en el
+21
+tración y también lo que necesita tu personaje para uti- juego y que, por tanto, no existe en el mundo de Aquelarre .
+lizar la magia, llega el turno de hablar de los hechizos, Para los brujos, alquimistas o magos, un hechizo es un he-
+que poseen una importancia trascendental en el juego chizo: algunos son más poderosos, insólitos o complejos que
+A
+pues, ¿de qué le serviría a un brujo poseer un alto porcentaje en otros, pero todos ellos son, al fin y al cabo, hechizos.
+IRR o un gran porcentaje en Conocimiento Mágico si no ha apren-
+dido a utilizar ningún hechizo? Para evitar que eso ocurra, en los APRENDIZAJE DE HECHIZOS
+siguientes párrafos te hablaremos largo y tendido del aprendizaje
+Naturalmente, antes de poder utilizar un hechizo, es necesario
+de hechizos, de sus clases, de sus tipos, de su clasificación, etc. Más
+que el mago lo estudie, lo memorice y llegue a aprenderlo co-
+adelante encontrarás un grimorio completo (pág. 161), con una
+rrectamente, para lo que deberá recurrir a otro mago que actúe
+enorme lista de hechizos para que tu personaje los aprenda —si
+como su mentor o a un grimorio o libro en el que aparezca des-
+se atreve— o para que los utilicen los enemigos y las criaturas con
+crito. Aunque en ambos casos, el aprendizaje de hechizos es muy
+las que se encuentre en sus aventuras de Aquelarre.
+similar, vamos a describir ambos métodos por separado.
+Aunque el aprendizaje de hechizos con un mentor es más sen-
+VIS
+cillo que a través de un grimorio, también es cierto que no son
+Si le echas un vistazo al grimorio de hechizos que hemos in-
+demasiados los magos que están dispuestos a enseñar sus se-
+corporado a este capítulo (pág. 161), podrás observar que cada
+cretos al primero que llame a su puerta. Por tanto, si el perso-
+uno de ellos pertenece a una determinada vis —vis prima, vis
+naje quiere aprender algún hechizo de esta forma deberá,
+secunda, vis tertia…—, una palabra latina de género femenino
+primero, encontrar al mentor adecuado, lo que puede llevar,
+que viene a significar algo así como “fuerza”, “poder” o “ener-
+en tiempo de juego, semanas, meses o incluso años, posible-
+gía”, ya que es precisamente eso lo que representa: la magni-
+mente viajando de ciudad en ciudad, de pueblo en pueblo y
+tud, el nivel o la potencia de un hechizo en concreto. Como
+de rumor en rumor, hasta encontrar al hombre adecuado. Una
+verás, existen siete vis, desde la vis prima hasta la vis septima,
+vez encontrado —y convencido, que ésa es otra—, el mentor
+cada una más potente y terrible que la anterior: los efectos del
+y el alumno tendrán que pasar juntos tantas semanas como PC
+hechizo serán más poderosos, pero también requerirán com-
+cueste lanzar el hechizo que le esté enseñando —por ejemplo,
+ponentes más excepcionales y raros, y será mucho más difícil
+un hechizo de vis quarta, que requiere 3 PC para ser utilizado,
+utilizarlo e incluso aprenderlo. De esta forma, los hechizos de
+necesita tres semanas de tiempo de juego—. Una vez pasado
+vis prima serán relativamente comunes, fáciles de utilizar y per-
+ese tiempo, el mentor deberá hacer una tirada de Enseñar: si
+mitirán llevar a cabo acciones relativamente simples —abrir
+falla, no habrá conseguido explicar correctamente el uso del
+puertas, resistir bajas temperaturas, ayudar en un parto…—,
+hechizo, y el tiempo se habrá perdido, aunque puede volver a
+mientras que los de vis septima son extraordinariamente raros y
+intentarlo si pasa de nuevo el mismo número de semanas en-
+sólo están al alcance de muy pocos magos, otorgándoles, eso sí,
+señándoselo otra vez. En caso de que tenga éxito, sí que lo
+poderes casi divinos —matar, vivir eternamente o incluso invo-
+habrá explicado bien, obligando al PJ a llevar a cabo una tirada
+car al propio Lucifer—.
+de IRR para memorizar el hechizo. Si el PJ tiene éxito en esta
+tirada, habrá aprendido a utilizar el hechizo, pero si falla en la
+Con respecto a las reglas utilizaremos de forma indistinta el
+tirada de IRR es que se le ha escapado algún aspecto básico
+uso del término “vis” con el de “nivel” —palabra que se utili-
+del hechizo y deberá comenzar a estudiarlo de nuevo, lo que
+zaba en las anteriores ediciones de Aquelarre, y que es compa-
+requiere el mismo número de semanas, una nueva tirada de
+tible con la anterior—, aunque recomendamos que aquéllos de
+Enseñar del mentor y otra tirada de IRR del alumno.
+nuestros personajes que utilicen magia no usen, en el ámbito
+del juego, ninguno de los dos vocablos para indicar la magni-
+Si el personaje mago no dispone de un mentor a mano —pues
+tud de sus hechizos, ya que la clasificación en diferentes vis es
+nunca hay uno cerca cuando verdaderamente se necesita—,
+21
+Addenda: A decir verdad, la clasificación de hechizos en siete vis sí que aparece en el Gulandis Acolyti, un viejo grimorio escrito en el siglo IV de nuestra era
+por un filósofo gnóstico nacido en las cercanías de Colonia Patricia y que firmaba como I.P.F, acrónimo de Ioannes Paulus Fernandus. Ninguna copia del
+tratado llegó a la época en la que transcurren las aventuras de Aquelarre, pues la última de ellas se perdió durante el incendio de la abadía de la Rosa,
+situada en los Alpes italianos, en el año de 1327.
+153
+=== PAGE 156 ===
+ParsVI  04/10/13  14:40  Página 154
+Aquelarre: Juego de rol demoníaco medieval
+siempre puede aprenderlo si lo estudia de un gri-
+Picatrix
+morio, que aunque escasos, son más comunes que
+Se trata de una mala traducción del Ghayat al-hakim,
+los mentores. El método para aprender un hechizo
+tratado de magia escrito en árabe por Al-Majriti.
+es prácticamente igual que con un mentor —tiempo
+de estudio, tirada de Enseñar y tirada de IRR del PJ—,
+a Autor: Anónimo.
+ya que todos los grimorios disponen de un porcentaje en
+a Idioma: Latín.
+Enseñar que indica si los hechizos que se describen en su
+a Enseñar: 30%.
+interior aparecen correctamente explicados —un alto porcen-
+a Hechizos: Amuleto contra la Ponzoña, Manto de Salamandra,
+taje en Enseñar—, o sólo se garabatea su uso y funcionamiento
+Sueño Reparador, Falsas Visiones, Polvos Elementales, Invo-
+—un bajo porcentaje en Enseñar—. Antes de ponerse con el
+car al Fenicio, Corazón de León, Maldición de Cipriano.
+estudio es requisito indispensable que el personaje conozca el
+idioma en el que está escrito el grimorio y que tenga éxito en
+El Libro de San Cipriano
+una tirada de Leer y Escribir. Si se consigue, se puede comen-
+Según la tradición, este libro es indestructible. Sus páginas no
+zar con el proceso de aprendizaje normal.
+pueden ser ni desgarradas ni quemadas, el fuego se apaga a
+Exemplum: Mientras Lope investiga por Burgos en busca de la meiga su contacto y el agua no lo moja. Lo otorga el Diablo a sus fa-
+voritos y es invisible para todos excepto para aquéllos que ca-
+Carmela, Micael decide estudiar el viejo tomo en árabe que encontró
+recen de alma.
+en la biblioteca del monasterio de Silos. Lo primero que debe hacer
+para comprobar si es capaz de estudiar sus hechizos es determinar si a Autor: Giona Sufurino.
+a Idioma: Hebreo.
+comprende lo que allí está escrito: ya que el alquimista tiene las com-
+a Enseñar: 25%.
+petencias de Idioma (Árabe) a 40% y Leer y Escribir a 60% tira por
+a Hechizos: Cualquiera de magia negra.
+la más baja de las dos, o sea, un 40%. Obtiene un 13, suficiente para
+comprender lo que dice el grimorio, en el que se explica un hechizo de
+El Gran Grimorio
+vis tertia, Lengua de Babel, con un porcentaje en Enseñar del 35%
+a Autor: Anónimo.
+(no está precisamente muy bien explicado).
+a Idioma: Hebreo.
+Para memorizarlo, Micael debe pasar 2 semanas estudiando el hechizo
+a Enseñar: 45%.
+—ya que los hechizos de vis tertia necesitan 2 PC para ser lanza-
+a Hechizos: Todos los de Invocación.
+dos—, y una vez pasado ese tiempo debe hacer una tirada por Enseñar
+del grimorio, obteniendo un 34, un éxito justito, pero válido. Por úl- Libro de Taurus
+timo, aunque ha comprendido como usarlo, debe memorizarlo, lo que
+Tomo encuadernado con piel humana negra.
+requiere otra tirada, esta vez por la IRR de Micael, que actualmente
+a Autor: Anónimo.
+es de 85. Tira los dados y saca 43, que es más que suficiente. Micael
+a Idioma: Árabe.
+ha aprendido un nuevo hechizo, Lengua de Babel, que podrá utilizar,
+a Enseñar: 40%.
+siempre y cuando disponga de los componentes, claro…
+a Hechizos: Lámpara de Búsqueda, Leche de Sapiencia, Bra-
+zalete Solar, Maldición, Manto de Salamandra, Arma In-
+GRIMORIOS
+victa, Manto de Sombras.
+Si alguno de los PJs desea escribir su propio grimorio deberá
+Libro de la Potencia
+hacerlo de la siguiente manera:
+a Autor: Aptolcater.
+a Por cada hechizo que describa en el grimorio tendrá que
+a Idioma: Griego.
+estar el mismo tiempo que se tarda en estudiarlo, escribién-
+a Enseñar: 30%.
+dolo. Por ejemplo, si describe un hechizo de nivel 2, que se
+a Hechizos: Discordia, Brazalete Lunar, Filtro Amoroso, Sub-
+estudia en una semana, deberá pasar también una semana
+yugación, Encanto del Viajero.
+escribiéndolo en el grimorio.
+Libro de las Postrimerías
+a Pasado ese tiempo tendrá que hacer una tirada usando el
+a Autor: Rham al Llois.
+porcentaje más bajo que posea en las competencias de En-
+a Idioma: Árabe.
+señar, Conocimiento Mágico y Leer y Escribir. Si tiene
+a Enseñar: 30%.
+éxito, el libro adquirirá un porcentaje en Enseñar igual a
+a Hechizos: Arma Inquebrantable, Arma Invicta, Piel de
+la diferencia entre el resultado de la tirada y el porcentaje
+Lobo, Manto de Sombras, Talismán de Protección, Leche de
+por el que tiró, al que se le debe sumar el valor en Cultura
+Sapiencia.
+del PJ (en el caso de un crítico, el porcentaje en Enseñar
+La lectura de este libro proporciona además 25 PAp para au-
+será igual al porcentaje mayor que posea en las tres com-
+mentar el Conocimiento Mágico del lector, siempre que éste
+petencias anteriores más la CUL del PJ). Si falla, el he-
+no tenga más de 100% en dicha competencia.
+chizo no se ha escrito correctamente y nadie podrá
+aprenderlo estudiando ese grimorio.
+El Dragón Rojo y la Cabra Infernal
+A continuación te describimos también buena parte de los
+Pésima traducción de un antiguo tratado de magia caldea.
+grimorios que han aparecido en aventuras o suplementos
+de Aquelarre, algunos de ellos históricos, y otros no tanto. a Autor: Anónimo.
+154
+=== PAGE 157 ===
+ParsVI  04/10/13  14:40  Página 155
+Pars 6: Ars Magica
+a Idioma: Latín.
+El Libro de las Mentiras
+a Enseñar: 25%.
+En apariencia, se trata de un libro encuadernado en
+a Hechizos: Misa Negra, Pacto Infernal, Nudo Maléfico y
+piel humana (negra), muy desgastada. Sin embargo,
+todos los hechizos de Invocación.
+si se coloca cerca de algún libro, tomará la forma y el
+tamaño exterior de éste, volviendo sólo a su forma real
+Libro de la Sabiduría
+si pasa toda una noche a la luz directa de la luna llena.
+Según la leyenda, este libro le fue entregado a Adán tras su
+a Autor: Beherito, según se rumorea.
+caída, y luego pasó de generación en generación hasta llegar a
+a Idioma: Especial (el mejor idioma que conozca el lector).
+manos del rey Salomón, que con sus secretos pudo levantar el
+a Enseñar: 10% (especial).
+templo de Jerusalén y dominar a los demonios. Tras su muerte
+a Hechizos: Contiene todos los hechizos de goecia de tipo
+el libro se perdió y su emplazamiento sigue siendo un misterio.
+Contiene todos los secretos del universo, de la vida y de la pernicioso, pero tiene un pequeño inconveniente, y es que
+muerte, incluso aquellos secretos que sólo conoce Dios. Dema-
+está maldito. Cada uno de esos hechizos está escrito en
+siado conocimiento para un solo hombre. Aquél que lo abra
+forma de Trampa Goética (véase el hechizo en la pág. 210),
+nada entenderá a no ser que pase una tirada de su Cultura x1:
+la cual se activará al ser leída. Si se desea aprender un he-
+en caso de pasarla, todo el conocimiento entrará de golpe en su
+chizo en concreto, será necesario encontrar la página en la
+cerebro y su raciocinio estallará, quedando muerto en vida.
+que está (cada una contiene un hechizo, en forma de
+Trampa Goética, por supuesto, y cada vez que se com-
+a Autor: Anónimo.
+prueba una página se activa la trampa) y leer el hechizo con
+a Idioma: Hebreo.
+atención (con lo cual se hará la tirada de Enseñar, además
+a Enseñar y Hechizos: Véase más arriba.
+de activar la trampa). Así, si se desease aprender un hechizo
+Clavis Secretorum Coelis et Terrae goético que se encuentra en la página 10, se debería empe-
+zar a buscar desde la 1 (suponiendo que se haga por orden)
+Este libro contiene las enseñanzas y secretos de Simón el
+y una vez se encuentre en la 10, estudiarlo con atención, lo
+Mago, contemporáneo de Jesucristo que fue destruido por San
+cual significaría que el lector se “come” once trampas (la
+Pedro.
+página 10 se repite, por el estudio).
+a Autor: Anónimo.
+a Idioma: Latín.
+Magice Rerum Daemonii Est
+a Enseñar: 25%.
+a Autor: Jaume de Fabregat, basándose en textos de Ramón
+a Hechizos: Lámpara de Búsqueda, Dominación, Estupidez,
+Llull.
+Oración Oscura, Tortura, Alas del Maligno, Cáliz Maldito,
+a Idioma: Latín vulgar.
+Maldición de la Bestia.
+a Enseñar: 25%.
+a Hechizos: Morada Maldita, Veneno de Escorpión, Mano de
+De Magia Nigra et Profunda
+Gloria, Maldición de las Estrígiles y Condenación.
+a Autor: Bernat Desmons.
+a Idioma: Latín vulgar.
+COMPONENTES DE LOS HECHIZOS
+a Enseñar: 40%.
+a La lectura de este libro proporciona únicamente 15 PAp Uno de los factores más importantes de los hechizos, y al que de-
+bemos prestar mucha atención, es el de sus componentes. Los hu-
+para aumentar el Conocimiento Mágico, siempre que el lec-
+manos, como seres racionales que somos, necesitamos un sostén,
+tor no tenga más de 75% en dicha competencia.
+un soporte que nos permita utilizar la magia, que pertenece, como
+De Feits lo Diable
+ya se dijo antes, al mundo irracional, y ése es precisamente el papel
+que juegan los componentes: cualquier hechizo, sea del tipo que
+Traducción de un texto latino anónimo del siglo III.
+sea o pertenezca a la clase a la que pertenezca, requiere un deter-
+a Autor: Absalón Leví.
+minado número de ingredientes o elementos para poder ser fabri-
+a Idioma: Catalán.
+cado, utilizado o llevado a cabo. Esos componentes pueden ser un
+a Enseñar: 45%.
+objeto o un material relativamente común —un trozo de hierro, ca-
+a Hechizos: Leche de Sapiencia, Invocación de Ánimas, Elixir
+nela, un poco de cera virgen—, algún tipo de acción o habilidad
+de la Vida.
+por parte del mago—abjurar de la religión propia, por ejemplo—,
+o puede ser algo tan extraño e inusual que pocas personas en el
+Llave de Salomón
+mundo serán capaces de conseguirlo —una de las coronas de los
+Los hechizos que contiene este grimorio son de tipo prohibido
+Reyes Magos, por poner un ejemplo—, y que necesitarán toda una
+(véase pág. 158). Está escrito en clave y para descifrarlo hay que aventura o incluso una campaña entera para poder encontrarlo.
+cotejar el texto con el Cantar de los Cantares, en su versión original
+Sea como sea, es requisito indispensable reunir todos esos com-
+(hebrea). Pero eso, claro está, pocos o ninguno lo saben…
+ponentes para fabricar o llevar a cabo el hechizo: si falta uno solo
+a Autor: ¿Salomón? de ellos, será completamente imposible utilizarlo, y de nada nos
+a Idioma: Hebreo (y en clave). valdría tener un gran porcentaje en IRR o en Conocimiento Má-
+gico. Que los magos lo tengan en cuenta, especialmente si se
+a Enseñar: 10%.
+trata de un hechizo poderoso, pues suelen requerir los com-
+a Hechizos: Botella de Suleimán, Camposanto, Puerta del In-
+ponentes más extraños que puedas imaginarte.
+fierno.
+155
+=== PAGE 158 ===
+ParsVI  04/10/13  14:40  Página 156
+Aquelarre: Juego de rol demoníaco medieval
+Naturalmente, las criaturas irracionales o demo-
+a Invocación (Invocatio): Se trata de una convoca-
+níacas, como seres del mundo irracional que son,
+toria realizada con métodos mágicos para llamar a
+no necesitan ningún tipo de componente para lle-
+nuestra presencia a algún tipo de entidad, como áni-
+var a cabo sus hechizos: si lo conocen, lo pueden uti-
+mas, demonios elementales, demonios mayores o incluso
+lizar sin necesidad de reunir ingrediente alguno.
+al propio Lucifer. Deben usarse con mucha prudencia, pues
+Recordadlo por si vuestros personajes se encuentran en
+nunca se sabe con qué humor puede presentarse la entidad
+sus aventuras con una de estas criaturas.
+invocada.
+a Maleficio (Maleficium): Una acción, lectura o declamación
+FORMAS DE LOS HECHIZOS
+que sirve como fórmula mágica para llevar a cabo el he-
+Otra distinción importante entre los hechizos es su forma, el
+chizo. Probablemente sea la forma más fácil de utilizar, pero
+estado en que se nos presenta: puede ser una simple fórmula
+en ocasiones requiere una preparación muy meticulosa o
+mágica que se pronuncia, un bebedizo que haya que ingerir o
+particular.
+un objeto que haya sido imbuido con un poderoso efecto má-
+gico. Es una característica muy importante para un hechizo, a Poción (Potio): Una pócima o bebedizo que se fabrica con los
+ya que la forma que adopte puede ayudar o perjudicar al
+ingredientes del hechizo y que debe ingerirse para que surta
+mago en un determinado momento —por ejemplo, si estamos
+efecto. Se trata también de una forma relativamente fácil de
+atados de pies y manos, sí que podemos utilizar un hechizo
+usar, pero que requiere preparar la poción con antelación para
+que sólo requiera hablar, pero nos será imposible tomarnos
+tenerla lista, basándonos para ello en el porcentaje que tenga
+una pócima—, así que tenlo presente a la hora de decidir qué
+el mago en Alquimia consultando la siguiente tabla:
+hechizo quieres que aprenda tu personaje.
+Tabla de Fabricación de Pociones
+Todos los hechizos, del tipo que sean, pertenecen a una de las
+22
+siguientes formas :  Alquimia                                     Tiempo de Preparación
+   01 – 30%                                            No puede fabricarla
+22
+Addenda: El lector sagaz habrá advertido que utilizamos la clasificación en
+cinco formas concebida por Michelangelo de Ruy, alquimista latino del siglo
+   31 – 40%                                                      1D6 días
+XIV que se hizo famoso en los más refinados salones alquímicos de su mo-
+   41 – 70%                                                      1D4 días
+mento con su obra Ars Minima, un libro que supuestamente extraía y comen-
+taba los contenidos más importantes del Ars Magna de Ramón Llull
+   71 – 90%                                                      1D3 días
+—Raimundo Lulio para los castellanos—, aunque en la práctica no le llegaba
+ni a la suela de las sandalias a tan insigne maestro alquimista.
+  91% o más                                                        1 día
+156
+=== PAGE 159 ===
+ParsVI  04/10/13  14:40  Página 157
+Pars 6: Ars Magica
+Pasado ese tiempo, el mago tendrá a su disposi-
+los componentes del hechizo y está preparado para fabri-
+ción seis dosis de la poción, que puede utilizar
+carlo: ya que el porcentaje de Micael en Alquimia es de
+en el momento que desee, pero antes de que la po-
+60%, tardará 1D3 semanas. Tira los dados y obtiene un
+ción caduque: cada hechizo posee un tiempo de caducidad
+bonito 2: el alquimista tardará, por tanto, dos semanas
+diferente (comprueba su descripción), que una vez supe-
+en fabricar seis dosis del ungüento cuya caducidad será de
+rado vuelve inservible la poción, perdiendo completamente
+2D6 días, tal y como se explica en el propio hechizo: el DJ tira
+sus efectos. Si el mago lo desea, puede preparar al mismo
+los dados (en secreto, que es muy ladino) y obtiene 8, lo que indica
+tiempo hasta tres hechizos de pociones, pero no más.
+que pasados 8 días, las dosis que no haya gastado se echarán a perder.
+a Talismán (Amuletum): En este caso, el hechizo se aloja en
+Si Micael lo hubiera querido, al mismo tiempo que fabricaba ese un-
+un objeto, que llegado el momento debe activarse para
+güento podría haber estado fabricando otros dos más.
+mostrar sus efectos. Aunque también es otra de las formas
+relativamente sencillas de utilizar, siempre cabe la posibili-
+En la descripción de los hechizos verás que algunos de ellos
+dad de que perdamos el talismán, lo que nos obligaría a fa-
+tienen un tiempo de fabricación diferente al que aquí ofrece-
+bricar otro. Al igual que ocurre con las pociones, el tiempo
+mos: en esos casos, la descripción del hechizo tiene preferencia
+de fabricación de los talismanes también se basa en Alqui-
+sobre lo dicho aquí.
+mia, aunque es mucho más laborioso, ya que el tiempo de
+elaboración es mayor y es imposible crear más de un talis-
+NATURALEZA DE LOS HECHIZOS
+mán al mismo tiempo.
+Para terminar esta descripción con las diferentes características
+y particularidades que pueden poseer los hechizos debemos
+Tabla de Fabricación de Talismanes
+mencionar su naturaleza, la procedencia de un hechizo, que
+   Alquimia                                    Tiempo de Preparación
+puede darnos una idea aproximada del sentido con el que fue
+    01 – 30%                                          No puede fabricarlo
+creado al tiempo que nos proporciona una imagen del tipo de
+    31 – 40%                                                1D6+3 meses
+mago al que va dirigido. En esencia, cualquiera de los hechizos
+que puedes encontrar en la lista que acompaña este capítulo
+    41 – 70%                                                1D4+2 meses
+puede incluirse en una de las dos siguientes naturalezas:
+    71 – 90%                                                1D3+2 meses
+   91% o más                                               2D6 semanas a Magia Blanca: Se trata de hechizos benéficos o, a lo sumo,
+no perjudiciales —al menos en esencia, que otra cosa es lo
+a Ungüento (Unguentum): La última de las formas es similar
+que haga el mago con un hechizo en concreto—. Aunque
+a las dos anteriores, pero en este caso los componentes del
+el uso de estos hechizos está, como toda la magia, prohibido
+hechizo se utilizan para producir una pasta o bálsamo que
+por las tres religiones monoteístas de la época, lo cierto es
+el mago debe untarse, lo que puede retrasar bastante el
+que su estudio y práctica no mancilla en forma alguna el
+tiempo de ejecución. Al igual que las pociones, los ungüen-
+alma espiritual del mago.
+tos también deben prepararse con antelación usando la
+a Magia Negra: Denominada también “goecia”, se trata de
+competencia de Alquimia, tal y como aparece en la si-
+un tipo de magia particularmente oscura y perjudicial, ya
+guiente tabla:
+sea por sus efectos o por la procedencia de sus componen-
+Tabla de Fabricación de Ungüentos
+tes. Aunque cualquier mago puede aprender estos hechi-
+zos, su simple utilización condena el alma del que los usa,
+Alquimia                                   Tiempo de Preparación
+quedando maldito a los ojos de la divinidad (hablaremos
+01 – 30%                                          No puede prepararlo
+sobre los efectos de la fe en aquellos “malditos por Dios”
+31 – 40%                                                 1D6 semanas
+en el siguiente capítulo, pág. 240). 
+41 – 70%                                                 1D3 semanas
+Además de estas dos naturalezas, en la descripción de los hechi-
+71 – 90%                                                     1 semana
+zos también haremos mención al posible origen del hechizo, un
+91% o más                                                  1D6 días
+término sencillo que puede ayudarnos a determinar los hechizos
+que son más corrientes para determinadas profesiones, aunque
+Una vez terminada la fabricación tendremos a nuestra dis-
+no deben entenderse como divisiones absolutas y herméticas: es
+posición seis dosis de ungüento que podemos utilizar
+posible que un alquimista aprenda un hechizo de magia popular,
+cuando deseemos, pero siempre antes de que se caduque
+aunque no suele ser lo normal. Los orígenes que podemos en-
+la pasta (consulta los hechizos para ver el tiempo exacto de
+contrar para un hechizo son los siguientes:
+caducidad que posee un determinado hechizo). De forma
+a Magia Popular: Hechizos de origen tradicional basados en
+similar a las pociones, un mago puede fabricar al mismo
+supersticiones de épocas pasadas y que son transmitidos
+tiempo hasta tres tipos diferentes de ungüentos, pero ni
+de generación en generación de forma oral de maestro a
+uno más.
+discípulo. Suelen ser los hechizos más habituales que verás
+Exemplum: Tras aprenderse su nuevo hechizo, nuestro alquimista, Mi-
+a lo largo del juego y suelen ser escogidos por las profesio-
+cael, ha decidido meterse en su laboratorio privado para fabricar al-
+nes del tipo brujo o curandero.
+gunas dosis del ungüento de Bálsamo de Curación que conoce —fue
+a Magia Alquímica: Llamada también “magia roja”, se
+uno de los que eligió al crearse el personaje—. Consigue reunir todos
+trata de fórmulas mágicas de marcado carácter alquí-
+157
+=== PAGE 160 ===
+ParsVI  04/10/13  14:40  Página 158
+Aquelarre: Juego de rol demoníaco medieval
+mico, sesudas investigaciones protocientíficas ferocidad que la Iglesia a cualquiera que co-
+que requieren muchos más conocimientos teóricos nozca uno de ellos. Estos hechizos no pueden ser
+y abstractos que la magia popular. Suelen ser los escogidos durante la creación del personaje y nadie
+que más fácilmente encontramos en grimorios y li- que no tenga un libro que hable de ellos o que no posea
+bros, y se trata de hechizos particularmente apropiados un 101% o más en Conocimiento Mágico podrá ni tan si-
+para las profesiones de alquimista o mago. quiera haber oído hablar de ellos. Si algún personaje tiene
+la oportunidad de aprender alguno no podrá utilizar la
+a Magia Infernal: Aunque los orígenes popular o alquímico
+Suerte ni para aprenderlo ni para lanzarlo, y es condición
+pueden pertenecer indistintamente a la naturaleza blanca
+obligatoria —tanto para humanos como para criaturas
+o negra de la magia, los hechizos de magia infernal son
+irracionales— utilizar en su lanzamiento los correspon-
+todos de goecia. Son hechizos creados por demonios para
+dientes pases de manos, pronunciar las fórmulas apropia-
+ser utilizados por ellos mismos o por sus seguidores, que
+das en voz alta y clara y disponer de todos los
+los aprenden directamente de sus labios o a través de algún
+componentes necesarios. Además, los PC gastados en su
+grimorio maldito.
+lanzamiento se recuperarán a la tasa de 1 PC por cada se-
+a Magia Prohibida: Por último tenemos que mencionar un
+mana en que no se use magia alguna, durante su utiliza-
+tipo de magia extremadamente enigmática y tenebrosa,
+ción tendrán lugar manifestaciones físicas de diferente
+incluso más de lo que es normal en la magia. Se trata de
+índole —tormentas, terremotos, tornados…—, y en caso
+la magia prohibida, hechizos que están vedados a la hu-
+de obtener una pifia durante el lanzamiento el mago mo-
+manidad, ya que poseen un poder tal que ni siquiera los
+rirá (y ya veremos si no se lleva con él a buena parte de
+demonios desean enseñarlos, persiguiendo con la misma
+los compañeros o del entorno que lo rodea).
+Lanzamiento de Hechizos
+UENO, bien, llegados a este punto sabes las diferentes
+todas las heridas, así que una vez pasado ese tiempo, Micael ya está
+clases de hechizos que existen, cómo aprenderlos, de
+preparado para lanzar el hechizo: lo declara y lleva a cabo una acción
+dónde proceden, como se manifiestan y mil cosas más,
+extendida para activar el bálsamo curativo.
+B pero nos falta todavía contestar a la pregunta más fun-
+damental: ¿cómo demonios se utiliza la magia? Tranquilidad, que
+El tiempo necesario para realizar todos aquellos preparativos
+vamos a ello en este preciso instante. Y para que resulte sencillo,
+previos que requiere el lanzamiento de un hechizo lo decidirá
+explicaremos de forma detenida los diferentes pasos en los que
+el Director de Juego basándose en la forma del hechizo —siem-
+se divide el proceso de lanzamiento de hechizos.
+pre será más rápido tomarse una poción que frotarse un un-
+güento— y en la descripción del mismo. En principio, las
+1. DECLARACIÓN
+invocaciones y los ungüentos suelen ser los hechizos que re-
+quieren una mayor preparación, mientras que las pociones, los
+Como ya vimos en el capítulo anterior, al comienzo del asalto
+maleficios y los talismanes son los más rápidos —en la mayor
+tendremos que declarar las acciones que desean realizar nues-
+parte de los casos, las dos acciones necesarias para activar el
+tros personajes, utilizando para ello la Iniciativa (véase pág.
+hechizo ya incluyen los preparativos previos—, pero el DJ ten-
+114). En el caso de que se trate del lanzamiento de un hechizo,
+drá siempre la última palabra en lo referente a ello.
+deberemos utilizar las dos acciones de que disponemos en ese
+asalto, pues se trata de una acción extendida; pero has de tener
+2. PUNTOS DE CONCENTRACIÓN
+en cuenta que dicha acción incluye únicamente la activación
+del hechizo —los pases mágicos necesarios, la ingesta de la po-
+Tras la declaración, y en cuanto llegue el momento de actuar
+ción, la pronunciación de las palabras que se requieran,…—,
+del mago, lo primero que debemos hacer es calcular la canti-
+pero no todos los preparativos anteriores: por ejemplo, si de-
+dad de Puntos de Concentración que requiere el hechizo y gas-
+seamos utilizar un hechizo de ungüento deberemos primero
+tarlos. Ese gasto es un requisito indispensable para el
+embadurnarnos con él y luego gastar las dos acciones para lan-
+lanzamiento, ya que implica el grado de concentración y es-
+zar el hechizo, lo que sumará bastante más de un asalto.
+fuerzo místico que debe poseer el mago para poder impulsar
+el hechizo, tenga o no éxito en el lanzamiento: si falla luego la
+Exemplum: Mientras Micael se encuentra en su laboratorio revisando
+tirada, los PC se habrán gastado igualmente y si desea volver
+unos viejos manuscritos, aparece de repente en la puerta su amigo
+a repetir el hechizo tendrá que gastar de nuevo la misma can-
+Lope, que viene malherido pues, según asegura, ha encontrado el es-
+tidad de Puntos de Concentración. Naturalmente, si no dis-
+condite de la meiga Carmela, pero ha tenido que enfrentarse con un
+pone de la cantidad necesaria de PC le será imposible utilizar
+extraño ser que a punto ha estado de acabar con su vida. Mientras le
+el hechizo hasta que no haya recuperado la cantidad adecuada
+para su uso (véase pág. 152 para más detalles sobre los PC).
+cuenta el relato de lo ocurrido, el alquimista coge una dosis del Bálsamo
+de Curación que había creado y comienza a lavar las heridas del cor-
+La cantidad de Puntos de Concentración que se necesita gastar
+tesano con el ungüento, tal y como se explica en la descripción del para activar un hechizo se basa en la vis del hechizo: cuanto más
+alta sea, más PC requiere, tal y como indica la siguiente tabla:
+hechizo. El DJ le indica que va a tardar tres asaltos en lavar
+158
+=== PAGE 161 ===
+ParsVI  04/10/13  14:40  Página 159
+Pars 6: Ars Magica
+mismo asalto en el que intenta lanzar el hechizo
+Tabla de Gasto de Puntos de Concentración
+su porcentaje de lanzamiento se verá reducido
+  Vis del Hechizo                         Puntos de Concentración
+en un -10%. En el caso de que fuera atacado
+        1 (Prima)                                                  1 PC
+pero no recibiera ningún daño, se le restaría de
+      2 (Secunda)                                                1 PC
+todas formas un -10%.
+        3 (Tertia)                                                   2 PC
+a Criaturas Poderosas: La existencia de las criaturas
+       4 (Quarta)                                                  3 PC
+irracionales está ligada al mundo mágico que habitan.
+       5 (Quinta)                                                  5 PC
+De esta forma, aun no practicando magia alguna, ésta
+         6 (Sexta)                                                   5 PC forma parte de su naturaleza, conviviendo con ella, respi-
+rándola, viviéndola como algo normal y cotidiano. Por eso,
+      7 (Septima)                                                10 PC
+si la víctima del hechizo que el mago va a utilizar es una
+Exemplum:
+Sigamos con el ejemplo de Micael y su Bálsamo de Curación.
+criatura irracional que tenga una IRR superior al 100%, re-
+Llegado el momento de activar el hechizo, y antes incluso de calcular el
+duciremos en -1% el porcentaje de lanzamiento por cada
+porcentaje que tiene, el alquimista debe gastar los PC correspondientes:
+punto por encima de 100 que tenga la criatura en IRR. De
+como Bálsamo de Curación es un hechizo de vis secunda (nivel 2), debe esta manera, si queremos afectar a una criatura que tiene
+125% en IRR, tendremos un penalizador a la tirada de lan-
+gastar 1 PC, reduciendo sus Puntos de Concentración de 17 a 16.
+zamiento de -25%. Aquellos humanos que consigan aumen-
+3. CALCULAR EL PORCENTAJE
+tar su IRR por encima de 100 no podrán acogerse a esta
+regla, ya que, por mucho que quieran, siguen siendo hu-
+Tras realizar el gasto de Puntos de Concentración que requiere
+manos, no criaturas irracionales.
+el hechizo para ser utilizado debemos calcular el porcentaje
+exacto que tiene el mago para activarlo. El porcentaje básico
+a Vis del Hechizo: El último, pero no el menos importante,
+será siempre igual a la IRR actual que tenga el mago, porcen-
+de los factores que pueden modificar el porcentaje de lan-
+taje que se verá modificado por el método de lanzamiento, la
+zamiento de un hechizo es la vis de dicho hechizo: cuanto
+protección que lleve encima el mago, la pérdida de concentra-
+más alta sea su vis, más difícil será usarlo y, por tanto, más
+ción y la vis del hechizo.
+alto será el penalizador que reciba el porcentaje, tal y como
+a Método de lanzamiento: Para activar correctamente un he-
+se indica en la siguiente tabla:
+chizo es necesario llevar a cabo una serie de gestos mágicos
+Modificador al Lanzamiento según Vis
+con las manos y pronunciar con voz clara las palabras corres-
+pondientes. En el caso de que el mago desee que la utilización
+  Vis del Hechizo                         Modificador al Porcentaje
+del hechizo pase más desapercibida puede pronunciar en voz
+        1 (Prima)                                                  - 0 %
+baja las palabras mágicas, lo que modificaría el porcentaje en
+      2 (Secunda)                                               - 15 %
+-25%, e incluso no llevar a cabo ningún gesto con las manos,
+        3 (Tertia)                                                  - 35 %
+reduciéndolo en otro -25% —por tanto, si lo activa sin gestos
+       4 (Quarta)                                                - 50 %
+y, además, en voz baja, tendría un total de -50%—. Es impo-
+       5 (Quinta)                                                - 75 %
+sible lanzar un hechizo sin pronunciar ninguna palabra, así
+         6 (Sexta)                                                 - 100 %
+que si el mago está amordazado o —Dios o el Diablo no lo
+quieran— le cortan la lengua, no podrá activar ninguno de      7 (Septima)                                              - 150 %
+los hechizos que conozca.
+Si tras calcular el porcentaje, el resultado total es de 0% o
+a Protección: Las armaduras de la época medieval, de las menor, el mago podrá intentarlo, ya que como se dijo en la sec-
+que ya hablamos en el capítulo de combate (pág. 136), son ción de Éxitos y Fallos Automáticos del capítulo II (pág. 72),
+siempre hay una posibilidad de sacar una tirada si se obtiene
+tremendamente incómodas: suelen pesar bastante, no per-
+un resultado entre 01 y 05.
+miten una total ligereza de movimientos, el metal se ca-
+lienta en verano y se enfría en invierno, etc. En resumen,
+Exemplum: Micael continúa con su hechizo de Bálsamo de Curación.
+las molestias que supone llevar un armadura encima no
+Tras gastar los PC correspondientes vamos a calcular el porcentaje de
+contribuyen de forma positiva al lanzamiento de un he-
+lanzamiento que posee: su IRR actual es de 85, lo que le da un por-
+chizo. Por todo ello, utilizar un hechizo llevando encima
+centaje básico de 85%, que luego deberá modificar por:
+una armadura ligera modifica en -25% el porcentaje de
+a Método de lanzamiento: El alquimista hará los gestos normales y
+lanzamiento, las metálicas lo reducen en -50% y las com-
+dirá las palabras en voz alta y clara —sólo está Lope en la habi-
+pletas en un importante -75%. Las armaduras blandas,
+tación y no le importa que él sepa que está usando un hechizo—,
+que son poco más que ropas de abrigo, no reducen el por-
+así que no recibirá ningún penalizador por ello.
+centaje en ningún caso.
+a Protección: Micael no lleva armadura alguna, así que tampoco tiene
+a Pérdida de concentración: Si durante el asalto en que está
+que reducir su porcentaje por ello.
+lanzando su hechizo, el mago es atacado antes de que lle-
+a Pérdida de concentración: Como Micael tampoco ha recibido ningún
+gue el momento de llevar a cabo su acción es posible que
+ataque o herida durante este asalto tampoco verá reducido su
+pierda la concentración necesaria y no pueda activarlo de
+forma correcta. Por tanto, por cada PV que pierda en el porcentaje por la posible pérdida de concentración.
+159
+=== PAGE 162 ===
+ParsVI  04/10/13  14:40  Página 160
+Aquelarre: Juego de rol demoníaco medieval
+a Fallo: Si fallamos la tirada para activar el he-
+a Criaturas Poderosas: El hechizo afectará a Lope, que
+chizo, el mago habrá perdido los PC gastados en
+no es una criatura irracional, sino un humano, por
+su lanzamiento, además del tiempo utilizado y de
+lo que tampoco atenderemos a este factor. 
+una dosis, si se trataba de una poción o ungüento. Si lo
+a Vis del Hechizo: El hechizo que está lanzando el alqui-
+desea y si todavía le es posible, puede volver a intentarlo.
+mista, Bálsamo de Curación, es de vis secunda, lo que significa
+a Pifia: El mago la ha hecho buena. El hechizo se ha acti-
+que deberá reducir su porcentaje en -15%.
+vado, pero produce los efectos contrarios a los que se de-
+Finalmente, tras calcular los posibles modificadores, el porcentaje
+seaban: si servía para curar, ahora dañará a la víctima; si
+final que tiene Micael para llevar a cabo el hechizo es de un 70%
+iba a ser utilizado para invocar a una criatura, ahora será
+(85-15=70).
+invocada otra mucho más peligrosa —o la misma, pero
+enfurecida—; si permitía aumentar el daño de un arma,
+4. RESULTADO
+ahora lo reducirá o puede incluso que la rompa; etc. El
+Tras calcular el porcentaje final que posee el mago para acti-
+Director de Juego tendrá siempre la última palabra en lo
+var el hechizo sólo queda coger los dados y hacer la tirada
+referente a los resultados concretos, aunque, en todo
+utilizando dicho porcentaje, lo que nos daría cuatro resulta-
+caso, la víctima del hechizo pifiado sigue teniendo dere-
+dos posibles:
+cho a su tirada de RR. Lo que sí está claro es que el mago
+a Éxito: Si el mago obtiene un éxito en la tirada de lanza-
+miento, el hechizo produce los efectos que aparecen reco-
+gidos en la descripción del mismo. En caso de que el
+hechizo afecte a una persona de forma directa, ésta tiene
+derecho a resistirse a sus efectos (excepto si la descripción CONSILIUM ARBITRO:
+del hechizo indica lo contrario): para resistirse deberá
+MAGIA PARA NO MAGOS
+hacer una tirada de RR con un modificador negativo igual
+En determinadas ocasiones, alguno de los personajes
+a la cantidad de puntos de IRR que posea el mago por en-
+que no conozca la magia podrá tener acceso a pocio-
+cima del 100% —si tuviera, por ejemplo, 130 en IRR ten-
+nes, talismanes, ungüentos, etc. Aunque en principio
+dría un -30%—: si tiene éxito, el hechizo no le afecta. En
+sólo aquellas personas que conozcan el hechizo con-
+caso de que la víctima sea consciente de que va a ser ob-
+creto son capaces de activar los efectos de ese he-
+jeto de un hechizo y desee recibir los efectos del mismo
+chizo, pueden darse algunos casos especiales. En el
+puede, si así lo quiere, no llevar a cabo la tirada de RR; en
+caso de los maleficios o las invocaciones, está claro
+el caso de que no sea consciente, deberá hacer la tirada de
+que sólo el mago que los conoce puede llevarlos a
+RR, incluso si el hechizo tuviera efectos benéficos para él.
+cabo, pero cuando hablamos de pociones, talismanes
+Naturalmente, aquellos personajes que sean conscientes
+o ungüentos la cosa cambia, ya que nada impide a
+de que van a recibir un hechizo, también podrían ver mo-
+un personaje no mago acceder a esos objetos.
+dificada su RR tal y como se indica en la Tabla de Ganan-
+En el caso de que el objeto sea usado por un no mago
+cias de RR/IRR (pág. 148).
+pero lo active un mago, las reglas son las mismas que
+Lo que debe quedar claro es que cuando decimos que el he- hemos visto hasta ahora —por ejemplo, un PJ cual-
+quiera puede aplicar un ungüento de Arma Irrom-
+chizo debe afectar “de forma directa” a la víctima para que
+pible y luego llegar el mago que conoce el hechizo y
+ésta tenga derecho a una tirada de resistencia nos referimos
+activarlo para que sus efectos puedan empezar a
+precisamente a eso, a que el hechizo es el que va a dañar,
+aplicarse—, pero puede darse el caso de que el mago
+curar o afectar directamente a la víctima, sin intermedia-
+le explique al no mago cómo debe activar los efectos
+rios. Por ejemplo, si usamos un hechizo para borrar los re-
+de un hechizo concreto, indicándole las palabras y
+cuerdos de un enemigo, estamos usándolo de forma
+gestos que debe utilizar para lanzarlo de la forma co-
+directa; pero si usamos un hechizo que encanta un arma
+rrecta —un mago, por ejemplo, que le entregue un
+para producir más daño y luego usamos ese arma sobre el
+Bálsamo de Curación a un compañero y le explique
+mismo enemigo, éste no tendría derecho a tirada de RR, ya
+cómo puede usarlo—: en ese caso, el PJ no mago
+que no está siendo afectado directamente por el hechizo.
+debe tener al menos un 25% en Conocimiento Má-
+gico y un 50% en IRR para poder comprender correc-
+a Éxito Crítico: Se maneja de la misma forma que el éxito nor-
+tamente todas las directrices, estudiar las
+mal, sólo que si se trata de un hechizo que afecte directa-
+indicaciones que se le enseñan durante al menos dos
+mente a la víctima, ésta deberá hacer su tirada de RR a la
+días y tener éxito en una tirada de IRR (si falla, puede
+mitad de porcentaje, redondeando hacia arriba. En el caso
+volver a intentarlo dos días de estudio después). Si
+de que el hechizo no obligue a tirada de RR —o si la víctima
+es así, el PJ no mago, llegado el momento podrá
+ha decidido no hacer dicha tirada—, la duración del he-
+hacer él mismo la tirada de lanzamiento para activar
+chizo se multiplicará por dos o, si es un hechizo instantá-
+los poderes de un determinado objeto, utilizando,
+neo, como los de curación, serán sus efectos los que se vean
+eso sí, su propia IRR y los modificadores habituales
+multiplicados por dos. Además si el hechizo requiere que
+por vis del hechizo, protección, gestos, etc.
+la víctima haga una tirada de Templanza, ésta también
+se realizará a la mitad de porcentaje.
+160
+=== PAGE 163 ===
+ParsVI  04/10/13  14:40  Página 161
+Pars 6: Ars Magica
+ha perdido los PC gastados en el lanzamiento y
+como en este caso—, pero como el personaje sabe que va a
+una dosis, si se trataba de un hechizo de poción o
+ser objeto de un ungüento curativo, decide no hacer tirada
+ungüento.
+de resistencia alguna (aunque verá aumentada en 1
+Exemplum: 
+Tras calcular el porcentaje que tiene Micael para lanzar el punto su IRR por “ver” los efectos de un hechizo de vis
+hechizo, un 70%, sólo nos queda hacer la correspondiente tirada. El secunda). El bálsamo cura, por tanto, 1D3 PV a Lope: Micael
+alquimista obtiene un 34, un éxito normal. Al tratarse de un hechizo hace una tirada y obtiene un 3, que no está nada mal. Tras
+que afecta de forma directa a la víctima, Lope debería hacer una tirada aplicar por tanto el ungüento, Lope se siente mucho mejor y agra-
+de RR para resistirse a sus efectos —incluso aunque fueran benéficos, dece a su amigo los cuidados.
+Grimorium
+N este capítulo vas a encontrar una larga lista de hechi- También te presentamos en las siguientes páginas una
+zos de todo tipo, forma y procedencia, que podrás usar tabla con todos los hechizos ordenados alfabéticamente,
+para que tus personajes los aprendan, para que los uti- para que puedas localizarlo rápidamente en el manual y
+licen sus enemigos o simplemente como un elemento para que tengas una breve descripción de su uso y efectos.
+E
+de ambientación para tus partidas. Ya que en las páginas anterio- Aquéllos que tengan el nombre en cursiva se consideran
+res hemos hablado de los elementos que rigen los hechizos, nos hechizos de magia negra.
+centraremos ahora en las particularidades de cada uno de ellos,
+tratándolos de forma individual, para que no te quepa duda de
+HECHIZOS DE VIS PRIMA
+cómo deben ser utilizados. En el caso de que existan discrepan-
+cias entre la descripción de un hechizo y las reglas sobre magia
+Aliento de Salamandra
+que aparecen en las páginas anteriores, siempre tendrá preferen-
+Halitus Salamandrae
+cia lo que aparezca escrito en la descripción del hechizo.
+Maleficio, magia blanca de origen alquímico.
+Para facilitar su lectura, todos ellos se describen utilizando el
+a Caducidad: No aplicable.
+siguiente esquema:
+a Duración: 6 asaltos.
+Nombre del Hechizo
+a Componentes: Una gota de sangre de salamandra
+Nombre en latín
+(pág. 369).
+Forma del hechizo, naturaleza y origen del hechizo.
+a Preparación: Lo único que debe hacer es derramar una gota
+a Caducidad: En el caso de las pociones, ungüentos y algu-
+de sangre de salamandra en el lugar que desee.
+nos talismanes, tiempo máximo que pueden aguantar sin
+a Descripción: Tras activar el hechizo, de la gota surgirá una
+estropearse. Una vez pasado ese tiempo, las dosis no gas-
+llama de medio pie de longitud (unos 20 cm, aproximada-
+tadas o el objeto pierden sus efectos y es necesario volver a
+mente). Este fuego puede prender materiales combustibles
+fabricarlos. En el resto de hechizos se indica un simple “No
+y se considera, a todos los efectos, un fuego normal. Si no
+Aplicable”, ya que no tienen un tiempo de caducidad.
+se apaga antes, la llama sólo durará 6 asaltos, aunque lo que
+a Duración: Indica el tiempo que se mantienen los efectos del
+se haya prendido con ella seguirá ardiendo de la forma nor-
+hechizo, ya sean asaltos, minutos, meses o lo que se indi-
+mal. El mago puede, si lo desea y dispone de ellas, disemi-
+que. Algunos hechizos no tienen una duración determinada
+nar varias gotas a su alrededor y activarlas todas al mismo
+al tratarse de hechizos que no se ven afectados por el
+tiempo, aunque la tirada de lanzamiento se hará a la mitad
+tiempo o que son permanentes, lo que se indica con un sim-
+del porcentaje normal.
+ple “No Aplicable” o “Permanente”, según el hechizo.
+Alivio del Esclavo
+a Componentes: Una lista de los ingredientes que el mago
+Talismán, magia blanca de origen popular.
+debe reunir para utilizar o fabricar el hechizo. Algunos de
+estos componentes pueden proceder de ciertas criaturas
+a Caducidad: El talismán no pierde sus propiedades con el
+irracionales o hacer referencia a otro hechizo.
+paso del tiempo.
+a Preparación: Una explicación lo más detallada posible de
+a Duración: El efecto es inmediato.
+cómo se utilizan los componentes del hechizo para fabricar
+a Componentes: Placa de oro, hilos de plata y corindón (una
+o activar el mismo.
+piedra preciosa).
+a Descripción: El último apartado se encarga de pormenori-
+a Preparación: Se usa el corindón para grabar sobre la placa
+zar los efectos del hechizo en caso de que el mago tenga
+de oro diversos signos e inscripciones de naturaleza má-
+éxito en su tirada de lanzamiento, aunque algunos hechizos
+gica. Una vez hechas, se ata el corindón a la placa usando
+incluyen también la descripción de lo que ocurrirá en caso
+los hilos de plata.
+de que falle o pifie.
+161
+=== PAGE 164 ===
+ParsVI  04/10/13  14:40  Página 162
+Aquelarre: Juego de rol demoníaco medieval
+Tabla de Hechizos (I)
+Nombre                                     Vis      Forma        Efectos                                                                                                                                                    Pág.
+Abrazo de las Tinieblas                7      Maleficio     El mago se convierte en un demonio.                                                                                              223
+Aceite de Grandeza                  3     Ungüento     Un aceite que otorga al mago un aura de superioridad.                                                             179
+Aceite de Hechicerías               3     Ungüento     Se unta sobre la armadura para que no afecte al lanzamiento de hechizos.                           179
+Aceite de Usurpación                   6     Ungüento     El mago puede asumir la apariencia de la víctima e incluso intercambiarla.                         211
+Alas del Maligno                          4     Ungüento     Permite volar a una o dos personas.                                                                                                187
+Aliento de Salamandra            1      Maleficio     Crea una pequeña llama.                                                                                                                    161
+Aliento del Diablo                        5      Maleficio     Se puede lanzar un hechizo de origen infernal aleatorio sobre una víctima.                         201
+Alimento de Guland                     4      Maleficio     Crea una gema maldita que ayuda en la invocación de silfos y del demonio Guland.       187
+Alivio del Esclavo                     1      Talismán      Suelta todas las ataduras que aprisionen al portador.                                                                 161
+Alivio del Rabioso                     3        Poción        Un brebaje que permite curar la rabia.                                                                                            179
+Alma de Estatua                        5      Talismán      Inmoviliza a varias personas.                                                                                                            201
+Amansar Fieras                          3      Talismán      Pacifica a los animales que estén alrededor, aunque estén hambrientos.                                180
+Amor                                             1      Maleficio     La víctima se vuelve una persona romántica y enamoradiza.                                                   166
+Amuleto                                      4      Talismán      Un amuleto que permite tirar por RR para protegerse de los hechizos que no lo permiten.        188
+Amuleto contra la Ponzoña    1      Talismán      Una bolsa que se calienta cuando está cerca cualquier tipo de veneno.                                  166
+Amuleto del Fullero                  1      Talismán      Aumenta en +25 la Suerte de una persona que esté apostando en un juego de azar.          166
+Anillo de Basilisco                        6      Talismán      Un anillo que puede sustituir cualquier componente que provenga de un basilisco.         211
+Anillo de Nigromancia                4      Talismán      Un anillo que permite revivir un cadáver y ponerlo a las órdenes del mago.                       188
+Anillo del Maestro                    7      Talismán      Dificulta el lanzamiento de hechizos que vayan a afectar al mago.                                         224
+Aquelarre a Agaliaretph              6    Invocación    Invoca al demonio Agaliaretph.                                                                                                        211
+Aquelarre a Frimost                     6    Invocación    Invoca al demonio Frimost.                                                                                                               212
+Aquelarre a Guland                     6    Invocación    Invoca al demonio Guland.                                                                                                                212
+Aquelarre a Masabakes                6    Invocación    Invoca a la demonio Masabakes.                                                                                                      212
+Aquelarre a Silcharde                   6    Invocación    Invoca al demonio Silcharde.                                                                                                             212
+Aquelarre a Surgat                       6    Invocación    Invoca al demonio Surgat.                                                                                                                  213
+Aquelarre Menor                          6    Invocación    Invoca a un Demonio Menor.                                                                                                            214
+Arma Inquebrantable               1     Ungüento     Vuelve irrompible cualquier tipo de arma.                                                                                     166
+Arma Invicta                              3      Talismán      Un arma que ignora cualquier tipo de armadura.                                                                        180
+Armadura Constelada             4      Talismán      Una armadura que no afecte negativamente al lanzamiento de hechizos.                            188
+Armadura del Diablo                   6      Talismán      Una armadura infernal con poderes pero capaz de poseer a su portador.                             214
+Arrancar la Esencia                     4      Maleficio     Se cultiva una planta que drena poco a poco la esencia de la víctima hasta que muere.    188
+Asesino de Fantasmas              4      Maleficio     Permite acabar de forma permanente con un espíritu o ánima.                                               189
+Atadura de Eunuco                      2        Poción        Una poción que elimina el deseo sexual a la víctima.                                                                  171
+Atadura del Deseo                        1      Maleficio     La víctima sentirá una enorme aversión y asco ante la idea de realizar el acto sexual.       166
+Bálsamo de Curación               2     Ungüento     Un ungüento que cura 1D3 Puntos de Vida.                                                                                 171
+Bardas Encantadas                    3      Talismán      Otorga una protección contra el daño físico a una montura.                                                     180
+Bautismo Negro                           6    Invocación    Invoca a un engendro del Infierno para que se ponga a las órdenes del mago.                    215
+Bebedizo de Sueños                  1        Poción        La víctima cae dormida inmediatamente y será imposible despertarla.                                 167
+Belleza                                           4      Maleficio     Aumenta la Apariencia del mago.                                                                                                    189
+Bendición de Hada                   4      Talismán      Permite multiplicar por dos la Suerte y usarla incluso después de hacer una tirada.          189
+Bendición de Jonás                    4      Talismán      Permite a un barco navegar sin sufrir daños o naufragar.                                                          189
+Bendición de Pepin                   2      Talismán      Permite ganar cualquier juego de azar en el que se participe.                                                   172
+Bendición de San Nuño           1      Talismán      Permite abrir cualquier tipo de cerradura.                                                                                     167
+Beso de Thamur                            4      Talismán      Un arma que cobra vida propia y provoca el doble de daño.                                                    190
+Bolsa de Duendes                      4      Talismán      Una bolsa para ocultar objetos.                                                                                                         190
+Botella de Suleimán                  7      Talismán      Una botella para apresar a criaturas irracionales.                                                                         224
+Brazalete Lunar                          1      Talismán      Un talismán que protege del calor.                                                                                                   167
+Brazalete Solar                           1      Talismán      Un talismán que protege del frío.                                                                                                     167
+Cadena de Silcharde                     3      Maleficio     La víctima acatará todas las órdenes que le dicte el mago.                                                         180
+Caldero Mágico                         6      Talismán      Un caldero que facilita la fabricación y conservación de pociones y ungüentos.                  215
+Cáliz Maldito                                6      Talismán      Un cáliz que envenena o posee a todo aquél que bebe de él.                                                     216
+Calor Sofocante                             4     Ungüento     Provoca una sensación de enorme calor a la víctima, que comenzará a desnudarse.          190
+Camposanto                               7      Maleficio     Crea un cementerio protegido de las fuerzas del mal.                                                                 224
+Castigo de Frimost                       7      Maleficio     La víctima muere de forma instantánea.                                                                                         225
+Cerradura Maldita                       1     Ungüento     La cerradura que reciba el hechizo será particularmente difícil de abrir o forzar.                168
+162
+=== PAGE 165 ===
+ParsVI  04/10/13  14:40  Página 163
+Pars 6: Ars Magica
+Tabla de Hechizos (II)
+Nombre                                     Vis      Forma        Efectos                                                                                                                                                    Pág.
+Círculo de Protección               5      Maleficio     Un círculo que protege al mago de los ataques mágicos de criaturas irracionales.              202
+Clarividencia                              3      Talismán      Un anillo que permite ver sucesos que ocurren a mucha distancia.                                        180
+Condenación                                 6      Maleficio     Una maldición lanzada en el momento de la muerte para vengarse de los asesinos.         216
+Conservación                             1        Poción        Preparado que duplica el tiempo de caducidad de otra poción o ungüento.                        168
+Consultar a los Muertos              6      Maleficio     Sirve para interrogar (los restos de) un muerto, que deberá decir siempre la verdad.        216
+Corazón de León                       4        Poción        Infunde un gran valor y capacidad de ataque al que beba de la poción.                                191
+Corona de Oriente                     7      Talismán      Permite lanzar hechizos sin gastar PC y otorga una protección mágica de 5 puntos.         225
+Corona Salomónica                   7      Talismán      Una tiara que concede cierta defensa contra la magia.                                                                225
+Cruz de Caravaca                      4      Talismán      Una cruz que actúa como un Amuleto y un Talismán de Protección al mismo tiempo.     191
+Cuerda de Cridavents              3      Talismán      El mago puede crear vientos, desde una brisa a un verdadero vendaval.                              181
+Danza                                           4     Ungüento     Polvos que causan fuertes convulsiones en aquéllos que los reciben.                                     192
+Demencia                                      5        Poción        Un bebedizo que vuelve loca a la persona que lo toma.                                                             202
+Deseo Carnal                                3        Poción        Una poción que causa una pasión irrefrenable en la víctima.                                                    181
+Destilación de Quintaesencias   3        Poción        Permite duplicar una dosis de otra poción o ungüento.                                                             181
+Dibbuk                                          4      Maleficio     Hechiza una casa con la presencia de un dibbuk.                                                                           192
+Discordia                                       1        Poción        Provoca el odio y la aversión entre dos personas.                                                                        168
+Dolores de Parto                        1        Poción        Transfiere los dolores de una parturienta a otra persona o animal.                                          168
+Dominación                                  2        Poción        Permite que una mujer controle a un hombre.                                                                              172
+Dominio del Fuego                   5      Talismán      Colgante que permite al mago controlar el fuego.                                                                        202
+Don de Cipriano                        3     Ungüento     Aumenta la Racionalidad del receptor del hechizo.                                                                    181
+Don de Palabra                          5        Poción        Hace hablar a una persona o animal en la lengua del mago.                                                     202
+Don de Surgat                              2      Talismán      Una bolsa que convierte el carbón en monedas de oro.                                                              172
+Don de Tritón                             2      Talismán      Evita que el portador del amuleto se hunda en el agua.                                                             172
+Elixir de la Vida                         7      Talismán      Otorga una invulnerabilidad total al mago.                                                                                   226
+Encadenar a un Djinn               6      Maleficio     Aprisiona un djinn dentro de un objeto para añadirle poderes mágicos.                               217
+Encanto del Viajero                   4      Talismán      Aumenta el carisma de la persona que lo lleva.                                                                            192
+Encrucijada                                 7      Talismán      Crea un túnel que conecta dos localizaciones que están distantes entre sí.                            226
+Engendrar Lutín                          6      Maleficio     Permite crear un lutín para que se ponga al servicio del mago.                                                217
+Entereza del Mártir                   5      Maleficio     El mago se vuelve completamente inmune al dolor físico.                                                        203
+Esencia de Hostilidad                   4      Maleficio     La víctima causa rechazo y hostilidad en los animales que le rodean.                                    192
+Esencias de Éter                         4     Ungüento     Elimina el olor del mago y lo hace invisible a criaturas con IRR de 100 o superior.             192
+Espejo de Salomón                    6      Talismán      Un espejo que muestra el pasado, el presente y el futuro.                                                          217
+Estupidez                                      2      Maleficio     Hace que la víctima se vuelva más tonta y necia.                                                                         173
+Expulsar Enfermedades          2      Talismán      Anillo que permite curar a los enfermos.                                                                                        173
+Expulsión                                    5      Maleficio     Expulsar un espíritu del cuerpo de una persona.                                                                         203
+Falsas Visiones                           3     Ungüento     Un aceite que crea ilusiones en la mente de la víctima.                                                               182
+Fertilidad                                     1     Ungüento     Permite que una mujer quede embarazada de forma automática.                                           168
+Fidelidad                                        2        Poción        La víctima no puede hacer el amor nada más que con la persona que le da la poción.      174
+Filo Constelado                          5      Talismán      Un arma de filo que permite hacer daño a criaturas mágicas.                                                   203
+Filo Maldito                                  4      Talismán      Un arma maldita creada para satisfacer una venganza.                                                             193
+Filtro Amoroso                             3        Poción        La víctima se enamora perdidamente de la primera persona que vea.                                   182
+Filtro de Memoria                     2        Poción        Aumenta la competencia de Memoria de la persona que beba hasta el 100%.                      174
+Filtro de Olvido                            3        Poción        La víctima olvida todo lo que sucedió el día anterior.                                                                 182
+Flauta de Fauno                         6      Talismán      Una flauta que controla y enloquece a todos aquéllos que escuchan su música.                  217
+Fortuna                                        2      Talismán      Un objeto que proporciona un poco de buena suerte al mago.                                                 174
+Fuente Encantada                      7      Maleficio     Crea un manantial de agua curativa.                                                                                               227
+Fuerza de Gigante                     6      Talismán      Multiplica por dos la FUE, la RES y los PV del mago y le da una protección de 10.            218
+Furia                                              3        Poción        La víctima sentirá un fuerte odio hacia sus seres queridos.                                                       182
+Golpe de la Parca                          6      Maleficio     Permite matar a una víctima esté a la distancia que esté del mago.                                         218
+Gran Aquelarre                            7    Invocación    Permite llamar a uno de los Grandes Demonios o incluso al mismo Lucifer.                        227
+Guardia contra Embrujos        2      Maleficio     Proporciona una protección contra los hechizos de magia negra lanzados contra él.         174
+Guarda contra Maleficios        5      Talismán      El portador es inmune a los hechizos de la forma maleficio que se lancen sobre él.            204
+Guerra                                          3      Talismán      Aumenta la moral y capacidad de un ejército en combate.                                                        183
+Hambruna                                    6      Maleficio     La víctima será incapaz de comer o de tragar bocado alguno.                                                  218
+Hechizo Rojo                              4     Ungüento     Añade una protección adicional contra las enfermedades.                                                        193
+163

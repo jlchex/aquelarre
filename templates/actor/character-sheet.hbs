@@ -358,7 +358,7 @@
             {{#if displayStatusEffects.length}}
               {{#each displayStatusEffects}}
                 <div class="status-effect">
-                  <strong>{{this.label}}</strong> ({{this.locationLabel}})
+                  <strong>{{this.label}}</strong> ({{this.locationLabel}}){{#if this.durationLabel}} - {{this.durationLabel}}{{/if}}{{#if this.notes}} - {{this.notes}}{{/if}}
                 </div>
               {{/each}}
             {{else}}

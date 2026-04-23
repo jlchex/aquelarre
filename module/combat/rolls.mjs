@@ -77,12 +77,12 @@ export function getHitLocation(d100) {
 
   if (n <= 0) return "torso";
   if (n <= 10) return "cabeza";
-  if (n <= 20) return "brazo_izquierdo";
-  if (n <= 30) return "brazo_derecho";
-  if (n <= 50) return "torso";
-  if (n <= 70) return "abdomen";
-  if (n <= 80) return "pierna_izquierda";
-  return "pierna_derecha";
+  if (n <= 20) return "brazo_derecho";
+  if (n <= 30) return "brazo_izquierdo";
+  if (n <= 60) return "torso";
+  if (n <= 80) return "abdomen";
+  if (n <= 90) return "pierna_derecha";
+  return "pierna_izquierda";
 }
 
 function getOutcomeRank(rollData) {
@@ -169,9 +169,37 @@ export function compareAttackDefense(attackRoll, defenseRoll = null) {
   };
 }
 
-export function applyCriticalDamageBonus(baseDamage) {
-  const dmg = Math.max(0, Number(baseDamage ?? 0));
-  return Math.max(1, Math.ceil(dmg / 2));
+export function getMaximumFormulaDamage(formula = "1d3") {
+  const normalized = String(formula ?? "1d3").replace(/\s+/g, "");
+
+  if (!normalized) return 0;
+
+  const tokens = normalized.match(/[+-]?[^+-]+/g);
+  if (!tokens?.length) return 0;
+
+  let total = 0;
+
+  for (const token of tokens) {
+    const sign = token.startsWith("-") ? -1 : 1;
+    const unsigned = token.replace(/^[+-]/, "");
+
+    if (/^\d+$/.test(unsigned)) {
+      total += sign * Number(unsigned);
+      continue;
+    }
+
+    const dieMatch = unsigned.match(/^(\d*)d(\d+)$/i);
+    if (dieMatch) {
+      const count = Number(dieMatch[1] || 1);
+      const faces = Number(dieMatch[2] || 0);
+      total += sign * (count * faces);
+      continue;
+    }
+
+    return 0;
+  }
+
+  return Math.max(0, total);
 }
 
 export function resolveCriticalEffect(location, finalDamage) {

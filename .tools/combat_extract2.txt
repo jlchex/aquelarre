@@ -1,0 +1,2694 @@
+﻿=== PAGE 116 ===
+ParsIV  04/10/13  14:32  Página 114
+Aquelarre: Juego de rol demoníaco medieval
+Secuencia de Combate
+N el capítulo segundo ya te hablamos del asalto, la tenciones: el Director de Juego les preguntará a todos ellos qué ac-
+unidad de tiempo más pequeña que se utiliza en ciones piensan llevar a cabo en el asalto, comenzando siempre por
+Aquelarre y que se define como la cantidad de tiempo el personaje que haya obtenido la Iniciativa más baja y conti-
+E
+que se necesita para llevar a cabo dos acciones de nuando con el resto, de menor a mayor. De esta forma, los que
+combate. Llega el momento de que expliquemos qué significa hayan obtenido la Iniciativa más alta sabrán qué piensan hacer
+todo esto. sus contrincantes y podrán actuar en consonancia. Como no podía
+ser de otra forma, el Director de Juego deberá declarar también
+Durante una partida de rol existen dos tipos diferentes de
+las acciones que lleven a cabo los PNJs que controla, y lo hará en
+tiempo: el tiempo real y el tiempo de juego. El primero ya lo co-
+el momento en que les corresponda por orden de Iniciativa.
+nocemos, pues es el tiempo de nuestro mundo, las horas, mi-
+nutos y segundos que transcurren mientras jugamos una Si un PJ y un PNJ obtienen el mismo resultado en Iniciativa se con-
+partida de Aquelarre. El otro, el tiempo de juego, es el que sucede sidera que habrá conseguido un mayor resultado el PJ, pues tiene
+dentro del mundo de juego, y que a diferencia del primero, es preferencia sobre los PNJs. Si el empate ha tenido lugar entre dos
+elástico, pues un viaje que dura días o incluso meses en tiempo PJs o dos PNJs, obtendrá mayor resultado el que de los dos tenga
+de juego, se convierte en una mera descripción que dura, en una mayor puntuación en Percepción; si ambos tienen el mismo
+tiempo real, poco más que unos segundos. Y también ocurre al valor en Percepción, se considera que actúan al mismo tiempo.
+contrario, pues unos pocos minutos de combate en tiempo de
+Exemplum: Para poder ilustrar una secuencia de combate, vamos a describir
+juego pueden necesitar una hora o más de partida, ya que en
+un combate a primera sangre que tiene lugar entre Lope e Ignotus en un
+esos pocos minutos de la vida de nuestros personajes estarán
+descampado a las afueras de Burgos, donde ambos se han retirado para
+sucediéndoles una enorme cantidad de cosas que serán muy
+importantes para ellos, tanto a corto plazo —una herida, acabar practicar la lucha. Lo primero que debemos hacer es calcular la Iniciativa
+con el enemigo, huir…—, como a largo plazo —por ejemplo,
+de ambos contrincantes: Lope saca un 2 en su tirada de Iniciativa, que su-
+morir—, y debemos prestar atención a todas ellas.
+mado a su Agilidad, que es de 20, da un total de 22; Ignotus obtiene un 8,
+Así que, para poder manejar este tipo de situaciones y no volver-
+que sumado a su Agilidad, de 15, da un resultado de 23.
+nos locos en el intento, existe el asalto, que no es más que una
+Como Lope es el que tiene menos Iniciativa, debe declarar sus acciones,
+medida de tiempo artificial que, si nos ponemos técnicos, puede
+que consistirán en dos ataques con su espada. Ignotus sabe ya cuáles
+equivaler a unos 12 segundos de tiempo real. Durante el trans-
+serán las acciones de Lope, y se decanta por un ataque con la espada
+curso de un asalto, cada uno de los personajes implicados en el
+y una parada con el escudo.
+combate tendrá la oportunidad de llevar a cabo dos acciones nor-
+males o una acción extendida —acciones que requieren más
+FASE 2: ACCIÓN
+tiempo para llevarse a cabo, luego las veremos—, como atacar
+con una espada, usar un hechizo, esquivar el ataque de un ene-
+Llega el momento ahora de que los personajes lleven a cabo las
+migo, etc. De esta forma, todos los participantes tienen las mismas
+acciones que declararon en la fase anterior, siguiendo un orden
+posibilidades de actuar y no favorecemos a nadie en concreto.
+de Iniciativa decreciente; o sea, que actuará primero el que haya
+obtenido una mayor Iniciativa y le seguirán los demás de mayor
+El asalto, a su vez, se divide en tres fases perfectamente diferen-
+a menor Iniciativa. De esta forma, los que hayan conseguido una
+ciadas que permiten al Director de Juego controlar el momento
+mayor Iniciativa que el resto serán más rápidos y podrán llevar
+exacto en que tiene lugar cada una de las acciones que llevan a
+a cabo sus acciones antes que los demás, sorprendiéndolos o evi-
+cabo los participantes en un combate. Si todo esto te parece de-
+tando las acciones que pensaban llevar a cabo.
+masiado complejo, no te preocupes, pues al final de la descrip-
+ción encontrarás un esquema con un resumen de la secuencia
+Las dos acciones de cada uno de los personajes se llevarán a
+de combate que te ayudará en tus primeras partidas como DJ y
+cabo de forma simultánea: si eligió dos ataques, los hará en el
+que, tras unas pocas partidas, ya ni siquiera necesitarás.
+momento que le toque por Iniciativa; si era un movimiento y
+un ataque, lo hará justo en ese momento. De todas formas,
+nada obliga al personaje a llevar a cabo las dos acciones al
+FASE 1: DECLARACIÓN
+mismo tiempo: si quiere puede retrasar una acción o las dos
+Nada más comenzar el asalto, todos los que participen en el com-
+hasta un momento posterior al que le corresponda por su Ini-
+bate deberán llevar a cabo una tirada de Iniciativa, que es igual
+ciativa, aunque si termina el asalto y no las pone en práctica,
+a 1D10 más el valor que posea el personaje en su característica
+no las podrá guardar para asaltos posteriores. Las acciones de-
+de Agilidad. Ese resultado puede verse modificado por el tipo
+fensivas, sin embargo, son la excepción a esta norma: pueden
+de armadura que lleve encima el PJ o por algún hechizo que mo-
+llevarse a cabo en cualquier momento del asalto, incluso antes
+difique su Iniciativa, así que tenlo en cuenta a la hora de calcular
+de lo que permita nuestra Iniciativa, ya que siempre podemos
+el valor exacto que tendrá el PJ en Iniciativa durante ese asalto.
+defendernos de un ataque del contrario, aunque sea más rá-
+Iniciativa = 1D10 + AGI +/- Mod. por Armadura o Hechizos pido que nosotros; eso sí, deberemos declarar nuestra inten-
+ción de protegernos de una agresión antes de que se tiren los
+Una vez que todos los personajes involucrados hayan calcu-
+dados para comprobar si nos ha alcanzado o no.
+lado su Iniciativa, llega el momento de la declaración de in-
+114
+=== PAGE 117 ===
+ParsIV  04/10/13  14:33  Página 115
+Pars 4: De Re Militari
+Exemplum: En esta segunda fase, cambian las tornas y ahora es Ig-
+FASE 3: CONCLUSIÓN
+notus, con su Iniciativa mayor, el primero en actuar. Declaró un
+Una vez que todos los personajes hayan llevado a cabo sus res-
+ataque y una parada: la segunda, al tratarse de una acción de-
+pectivas acciones, el Director de Juego realizará una breve des-
+fensiva, la llevará a cabo cuando sea atacado, y el ataque decide
+cripción de lo sucedido en el asalto, para que los participantes
+retrasarlo, para ver cómo se le dan las cosas a Lope. Así que el
+en el combate sepan exactamente los cambios que han tenido
+turno pasa ahora al joven cortesano, que realiza su primer ataque lugar en esos segundos y puedan actuar en consecuencia en
+su siguiente asalto.
+contra Ignotus, quien, a su vez, declara que usará su parada para
+detenerlo. Lope tiene éxito en el ataque e Ignotus también lo tiene
+A continuación, el DJ y los jugadores realizarán todas aquellas
+tiradas o cálculos que no se hayan realizado en la segunda fase
+en su parada, con lo que detiene el espadazo del cortesano con su
+—por ejemplo, tiradas para recuperar el conocimiento, efectos
+escudo. Ahora llegaría el turno de hacer el segundo ataque de Lope,
+de hechizos, etc.—, y el asalto concluirá, pasando a la fase pri-
+pero Ignotus decide realizar justo ahora el ataque que retrasó an-
+mera de un nuevo asalto.
+teriormente, y como él tenía una mayor Iniciativa lo lleva a cabo
+antes que el cortesano: Ignotus usa su espada con éxito y consigue
+Tabla-Resumen del Combate
+herir a Lope —que al no haber declarado ninguna acción defensiva,
+Fase 1: Declaración
+nada puede hacer por impedirlo—, terminando así el combate que
+a Tirada de Iniciativa: 1D10 + AGI +/- posibles modifi-
+era, como ya dijimos, a primera sangre. Claro que si no hubiera
+cadores.
+sido el caso, Lope habría tenido luego la oportunidad de realizar su
+a Declaración de intenciones en orden creciente de Iniciativa.
+segundo ataque, contra el que Ignotus, al haber gastado sus dos ac-
+Fase 2: Acción
+ciones, no tendría derecho a defenderse.
+a Se llevan a cabo las acciones de los personajes en orden
+En el caso de que una acción previa invalide totalmente la re-
+decreciente de Iniciativa.
+alización de una acción posterior —el enemigo al que vamos
+Fase 3: Conclusión
+a atacar ya ha muerto, alguien nos ha desarmado antes de que
+a El DJ describe lo ocurrido en el asalto.
+podamos usar el arma, etc.—, perderemos esa acción, ya que
+a Se realizan aquellas tiradas o cálculos que no tuvieron
+es imposible cambiar la realización de una acción en el trans-
+cabida en las fases anteriores.
+curso de un asalto.
+115
+=== PAGE 118 ===
+ParsIV  04/10/13  14:33  Página 116
+Aquelarre: Juego de rol demoníaco medieval
+Acciones de Combate
+HORA que ya sabemos en qué fases se divide un queñas o nuestras propias manos. Para poder llevarlo a la
+asalto de combate, vamos a describir cada una de
+práctica deberemos realizar el movimiento después de las
+las diferentes acciones que puede llevar a cabo un
+acciones de nuestro contrincante —tengamos la Iniciativa
+A
+personaje a lo largo de su turno. Para facilitar su
+que tengamos—, y siempre que en ese asalto no hayamos
+consulta las hemos dividido en cuatro tipos diferentes: accio-
+hecho ninguna acción de ataque, de movimiento u otra ac-
+nes de movimiento, de ataque, de defensa y otras acciones.
+ción defensiva que no sea una esquiva, una parada o una
+Además, en la descripción de cada una de ellas indicaremos
+parada con escudo. Si es así, al llegar nuestro turno entra-
+si se trata de acciones normales (que cuentan como una acción
+remos automáticamente en una situación de melé, en la que
+de las dos que se pueden realizar durante el asalto) o acciones
+sólo servirán las armas de tamaño ligero o los ataques de
+extendidas (todas aquéllas que necesitan las dos acciones de
+Pelea, y en la que tanto nosotros como nuestro enemigo ten-
+que dispone el personaje en el asalto para poder llevarse a
+dremos un modificador de +50% a nuestros ataques.
+cabo).
+Si nuestro contrincante desea abandonar la situación de
+Para que puedas localizar fácilmente todas las acciones, junto
+melé, deberá llevar a cabo una acción defensiva de Zafarse
+a cada uno de los tipos encontrarás una tabla resumen con las
+(véase a continuación).
+acciones que se describen.
+Este ataque es aconsejable cuando usamos armas pequeñas
+ACCIONES DE MOVIMIENTO
+y nos enfrentamos a enemigos con armas de mayor tamaño,
+y también es el preferido por determinados animales, como
+Siempre que nuestro personaje desee trasladarse de un punto
+los lobos o los osos, que acostumbran a abalanzarse contra
+a otro durante el asalto deberá realizar algún tipo de acción de
+sus presas de una forma similar.
+movimiento, limitando por tanto la realización de otro tipo de
+acción. Se pueden combinar dos acciones de movimiento du-
+a Levantarse del Suelo (Acción Normal): Si nos encontramos
+rante un asalto sin problema —un movimiento normal más
+en el suelo, podemos levantarnos utilizando una acción de
+otro corriendo, por ejemplo—, pero si deseamos llevar a cabo
+movimiento normal, aunque durante ese asalto no podre-
+una acción de movimiento y otra de ataque, la de movimiento
+mos realizar ninguna acción de ataque, sólo defensivas. Al
+siempre deberá ser la primera; nunca podremos llevar a cabo
+finalizar el asalto nos habremos incorporado y comenzare-
+un ataque y luego un movimiento. Esa regla sólo se aplica a
+mos el siguiente asalto de pie.
+los ataques; las acciones defensivas se pueden combinar libre-
+mente con el movimiento.
+a Montar/Desmontar (Acción Normal): Debemos llevar a
+cabo una acción normal de movimiento si queremos subir
+a Movimiento Normal (Acción Normal): Permite al perso-
+a una cabalgadura o bajarnos de ella, o si, por ejemplo, que-
+naje moverse hasta 6 varas de distancia andando.
+remos encaramarnos a un carro o descender del mismo.
+a Movimiento de Carrera (Acción Normal): Proporciona al
+Normalmente no es necesario llevar a cabo tirada alguna
+personaje la posibilidad de moverse hasta 12 varas de dis-
+de Cabalgar para ello, aunque determinadas situaciones si
+tancia corriendo.
+lo exigirán, como montar un caballo en movimiento o ba-
+a Movimiento Reptante (Acción Normal): Si estamos en el
+jarnos de un caballo que no haya sido entrenado para el
+suelo podemos reptar hasta 3 varas de distancia arrastrán-
+combate en medio de una batalla.
+donos.
+a Nadar (Acción Normal): Si nos encontramos en el agua, po-
+a Movimiento de Melé (Acción Normal): Un movimiento de dremos avanzar nadando una distancia de 3 varas por cada
+melé nos permite abalanzarnos sobre nuestro enemigo a acción de movimiento (un total de 6 varas si nadamos du-
+una distancia tan corta que sólo se puedan usar armas pe- rante las dos acciones de un asalto). En el caso de que este-
+Acciones de Movimiento
+Movimiento Normal      Acción Normal    El PJ anda normalmente, y puede moverse hasta 6 varas.
+Movimiento de Carrera   Acción Normal    El PJ corre, y puede moverse hasta 12 varas.
+Movimiento Reptante   Acción Normal    El PJ se arrastra, y puede moverse hasta 3 varas.
+Movimiento de Melé     Acción Normal    Un movimiento que nos permite abalanzarnos sobre nuestro enemigo a distancia muy corta.
+Levantarse del Suelo     Acción Normal    El PJ se levanta del suelo. Esta acción es incompatible con cualquier acción de ataque.
+Montar/Desmontar       Acción Normal    El PJ se sube o se baja de un caballo.
+Nadar                               Acción Normal    El PJ se mueve nadando sobre el agua 3 varas o buceando 2 varas por debajo de ella.
+Saltar                                Acción Normal    El PJ lleva a cabo un salto.
+Trepar                               Acción Normal    El PJ se mueve trepando 2 varas hacia arriba o hacia abajo.
+116
+=== PAGE 119 ===
+ParsIV  04/10/13  14:33  Página 117
+Pars 4: De Re Militari
+mos buceando debajo del agua, la distancia será
+a Ataque a Distancia (Acción Normal): Es similar
+de 2 varas.
+al ataque cuerpo a cuerpo, pero en este caso uti-
+lizamos un arma de proyectil (arco, ballesta u
+aSaltar (Acción Normal): Si nuestro personaje realiza un
+honda) o un arma arrojadiza (un cuchillo, una
+salto, ese movimiento consumirá una de sus acciones de
+piedra, etc.) para acertar a nuestro enemigo. Para
+asalto. Si el salto se realiza con carrerilla, se considera que
+llevarla a cabo debemos hacer la tirada utilizando la
+ha llevado a cabos dos acciones de movimiento: una sería
+competencia adecuada al arma que usamos o con Lan-
+la carrera y otra el salto en sí. Para comprobar la distancia
+zar si se trata de un arma arrojadiza: si tenemos éxito,
+en varas que ha saltado consulta la descripción de la com-
+nuestro ataque golpea al enemigo. El porcentaje que tene-
+petencia Saltar en el capítulo II (pág. 84).
+mos en dicha tirada se verá modificado por la distancia a
+a Trepar (Acción Normal): Si el personaje se encuentra tre-
+la que nos encontremos de nuestro oponente, tal y como se
+pando por un árbol, muro, etc., cada acción de movimiento
+indica en la sección de Distancias en el capítulo de Varian-
+que dedique a desplazarse le permitirá avanzar una distan-
+tes (pág. 126).
+cia de 2 varas hacia arriba o hacia abajo. Será necesario re-
+Exemplum: Mientras Lope departe espada en mano contra uno de los
+alizar una tirada de Trepar antes de realizar el movimiento,
+bandidos, Ignotus tampoco pierde el tiempo. Echa mano de un cuchillo
+pues si se falla el PJ no habrá conseguido moverse nada o,
+aún peor, se caerá (consulta la descripción de la competen- que tiene guardado en la caña de la bota y se lo lanza al bandido más
+cia Trepar en la pág. 87).
+cercano. Su porcentaje en Lanzar es del 40%, aunque se le suma +20%
+al encontrarse su blanco a distancia corta (véanse las Reglas de Dis-
+ACCIONES DE ATAQUE
+tancia en la pág. 126): obtiene un 51 en la tirada, con lo que alcanza
+al bandido.
+Con estas acciones buscamos dañar, retener o perjudicar de al-
+guna forma a nuestro contrincante utilizando nuestro cuerpo
+a Alancear (Acción Extendida): En el caso de que seamos ob-
+o algún tipo de arma, ya sea de cuerpo a cuerpo o de distancia.
+jeto de una carga a caballo lanzada contra nosotros y dis-
+Las acciones de ataque se pueden combinar libremente entre
+pongamos de cualquier arma que pertenezca al grupo de
+sí o con el resto de acciones sin problema alguno, excepto,
+las lanzas, podemos utilizar esta maniobra para usar la em-
+como explicamos antes, con las de movimiento: si llevamos a
+bestida en contra del propio jinete. Se trata de una acción
+cabo una acción de ataque y otra de movimiento, la de movi-
+extendida ya que pasaremos todo el asalto sosteniendo con
+miento siempre se realizará antes.
+fuerza la lanza para que al mismo tiempo que recibimos el
+Además, las acciones de ataque se pueden ver modificadas
+ataque de nuestro enemigo, su montura quede ensartada
+por diferentes factores, que aumentarán o disminuirán nues-
+en nuestro arma, para lo que deberemos conseguir una ti-
+tro porcentaje en la tirada. Consulta la sección de Modifica-
+rada de Lanzas con éxito. Si es así, haremos la tirada habi-
+dores al Combate en la sección de Variantes (pág. 125) para
+tual de daño con la lanza, pero multiplicaremos el resultado
+más información, pero ten en cuenta que las competencias
+por dos, y ése será el total del PD que recibirá la montura
+primero deben verse modificadas por estas acciones y, a con-
+de nuestro atacante. También es cierto que no podremos de-
+tinuación, por los modificadores que aparecen en la Tabla de
+Modificadores. fendernos del ataque de nuestro enemigo, pero puede que,
+al menos, podamos acabar con la ventaja que le supone
+a Ataque Cuerpo a Cuerpo (Acción Normal): Es el tipo de
+combatir a caballo.
+ataque más usual. Con esta acción utilizamos un arma o
+nuestro propio cuerpo (puñetazos, patadas, cabezazos…) a Añagaza (Acción Extendida): Se trata de un movimiento
+para dañar a nuestro oponente. Para llevarla a cabo debe- que simula un ataque por un ángulo para, en realidad, ata-
+mos hacer una tirada por la competencia de Arma ade- car por otro, dificultando la defensa del oponente para que
+cuada, o por Pelea si estamos desarmados: si tenemos éxito, caiga en sus redes. Si queremos llevarlo a cabo, debemos
+nuestro ataque golpea al enemigo. hacer una tirada de ataque a la mitad del porcentaje normal
+y si tiene éxito, nuestro oponente deberá llevar a cabo tam-
+Exemplum: Terminado el combate de entrenamiento entre Lope e Ignotus,
+bién una acción defensiva a la mitad de su porcentaje habi-
+ambos contendientes deciden retirarse de nuevo a Burgos, pues pronto
+tual si no quiere que le alcance nuestro golpe.
+caerá la noche y promete ser fría. Pero cuando se dirigen hacia sus
+Exemplum:
+Llega el turno de los bandidos, que no son precisamente unos
+monturas, descubren que no están solos en el claro, pues acaba de en-
+bisoños en el arte de la guerra. El que ha recibido el ataque de Lope
+trar un grupo de desarrapados vestidos con restos de armaduras y
+intenta llevar a cabo una añagaza con su clava para despistar al cor-
+portando armas rústicas. Sin lugar a dudas debe  tratarse de un grupo
+tesano y de esta forma reducirlo lo más rápido posible. El bandido
+de bandidos que los han divisado y han pensado que no estaría mal
+tiene un porcentaje de 60% con la clava, que se reduce a 30% para
+despojar de bienes —y puede que de vida— al joven y al viejo.
+poder realizar la añagaza: obtiene un 16, por lo que tiene éxito, y
+En cuanto se acerca el primero, con una sonrisa burlona en la cara y
+Lope deberá realizar su tirada de Defensa a la mitad. Como su por-
+una clava en las manos, Lope no se lo piensa dos veces y decide llevar
+centaje con la espada es de tan sólo 40%, deberá sacar menos de 20%
+a cabo un ataque cuerpo a cuerpo: levanta su espada de mano y ataca
+para poder parar con ella: tira los dados y obtiene un 19. Raspado,
+al bandido sin darle tiempo a decir ni hola. Realiza una tirada por
+pero consigue librarse de la añagaza del bandido.
+Espadas y tiene éxito, con lo que su espada golpea al ladrón.
+117
+=== PAGE 120 ===
+ParsIV  04/10/13  14:33  Página 118
+Aquelarre: Juego de rol demoníaco medieval
+cada aumento que deseemos hacer en la Tabla de
+a  Ataque de Escudo (Acción Normal): En caso
+Bonificador de Daño: por ejemplo, si tenemos con la
+de necesidad, y siempre que estemos utilizando
+espada un bonificador de +1D4, podremos hacer un
+un escudo de tamaño medio o pequeño —no es
+ataque recio que tenga un bonificador de +1D6 si reducimos
+una acción que pueda llevarse a cabo con una
+en 25% nuestro porcentaje de ataque, o incluso de +2D6 si lo
+tarja o un pavés—, podemos usarlo para intentar herir
+bajamos en -50%. Esta acción no puede efectuarse con armas
+a nuestro contrincante usando para ello el filo del
+arrojadizas o a distancia, como arcos, ballestas u hondas.
+mismo. Para realizar el ataque haremos una tirada por la
+competencia Escudos pero a la mitad del porcentaje —pues
+a Aturdir (Acción Normal): Con esta acción pretendemos no-
+es una protección que no está pensada para ser utilizada de
+quear o dejar inconsciente a un enemigo. Para poder llevarla
+esa forma—: si tiene éxito, el contrincante puede llevar a
+a cabo debemos atacar por sorpresa a nuestro oponente (por
+cabo su acción defensiva de la forma normal si la declaró
+la espalda, sin previo aviso, etc.), usando un arma contun-
+previamente, y en caso de que la falle, el daño que le hare-
+dente o nuestras propias manos —no sirven armas con filo o
+mos será de 1D4, si es un escudo pequeño (adarga, rodela 19
+punta, como hachas o espadas — , y siempre y cuando nues-
+y broquel), o de 1D4+1, si es de tamaño medio (escudo de
+tro contrincante no lleve casco de metal o yelmo, ya que el
+madera y de metal), a lo que habrá que añadir el bonifica-
+ataque se produce directamente sobre la cabeza. En caso de
+dor de daño por Fuerza.
+que se cumplan todos estos requisitos haremos una tirada de
+ataque con el arma que llevamos con un penalizador de -25%
+a Ataque Doble (Acción Extendida): En el caso de que tenga-
+(aunque si atacamos por la espalda tendremos un +50%, así
+mos un arma de tamaño medio en una mano y otra de ta-
+que la cosa se compensa) y si tenemos suerte haremos una ti-
+maño ligero en la otra —una espada y una daga es el ejemplo
+rada de daño normal que luego multiplicaremos por dos, ya
+típico—, podemos realizar un ataque doble con ambas armas
+que el daño se produce en la cabeza. Pero al contrario que
+para herir más profundamente a nuestro contrincante o para
+otros ataques, los PD obtenidos no se restan al total de PV del
+penetrar sus defensas por un punto u otro. Para llevarlo a
+objetivo, sino que se comparan con su característica de Resis-
+cabo realizaremos una única tirada de ataque usando el por-
+tencia: si obtenemos tantos o más PD que la Resistencia del
+centaje más pequeño de ambas armas —y te recordamos que
+enemigo, éste caerá inconsciente. El tiempo exacto que per-
+las armas manejadas con la mano torpe tienen un -25%—: si
+manecerá inconsciente será igual a 10 veces la cantidad por
+se tiene éxito, ambos ataques habrán acertado al oponente.
+la que hayamos sobrepasado la Resistencia del contrincante
+Por otro lado, si éste ha declarado una acción defensiva, sólo
+en minutos (con un mínimo de 10 minutos). En caso de que
+podrá usarla contra uno de ellos —queda en su mano elegir
+el atacante obtenga una pifia en su tirada de ataque, se con-
+de cuál de los dos ataques se defiende—; si hubiera decla-
+sidera que habrá hecho un ataque en toda regla sobre la ca-
+rado dos acciones defensivas, éstas tendrían que ser de di-
+beza del enemigo y, por tanto, en vez de aturdirlo, le hará los
+ferente tipo —una parada o un esquivar— o con armas
+PD habituales, que se restarán a sus PV.
+diferentes —parar con la espada y también parar con el es-
+cudo— para poder defenderse de ambos ataques.
+a Barrido (Acción Extendida): Esta acción sólo puede lle-
+varse a cabo con armas contundentes o de corte, nunca per-
+a Ataque Preciso (Acción Normal): Si lo que pretende el perso-
+forantes, como la lanza por ejemplo, y que tengan un
+naje es alcanzar al enemigo más que provocarle un gran daño
+tamaño medio o pesado, nunca ligero. En el caso de que es-
+—durante un torneo, una justa o un entrenamiento— puede
+temos rodeados por dos o más enemigos podemos realizar
+llevar a cabo un ataque preciso. Al hacerlo de esta manera su
+un ataque de barrido de forma horizontal para tratar de al-
+porcentaje de ataque aumenta en un +25%, pero el daño que
+canzar a todos los enemigos que podamos: para ello reali-
+hagamos se dividirá entre dos, redondeando hacia abajo.
+zaremos una tirada de ataque con un penalizador de -20%
+a Ataque Rápido (Acción Normal): Se trata de un ataque efec-
+por cada enemigo por encima del primero al que queramos
+tuado con la mayor velocidad posible, aunque se pierda des-
+alcanzar. En caso de que tengamos éxito, nuestros enemigos
+treza en el manejo de nuestra arma al llevarlo a cabo. Cuando
+tienen derecho a una acción defensiva (siempre y cuando
+se declara un ataque rápido en la fase 1 del asalto, durante la
+la hubieran declarado previamente), que realizarán en el
+declaración de intenciones, nuestra Iniciativa se ve aumen-
+orden en que se vean afectados por el barrido —de iz-
+tada en +5, lo que nos puede permitir atacar antes que nues-
+quierda a derecha o a la inversa—: si utilizan una parada y
+tro enemigo. Eso sí, al llevar a cabo la tirada de Ataque
+tienen éxito, detienen el arma en ese punto y el resto de sus
+recibiremos un penalizador de -50%, ya que la velocidad de
+compañeros no se verán afectados por el barrido del per-
+la acción se compensa con la pérdida de precisión.
+sonaje. Los que fallen la acción defensiva recibirán el daño
+a Ataque Recio (Acción Extendida): Si pasamos todo el asalto
+de la forma normal, tirando los dados de manera indepen-
+preparando un ataque —volteando nuestra arma por encima
+diente para cada uno de ellos, excepto el de localización,
+de la cabeza, afianzando la lanza antes de atacar, etc.—, po-
+que será el mismo para todos ellos.
+demos realizarlo infligiendo más daño del que normalmente
+Exemplum: Tras acabar con su primer bandido en la melé y mientras
+solemos hacer, pero cuidado, pues se trata de una acción ex-
+prosigue el combate, Ignotus se ha visto rodeado por tres bandidos, así
+tendida, con lo que luego no dispondremos de más acciones
+19
+para defendernos. El ataque se lleva a cabo de la forma Addenda: Aunque sí que es posible usar el pomo o el mango de dichas armas
+para aturdir. En ese caso la tirada se hará sobre el valor de Pelea, y el daño
+normal, pero tendremos un penalizador de -25% por
+será igual a 1D4 más el bonificador de daño por la característica de Fuerza.
+118
+=== PAGE 121 ===
+ParsIV  04/10/13  14:33  Página 119
+Pars 4: De Re Militari
+a Carga a Caballo (Acción Extendida): Para poder
+que decide hacerse un hueco en el claro usando un ataque
+realizar esta maniobra debemos montar sobre un
+de barrido con su espada. Su porcentaje de ataque es de 90%,
+caballo, comenzar el asalto alejados como má-
+y como quiere alcanzar a tres enemigos reduce su porcentaje en
+ximo 20 varas de nuestro enemigo y disponer de
+un -40% (-20% por cada bandido por encima del primero): obtiene
+un arma de tamaño medio o de una lanza, del ta-
+un 24, suficiente para realizarlo correctamente. El ataque se lleva a
+maño que sea. Si es así, podemos espolear nuestra
+cabo de izquierda a derecha, así que el bandido que tiene más a su
+montura hacia nuestro rival y utilizar el ímpetu de nues-
+izquierda realiza una parada, que falla, con lo que la espada de Ig-
+tra acometida para infligir una gran cantidad de daño. Se
+notus le golpea en el pecho y continúa su barrido hacia la derecha. El
+trata de una acción extendida, pues combina una acción de
+siguiente bandido intenta también parar con su arma y falla igual-
+movimiento y otra de ataque, que se lleva a cabo de la forma
+mente, con lo que es golpeado en el mismo lugar que el anterior, en el
+habitual, realizando una tirada de ataque normal (aunque con
+pecho, y el ataque no se detiene, llegando hasta el último bandido que posibles modificadores por atacar desde una altura superior
+y en movimiento, y recordando en todo momento que si com-
+sí consigue parar el ataque, deteniendo el movimiento del arma y evi-
+batimos sobre un caballo, el porcentaje de ataque nunca
+tando el daño.
+podrá ser mayor a nuestra competencia de Cabalgar). Si la ti-
+a Carga (Acción Extendida): En caso de que queramos aba-
+rada tiene éxito, la tirada de daño que realicemos con esa
+lanzarnos sobre un enemigo y usar el empuje de nuestro
+arma se multiplicará por dos. Luego, a ese resultado total, se
+movimiento para infligir un mayor daño, deberemos llevar
+le restará la armadura y se tirará por la localización afectada.
+a cabo una carga. Se trata de una acción extendida pues
+Nunca se puede parar una carga a caballo, ya que el empuje
+combina una acción de movimiento corriendo —debere-
+de la carga terminaría provocando el mismo daño en el de-
+mos comenzar el asalto por tanto a 12 varas o menos de
+fensor; lo que sí que podemos hacer es esquivarla, para lo que
+nuestro enemigo— con un ataque normal, que sólo puede
+no hay ningún problema.
+llevarse a cabo con armas pesadas o medias, nunca con li-
+a Clava de Escudo (Acción Normal): Esta maniobra sólo puede
+geras. Si el ataque tiene éxito, el daño que infligiremos será
+llevarse a cabo con hachas. Al realizar esta acción, usaremos
+superior, ya que multiplicaremos el daño obtenido por 1,5,
+el filo de nuestra arma para intentar destruir el escudo de un
+redondeando hacia arriba. De esa forma, en vez de infligir,
+contrincante. Para ello, deberemos hacer una tirada de ataque
+por ejemplo, 10 PD, haríamos 15 PD.
+119
+=== PAGE 122 ===
+ParsIV  04/10/13  14:33  Página 120
+Aquelarre: Juego de rol demoníaco medieval
+con un penalizador de -25%: si tenemos éxito, el guido engancharlo y deberemos enfrentar nues-
+hacha impactará directamente contra el escudo del tra Fuerza x5 contra el Cabalgar del jinete. Si gana-
+enemigo, al que le restaremos tantos puntos de Re- mos el enfrentamiento, nuestro oponente cae al suelo
+sistencia como el doble de los PD que obtengamos en y recibe 1D6 PD a consecuencia de la caída.
+la tirada de daño. En caso de obtener un éxito crítico en la
+a Empujón (Acción Normal): Con esta maniobra pretende-
+tirada de ataque, el golpe del hacha habrá destruido comple-
+mos derribar al contrincante con nuestro propio cuerpo.
+tamente el escudo enemigo, sin importar los puntos de Re-
+Para desarrollarla debemos realizar una tirada de Pelea y
+sistencia que le quedaran. Esta maniobra sólo puede evitarse
+en el caso de tener éxito, enfrentaremos nuestra Fuerza x5
+con una “esquiva” o llevando a cabo una parada con el arma
+contra la Fuerza x5 del oponente. Si vencemos nosotros,
+que el enemigo lleva en la otra mano, ya que si la realiza con
+nuestro enemigo trastabillará hacia atrás y deberá hacer
+el escudo, no habrá conseguido evitar nada.
+una tirada de Agilidad x2 para no caer al suelo. Si el enfren-
+a Desarmar (Acción Normal): Cuando usamos esta maniobra tamiento lo gana nuestro oponente, no habremos conse-
+intentamos dejar a nuestro contrincante sin arma. Para lle- guido nada, aunque debemos andar con cuidado, porque
+varla a cabo debemos tener un arma del mismo tamaño o su- si él consigue un éxito crítico en su tirada, el que acabará
+perior a la que lleva nuestro enemigo y realizaremos una en el suelo de forma automática será nuestro personaje.
+tirada de ataque con la mitad de nuestro porcentaje: si tene- Esta acción de ataque no puede pararse, sólo esquivarse.
+mos éxito habremos golpeado su arma y tendremos que
+a Inmovilizar (Acción Extendida): Esta acción sólo puede lle-
+comprobar si la deja caer o no. Para ello debemos ganar un
+varse a cabo si nos encontramos en una situación de melé (ya
+enfrentamiento entre nuestra Fuerza y la de nuestro contrin-
+sea porque nosotros o nuestro contrincante haya realizado un
+cante, con un multiplicador diferente según el tamaño de
+movimiento de melé previo), pues con ella intentaremos
+arma que usemos los dos: si es un arma pequeña, multipli-
+apresar a nuestro enemigo para que no pueda moverse e in-
+caremos la Fuerza x3; si es de tamaño medio, x4; y si es pe-
+cluso infligirle daño sin que pueda defenderse. Para realizar
+sada, multiplicaremos x5. De esa forma, si utilizamos un
+una maniobra de inmovilización, se realiza un enfrenta-
+espadón para desarmar a un contrincante con un cuchillo y
+miento de Fuerza x5 entre el atacante y el defensor: si gana el
+conseguimos la tirada de ataque, nosotros tiraremos Fuerza
+defensor, la maniobra falla, aunque continúa la melé. Pero si
+x5 en el enfrentamiento y el enemigo sólo x3.
+es el atacante el que consigue ganar el enfrentamiento, habrá
+a Descabalgar (Acción Normal): Esta maniobra, que sólo conseguido apresar a su rival, que no podrá moverse hasta
+puede ejecutarse con una lanza larga que disponga de una que no sea liberado o tenga éxito con una acción defensiva
+punta diseñada específicamente para ello —véase la des- de Liberarse. Además, el atacante puede, si lo desea, infligir
+cripción de la lanza larga en la pág. 131—, nos permite en- cada asalto un daño igual a 1D3 más su bonificador al daño
+ganchar a un jinete con nuestra lanza y derribarlo. Para por Fuerza —debido a la presión ejercida, la luxación de los
+llevarla a cabo debemos hacer una tirada de Lanzas a la miembros o el estrangulamiento— y que se restará directa-
+mitad del porcentaje: si tenemos éxito y nuestro oponente mente de los PV del oponente, sin tener en cuenta localiza-
+no consigue parar el ataque o esquivarlo, habremos conse- ciones de daño ni armaduras. Se considera que causar ese
+Acciones de Ataque
+Ataque C/C                  Acción Normal      Tirada de competencia de Arma o de Pelea para acertar a nuestro enemigo.
+Ataque a Distancia       Acción Normal      Tirada de competencia de Arma o de Lanzar para acertar a nuestro enemigo.
+Alancear                      Acción Extendida    Sostener firmemente una lanza ante una carga a caballo para que la montura quede ensartada.
+Añagaza                       Acción Extendida    Un ataque simulado que oculta el verdadero destino de nuestra arma.
+Ataque de Escudo        Acción Normal      Un ataque desesperado realizado con el filo de un escudo.
+Ataque Doble              Acción Extendida    Usar las armas de las dos manos en un único ataque.
+Ataque Preciso              Acción Normal      Un ataque que busca más alcanzar al enemigo que dañarle.
+Ataque Rápido             Acción Normal      Un ataque rápido que nos puede permitir actuar antes que nuestro enemigo.
+Ataque Recio               Acción Extendida    Un ataque lento pero que permite realizar más daño del que solemos hacer habitualmente.
+Aturdir                           Acción Normal      Un ataque concebido para dejar inconsciente al oponente.
+Barrido                         Acción Extendida    Un ataque que intenta alcanzar a todos los enemigos que nos rodean.
+Carga                            Acción Extendida    Un ataque de acometida que intenta causar más daño a nuestro rival.
+Carga a Caballo          Acción Extendida    Una acometida realizada sobre un caballo para provocar un daño enorme en nuestro rival.
+Clava de Escudo           Acción Normal      Un ataque de hacha dirigida directamente al escudo del enemigo para tratar de quebrarlo.
+Desarmar                       Acción Normal      Un ataque dirigido a desarmar a nuestro oponente.
+Descabalgar                   Acción Normal      Utilizar una lanza para derribar a un jinete de su montura.
+Empujón                        Acción Normal      Un ataque que intenta derribar a nuestro enemigo de un empujón.
+Inmovilizar                  Acción Extendida    Una maniobra que permite apresar a nuestro rival.
+Tropiezo                         Acción Normal      Un ataque que pretende tirar al suelo a nuestro enemigo haciéndole tropezar con nuestra arma.
+120
+=== PAGE 123 ===
+ParsIV  04/10/13  14:33  Página 121
+Pars 4: De Re Militari
+daño es una acción extendida, así que sólo podemos a cabo una parada múltiple para detener dos ata-
+causar daño una vez por asalto. ques procedentes de un mismo oponente—, aun-
+que nuestro porcentaje en la competencia se ve
+a Tropiezo (Acción Normal): Esta acción, similar en sus fines
+reducido según el número de oponentes que
+al Empujón, sólo puede efectuarse con una lanza, palo o
+deseemos parar:
+bien desarmado, usando la competencia de Pelea. Al usar
+un tropiezo lo que pretendemos es hacer trastabillar a nues- g Parar dos ataques procedentes de dos enemigos
+tro contrincante usando nuestra arma o pies y hacerle caer diferentes: -25% a la competencia.
+al suelo: para llevarlo a cabo deberemos hacer una tirada g Parar tres ataques procedentes de tres enemigos dife-
+con nuestra competencia de Arma o con Pelea, aunque a la rentes: -50% a la competencia.
+mitad de nuestro porcentaje normal. Si tenemos éxito, nues- g Parar cuatro ataques procedentes de cuatro enemigos
+tro enemigo debe hacer una tirada de Agilidad x3: si falla, diferentes: -75% a la competencia.
+caerá al suelo y perderá cualquier acción que le quedara
+Por último, unos consejos finales. Si queremos podemos
+por realizar durante ese asalto. Naturalmente, esta acción
+usar nuestras propias manos para parar un ataque ha-
+sólo puede usarse sobre seres humanos o criaturas bípedas,
+ciendo una tirada de Pelea pero, a no ser que estemos dete-
+nunca sobre cuadrúpedos.
+niendo otro ataque realizado con Pelea u obtengamos un
+éxito crítico en la tirada, recibiremos el daño normal del
+ACCIONES DE DEFENSA
+arma que recaerá directamente en uno de los brazos del
+Gracias a estas acciones nuestro personaje intentará evitar todo
+personaje. También es posible usar la competencia de Pelea
+o parte del daño que le causen los ataques de sus enemigos,
+para parar con un arco o una ballesta —nunca con una
+utilizando para ello su agilidad o las armas de las que dis-
+honda—, pero si se utiliza de esa forma el arma, quedará
+ponga. Estas acciones se pueden combinar libremente tanto
+inservible de forma automática.
+entre sí como con el resto de acciones.
+Es imposible defenderse de un ataque a distancia usando
+Ten en cuenta que en determinadas ocasiones nuestras accio-
+una parada.
+nes de defensa se pueden ver modificadas por diferentes fac-
+tores, aumentando o disminuyendo nuestra posibilidad de a Parada con Escudo (Acción Normal): Si llevamos encima un
+éxito con ellas. Consulta la sección de Modificadores al Com- escudo podemos utilizarlo para detener los ataques de una
+bate en el capítulo de Variantes (pág. 125).
+forma más efectiva. Se siguen las mismas reglas que con Pa-
+rada, pero un escudo nunca se escapa de las manos y sólo se
+a Parada (Acción Normal): Se trata de interponer el arma que
+romperá cuando su Resistencia se vea reducida a 0. Además,
+llevamos en la mano para evitar que nos alcance el ataque
+si somos objeto de un ataque a distancia podemos usar el es-
+de nuestro oponente. Para llevar a cabo una parada debe-
+cudo para protegernos determinadas localizaciones de im-
+remos hacer una tirada por la competencia del Arma que
+pacto, tal y como se indica en la descripción del escudo que
+tengamos: si tenemos éxito, detendremos el ataque de nues-
+estamos usando (pág. 139); para colocar el escudo en la posi-
+tro enemigo, que no llegará a hacernos ningún daño. 
+ción adecuada es necesario llevar a cabo una acción normal.
+Lo que sí debemos tener muy en cuenta a la hora de realizar
+a Esquivar (Acción Normal): Con esta acción defensiva el
+una parada es el arma que nos ataca y el arma que nosotros
+personaje intenta eludir los ataques cuerpo a cuerpo que
+usamos para detener el ataque, ya que, si le echas un vistazo
+traten de alcanzarlo mediante movimientos rápidos del
+a la Tabla de Armas (pág. 132), verás que todas ellas poseen
+cuerpo, de las piernas o incluso retrocediendo ligeramente
+un valor de tamaño, ya sea ligero, medio o pesado. Si usamos
+durante el combate. Para llevarla a cabo se realiza una ti-
+armas del mismo tamaño (una espada contra una espada), li-
+rada de la competencia Esquivar: si tenemos éxito, rehui-
+gero contra medio (una daga contra una espada) o medio
+mos el ataque, que no llega a causarnos ningún daño.
+contra pesado (una espada contra un espadón), no pasa nada,
+pero si usamos un arma ligera para detener el ataque de un
+Al contrario que la Parada, con una única tirada de Esquivar
+arma pesada (una daga contra un espadón), deberemos en-
+nos zafaremos de todos los ataques que recibamos de un
+frentar nuestra FUEx3 contra la FUEx5 del atacante: si falla-
+mismo enemigo durante ese asalto —si nos atacan varios ene-
+mos el enfrentamiento, detendremos el ataque, pero el arma
+migos, deberemos usar una acción de Esquivar por cada uno
+se escapará de nuestras manos.
+de ellos, si es que podemos—. Claro que lo tendremos más
+difícil si se trata de evitar un ataque que haya obtenido un
+De la misma forma, para detener un ataque crítico debere-
+éxito crítico: en ese caso, deberemos sacar nuestra tirada de
+mos obtener también un crítico en la tirada de parada, ya
+Esquivar como si el valor de la competencia se hubiera redu-
+que en caso contrario conseguiremos detener el ataque,
+cido a la mitad, redondeando hacia arriba (por ejemplo, si
+pero el arma que usábamos para pararlo se escapará de
+nuestro Esquivar es del 50%, sólo podríamos evitar un ataque
+nuestros manos o incluso, si se trata de un arma ligera con-
+crítico con un resultado de 25% o menos).
+tra una pesada, se nos romperá por el esfuerzo.
+Es imposible usar una acción de Esquivar para evitar un
+Una de las ventajas de la parada es que con una única ac-
+ataque a distancia.
+ción de combate podemos llevar a cabo una parada múlti-
+ple, y detener de esa forma ataques que provengan de
+a Buscar Cobertura (Acción Extendida): Gracias a esta ac-
+diferentes enemigos —nunca del mismo: no se puede llevar
+ción podemos defendernos de un ataque a distancia bus-
+121
+=== PAGE 124 ===
+ParsIV  04/10/13  14:33  Página 122
+Aquelarre: Juego de rol demoníaco medieval
+cando una cobertura rápida. Para poder llevarla a
+a Huida (Acción Extendida): Si estamos envueltos
+cabo deberemos haber obtenido más Iniciativa que el
+en un combate y deseamos abandonarlo por las bue-
+enemigo al que deseemos evitar y tendremos que tener
+nas, podemos hacerlo usando acciones de movimiento,
+cerca algún tipo de cobertura, ya sea total (la esquina de
+aunque eso supone bajar la guardia, con lo que nuestro opo-
+una casa, un agujero profundo…) o parcial (un muro bajo,
+nente, si lo desea, podría hacernos un ataque normal con un
+otro personaje…), ya que intentaremos lanzarnos hacia dicha
++25% a su porcentaje. Otra opción es llevar a cabo la maniobra
+cobertura antes de recibir el ataque y evitar de esa forma que
+de huida. Si declaramos esta acción, prepararemos nuestra
+nos alcance. Para llevarla a cabo, antes de que nuestro oponente
+huida durante todo el asalto y se nos permitirá además efec-
+haga su tirada de ataque a distancia debemos hacer una tirada
+tuar hasta dos acciones defensivas —normalmente paradas o
+de Saltar: si tenemos éxito, habremos alcanzado la cobertura
+“esquivas”—. De esta forma, al llegar al siguiente asalto, sea
+antes de recibir el ataque, así que cualquier impacto recibido en
+cual sea la Iniciativa obtenida, podremos abandonar el com-
+una localización protegida afectará a nuestra cobertura, y no a
+bate sin que nuestro enemigo pueda atacarnos.
+nosotros. Si nuestro enemigo consigue un éxito crítico en su ti-
+Exemplum: Tras varios asaltos de combate y con algunos de sus compa-
+rada, deberemos haber obtenido también un crítico en Saltar o
+ñeros heridos o muertos en el suelo, los dos únicos bandidos que quedan
+no habrá servido de nada nuestra maniobra.
+combatiendo contra Lope e Ignotus deciden escapar. El primero de ellos
+a Defensa Completa (Acción Extendida): Si apostamos por
+simplemente anuncia que llevará a cabo dos acciones de movimiento
+no atacar durante el asalto, podemos realizar una única ac-
+corriendo, para alejarse todo lo posible, pero ello supone bajar la guar-
+ción de defensa con un modificador de +50% a la tirada.
+dia, así que Lope le ataca mientras huye con un +25% a su porcentaje,
+Esa acción defensiva sólo puede ser una acción normal (Pa-
+lo que le permite alcanzarle y abatirlo.
+rada, Esquivar, Zafarse, etc.), nunca extendida (no puede
+El segundo bandido es más listo y decide llevar a cabo en este asalto
+llevarse a cabo una Huida o un Liberarse, por ejemplo), y
+una acción extendida de huida, preparando su fuga. Consigue parar
+se seguirán las reglas habituales de dicha acción (si es una
+parada, por ejemplo, se pueden llevar a cabo varias paradas los dos ataques que Ignotus le hace, con lo que al llegar al siguiente
+múltiples), lo único que cambia es que se le suma un +50%
+asalto puede realizar acciones de movimiento sin necesidad de bajar
+a la tirada y que se convierte en una acción extendida.
+la guardia, evitando que Ignotus pueda atacarle, únicamente perse-
+guirle usando a su vez acciones de movimiento, aunque el viejo guerrero
+a Guardia Completa (Acción Normal): Esta maniobra requiere
+el uso de un escudo: si el PJ no lleva ninguno, no puede utili- piensa que ya es suficiente y lo deja huir.
+zarla. Usando una de las acciones del asalto, un PJ que utilice
+a Liberarse (Acción Extendida): Si nos encontramos apresa-
+un escudo puede colocarlo en posición de guardia completa,
+dos gracias a una acción de Inmovilizar la única forma de
+ciñéndolo lo más posible a su cuerpo, otorgando a partir de en-
+escapar de la presa es realizando esta maniobra. Para lle-
+tonces una protección adicional contra ataques enemigos.
+varla a cabo debemos ganar un enfrentamiento entre nues-
+Mientras se encuentre en guardia completa, el escudo prote-
+tra Fuerza x5 y la Fuerza x5 de nuestro rival: si
+gerá de los ataques cuerpo a cuerpo de la misma forma que lo
+conseguimos ganar el enfrentamiento, nos liberamos de la
+hace en los ataques a distancia (véase la maniobra Parada con
+inmovilización y de la situación de melé en la que nos en-
+Escudo en la pág. 121 y la descripción de los escudos en la pág.
+contrábamos, por lo que en el siguiente asalto podremos
+139), aunque el porcentaje que posee el PJ para realizar cual-
+actuar libremente.
+quier tipo de ataque o para parar con el escudo se verá redu-
+a Serpentear (Acción Extendida): En caso de que seamos víc-
+cido a la mitad mientras se encuentre en guardia completa. De
+tima de un ataque de proyectil con arcos, ballestas u hondas
+esta forma, si el PJ usa un escudo de metal en guardia com-
+a una distancia normal o larga, podemos movernos de forma
+pleta, tendría siempre un brazo, el pecho y otra localización,
+rápida, serpenteando por el campo de batalla, o incluso tirán-
+como el abdomen, protegido por el escudo. El PJ continuará
+donos al suelo, todo ello para ofrecer un blanco más difícil al
+en guardia completa hasta que declare que desea salir de ella,
+tirador. Por tanto, esta acción defensiva debe efectuarse antes
+algo que puede llevar a cabo como una acción libre, sin nece-
+de que nuestro atacante lleve a cabo su tirada de ataque, y
+sidad de utilizar ninguna de las acciones del asalto.
+Acciones de Defensa
+Parada                            Acción Normal      Usar el arma de la que disponemos para bloquear el ataque del adversario.
+Parada con Escudo       Acción Normal      Usar un escudo para bloquear el ataque del adversario.
+Esquivar                        Acción Normal      Evitar que un ataque nos golpee realizando una tirada de Esquivar.
+Defensa Completa      Acción Extendida    Llevar a cabo una única defensa en el asalto, pero con un mayor porcentaje.
+Evitar                            Acción Extendida    Hacer una tirada de Saltar para alcanzar una cobertura cercana antes de ser atacado a distancia.
+Guardia Completa       Acción Normal      Utilizar el escudo para protegerse en un combate cuerpo a cuerpo.
+Huida                           Acción Extendida    Maniobra necesaria para abandonar un combate sin bajar la guardia.
+Liberarse                      Acción Extendida    Permite al personaje escapar de una maniobra de Inmovilizar (inmovilización).
+Serpentear                   Acción Extendida    Moverse de manera errática para ofrecer el menor blanco posible a un ataque a distancia.
+Zafarse                           Acción Normal      Abandonar una situación de melé con una tirada de Pelea.
+122
+=== PAGE 125 ===
+ParsIV  04/10/13  14:33  Página 123
+Pars 4: De Re Militari
+para ello, debemos hacer una tirada de Correr a la
+a Lanzar un Hechizo (Acción Extendida): Aunque
+mitad de su porcentaje: si tenemos éxito, el tirador de-
+nos detendremos más tranquilamente en el lanza-
+berá también hacer su tirada de ataque a la mitad de su
+miento de hechizos cuando lleguemos al capítulo
+porcentaje. Esta acción defensiva supone que el personaje se
+dedicado a la Magia (pág. 158), lo que sí te pode-
+ha movido al menos 6 varas en la dirección que desee.
+mos decir es que se requieren dos acciones para
+poder utilizar correctamente un hechizo, por lo que se
+a Zafarse (Acción Normal): Utilizaremos la acción de Zafarse
+trata de una acción extendida.
+para abandonar una situación de melé provocada por un
+movimiento de melé. Para poder llevarla a cabo tendremos
+a Prepararse (Variable): Si el personaje se prepara previa-
+que hacer una tirada de Pelea: si tiene éxito, conseguiremos
+mente antes de llevar a cabo un ataque —apuntando con
+separarnos de nuestro contrincante lo suficiente para aban-
+su arco al enemigo, afianzando el golpe mientras ve cómo
+donar la melé y poder actuar de forma normal.
+éste se aproxima, etc.—, aumentará sus posibilidades de
+éxito al hacer la tirada. Por cada asalto completo que pase-
+OTRAS ACCIONES mos preparándonos antes de que realicemos nuestro ata-
+que, obtendremos un bonificador de +10% a nuestra tirada,
+Además de movernos, atacar y defendernos, a lo largo del
+aunque no podremos acumular más de un +50% a nuestro
+combate puede que llevemos a cabo otras acciones que nada
+ataque, pasemos los asaltos que pasemos preparándonos.
+tengan que ver con esos tres tipos básicos. Por eso, hemos in-
+troducido esta sección, en la que incluimos algunas de las po-
+a Tretas (Acción Normal): Englobamos dentro de tretas
+sibles acciones que los personajes pueden realizar. De todas
+todas las acciones inusuales y un tanto sucias que un per-
+formas, es una lista incompleta pues la imaginación e inven-
+sonaje puede llevar a cabo para dificultar el ataque o el mo-
+tiva de los jugadores es infinita, y dependerá mucho del Di-
+vimiento de su contrincante: lanzarle arena a los ojos,
+rector de Juego arbitrar convenientemente cualquier acción
+arrojarle un tapiz por encima, trabar su arma con una tela,
+extraña que pueda llevar a cabo un personaje.
+morderle, golpearle las orejas con ambas manos para de-
+a Dar Objeto (Acción Normal): Si queremos darle un objeto
+jarlo sordo, desjarretarle los tendones de un brazo o una
+o arma que tengamos en la mano a otro de los personajes,
+pierna con un cuchillo, etc. A no ser que se trate de una ma-
+deberemos llevar a cabo una acción normal. Se supone que
+niobra muy compleja, se puede resolver como una acción
+el objeto se le da en la mano al otro, pues en el caso de que
+normal, realizando una tirada de Pelea con los modificado-
+ambos estén separados y se le arroje, el lanzador debe llevar
+res oportunos —no será lo mismo tratar de alcanzar los ojos
+a cabo una tirada de Lanzar y la persona que lo recoge otra
+que el brazo del arma, por ejemplo—. Si tiene éxito, el Di-
+de Agilidad x5 para atraparlo correctamente.
+rector de Juego deberá determinar los efectos concretos de
+la treta, teniendo en cuenta el tipo de maniobra y la situa-
+a Desenvainar (Acción Normal): En el caso de que comience
+ción en la que tiene lugar el combate.
+un combate y no hayamos preparado nuestra arma debere-
+mos usar una acción normal para sacarla o enristrarla. Natu-
+a Acciones Libres (No consumen acciones): Existe una serie
+ralmente, esta acción debe llevarse a cabo antes de poder usar
+de acciones que cualquier personaje puede efectuar sin que
+el arma para atacar o defender, así que si nuestro enemigo
+le consuman una de las dos acciones del asalto, pues se trata
+posee una mayor Iniciativa, es posible que su ataque nos coja
+de actos casi inconscientes o que no impiden la realización de
+desprevenidos y sin arma con la que defendernos. Cada arma
+otras acciones. Lo más común es el uso de las competencias
+que desenvainemos requiere una acción diferente, excepto si
+de Percepción o de Comunicación: detectar un movimiento
+usamos ambas manos para sacar dos armas, aunque esta regla
+a nuestras espaldas, escuchar una conversación que tiene
+no se aplica a los escudos: preparar un escudo requiere siem-
+lugar cerca, ordenar a nuestros hombres que lleven a cabo
+pre usar una acción de Desenvainar. En el caso de que el arma
+una carga, entender el idioma en que hablan nuestros enemi-
+que queramos coger esté sobre una mesa, en el suelo, etc., se
+gos, etc. Otra acción libre es moverse una vara durante un
+seguirán las mismas reglas que para desenvainar, al igual que
+asalto en cualquier dirección, pues se supone que al ejecutar
+si quisiéramos coger algo que tengamos en nuestro equipo y
+las acciones de ataque o defensa puedes recular, retroceder,
+que se encuentre a mano —una cantimplora, por ejemplo—,
+esquivar, etc. —recuerda, de todas formas, que avanzar una
+pero si el objeto en cuestión es de más difícil acceso —la misma
+vara hacia el oponente se considera un movimiento de
+cantimplora pero al fondo de una mochila—, la acción puede
+melé—. De todas maneras, como siempre, el Director de
+pasar de normal a extendida o incluso durar más de un asalto,
+Juego tiene la última palabra a la hora de decidir qué es real-
+a discreción del DJ.
+mente una acción libre y qué no.
+Otras Acciones
+Dar Objeto                    Acción Normal     Dar un objeto o arma a otro personaje.
+Desenvainar                 Acción Normal     Sacar un arma para poder utilizarla en el combate.
+Lanzar un Hechizo    Acción Extendida   Utilizar un hechizo en combate.
+Prepararse                           Variable           Preparar con antelación un ataque para aumentar nuestras posibilidades de éxito.
+Tretas                             Acción Normal     Llevar a cabo una maniobra inusual y sucia para entorpecer a nuestro contrincante.
+Acción Libre                              -                  Una maniobra o acto que el PJ puede llevar a cabo sin que le consuma una de las dos acciones.
+123
+=== PAGE 126 ===
+ParsIV  04/10/13  14:33  Página 124
+Aquelarre: Juego de rol demoníaco medieval
+Daño
+ADA vez que un ataque alcance su objetivo y éste no
+no dispondría de ningún bonificador al daño (y con suerte, pues si
+haya conseguido defenderse del mismo —porque no
+llega a tener sólo 9 en FUE, tendría un bonificador de daño negativo,
+pudiera o por haber fallado su acción defensiva—,
+de -1D4).
+C
+llega el momento de calcular el daño exacto que
+nuestro ataque ha causado. Si le echas un vistazo a la Tabla de
+El otro valor que puede modificar el daño que hacemos con un
+Armas (pág. 132) verás que todas ellas tienen asignados en el
+arma es la Fuerza mínima: todas las armas poseen un mínimo
+valor de Daño un tipo de dado —por ejemplo el cuchillo,
+determinado de Fuerza que indica el grado de fortaleza que debe
+1D6— que incluso puede llevar modificadores —la espada
+poseer el personaje para poder utilizarla de forma competente.
+tiene un valor de daño de 1D8+1, por ejemplo—. Ese dado es
+Si un PJ usa un arma con una Fuerza por debajo de ese mínimo,
+la cantidad de PD que infligimos a nuestro objetivo cada vez
+infligirá 1 PD menos por cada punto por debajo del mínimo es-
+que le alcancemos con esa arma.
+tablecido para dicha arma. Aunque la cosa no se queda ahí, ni
+mucho menos, ya que además verá reducido en -5% su porcen-
+Claro que no todo el mundo está igual de capacitado para ma-
+taje de ataque y en -1 su tirada de Iniciativa cuando use esa arma
+nejar un arma determinada, ya que algunas requieren de una
+por cada punto por debajo del valor mínimo en Fuerza que se
+gran fortaleza, otras de una buena agilidad e incluso las hay que
+necesite para usarla.
+necesitan que tengamos una vista afinada. Por eso, en la misma
+Tabla de Armas hay dos valores que pueden modificar la tirada
+Exemplum: Como hemos dicho antes, Lope gusta de llevar encima su es-
+de Daño que hagamos con esa arma. El primero de los valores
+pada. Si consultamos la Fuerza mínima de la espada de mano veremos
+es el bonificador de daño, que se basa en la característica base
+que es de 12: malo, malo, ya que el cortesano sólo tiene 10 en Fuerza.
+del arma, la característica primaria que nos permite sacarle todo
+Como le hacen falta 2 puntos para llegar a ese mínimo, el daño que
+el rendimiento a un arma determinada: cuanto mayor sea dicha
+característica más daño podemos infligir al utilizar el arma. Para
+inflige con la espada se verá reducido en -2 y, además, tendrá de
+calcular el bonificador de daño exacto que tenemos con un arma
+forma permanente un -10% en su porcentaje de Espadas cada vez
+localiza el valor de la característica base del arma que estás
+que use esa arma, y un -2 a sus tiradas de Iniciativa. Si tenemos en
+usando en la siguiente tabla:
+cuenta el bonificador de daño que tiene Lope con la espada, el total de
+daño que es capaz de hacer con ella es de 1D8+1+1D4-2, o, simpli-
+Tabla de Bonificador de Daño
+ficándolo, 1D8+1D4-1.
+        Característica Base         Bonificador de Daño
+Si en vez de espada usara una espada corta, que tiene una Fuerza
+                     1 – 4                                     - 1D6
+mínima de 8, Lope no tendría penalizadores ni al daño ni a su por-
+                     5 – 9                                     - 1D4
+centaje de ataque, pero claro, la espada corta a pesar de ser arma de
+                   10 – 14                                      — 
+noble, es muy parecida a otras que usan cazadores y piratas (como el
+                   15 – 19                                   + 1D4
+bracamonte),  así que no creemos que llegue a cambiar un arma por
+                   20 – 24                                   + 1D6
+otra, a pesar de los negativos que le ofrece la espada. Como dicen los
+                   25 – 29                                   + 2D6
+franceses: noblesse obligue…
+                   30 – 34                                   + 3D6
+Existen otros modificadores que pueden afectar al daño que
+                   35 – 39                                   + 4D6
+infligimos con un arma. Algunos de ellos ya se han tratado en
+                   40 – 44                                   + 5D6
+capítulos anteriores, como la localización de impactos (pág.
+                   45 – 50                                   + 6D6 98): cada vez que un personaje recibe un golpe se debe tirar
+1D10 para determinar en qué zona del cuerpo ha impactado,
+En el caso de que se trate de un arma arrojadiza (un cuchillo,
+ya que algunas serán más o menos sensibles al daño que otras.
+una lanza o una piedra, por ejemplo) o de la competencia
+Por ejemplo, todo daño sufrido en la cabeza se multiplicará
+Pelea, el bonificador de daño se calculará usando la caracte-
+por dos y, de forma similar, los PD que se reciban en las extre-
+rística de Fuerza.
+midades se dividen entre dos.
+Exemplum: Nuestro cortesano, Lope de Navarrete, como buen noble que
+Otro aspecto que puede modificar la cantidad de daño sufrida
+es, porta siempre una espada al cinto. La espada posee un valor de
+por un personaje es la protección que lleve, el tipo de armadura
+Daño de 1D8+1, que es la cantidad básica de PD que es capaz de in- que vista, de la que hablaremos detenidamente más adelante
+(pág. 134). En resumidas cuentas te diremos que toda armadura
+fligir, pero como la espada tiene como característica base la Habilidad,
+posee un valor de Protección: ese valor se restará a la cantidad de
+que Lope tiene a 15, el bonificador de daño del cortesano al usar esa
+PD sufridos, y el resultado será el daño real que ha sufrido el per-
+arma es de +1D4, causando un total de 1D8+1+1D4 cada vez que con-
+sonaje (y que se deberá multiplicar o dividir por dos según la lo-
+sigue alcanzar a un enemigo con ella.
+calización). Por ejemplo, si llevamos ropa gruesa, que tiene un
+Si en vez de la espada, Lope cogiera un montante, que tiene como
+valor de protección de 1, restaremos un punto a todo el daño su-
+característica base la Fuerza, que el cortesano tiene sólo a 10, frido mientras llevemos encima esa armadura.
+124
+=== PAGE 127 ===
+ParsIV  04/10/13  14:33  Página 125
+Pars 4: De Re Militari
+Por último, aunque no menos importante, son los para una descripción de la Resistencia, pág. 134). Por
+efectos que tienen los éxitos críticos sobre el daño: tanto, si fuéramos capaces de hacer con una espada
+siempre que obtengamos un éxito crítico en nuestro ata- un daño de 1D8+1+1D4, siempre que consigamos
+que y golpeemos a nuestro oponente, haremos el máximo daño obtener un crítico en nuestro ataque infligiríamos 13
+PD de forma automática, sin tiradas de dados, y la ar-
+posible que pudiéramos hacer y no tendremos en cuenta la ar-
+madura que lleve nuestro enemigo, sea la que sea, aunque le res- madura de nuestro oponente no le serviría de nada, pues
+taremos a la armadura tantos puntos de Resistencia como PD la atravesaríamos como si fuera mantequilla, e incluso le
+hayamos realizado (échale un vistazo al apartado de armaduras restaríamos 13 puntos a su Resistencia.
+Variantes
+OS combates acostumbran a ser caóticos y confusos, y eso, cuando se lucha sobre un caballo, nuestro porcentaje en ata-
+aunque las reglas que te hemos presentado hasta ahora car o defender nunca podrá ser superior al porcentaje que pose-
+pueden cubrir la mayoría de las situaciones que ocu- emos en Cabalgar. Por ejemplo, si luchamos montados con una
+L rran en el transcurso del mismo, muchas veces los ju- espada y tenemos en Espadas un 80% y en Cabalgar un 50%,
+gadores se irán por los cerros de Úbeda, los resultados que se todas las tiradas de ataque y defensa con la espada se realizarán
+obtienen en los dados encauzarán la pelea de forma extraña o como si nuestro porcentaje fuera sólo del 50%. De todas formas,
+incluso las propias circunstancias en las que tiene lugar el en- si consultas la tabla de Modificadores al Combate verás que ga-
+frentamiento no serán las más normales —no siempre se puede namos un +25% por pelear a caballo contra un soldado a pie, ya
+luchar a plena luz del día en pleno descampado con la antelación que estamos sobre una altura superior.
+suficiente—. Para ayudarte a manejar esas eventualidades te pre-
+La segunda gran variante implica a las tiradas de localizaciones
+sentamos ahora un conjunto de variantes que puedes usar en de-
+de impacto, ya que al estar sobre el caballo es muy difícil que
+terminadas circunstancias para simular mejor las condiciones en
+alcancemos el abdomen o las piernas de nuestro adversario. Por
+las que se desarrolla un combate.
+eso siempre tiraremos 1D5 para calcular la localización afectada
+por nuestros golpes. De igual manera, un combatiente a pie que
+MODIFICADORES AL COMBATE
+ataque a un jinete no podrá nunca alcanzar la pierna que está
+en el lado contrario de la montura: en caso de que la tirada de
+A lo largo de un combate pueden suceder muchas cosas que al-
+localización de impacto nos indique que ha sido golpeada esa
+teren nuestra capacidad de ataque o de defensa: puede que un
+pierna, el ataque lo recibirá directamente el caballo.
+golpe nos haya tirado al suelo, que nuestro enemigo se haya mon-
+tado en un caballo, que estemos luchando en mitad de la noche
+Por último, debemos recordar que sólo los jinetes pueden lle-
+o que simplemente deseemos atacar a nuestro enemigo en una
+var a cabo una carga a caballo, una acción de ataque de la que
+zona concreta. Todos estos casos se resuelven otorgando bonifi-
+hablamos anteriormente (pág. 119).
+cadores o penalizadores a nuestros porcentajes de ataque.
+EMBOSCADAS
+En la tabla de Modificadores al Combate encontrarás una lista
+de modificadores que se pueden utilizar durante un combate
+En las reglas descritas hasta ahora siempre hemos supuesto
+ordenados en tipos de modificadores diferentes (de posición, de
+que ambos contendientes comienzan el combate preparados y
+localización, de visibilidad, etc.) y divididos a su vez en modi-
+listos, pero puede suceder —y sucederá mucho antes de lo que
+ficadores de ataque y de defensa. Siéntete libre de usarlos en el
+piensas— que uno de los combatientes sea sorprendido por el
+combate, cámbialos a tu gusto si piensas que no se ciñen correc-
+ataque del otro ya sea porque haya sido emboscado por éste,
+tamente a la partida o incluso ignóralos por completo si es tu
+por haberle dado la espalda a quien no debía dársela o porque
+deseo. Pero recuerda que si vas a realizar una acción de ataque
+haya conseguido previamente un éxito en un enfrentamiento
+o defensa que modifique tu ataque (desarmar, tropiezo, etc.),
+entre su competencia de Sigilo y la competencia Descubrir del
+calcula primero tu porcentaje con esa acción y a continuación
+PJ sorprendido.
+añádele o réstale los modificadores de esta tabla.
+Suceda como suceda, lo cierto es que durante el primer asalto el
+personaje sorprendido estará en desventaja frente al atacante, lo
+COMBATE A CABALLO
+que se refleja en una tirada de Iniciativa menor, pues tirará 1D5
+Una de las situaciones más comunes que tienen lugar en Aque-
+en lugar de 1D10 para calcular su Iniciativa. Además, todas las
+larre es el combate a caballo, ya sea entre dos jinetes o entre un
+tiradas de acciones defensivas que lleve a cabo durante este pri-
+jinete y un combatiente a pie, y aunque las reglas generales
+mer asalto se verán penalizadas en un -25%, mientras que su
+sobre el combate no varían, sí que es cierto que hay que tener
+contrincante modificará sus acciones de ataque en un +25%, y lo
+en cuenta algunas variantes significativas para simular un en-
+que es peor: no podrá defenderse de ningún ataque que tenga
+frentamiento a caballo.
+lugar antes de su Iniciativa, lo que supone una excepción a la
+norma (por ejemplo, si tenemos un Iniciativa de 18 y nos ataca
+La primera tiene que ver con la competencia que debemos usar,
+un enemigo con Iniciativa 20 no podremos defendernos de su
+ya que combatir sobre un caballo supone la utilización de dos
+ataque). Una vez terminado este primer asalto, el resto de asal-
+competencias diferentes: por un lado, la del arma que estamos
+tos se usarán las reglas habituales de combate.
+usando y, por otro, Cabalgar para controlar nuestra montura. Por
+125
+=== PAGE 128 ===
+ParsIV  04/10/13  14:33  Página 126
+Aquelarre: Juego de rol demoníaco medieval
+Tabla de Modificadores al Combate
+Modificadores por Localización: Siempre que queramos golpear una zona concreta de nuestro enemigo, deberemos re-
+ducir nuestro porcentaje de ataque, más cuanto más difícil sea acertar en dicha zona.
+Golpear el pecho o el abdomen.                                                                                                                              -10% al ataque
+Golpear una pierna.                                                                                                                                                  -15% al ataque
+Golpear un brazo.                                                                                                                                                     -25% al ataque
+Golpear un pie.                                                                                                                                                          -30% al ataque
+Golpear una mano.                                                                                                                                                   -35% al ataque
+Golpear la cabeza.                                                                                                                                                     -50% al ataque
+Golpear el cuello.                                                                                                                                                      -70% al ataque
+Golpear los ojos o la nariz.                                                                                                                                      -75% al ataque
+Modificadores por Situación: Encontrarse en una situación determinada (detrás del enemigo, caído en el suelo, sobre un ca-
+ballo…) puede ayudar o perjudicar nuestros intentos de atacar o defendernos.
+Atacar por la espalda.                                                                                                                                              + 50% al ataque
+Atacar a un enemigo que se encuentra enzarzado en una melé con nosotros.                                               + 50% al ataque
+Atacar a un enemigo que está caído en el suelo.                                                                                                 + 50% al ataque
+Atacar por sorpresa a un enemigo.                                                                                                                        + 25% al ataque
+Atacar desde una posición superior (sobre un caballo, en la parte superior de unas escaleras…).             + 25% al ataque
+Atacar a un enemigo de gran tamaño (mandrágora, dragón, serpiente marina…).                                      + 20% al ataque
+Atacar en movimiento (sobre un carro, en un barco, atacar tras realizar una acción de movimiento previa…). -10% al ataque
+Atacar a un enemigo de pequeño tamaño (lutín, hada, salamandra…).                                                          -20% al ataque
+Atacar con la mano torpe (si somos diestros, la izquierda; si somos zurdos, la derecha).                             -25% al ataque
+Atacar después de haber caído al suelo.                                                                                                                -25% al ataque
+Atacar a un enemigo que está detrás de nosotros.                                                                                               -50% al ataque
+Defenderse en movimiento (sobre un carro, defenderse tras realizar una acción de movimiento previa…).    -10% a la defensa
+Defenderse de un ataque desde una posición inferior (atacante a caballo, hemos caído..-).                      -25% a la defensa
+Defenderse de un ataque por sorpresa.                                                                                                               -25% a la defensa
+Defenderse de un enemigo que está detrás de nosotros.                                                                                 -50% a la defensa
+Modificadores por Visibilidad: Algo obstaculiza la visibilidad durante un combate, todos aquéllos que la sufran verán redu-
+cidas sus posibilidades de atacar y defenderse de igual manera.
+Combatir con visibilidad reducida (niebla, humo, lluvia densa, zona iluminada sólo antorcha…).          -25% al ataque y a la defensa
+Combatir con poca visibilidad (noche con luna, en una cueva aunque cerca de la entrada…).        -50% al ataque y a la defensa
+Combatir sin visibilidad alguna (noche sin luna, en el interior de una cueva, cegado por completo…).  -75% al ataque y a la defensa
+será de -20%, ya que nos costará más acertarle. Siguiendo con
+DISTANCIAS
+el ejemplo del arco corto, la distancia corta estará entre 2 y 15
+varas; la media, entre 16 y 40 varas y la distancia larga, entre
+Si le echas un vistazo a la Tabla de Armas, verás que algunas
+41 y 60 varas. Si nuestro enemigo se encuentra más allá del al-
+de ellas poseen un rasgo llamado Alcance, que suele aparecer
+cance largo, será imposible atacarle con esa arma.
+como tres números separados por barras (por ejemplo, el arco
+corto, que tiene 15/40/60). Ese alcance indica las distancias
+Algunas de las armas aparecen con un valor en Alcance que no
+cortas, medias y largas a las que puede ser disparada el arma
+tiene número, sino la abreviatura “FUE”. Esas armas se consi-
+o el proyectil que utilice dicha arma.
+deran arrojadizas y, por tanto, su distancia corta, media y larga
+se basará en la fuerza de la persona que las lance: la distancia
+La forma de utilizar esas distancias en combate es relativa-
+corta será igual a su Fuerza dividida entre 2 en varas (redonde-
+mente fácil: siempre que tratemos de alcanzar a un enemigo
+ando hacia arriba); la media, a su Fuerza y la larga, a su Fuerza
+que se encuentre a distancia corta —o sea, a una distancia su-
+x2. Por ejemplo, un personaje con Fuerza 12 que lance un cu-
+perior a 2 varas e inferior al primer número que aparece en su
+chillo tendrá un valor en Alcance igual a 6/12/24.
+valor de Alcance—, tendremos un modificador de +20% al ata-
+que, ya que nuestro objetivo está relativamente cerca y es fácil
+acertarle. Si se encuentra a distancia media —a una distancia
+RECARGA
+en varas superior al primer número, pero inferior al se-
+En la Tabla de Armas (pág. 132) las armas de proyectiles (ba-
+gundo—, la tirada de ataque quedará sin modificar. Pero si
+llestas, arcos y hondas) cuentan con otro valor adicional que
+está a distancia larga —por encima del segundo número,
+sólo poseen ellas: la Recarga. Aparece siempre como un nú-
+pero por debajo del último—, el modificador al ataque
+mero (1, 3, etc.) e indica el número de acciones de combate que
+126
+=== PAGE 129 ===
+ParsIV  04/10/13  14:33  Página 127
+Pars 4: De Re Militari
+debemos invertir para recargar correctamente el
+arma. Por ejemplo, la ballesta posee un valor de Re-
+carga de 3, lo que significa que una vez disparada de-
+bemos usar 3 acciones de combate: sacar una nueva saeta de
+nuestra aljaba, colocarla en el arma y tensar la cuerda.
+Dicho número de acciones se puede “gastar” de forma conti-
+nuada, lo que en algunos casos requiere que pasemos más de un
+asalto recargando el arma, o alternar. Por ejemplo, si usamos la
+ballesta podemos recargarla usando las 3 acciones de forma in-
+interrumpida (lo que nos llevará un asalto y medio) o podemos
+invertir 1 acción durante 3 asaltos para terminar de recargarla.
+En las armas que se pueden arrojar no hemos incluido ningún
+valor en recarga porque no es necesario preparar el arma que
+vayamos a lanzar: si la tenemos en la mano podemos arrojarla.
+Si no la tenemos preparada, pues deberemos usar una acción
+de Desenvainar.
+PIFIAS EN COMBATE
+En la sección de combate hemos comentado lo que ocurre
+cuando obtenemos un crítico en un ataque: infligiremos el má-
+ximo daño posible sin tener en cuenta la armadura de nuestro
+enemigo. Pero, ¿qué ocurre cuando un personaje obtiene una
+pifia en el combate, ya sea atacando o defendiéndose? En estos
+casos lo más recomendable sería que el Director de Juego deter-
+minara el efecto concreto que produce la pifia basándose en la
+situación del personaje, en la localización en la que está teniendo
+lugar el enfrentamiento —no es igual combatir en una calle que
+al filo de un precipicio—, en las circunstancias que rodean el
+combate —si es de noche, si está lloviendo—, en el propio des-
+arrollo de la aventura o incluso en el azar: se hace una tirada de
+1D10 y cuanto mayor sea el resultado, peor será lo ocurrido.
+De todas formas, aquí te ofrecemos algunos ejemplos de pifias,
+para que el Director de Juego las utilice o le sirvan de base para
+crear las suyas propias:
+a El PJ se tuerce un tobillo: todas sus acciones de movimiento
+se reducen en 1 vara y el jugador hace una tirada de Agili-
+dad x3; si falla, caerá al suelo. Si combate montado, deberá
+hacer una tirada de Cabalgar y en caso de fallarla, caerá del
+caballo, haciéndose 1D6 PD.
+a El PJ se despista y pierde las siguientes 1D3 acciones de
+combate (ya sean las que le queden en este asalto o en el si-
+guiente).
+a Una parte de su armadura se rompe: tira 1D10 y consulta
+la Tabla de Localizaciones de Impacto, para decidir que lo-
+calización ha quedado desprotegida.
+a Al PJ se le cae el arma al suelo. Si tenía más de una o llevaba
+un escudo, hay un 30% de posibilidades de que sea ésto úl-
+timo lo que se le caiga.
+a Al llevar a cabo su ataque, el arma se le escurre de las
+manos y aterriza a 2D4 varas de distancia del PJ.
+a El personaje cae directamente al suelo con un movimiento
+poco elegante. Si se encontraba subido sobre un caballo, la
+caída le provoca 1D6 PD.
+a Al personaje se le nubla la vista por el sudor, un mareo re-
+pentino, por el casco, etc. Durante 1D3 asaltos, tendrá un
+127
+=== PAGE 130 ===
+ParsIV  04/10/13  14:33  Página 128
+Aquelarre: Juego de rol demoníaco medieval
+modificador de -30% a sus tiradas de Ataque y normal del ataque. Si no había amigos o com-
+Defensa, hasta que consiga aclararse la vista. pañeros a los que poder afectar, se le rompe el
+arma.
+a El PJ es una auténtica bestia: el ímpetu con que
+ha llevado a cabo su ataque ha sido tal que ha con- a El personaje acaba de ingresar en los anales de la guerra:
+seguido romper el arma al golpearla contra una pared, gracias a un inconcebible e irrepetible movimiento, su arma
+un árbol, el suelo, etc. ha conseguido dañarle a él mismo en lugar de a su ene-
+migo, provocándose el daño habitual del arma normal, in-
+a Un verdadero genio: el ataque del PJ alcanza a un amigo
+cluyendo bonificador por característica.
+o compañero en lugar de a su enemigo, sufriendo el daño
+Armas
+continuación te presentamos una descripción deta- das, lo que permite su uso a caballo. A pesar de todo, re-
+llada de cada una de las armas que se pueden utilizar
+quiere la misma fuerza para utilizarlo que el arco largo, su
+en los combates de Aquelarre, divididas en grupos
+fabricación necesita una gran cantidad de tiempo y son
+A según la competencia a la que pertenecen. Al finalizar
+muy susceptibles a los climas húmedos, lo que no propició
+las descripciones encontrarás una Tabla de Armas con los valores
+su adopción en el norte de la Península o en Europa.
+de juego de cada una de ellas. Ten en cuenta que las armas per-
+tenecen a una condición social concreta (villano, soldado o noble),
+BALLESTAS (PERCEPCIÓN)
+que indican quiénes son los usuarios habituales de ese tipo de
+Armas de soldado y noble
+armas: llevar encima un arma que no se ciña a tu condición (por
+ejemplo, ser un pastor y llevar encima un montante) sólo le traerá Una evolución del arco que, utilizando un sistema de tensión
+problemas al personaje, desde el ostracismo y la exclusión a penas mecánico, permite lanzar una saeta —una flecha o virote pe-
+mucho más severas (consulta el cuadro Sobre Armas y Armadu- queño— con la suficiente fuerza como para atravesar las ar-
+ras en la pág. 137 para más información). maduras más gruesas de la época. Su gran inconveniente es el
+tiempo que se necesita para recargarla, mucho más que el arco,
+pero lo compensa su facilidad de uso y la poca experiencia que
+ARCOS (PERCEPCIÓN)
+requiere su manejo, lo que también suponía que un consu-
+Armas de villano y soldado
+mado guerrero podía perder fácilmente la vida a manos de un
+Un arma de proyectiles formada por una cuerda y una única
+ballestero inexperto, lo cual resultaba tan amenazador para la
+pieza de madera curva. No se encuentra muy extendida en los
+nobleza que en el Segundo Concilio de Letrán (1139) se emitió
+reinos peninsulares cristianos, pues aparte de cazadores y
+una bula papal solicitando que no fuera utilizada contra otros
+monteros, pocos eran los que la utilizaban —no como en In-
+cristianos. Esto demuestra lo mal vistas que solían estar, espe-
+glaterra, cuyos arqueros fueron especialmente famosos du-
+cialmente en manos de villanos. A pesar de todo, era habitual
+rante la Guerra de los Cien Años—, aunque las tropas
+el uso de ballestas en las tropas de mercenarios —especial-
+musulmanas sí que acostumbraban a llevar arcos en la batalla.
+mente conocidos fueron los genoveses— o en el equipo de un
+Las flechas se solían guardar en aljabas que se llevaban en la
+noble, pues gustaban de usarlas en sus cacerías.
+espalda o en la silla de la montura, si se cuenta con ella, y era
+a Arbalesta: Es una versión pesada de la ballesta normal, más
+práctica habitual que el arquero, antes de iniciar un combate,
+voluminosa y con las palas construidas siempre con acero, lo
+clavara delante suya varias flechas en el suelo.
+que otorgaba a las saetas una mayor capacidad de penetración
+a Arco Corto: Dentro de su rareza, el arco corto es el más co-
+y un alcance mayor, aunque debía usarse un cranequín —una
+nocido en la Península Ibérica, un arco de tamaño medio
+maquina tensadora con ruedas dentadas— para recargarla.
+(una vara, aproximadamente) utilizado principalmente por
+a Ballesta: Se trata de la ballesta arquetípica, una versión en
+cazadores.
+madera con las palas en metal que, en comparación con el
+a Arco Largo: Utilizados principalmente por soldados ingle-
+arco, necesita más tiempo para ser recargada —requiere un
+ses, que acostumbran a fabricarlos con madera de tejo, el
+estribo, una especie de torniquete a manivela—. Gracias a su
+arco largo es prácticamente desconocido en los reinos pe-
+facilidad de uso estuvo muy extendida en la Edad Media.
+ninsulares. Si los personajes llegan a ver uno lo más proba-
+a Ballesta Ligera: Una versión más reducida de la ballesta
+ble es que esté en manos de algún mercenario de la Europa
+muy extendida en los estamentos nobiliarios, donde era
+del Norte o de las Islas Británicas.
+usada en sus partidas de caza, y que llegó a tal grado de
+a Arco Recurvado: De origen mongol, el arco recurvado se
+perfeccionamiento que a comienzos del siglo XV se podían
+ha hecho un hueco en el ejército nazarí. Fabricado con hue-
+fabricar desmontables o tan pequeñas que cabían perfecta-
+sos, madera y tendones de animales, posee una gran esta-
+mente en la manga de un jubón. Para tensarlas, al contrario
+bilidad, y aunque requiere el uso de ambas manos para su
+que las demás ballestas, sólo se usan las manos, lo que agi-
+utilización, deja libres tres dedos de la mano que sujeta
+liza el proceso de recarga.
+la flecha, que pueden usarse para manejar unas rien-
+128
+=== PAGE 131 ===
+ParsIV  04/10/13  14:33  Página 129
+Pars 4: De Re Militari
+curvatura más pronunciada que la hoja, que
+CUCHILLOS (HABILIDAD)
+posee un cierre hermético, lo que permite con-
+Armas de villano, soldado y noble
+servar el arma empapada en veneno durante
+Consideramos “cuchillo” a toda arma de filo cortante que posea
+largos periodos de tiempo. No se puede usar
+un tamaño menor al de la espada —aproximadamente, media
+como arma arrojadiza.
+vara o menos—, ya sean cuchillos en sí, dagas, espadas peque-
+a Telek: Un puñal muy delgado y afilado, de origen is-
+ñas, etc. Se trata de armas muy versátiles, con un enorme campo
+lámico, utilizado por los tuaregs junto con su espada,
+de utilización, lo que significa que fueron usadas por todos los
+la takuba. Acostumbran a llevarlo envainado en una funda
+estamentos sociales ya fuera en el trabajo, en la alimentación, en
+que cuelga de la muñeca y está especialmente diseñado
+la guerra o incluso como objeto de ornamentación o adorno.
+para abrazar al enemigo en combate y apuñalarlo por la es-
+Son armas cortas y ligeras que no pueden ser usadas correcta-
+palda, por lo que si es usado en un ataque de melé, añade
+mente para detener los ataques de armas pesadas —consulta
+un bonificador de +10% a las tiradas de ataque.
+las Reglas de Parada—, aunque también es cierto que, si nos
+abalanzamos contra un enemigo usando un movimiento de
+a Terciado: Se trata de una versión musulmana del braca-
+melé, se pueden convertir en armas tremendamente mortales.
+mante, de filo igualmente ancho pero ligeramente curvo, y
+al igual que éste, no se puede usar para ser lanzado.
+a Almarada: Aunque fue concebida en principio como una
+herramienta de trabajo, se convirtió finalmente en un arma
+ESPADAS (HABILIDAD)
+punzante con un filo de acero muy estrecho y la empuña-
+Armas de noble
+dura de madera. No posee filo cortante, pues, de forma si-
+milar al estilete, se utiliza introduciéndola violentamente
+Durante la Edad Media la espada era mucho más que un arma:
+entre las junturas de la armadura del enemigo —se la de-
+era un símbolo nobiliario por derecho propio, ya que sólo los
+nominaba “chupasangre” por las graves hemorragias in-
+reyes, nobles y caballeros tenían derecho a portar una, dejando
+ternas que era capaz de provocar—, aunque es imposible en manos de soldados y villanos armas más toscas, como ha-
+lanzarla o usarla para parar un ataque. chas, lanzas o mazas. Se la puede definir como un arma blanca
+de uno o dos filos, recta o no, con empuñadura y una hoja de
+a Bracamante: Se trata de una evolución del cuchillo y la
+longitud superior a la media vara.
+daga, pues el bracamante posee una hoja de media vara de
+a Espada Corta: Aunque similar al bracamante o al terciado, la
+longitud, ancha y con un solo filo, muy usada por la infan-
+espada corta es simplemente una espada de mano con una hoja
+tería de los reinos de Castilla y Aragón, por cazadores para
+recta muy reducida, de una longitud aproximada de media
+despiezar las piezas cobradas o por marineros y piratas. No
+vara, y doble filo. Junto a la daga, la espada corta es, quizá, el
+puede lanzarse debido a su peso.
+arma secundaria más apreciada por nobles y damas.
+a Coltell: Una de las armas habituales en el equipo del almo-
+a Espada de Mano: El arma medieval por antonomasia, sím-
+gávar: un cuchillo de hoja larga y ancha, ligeramente menor
+bolo del caballero cristiano que era el único que tenía la po-
+que el bracamante. Los almogávares acostumbraban a com-
+testad de portar una. Posee una hoja recta y de doble filo
+binarlo con un escudo de metal, de madera o una rodela, y
+con una longitud que solía alcanzar la vara.
+un par de azconas (lanzas cortas) para arrojarlas en com-
+bate. El coltell no está bien equilibrado y no puede ser usado
+a Estoque: Una variante de la espada con un filo mucho más
+como arma arrojadiza.
+estrecho y que se usa principalmente como arma de perfo-
+20
+ración, y no de corte . Con el tiempo, el estoque evoluciona-
+a Cuchillo: Bajo este epígrafe se recogen todos aquellos cuchi-
+ría hasta convertirse en la espada ropera del XVI y XVII.
+llos utilizados principalmente como herramientas, ya sea
+para preparar la carne, despellejar a un animal, cortar peque-
+a Jineta Nashrí: Una espada de origen nazarí, utilizada en el
+ñas ramas o, en caso de necesidad, como arma improvisada.
+reino de Granada. Se trata de una espada de poca longitud —
+entre 0,6 y 0,7 varas—, de hoja recta de doble filo, empuñadura
+a Daga:Arma usada por la nobleza como secundaria, pues sirve
+de pomo redondo y guarda de hueso. La mayoría de las jinetas
+de complemento de la espada, o como arma personal de
+se fabricaban con materiales lujosos y exóticos, y era normal
+damas y mujeres. Posee doble filo y guarda para proteger el
+que su empuñadura estuviera recubierta de oro y piedras pre-
+puño, y su longitud se encuentra entre un pie y media vara.
+ciosas, lo que las convertía en un tipo de armamento de lujo
+a Estilete: Llamada también “misericordiosa” (ya que mu-
+que sólo podían permitirse grandes nobles nazaríes, por lo que
+chos caballeros la usaban para rematar a sus contrincantes
+era costumbre regalar una a embajadores de otros reinos.
+en el campo de batalla), es un arma muy similar a la alma-
+a Nimcha: Una variante del saif, la nimcha es una cimitarra de
+rada, pues su filo es punzante y no cortante, aunque posee
+origen magrebí con una mayor curvatura en su hoja y que
+una longitud mucho menor que ésta, lo que la hace perfecta
+cuenta con un entrante en la empuñadura que permite alojar
+para ser ocultada, aunque no es posible lanzarla ni usarla
+en él el dedo meñique, facilitando su agarre. Por tanto, si se usa
+para parar un ataque.
+para realizar una acción de parada y las reglas indican que per-
+a Gumía: Daga de origen marroquí con la hoja curva y la em-
+20
+Addenda: Ya que el estoque no nació hasta comienzos del siglo XV, si eres
+puñadura de hueso. Es utilizada por muchos asesinos, pues
+un DJ al que le gusta controlar todos estos detalles, puedes eliminar esta
+la gumía suele guardarse en una funda metálica con una
+arma de todas las aventuras que transcurran durante el siglo XIV.
+129
+=== PAGE 132 ===
+ParsIV  04/10/13  14:33  Página 130
+Aquelarre: Juego de rol demoníaco medieval
+demos el arma, la nimcha sólo caerá de nuestras Las hachas son armas pensadas esencialmente para
+manos si fallamos una tirada de FUEx5. el ataque, pero no para la defensa: por eso, siempre
+que sean usadas en una acción de ataque obtendremos
+a Saif: Llamada “cimitarra” por los cristianos, el
+un modificador de +10% a nuestra tirada; claro que también
+saif es el equivalente musulmán de la espada, con
+ocurre lo contrario, ya que si se utilizan en una acción defen-
+una hoja ligeramente curva y de un solo filo. Las más
+siva, nuestra tirada recibirá un modificador de -10%. Además,
+famosas eran las fabricadas con acero de Damasco y al
+las armaduras blandas y ligeras casi no ofrecen protección con-
+igual que ocurre con la espada cristiana, el saif es un sím-
+tra un ataque de hacha: la protección de la armadura sólo pro-
+bolo de Allah y, por tanto, sólo era portada por aquellos que
+tege la mitad, redondeando hacia abajo.
+hubieran sido bendecidos por Él (o sea, los nobles).
+a Archa: Llamada también “guadaña de guerra”, es un arma
+a Takuba: También de origen islámico, la takuba es una es-
+que mezcla la idea del hacha y de la lanza, pues se compone
+pada de hoja recta de doble filo utilizada por los tuaregs
+de una empuñadura de gran longitud —entre 1,5 y 2 varas–
+del Sahara , aunque posee una hoja mucho más ancha que
+en cuyo extremo hay una hoja en forma de cimitarra o es-
+la jineta nashrí, y suele estar adornada con varias acanala-
+pada curva de una anchura cercana al pie, aunque para
+duras e inscripciones con motivos geométricos, por lo que
+usarla es necesario utilizar ambas manos. Alcanzaron cierta
+es fácil de distinguir.
+relevancia en los ejércitos cristianos, que incluso llegaron a
+formar cuerpos de archeros en sus ejércitos.
+ESPADONES (FUERZA)
+a Hacha: Aunque no es más que una simple herramienta
+Armas de noble
+para cortar madera, en caso de necesidad puede ser utili-
+Los espadones se diferencian de la espada por el tamaño de su zada como arma ofensiva, llegando a ser peligrosa en unas
+hoja, cuya longitud suele oscilar entre 1 y 1,3 varas, y por la ne-
+manos bien entrenadas en su uso. La longitud de su empu-
+cesidad de utilizar ambas manos para esgrimirla, lo que impide
+ñadura no suele llegar a la media vara. Éstas son las únicas
+el uso del escudo. Durante la Baja Edad Media comienza a ex-
+hachas que pueden usarse como armas arrojadizas.
+tenderse su uso debido a su mayor capacidad de corte, de tal
+a Hacha de Armas: Llamada también “hacha de mano”, es
+forma que hacia el año 1400 son tan comunes como las espadas
+una variante del hacha normal, diseñada exclusivamente
+e igualmente asociados al estamento nobiliario, que es el único
+para la guerra y fabricada completamente en metal, con
+capaz de permitirse un arma de dichas características.
+una longitud de aproximadamente 0,7 varas.
+a Alfanje: Se trata de la versión musulmana del montante,
+a Hacha de Combate: La más devastadora de las armas me-
+una espada de gran longitud con la hoja ancha, ligeramente
+dievales, aunque requiere el uso de dos manos para poder
+curvada y de un solo filo. Su nombre procede del árabe al-
+usarla en combate, y consta simplemente de un filo de
+janyar (“puñal”).
+hacha doble en el extremo de una empuñadura de madera
+a Espada Bastarda: Es una variante de la espada de mano,
+con una longitud de una vara o superior.
+denominada también “espada de mano y media” pues,
+a Hacha de Petos: Una variante del hacha de armas con un
+aunque mantiene su misma longitud, su empuñadura es
+mango de gran longitud —entre 1,5 y 1,8 varas—, por lo
+más larga para permitir su manejo con dos manos, otorgán-
+que requiere el uso de ambas manos; una hoja de hacha con
+dole una mayor fuerza. Por eso mismo, al tratarse de una
+un pico o martillo en el lado contrario y, en ocasiones, una
+fusión entre la espada y el espadón recibe el nombre de
+punta de lanza en el extremo del asta. Fue usada principal-
+“bastarda”. Por otro lado, aunque para usarla correcta-
+mente en duelos, torneos y entrenamientos, por lo que solía
+mente se requiere el uso de ambas manos, es posible usarla
+ser una de las pocas hachas que podía llegar a dominar un
+con una sola; en este caso, la Fuerza mínima del personaje
+noble o un caballero. Con el tiempo, el hacha de petos se
+aumentaría hasta 15.
+transformó en la alabarda.
+a Montante: Llamado en ocasiones “espada larga”, el mon-
+a Pico de Cuervo: Más que un hacha, esta arma es una espe-
+tante es el espadón por excelencia, una evolución de la es-
+cie de variante militar de un martillo, pues, en lugar de filo
+pada que aumenta la longitud de su filo para poder
+cortante, posee un pico extremadamente aguzado y largo
+enfrentarse a las nuevas armaduras que aparecen en el siglo
+que puede alcanzar una longitud de hasta un pie.
+XIV. Como todos los espadones, requiere el uso de dos
+manos para poder emplearse en combate.
+HONDAS (PERCEPCIÓN)
+HACHAS (FUERZA) Armas de villano
+Armas de villano y soldado
+Es una de las armas más antiguas que existen, asociada de forma
+tradicional al pastoreo, pues era utilizada para encaminar los re-
+Estas armas son similares a las hachas usadas para cortar leña
+baños de animales. Se trata simplemente de dos correas que su-
+y talar árboles, pero modificadas para ser utilizadas de forma
+jetan un trozo de cuero en el que se coloca el proyectil
+efectiva en el combate, con los filos más pronunciados y un
+—habitualmente piedra, arcilla cocida o plomo—, y que, tras ser
+peso menor, que permita blandirla fácilmente. Fueron muy
+volteada con fuerza, se arroja sobre el objetivo. Durante la Edad
+utilizadas durante todo el Medievo, pero tras la llegada de la
+Media era usada, además de por pastores, por soldados de ori-
+pólvora y el auge de las armas de asta, fueron desapare-
+gen humilde, que podían usarlas con una gran precisión, e in-
+ciendo o transformándose en armas de tipo alabardesco.
+130
+=== PAGE 133 ===
+ParsIV  04/10/13  14:33  Página 131
+Pars 4: De Re Militari
+cluso está documentada la existencia de cuerpos de acostumbraba a sobrepasar las 1,5 varas. Eso per-
+honderos en algunos ejércitos medievales. mite que, además de poder ser utilizada en com-
+bate cuerpo a cuerpo, pueda ser usada como
+a Honda: aunque se fabrica con muy diversos materiales —
+arma arrojadiza, cuando recibía también el
+cáñamo, cuero, etc.— y utiliza diferentes proyectiles —pie-
+nombre de “dardo”, “venablo” o “azcona”; aun-
+dra, plomo, arcilla cocida…—, no hay grandes diferencias
+que, al contrario que otras armas arrojadizas, el al-
+en el ámbito del juego entre las hondas que puedan encon-
+cance de una lanza es mucho mayor: su distancia corta
+trarse los jugadores.
+será igual al valor en Fuerza del atacante, la media será
+su Fuerza x2 y la larga su Fuerza x3.
+LANZAS (AGILIDAD)
+Armas de soldado y noble a Lanza de Caballería: La lanza más extendida durante el Me-
+dievo, ya fuera utilizada por unidades de infantería para en-
+Compuesta por un hoja afilada o puntiaguda en el extremo de
+frentarse a las cargas de la caballería o como el arma principal
+un palo o asta —por lo que a veces reciben el nombre de
+de muchos jinetes, que las usaban precisamente para cargar.
+“armas de asta”—, las lanzas eran otra de las armas más ex-
+Por todo ello, la lanza larga es un arma inútil en un combate
+tendidas en la época, pues eran usadas con mucha frecuencia
+singular hombre contra hombre, y sólo puede utilizarse por
+por soldados, debido a su bajo coste y a su facilidad de uso
+como arma a pie, y por caballeros tanto en el combate, enris- un guerrero a caballo para realizar la acción de ataque Carga
+trada en la silla del caballo, como en las frecuentes justas o tor-
+a caballo o por un soldado a pie para llevar a cabo la acción
+neos que acostumbraban a celebrar en tiempos de paz.
+defensiva Alancear. Por tanto, debe quedar claro que es im-
+posible parar con ella cualquier ataque.
+La gran capacidad de penetración de las lanzas las convierte
+en armas especialmente letales: siempre que obtengamos un
+a Lanza Larga: Una variante de la lanza corta, denominada
+resultado en nuestra tirada de ataque igual o inferior a la po-
+también “lanzón”, que posee una mayor longitud, entre 1,7
+sibilidad de obtener un crítico multiplicada por dos —o, dicho
+y 2 varas de altura, por lo que requiere el uso de ambas
+de otro modo, igual o inferior al 20% de nuestro porcentaje
+manos para ser utilizada en combate. Algunos tipos de lan-
+de éxito—, la lanza no sólo dañará a nuestro adversario sino
+zas largas, llamadas “podaderas” u “hocinos”, poseen una
+que quedará ensartada en su cuerpo. A partir de entonces,
+punta saliente orientada hacia atrás que podía usarse para
+cada acción de ataque que llevemos a cabo nos permitirá ha-
+derribar a un jinete —véase la acción de ataque Descabalgar
+cerle a nuestro contrincante daño de forma automática, sin
+en la pág. 120—.
+necesidad de hacer tirada alguna. Podemos sacar la lanza
+cuando lo deseemos, pero si nuestro enemigo quiere hacerlo
+a Morosa: Lanza larga de origen islámico cuyo extremo se
+deberá gastar una acción de combate y ganar un enfrenta-
+duplica en dos astas metálicas afiladas, una mayor que la
+miento entre su Fuerza x5 y nuestra Fuerza x5.
+otra, y cuenta en la mitad del arma con unas anillas para
+introducir los dedos que le proporcionan mayor estabilidad
+Exemplum: Tal y como le ha indicado Ignotus, Lope coge una de las lanzas
+a la sujeción. Al igual que la lanza de caballería, sólo puede
+que llevaban los bandidos y se dedica a rematar con ella a los heridos
+ser usada por un jinete que cargue a caballo o por un sol-
+que no han podido huir. Su porcentaje con ellas es el básico, o sea, su
+dado que use la acción de Alancear, pero en caso de que el
+Agilidad, que es igual a 20%, a lo que hay que sumar +50% por atacar
+arma quede ensartada en el cuerpo de nuestro enemigo, se
+a un enemigo que está tendido en el suelo, por lo que el total de Lope
+supone que ambas astas han quedado hincadas en su inte-
+con la lanza corta del bandido es de 70%. Hacemos la tirada y obte-
+rior, provocándole de forma automática un daño de 3D6,
+nemos un 12, que es igual o inferior al 20% del porcentaje de éxito
+en lugar de los 2D6 habituales en las lanzas de caballería.
+que teníamos con la lanza (o sea, menor que 14%, el doble del crítico,
+que es de 7%): Lope daña al bandido y además ensarta en su cuerpo
+MAZAS (FUERZA)
+el arma, por lo que el siguiente asalto podrá hacerle de nuevo el daño
+Armas de villano y soldado
+de la lanza sin necesidad de hacer tirada alguna de ataque. 
+Arma contundente compuesta por la llamada “cabeza de
+armas” —una protuberancia con o sin puntas— y un mango,
+Además, la longitud de la lanza permite atacar rápidamente a
+todo ello fabricado en una misma pieza de metal. Aunque era
+los enemigos que se nos echan encima, aunque, una vez los te-
+conocida desde antiguo, no será hasta la Edad Media cuando
+nemos al lado, esa misma ventaja se convierte en un inconve-
+alcance todo su potencial, utilizando cabezas cilíndricas, con
+niente. En el ámbito de las reglas, las lanzas poseen un
+formas hexagonales u octogonales, o incluso reforzándolas con
+modificador de +10 a nuestras tiradas de Iniciativa en el pri-
+cuchillas afiladas o puntas metálicas. Muchos caballeros de or-
+mer asalto de combate, que se convierte en un -10 a partir del
+denes militares abandonaron el uso de la espada en favor de
+segundo.
+las mazas para reducir en todo lo posible el derramamiento de
+a Horquilla: Una variante militar de la horca usada por los
+sangre, prohibido por la Iglesia.
+campesinos para trasladar las mieses. Se trata de una lanza
+El peso de las mazas las convierte en armas lentas, otorgándole
+que termina en dos o tres puntas en forma de tridente y que
+un modificador de -5 a la Iniciativa, pero una vez que golpean
+requiere el uso de ambas manos para su manejo. No estuvo
+son devastadoras y poco pueden hacer contra ellas las arma-
+muy extendida entre los ejércitos peninsulares.
+duras que no estén acolchadas. Debido a ello, la protección
+que ofrece una armadura metálica, completa o bien los cas-
+a Lanza Corta: Llamada también “chuzo”, la lanza corta es
+cos de tipo metálico —el bacinete, la celada y el yelmo—
+la más pequeña de todas las lanzas, pues su longitud no
+131
+=== PAGE 134 ===
+ParsIV  04/10/13  14:33  Página 132
+Aquelarre: Juego de rol demoníaco medieval
+Tabla de Armas
+Nombre                      Competencia    Característica Base     Fuerza Mínima      Daño        Tamaño    Recarga       Alcance
+Alfanje*                         Espadones                 Fuerza                            14               1D10 + 1      Pesado           -                    -
+Almarada                       Cuchillos                Habilidad                          5                 1D4 + 2        Ligero            -                    -
+Arbalesta                        Ballestas               Percepción                        12               1D10 + 2      Pesado           3        50 / 100 / 150
+Archa*                              Hachas                    Fuerza                            12               1D10 + 1      Pesado           -                    -
+Arco Corto*                      Arcos                  Percepción                        10                   1D6           Medio           1          15 / 40 / 60
+Arco Largo*                      Arcos                  Percepción                        12                  1D10         Pesado           1         20 / 50 / 100
+Arco (Re)curvado*           Arcos                  Percepción                        12                  1D10          Medio           1         25 / 55 / 110
+Ballesta*                          Ballestas               Percepción                        10                  1D10          Medio           3         30 / 60 / 120
+Ballesta Ligera               Ballestas               Percepción                        10                   1D6           Medio           2          15 / 30 / 60
+Bastón de Combate          Palos                    Agilidad                           5                    1D4           Medio            -                    -
+Bordón*                             Palos                    Agilidad                           5                 1D4 + 2       Medio            -                    -
+Bracamante                    Cuchillos                Habilidad                          8                 1D6 + 2       Medio            -                    -
+Cayado*                             Palos                    Agilidad                           5                 1D4 + 1       Medio            -                    -
+Clava                                 Mazas                     Fuerza                            10                   1D6           Medio            -                    -
+Coltell                              Cuchillos                Habilidad                          8                 1D6 + 1       Medio            -                    -
+Cuchillo                         Cuchillos                Habilidad                          5                    1D6           Ligero            -                 FUE
+Dabus                                Mazas                     Fuerza                            10                1D6 + 1       Medio            -                    -
+Daga                               Cuchillos                Habilidad                          5                    2D3           Ligero            -                 FUE
+Espada Corta                  Espadas                 Habilidad                          8                 1D6 + 1       Medio            -                    -
+Espada de Mano            Espadas                 Habilidad                         12                1D8 + 1       Medio            -                    -
+Espada Bastarda*        Espadones                 Fuerza                            12                  1D10          Medio            -                    -
+Estilete                            Cuchillos                Habilidad                          5                 1D3 + 1        Ligero            -                    -
+Estoque                           Espadas                 Habilidad                         10                   1D8           Medio            -                    -
+Gumía                            Cuchillos                Habilidad                          5                 1D4 + 2        Ligero            -                    -
+Hacha                               Hachas                    Fuerza                             8                    1D6           Medio            -                 FUE
+Hacha de Armas             Hachas                    Fuerza                            12                1D8 + 2       Medio            -                    -
+Hacha de Combate*       Hachas                    Fuerza                            15            1D10 + 1D4   Pesado           -                    -
+Hacha de Petos*             Hachas                    Fuerza                            12                  1D10         Pesado           -                    -
+Honda                              Hondas                Percepción                         5                 1D3 + 2        Ligero           1          15 / 25 / 50
+Horquilla*                        Lanzas                   Agilidad                          10                   1D8           Medio            -                    -
+Jineta Nashrí                   Espadas                 Habilidad                          8                 1D6 + 2       Medio            -                    -
+Lanza Corta                     Lanzas                   Agilidad                           8                 1D6 + 1       Medio            -                 FUE
+Lanza de Caballería*      Lanzas                   Agilidad                          12                   2D6          Pesado           -                    -
+Lanza Larga*                   Lanzas                   Agilidad                          10                 1D8+2        Pesado           -                    -
+Mangual                           Mazas                     Fuerza                            12                   1D8           Medio            -                    -
+Martillo de Guerra          Mazas                     Fuerza                            10                1D8 + 1       Medio            -                    -
+Mayal de Armas*            Mazas                     Fuerza                            12                  1D10         Pesado           -                    -
+Maza                                 Mazas                     Fuerza                            10                   1D8           Medio            -                    -
+Maza de Armas               Mazas                     Fuerza                            12                1D8 + 2       Medio            -                    -
+Maza Pesada*                  Mazas                     Fuerza                            15                   2D6          Pesado           -                    -
+Montante*                     Espadones                 Fuerza                            15               1D10 + 2      Pesado           -                    -
+Morosa*                            Lanzas                   Agilidad                          15                   2D6          Pesado           -                    -
+Nimcha                             Espadas                 Habilidad                         10                1D6 + 2       Medio            -                    -
+Pelea                                   Pelea                    Agilidad                           -                    1D3                -                 -                    -
+Pico de Cuervo               Hachas                    Fuerza                            10                1D8 + 1       Medio            -                    -
+Saif                                   Espadas                 Habilidad                         10                1D6 + 2       Medio            -                    -
+Takuba                              Espadas                 Habilidad                         10                1D8 + 1       Medio            -                    -
+Telek                                Cuchillos                Habilidad                          5                 1D3 + 2        Ligero            -                    -
+Terciado                         Cuchillos                Habilidad                          9                 1D6 + 1       Medio            -                    -
+Tripa                                  Mazas                     Fuerza                             8                 1D4 + 2        Ligero            -                    -
+Nombre: Nombre que se le daba comúnmente al arma, aunque podía tener otros. Aquéllas que aparezcan con un asterisco (*) junto al nombre
+son armas que requieren el uso de ambas manos para ser utilizadas correctamente.
+Competencia: Competencia de Armas por la que se debe tirar para atacar y defenderse con ella.
+Característica Base: Característica de la que depende el arma y su competencia, y con la que se calcula su bonificador al daño.
+Fuerza Mínima: Valor mínimo en FUE que se requiere para usar el arma correctamente. Por cada punto de FUE menos se obtiene un -1 a las
+tiradas de daño, -1 a las tiradas de Iniciativa con ese arma y un penalizador de -5% a su competencia.
+Daño: Dados que se utilizan para calcular la cantidad de PD que inflige en un ataque.
+Tamaño: Volumen aproximado del arma, ya sea Ligero (armas pequeñas para una mano), Medio (armas de una mano con mayor peso) o
+Pesadas (armas de dos manos).
+Recarga: Número de acciones que se necesitan para recargar el arma. Sólo lo poseen las armas de proyectiles.
+Alcance: Distancia corta, media y larga que posee el arma (si aparece FUE es que su alcance se calcula con la Fuerza del que las lanza: consulta
+la sección sobre distancia, pág. 126). Sólo lo poseen las armas de proyectiles o a distancia. 
+132
+=== PAGE 135 ===
+ParsIV  04/10/13  14:33  Página 133
+Pars 4: De Re Militari
+contra las mazas es la mitad de lo normal, redonde-
+ando hacia arriba.
+a Clava: La maza menos estilizada de todas, pues
+se trata poco más que de un garrote, una gruesa
+rama o un trozo de madera, al que a veces se le
+añaden de forma tosca clavos o filos cortantes en su
+extremo superior.
+a Dabus: Una maza de madera sólida de una vara de longi-
+tud con refuerzos metálicos en su extremo, un arma muy
+utilizada por guardianes y porteros de casas adineradas o
+por los muccadin de las aljamas judías. Fue muy utilizada
+en los reinos peninsulares, especialmente en la zona domi-
+nada por los musulmanes.
+a Mangual: Denominado en ocasiones “látigo de armas”, el
+mangual se compone de un mango de madera de una longi-
+tud de media vara en cuyo extremo cuelga una cadena con
+una bola metálica con pinchos. Se trata de otra variante mili-
+tar del mayal, que permitía además desarmar fácilmente al
+contrincante, al usar la cadena para atrapar el arma del con-
+trario (el uso de la acción ofensiva Desarmar no requiere la
+división del porcentaje de la competencia por la mitad). Al
+igual que el arco largo, es un arma extremadamente rara en
+la Península, aunque fue muy utilizada en Centroeuropa.
+a Martillo de Guerra: Aunque no se trata más que de una va-
+riante militar de la herramienta, el martillo de guerra, lla-
+mado también “lucerna”, podía convertirse en un arma muy
+eficaz en manos de un soldado entrenado en su manejo. La
+longitud del arma variaba entre media y una vara, y eran con-
+sideradas armas muy ligeras, hasta tal extremo que muchos
+guerreros las tenían como sus armas principales.
+a Mayal de Armas: El mayal es una herramienta campesina
+utilizada para desgranar cereales y consta de dos mangos
+de madera unidos por una cadena, uno de ellos de menor
+tamaño, que es el que se usa para golpear la mies. El mayal
+de armas es, por tanto, una variante militar de dicha herra-
+mienta con refuerzos metálicos y, en ocasiones, una cabeza
+de armas con pinchos para producir un mayor daño. Era
+un arma campesina utilizada principalmente por milicia-
+nos de baja extracción social y requiere el uso de ambas
+manos para su manejo.
+a Maza: Aunque se trata de una de las armas más antiguas co-
+nocidas por el hombre, en la época de Aquelarre la maza se
+fabrica completamente con hierro, plomo o incluso bronce,
+un cabezal de sección circular o poligonal y una longitud
+aproximada de 0,5-0,7 varas. A lo largo del Medievo irá evo-
+lucionando rápidamente hasta convertirse en la llamada
+“maza de armas”, mucho más efectiva en combate, por lo que
+la maza normal prácticamente dejó de utilizarse.
+a Maza de Armas: Llamada también “maza barreteada”, la
+maza de armas es una evolución de la maza a la que se le
+añaden unos apéndices de hierro o acero en el cabezal —
+llamados “cuchillas” o “aletas”—, dispuestos de tal forma
+que forman filos puntiagudos. Eran armas fáciles de fabri-
+car y con muy bajo coste, lo que permitía armar a todo
+un ejército de manera barata.
+133
+=== PAGE 136 ===
+ParsIV  04/10/13  14:33  Página 134
+Aquelarre: Juego de rol demoníaco medieval
+cuentran más cercanas al Pirineo, pues el bastón
+a Maza Pesada: Una variante de la maza de
+de combate es de procedencia francesa —allí lo lla-
+armas de mayor longitud y peso, causa un
+man canne de combat—. No es más que un bastón de
+mayor nivel de daño cuando se utiliza, aunque
+madera de aproximadamente una vara de longitud, caracte-
+requiere el uso de ambas manos para poder ser
+rística ideal para pasar desapercibido, pues nadie creería que
+utilizada con propiedad.
+es posible utilizarlo de forma eficaz en combate.
+a Tripa: Un arma muy rústica y primitiva, y por tanto muy
+a Bordón: Palo de madera utilizado por los caminantes o pe-
+extendida entre la población campesina. Se trata de un saco
+regrinos para ayudarse en su marcha. Suele tener una lon-
+de cuero lleno de arena o piedras que se sujeta con una tira
+gitud de entre 1,7 y 2 varas, con un grosor inferior al del
+del mismo material, ya que para usarla se volteaba de
+cayado y a menudo reforzado con metal en ambas extremi-
+forma similar a las hondas y se hacía caer sobre el enemigo
+dades. Aunque no se trata de su función principal, muchos
+(lo que además impide que pueda usarse para parar un ata-
+son los caminantes que han perfeccionado su uso como
+que). Estuvo muy extendida por las zonas montañosas de
+arma ofensiva.
+la Península, especialmente en las tierras meridionales de
+Castilla, Navarra y Aragón.
+a Cayado: Es una vara gruesa de madera de una longitud
+entre 1,7 y 2 varas, a menudo con la parte superior curvada.
+PALOS (AGILIDAD)
+Aunque puede usarse como arma improvisada, su labor
+Armas de villano
+principal es ayudar al pastor a prender y retener las reses
+Esta categoría incluye todas aquellas armas de gran longitud
+que custodia.
+—entre 1,5 y 2 varas, incluso más—, fabricadas en madera y
+que requieren el uso de las dos manos para usarlas con pro-
+PELEA (AGILIDAD)
+piedad, como los cayados, bastones de combate o los bordones
+Armas de villano, soldado y noble
+de los peregrinos, que a pesar de no tratarse de armas en el es-
+Más que una competencia de armas, Pelea es una competencia
+tricto sentido de la palabra, podían llegar a ser utilizados de
+de combate sin armas: siempre que queramos que nuestro per-
+esa forma en caso de necesidad.
+sonaje ataque a otro y se encuentre desarmado usará esta com-
+Al igual que ocurre con las lanzas, la longitud de los palos per-
+petencia. Por eso, siempre que usemos un puñetazo, una
+mite alcanzar a los atacantes antes que ellos a nosotros, otor-
+patada, un cabezazo, un rodillazo, etc., tiraremos por Pelea
+gándonos un +10 a la Iniciativa en el primer asalto, aunque, al
+para comprobar el éxito o fracaso de nuestro ataque, y con el
+contrario que las lanzas, a partir del asalto siguiente, las tiradas
+fin de agrupar todas las clases de ataques posibles hemos aña-
+de Iniciativa se realizan de la forma normal, sin modificadores
+dido una línea en la Tabla de Armas llamada “Pelea” que re-
+o penalizadores. Por desgracia, el material en que están cons-
+coge ese tipo de acciones. Recuerda además que el bonificador
+truidos los palos, la madera, los hace especialmente frágiles
+al daño de un ataque realizado con Pelea se basará en FUE, y
+frente al resto de las armas: si realizamos una parada con un
+no en AGI, aunque ésta sea su característica base.
+palo y recibimos un ataque crítico, el arma se nos romperá, a
+Además, la competencia de Pelea permite llevar a cabo todo
+no ser que nuestra tirada de parada también sea crítico o que
+tipo de trucos sucios durante un combate que no están recogi-
+el arma que nos atacó fuera de tamaño ligero.
+dos en el resto de competencias: tirar arena a la cara del con-
+a Bastón de Combate: Se trata de un arma que sólo puede en-
+trario, derribarlo, morder, etc.
+contrarse en aquellas zonas de Navarra y Aragón que se en-
+Armaduras y Escudos
+RAS describir las armas vamos a hacer lo mismo con duras (pág. 136). Esto se debe a que se trata de vestimentas
+las protecciones que pueden utilizar los personajes que, en la mayor parte de los casos, no están pensadas para el
+para defenderse de los ataques de sus enemigos, ya uso cotidiano, sino para una situación de combate puntual
+T
+se trate de armaduras para vestir o de escudos para (como una batalla, por ejemplo), pues suelen ser prendas poco
+interponer entre las armas del enemigo y uno mismo. confortables, muy pesadas y bastante incómodas. Además,
+debes tener en cuenta que alguien ataviado con armadura era
+considerado un guerrero preparado para el combate —de
+ARMADURAS
+forma similar a ver en la actualidad a un policía antidisturbios
+En Aquelarre denominamos armadura a cualquier tipo de ves-
+andando por la calle—, lo que no solía estar bien visto en ciu-
+timenta, del material que sea, que otorgue cierto tipo de pro-
+dades y feudos, ya que la persona podía ser confundida con
+tección a la persona que lo lleva. Todas ellas otorgan un
+un bandido, un impostor o incluso un invasor, y esto obligaría
+número determinado de puntos de Protección, que tal y como
+a las autoridades de la zona a actuar en consecuencia. La op-
+indicamos en el apartado de Daño (pág. 124) reducen los PD
+ción más sensata es ponerse la armadura cuando se vaya a
+recibidos por el personaje en esa misma cantidad, aunque a
+combatir, siempre y cuando haya tiempo, ya que equiparse
+cambio, muchas de ellas otorgan un determinado número
+con una armadura requiere tantos asaltos como puntos de Pro-
+de penalizaciones, como se refleja en la Tabla de Arma-
+tección posea.
+134
+=== PAGE 137 ===
+ParsIV  04/10/13  14:33  Página 135
+Pars 4: De Re Militari
+Pero, además, las armaduras cuentan con otro de gentes con poco dinero que gastar en pren-
+valor: la Resistencia, un valor numérico que repre- das de vestir. Cubre únicamente pecho y ab-
+senta la solidez de la armadura y que es diferente
+domen.
+para cada tipo. El valor de Resistencia que aparece en la Tabla
+a Ropas Gruesas: Aunque son en esencia unas
+de Armaduras (pág. 136) corresponde a una armadura de ese
+ropas de abrigo diseñadas para proteger del frío
+tipo nueva y recién terminada de fabricar, y conforme vaya
+usando para ello la lana, las pieles, el vellón o una
+perdiendo puntos, se irá desgastando y rompiendo hasta que
+mezcla de todo ello, también proporcionan una mínima
+llegue a 0 puntos, cuando quedará completamente inservible.
+protección contra el daño. Lo usan de forma habitual ple-
+Los puntos se van perdiendo al recibir golpes: cada vez que
+una armadura proteja a su usuario de un ataque, perderá tan- beyos y, usando materiales de mejor calidad, nobles, espe-
+tos puntos de Resistencia como PD recibidos haya absorbido
+cialmente en zonas de alta montaña o en buena parte de la
+—por tanto, los PD que afecten al usuario de la armadura no
+Península durante el invierno. Cubren todo el cuerpo, ex-
+se le restarán a la Resistencia—: por ejemplo, si llevamos una
+cepto la cabeza.
+cota de malla, que tiene 125 puntos de Resistencia y una Pro-
+tección de 5, y hemos recibido un ataque que provoca 8 PD, Armaduras Ligeras
+reduciremos en 5 la Resistencia y en 3 nuestros PV; si sólo re-
+Son aquéllas fabricadas con materiales flexibles, principal-
+cibimos 3 PD, se le restarán 3 puntos a la Resistencia. Pero,
+mente cuero. Son bastante ligeras y cómodas, al menos com-
+¡cuidado!, en caso de que recibamos un ataque crítico, nues-
+paradas con el resto, por lo que otorgan pocos
+tra armadura perderá tantos puntos de Resistencia como el
+penalizadores.
+daño total realizado.
+a Brazales: Protección de cuero curtido que se utiliza entre el
+Naturalmente, las armaduras se pueden reparar, lo que re-
+codo y la muñeca, muy habitual entre los arqueros —para
+quiere el trabajo de un artesano capacitado para ello que
+evitar rozaduras al usar el arco— y que a menudo se puede
+cuente con las herramientas adecuadas: consulta la Tabla de
+decorar mediante la técnica del repujado del cuero. Cubre
+Servicios Profesionales (pág. 511) para saber cuánto te cos-
+únicamente los brazos.
+tará una reparación de ese tipo o, si el personaje dispone de
+las herramientas y el equipo apropiado para hacerlo, podrá
+a Gambesón: La más sencilla de las armaduras propiamente
+hacerlo él mismo, aunque deberá hacer una tirada de Arte-
+dichas, una especie de túnica con mangas fabricada con
+sanía (Armería): por cada tirada con éxito que obtenga, au-
+cuero curtido o tela rellena de retales o pelo de caballo.
+mentará en +2D4 su valor de Resistencia. Eso sí, cualquier
+Cubre todo el cuerpo, excepto la cabeza.
+armadura o escudo que haya perdido más de dos terceras
+a Gambesón Reforzado: Se trata de un desarrollo del gam-
+partes de su Resistencia inicial, será completamente irrepa-
+besón normal, pero con añadidos de lona recia, cuero crudo
+rable (aunque no será inservible hasta que no llegue a 0 pun-
+—cuero que ha sido endurecido cociéndolo en agua, cera o
+tos de Resistencia).
+grasa— e incluso de metal en zonas de poca movilidad, lo
+Junto a la Resistencia, todas las armaduras cuentan con otra
+que refuerza aún más su protección. Cubre todo el cuerpo,
+característica, muy parecida a la que también tienen las
+excepto la cabeza.
+armas: la Fuerza mínima; pero, al contrario que ellas, las ar-
+maduras cuentan con un valor de todo o nada: si un perso-
+a Grebas de Cuero: La mayor parte de las armaduras com-
+naje tiene un valor en Fuerza igual o superior al que allí
+pletas, sean del tipo que sean, sólo protegen las piernas
+aparece, podrá usar su armadura de la manera normal, con
+hasta la rodilla, dejando expuesta toda la pierna hasta el to-
+las penalizaciones habituales pero nada más. Por otra parte,
+billo. Para otorgar una pequeña protección a esa zona se
+si su Fuerza está por debajo de ese valor, las penalizaciones
+crearon las grebas, fabricadas con cuero curtido. Sólo pro-
+se doblarán: si se tiene -2 a la Iniciativa, serán -4; si llevarla
+tegen las piernas.
+supone normalmente -25% a todas las competencias de Agi-
+lidad, ahora será un -50%, etc.
+a Velmez: Recibe este nombre el jubón de cuero que se usa
+debajo de otras armaduras más pesadas para amortiguar
+A continuación te describimos las armaduras que podrán en-
+los golpes recibidos, aunque también es posible usarlo de
+contrar los personajes en sus aventuras, agrupadas en tipos,
+forma independiente. Sólo cubre pecho y abdomen.
+una diferenciación que tiene poco efecto en el juego y sirve
+principalmente para ordenarlas y ayudar a su comprensión.
+Armaduras Metálicas
+Tras la descripción encontrarás la Tabla de Armaduras con los
+valores de todas ellas, incluyendo también los puntos de Pro- Armaduras fabricadas con metal, lo que las hace más resisten-
+tes que los tipos anteriores, aunque también bastante más pe-
+tección, Resistencia, Fuerza mínima y Penalizadores.
+sadas e incómodas. De todas formas, las armaduras metálicas
+Armaduras Blandas   
+están diseñadas de una manera muy flexible, permitiendo un
+grado de movilidad casi completa al usuario.
+Más que armaduras se trata de vestimentas que otorgan cierto
+nivel de protección a la persona que las lleva. No poseen pe-
+a Coracina: Denominada también “armadura de escamas”,
+nalizadores y son las únicas protecciones que se pueden llevar
+se trata de una túnica de tela sobre la que se colocan lámi-
+sin dar la sensación de vestir una armadura.
+nas de metal superpuestas a manera de escamas, y aunque
+a Pelliza de Piel: Una vestimenta rústica, pues se trata es más resistente que la loriga de malla, también es cierto
+de una prenda de abrigo fabricada con pieles de ani- que es mucho más incómoda de llevar. Cubre todo el
+males sin curtir, típica de campesinos, de bandidos y cuerpo, excepto la cabeza.
+135
+=== PAGE 138 ===
+ParsIV  04/10/13  14:33  Página 136
+Aquelarre: Juego de rol demoníaco medieval
+a Coraza Corta: Es una armadura ligera, a Grebas Metálicas: Un desarrollo de las grebas de
+muy ornamentada, que utilizan buena parte cuero que utiliza láminas de metal para proteger la
+de los nobles guerreros del reino nazarí de pierna entre la rodilla y el tobillo, usando cintas de
+Granada. Cubre únicamente pecho y abdo- cuero anudadas en la parte posterior. Sólo protegen las
+men y nunca se complementa con yelmo, sino con piernas.
+casco de metal.
+a Loriga de Malla: Utilizada desde la época romana, la
+a Cota de Placas: Denominada también “loriga de malla re- cota de malla vivió un resurgimiento durante la Edad
+forzada” ya que no se trata más que de un desarrollo de la Media. Fabricada con cientos de anillos que se unían me-
+loriga de mallas, que se refuerza usando láminas de metal diante remaches para formar una túnica que se cosía a
+en determinadas zonas rígidas, como antebrazos, pecho, un velmez o gambesón de cuero, la loriga de malla cu-
+etc., para aumentar la protección que ofrece. Cubre todo el bría el tronco, parte de los brazos y las piernas hasta las
+cuerpo, excepto la cabeza. rodillas, y fue probablemente la protección más común
+Tabla de Armaduras
+Nombre                         Tipo    Protección   Resistencia   FUE Mínima       Localizaciones         Penalizaciones
+Pelliza de Piel             Blanda          1                    15                      -               Pecho y abdomen      
+Ropas Gruesas            Blanda          1                    30                      -              Todo excepto cabeza      
+Brazales                        Ligera           2                    10                      -                        Brazos                
+Gambesón                   Ligera           2                    50                      -              Todo excepto cabeza      
+Gambesón Reforzado    Ligera           3                    75                      8              Todo excepto cabeza      - 25% a las Tiradas de Nadar.
+Grebas de Cuero         Ligera           2                    15                      -                        Piernas               
+Velmez                         Ligera           2                    25                      -               Pecho y abdomen      
+Coracina                     Metálica         5                   150                    10             Todo excepto cabeza      - 15% a las Competencias de Agilidad.
+                                                                                                                                                                    - 100% a las Tiradas de Nadar.
+Coraza Corta             Metálica         6                   125                    12             Pecho y abdomen      - 15% a las Competencias de Agilidad.
+                                                                                                                                                                    - 50% a las Tiradas de Nadar.
+                                                                                                                                                                    - 1 a las Tiradas de Iniciativa.
+Cota de Placas           Metálica         6                   150                    12             Todo excepto cabeza      - 25% a las Competencias de Agilidad.
+                                                                                                                                                                    - 100% a las Tiradas de Nadar.
+                                                                                                                                                                    - 2 a las Tiradas de Iniciativa.
+Grebas Metálicas      Metálica         4                    40                      8                       Piernas               - 5% a las Competencias de Agilidad.
+Loriga de Malla        Metálica         5                   125                    10             Todo excepto cabeza      - 10% a las Competencias de Agilidad.
+                                                                                                                                                                    - 75% a las Tiradas de Nadar.
+Arnés*                       Completa        8                   200                    15             Todo excepto cabeza      - 50% a las Competencias de Agilidad.
+                                                                                                                                                                    - 25% a las Competencias de Habilidad.
+                                                                                                                                                                    - 10% a las Competencias de Fuerza.
+                                                                                                                                                                    - 100% a las Tiradas de Nadar.
+                                                                                                                                                                    - 5 a las Tiradas de Iniciativa.
+Bacinete                        Casco           4                    40                      -                        Cabeza                
+Capacete                       Casco           2                    20                      -                        Cabeza                
+Celada                          Casco           6                    80                     12                       Cabeza                - 20% a las Competencias de Percepción.
+                                                                                                                                                                    - 2 a las Tiradas de Iniciativa.
+Gorro de Cuero           Casco           1                    20                      -                        Cabeza                
+Yelmo                            Casco           8                   100                    15                       Cabeza                - 25% a las Competencias de Percepción.
+                                                                                                                                                                    - 5 a las Tiradas de Iniciativa.
+Bardas                         Animal          5                   150                    30              Todo excepto patas       Reduce en 10 varas su movimiento.
+Bardas de Vaqueta     Animal          2                    75                     25              Todo excepto patas       Reduce en 5 varas su movimiento.
+Nombre: Nombre habitual por el que es conocida esa armadura.
+Tipo: Tipo en el que se encuadra la armadura.
+Protección: Puntos de Protección que otorga la armadura al usuario y que se restan del número de PD que reciba de un ataque.
+Resistencia: Puntos máximos de Resistencia que posee la armadura y que irá perdiendo conforme vaya recibiendo golpes.
+Fuerza Mínima: Valor de Fuerza mínima que debe poseer el usuario de la armadura. Si no llega a ese nivel, sus penalizadores se doblarán.
+Localizaciones: Localizaciones de Impacto que se encuentran protegidas por la armadura.
+Penalizadores: Penalizadores que sufrirá un usuario de una armadura, según su peso y rigidez.
+*  Para levantarse del suelo con un arnés puesto es necesario pasar una tirada de FUEx3.
+136
+=== PAGE 139 ===
+ParsIV  04/10/13  14:33  Página 137
+Pars 4: De Re Militari
+en los reinos peninsulares de los siglos XIV y
+XV. Cubre todo el cuerpo, excepto la cabeza.
+Armaduras Completas
+CONSILIUM ARBITRO: SOBRE
+Al igual que las metálicas, las armaduras completas también
+ARMAS Y ARMADURAS
+están fabricadas con metal, pero son más rígidas y gruesas, lo
+Si ya conocías las ediciones anteriores de Aquelarre habrás
+que otorga mayor protección a costa de un elevado peso, una
+observado que hemos eliminado la regla que prohibía el
+enorme rigidez y un número considerable de penalizadores a
+uso de determinados tipos de armas y armaduras a ciertas
+sus usuarios.
+profesiones, ya que esta edición intenta dar un mayor pro-
+a Arnés: Llamado también “armadura blanca”, “~completa”
+tagonismo al desarrollo del personaje sin ceñirle a una pro-
+o “~de placas”, el arnés es el mayor perfeccionamiento de la
+fesión de por vida. Ello no quiere decir que ahora
+cualquier personaje pueda vestirse un arnés o una loriga,
+armadura medieval, una protección formada por numerosas
+blandir un montante y pasearse por el reino como Pedro I
+piezas metálicas unidas entre sí mediante correas, hebillas,
+por su casa, ni mucho menos. Como ya hemos indicado
+clavos y ganchos y que, junto con el uso de un yelmo, prote-
+anteriormente, las armas y armaduras son la vestimenta
+gía todo el cuerpo del usuario. Se trataba de armaduras ex-
+del guerrero, las “herramientas” que usa en su oficio y que
+traordinariamente pesadas, utilizadas exclusivamente en
+son, al mismo tiempo, un símbolo de su profesión: sólo
+duelos y batallas y con un precio exorbitante, así que sólo los
+ellos las usaban y se las ponían cuando debían entablar
+nobles con mayor nivel económico podían permitirse el lujo
+batalla; no se les ocurriría dormir, pasear por la ciudad, to-
+de tener una. Con el tiempo, el arnés se transformó en una marse un trago en una taberna o viajar por un territorio
+que no fuera enemigo llevándolas puestas. Por eso, si uno
+vestidura de gala para militares y perdió su función defen-
+de los personajes insiste en llevar un arma que no perte-
+siva. Cubre todo el cuerpo, excepto la cabeza.
+nece a su condición social o vestir una armadura de forma
+permanente, especialmente si no pertenece a la nobleza,
+Cascos
+aquéllos que se encuentren con él le tomarán por una per-
+Ninguna de las armaduras descritas anteriormente otorga pro-
+sona que busca problemas, por un loco o, en el peor de los
+tección a la cabeza, así que, si se quiere resguardar también esa
+casos, por un bandido o un enemigo, y tomarán las medi-
+zona, se debe contar con un casco. De todas formas, consulta
+das oportunas, como detenerlo, apresarlo o incluso ejecu-
+la descripción de los cascos, ya que no todos pueden combi-
+tarlo en público. Avisado queda.
+narse con determinados tipos de armadura.
+Otra idea que suele correr por las mentes siempre imagi-
+a Bacinete: La más habitual de las protecciones para la ca-
+nativas de los personajes es la de combinar varias arma-
+duras: “¿Por qué no puedo ponerme un gambesón
+beza, un casco de metal semiesférico que protege también
+reforzado debajo de la loriga reforzada, además de un ca-
+las orejas, aunque no posee ni visera ni gola y que puede
+pacete por debajo del yelmo?”. La respuesta es que es fí-
+llevarse con cualquier tipo de armadura —aunque combi-
+sicamente imposible hacerlo: las armaduras son
+nar un arnés con un bacinete quedaba un pelín vulgar—.
+vestimentas gruesas, aunque algunas pesen menos que
+Recibía también el nombre de “almete” o, si posee alas me-
+otras, y llevar una encima de otra sólo conseguiría que las
+tálicas, de “sombrero de hierro”.
+rompiéramos al tratar de forzarlas o incluso que nos da-
+ñásemos a nosotros mismos —¿has tratado de ponerte
+a Capacete: Un casco similar al bacinete, pero mucho más ba-
+una zapatilla deportiva sobre unas sandalias, por ejem-
+rato y ligero, pues está fabricado con cuero duro, lo que
+plo?—. De todas formas, es cierto que ahora aparecen al-
+otorga una mínima protección en la cabeza. Aunque se
+gunas piezas de armaduras que sólo cubren
+puede combinar con cualquier tipo de armadura, no suele
+determinadas partes, como las grebas o los brazales, que
+estar bien visto llevar capacete con armaduras metálicas o
+sí se pueden combinar con otras armaduras, tal y como
+completas. se detalla en su descripción. En caso de hacerlo, la protec-
+ción de ambas armaduras no se sumará, sino que se usará
+a Celada: Un casco de metal muy similar al yelmo, pero que
+la mayor de las dos; por otro lado, lamentándolo mucho,
+deja libre la parte inferior de la cara —boca, barbilla y cue-
+las penalizaciones, si es que las hay, sí que se sumarán:
+llo—, lo que aligera su peso y permite que se lleve con una
+por ejemplo, es posible vestir una loriga de malla refor-
+mayor comodidad. Sólo puede combinarse con una cora-
+zada (protección 6) con unas grebas metálicas (protección
+4), pero la protección que tendríamos en ambas piernas
+cina, una loriga o un arnés.
+sería de 6, que es la mayor de las dos, y no de 10, y, al
+a Gorro de Cuero: Se trata básicamente de un sombrero fa-
+mismo tiempo, a las penalizaciones habituales de la loriga
+bricado con cuero que proporciona una ínfima protección
+de malla reforzada habría que unirles las de las grebas
+en la cabeza. Al igual que ocurre con las ropas gruesas, el metálicas, con lo que en lugar de tener -25% a todas las ti-
+radas de competencias de Agilidad, ahora tendríamos un
+gorro se considera una prenda de vestir habitual, y no una
+bonito -30%. Puedes preguntarte qué sentido tiene enton-
+armadura como tal. Se puede combinar con cualquier ar-
+ces utilizar ambas protecciones: si se da el caso de que
+madura blanda o ligera.
+nuestro enemigo nos intentara atacar en una zona no cu-
+a Yelmo: Sin lugar a dudas, el único casco que otorga una
+bierta por la loriga (o sea, por debajo de la rodilla) se en-
+contraría con la greba metálica con 4 de protección. 
+protección completa a la cabeza es el yelmo, pues sus dis-
+tintas partes y piezas —cimera, collar, babera y visera— re-
+cubren completamente el cráneo, la cara y el cuello del
+137
+=== PAGE 140 ===
+ParsIV  04/10/13  14:33  Página 138
+Aquelarre: Juego de rol demoníaco medieval
+portador. Se solía diseñar muchas veces con una rra—. Cubre todo el cuerpo del animal, ex-
+apariencia puntiaguda en la parte frontal e incluso cepto las patas.
+con formas de dientes de sierra en su parte inferior,
+a Bardas de Vaqueta: Es una variante de las bardas
+para aumentar la ferocidad del guerrero que lo por-
+metálicas diseñadas para proteger la caballería ligera,
+taba. A pesar de todo, el yelmo merma en gran medida la
+pues estaban construidas con cuero de ternera curtido,
+percepción de la persona que lo lleva, pues la visera le im-
+denominado “vaqueta”, por lo que pesaban menos y per-
+pide ver correctamente y los oídos quedan obstruidos por
+mitían al caballo moverse más rápido, aunque al igual
+el metal que los rodea; de todas formas, es posible subir la
+que con las bardas metálicas, sólo un caballo entrenado
+visera, lo que reduce la penalización a las competencias de
+en los avatares de la guerra permitiría que se le pusiera
+Percepción de -25% a -15%, aunque también disminuye la
+esta protección encima. Cubre el cuerpo de todo el ani-
+Protección de 8 a 7 puntos. El yelmo sólo puede combinarse
+mal, excepto las patas.
+con una coracina, una cota de placas, una loriga o un arnés,
+nunca con armaduras inferiores.
+ESCUDOS
+Armaduras para Animales
+En este apartado vamos a describir los diferentes tipos de escu-
+dos que pueden encontrarse los personajes de Aquelarre, cuya
+Este último epígrafe cubre todas las armaduras y protecciones
+utilidad básica, a pesar de estar construidos con diferentes for-
+que han sido diseñadas exclusivamente para animales, en con-
+mas, tamaños y materiales, es la misma en todos ellos: detener
+creto para las caballerías.
+los ataques que vayan lanzados hacia el portador del escudo. Al
+a Bardas: Armadura especialmente diseñada para caballos
+igual que con las armaduras y las armas, tras la descripción en-
+que, mediante la unión de diferentes piezas metálicas
+contrarás una Tabla de Escudos (pág. 140) con sus características,
+distribuidas de forma similar a la coracina, otorgan una
+en la que aparece recogido también su valor de Resistencia, ya
+buena protección a la caballería. Las bardas eran una
+que al igual que las armaduras, los escudos también se irán de-
+protección especialmente cara, ya que debía ajustarse
+teriorando conforme vayan recibiendo golpes —las reglas son
+para poder ser utilizada en un caballo en concreto, que
+parecidas a las de las armaduras: por cada 2 PD recibidos por el
+además debía estar especialmente entrenado en su uso escudo, reduce en 1 punto su Resistencia; en el momento que el
+—o sea, debía haber sido criado como caballo de gue- escudo llegue a 0 puntos en Resistencia, se romperá; además, al
+138
+=== PAGE 141 ===
+ParsIV  04/10/13  14:33  Página 139
+Pars 4: De Re Militari
+igual que ellas, se pueden reparar los puntos de Re-
+sistencia perdidos—. Otra de las características a tener
+en cuenta a la hora de usar un escudo es la Fuerza mí-
+nima, que se usa de forma similar a las armas: por cada punto
+de Fuerza del portador por debajo de la Fuerza mínima para ese
+escudo, reducirá en -5% su porcentaje en la competencia de Es-
+cudos. Por último, incluimos un apartado de Notas, que recoge
+algunos aspectos concretos sobre determinados escudos, como
+las penalizaciones que poseen todos aquéllos que vayan arma-
+dos con uno, o algunos bonificadores a la competencia de Escu-
+dos que poseen algunos escudos debido a su gran tamaño.
+a Adarga: Escudo ligero de cuero de origen islámico —su
+nombre real es addarqa— que suele tener forma ovalada o
+de corazón. Al tratarse de un escudo fabricado con un ma-
+terial tan ligero sólo es capaz de absorber los primeros 3 PD
+de los ataques que consiga detener: el resto de los PD pasan
+directamente al brazo que porte el escudo. Contra ataques
+a distancia, la adarga sólo protege el brazo.
+a Broquel: Fabricado en madera recubierta de cuero, el bro-
+quel es un escudo pequeño, utilizado casi exclusivamente
+por tropas de milicia, debido a su bajo coste. En caso de re-
+cibir un ataque a distancia sólo puede cubrir el brazo que
+porta el escudo.
+a Escudo de Madera: Es una variante del escudo de metal
+pero fabricado en madera, lo que lo hace más barato y más
+ligero, pero menos resistente. En caso de recibir un ataque
+a distancia, el escudo de madera cubre el brazo del escudo,
+el pecho y otra localización adyacente, ya fuera la cabeza o
+el abdomen.
+a Escudo de Metal: Era el escudo más común en los reinos
+cristianos, fabricado en madera y reforzado con metal, de
+forma rectangular con la parte inferior puntiaguda. Si se
+utiliza para defenderse de ataques a distancia, puede pro-
+teger el brazo del escudo, el pecho y otra localización ad-
+yacente, ya sea la cabeza o el abdomen.
+a Pavés: Escudo metálico de forma oblonga y mayor tamaño
+que el escudo de metal, capaz de proteger casi todo el cuerpo
+del portador de los ataques a distancia, a excepción de las
+piernas. Aunque al tratarse de un escudo pesado, limita las
+posibilidades de movimiento de la persona que lo lleva.
+a Rodela: Se trata de un escudo pequeño y metálico de forma
+redonda con una única asa, que utilizan sobre todo solda-
+dos a pie. En caso de recibir un ataque a distancia, puede
+cubrir el brazo que lo porta y el pecho.
+a Tarja: El escudo medieval de mayor tamaño y peso, capaz
+de cubrir todo el cuerpo del portador de las flechas y otros
+ataques a distancia, aunque limita especialmente su movi-
+lidad, por lo que suele ser usado por los soldados de van-
+guardia del ejército y así proteger a los compañeros que van
+tras ellos. Es imposible usarlo montado a caballo.
+Exemplum: Tras acabar con los bandidos y mientras se dirigen de vuelta
+a Burgos pensando que el día ya no podía ofrecerles más sorpresas,
+Lope e Ignotus se topan con dos viajeros, subido uno a un caballo y el
+otro acompañándole como paje, a los que saludan como Dios y la edu-
+cación mandan, recibiendo como respuesta el sonido inconfundible de
+139
+=== PAGE 142 ===
+ParsIV  04/10/13  14:33  Página 140
+Aquelarre: Juego de rol demoníaco medieval
+Tabla de Escudos
+Nombre               Resistencia FUE Mínima    Notas
+Adarga                         50                    5              Sólo puede absorber 3 PD: el resto pasa directamente al brazo que porta el escudo.
+                                                                               Contra ataques a distancia sólo protege el brazo.
+Broquel                        30                    5              Contra ataques a distancia sólo protege el brazo.
+Escudo de Madera       100                   8              Contra ataques a distancia protege el brazo, el pecho y otra localización 
+                                                                               (cabeza o abdomen).
+Escudo de Metal           150                  10             Contra ataques a distancia protege el brazo, el pecho y otra localización
+                                                                               (cabeza o abdomen).
+                                                                               - 25% a las Tiradas de Nadar.
+Pavés                           175                  12             - 15% a las Competencias de Agilidad.
+                                                                               - 50% a las Tiradas de Nadar.
+                                                                               - 2 a las Tiradas de Iniciativa.
+                                                                               Contra ataques a distancia protege casi todo el cuerpo, exceptuando piernas.
+                                                                               Otorga un +5% a la Competencia de Escudos.
+Rodela                          80                    8              Contra ataques a distancia protege el brazo y el pecho.
+Tarja                            200                  15             - 30% a las Competencias de Agilidad.
+                                                                               - 75% a las Tiradas de Nadar.
+                                                                               - 5 a las Tiradas de Iniciativa.
+                                                                               Es imposible usarlo a caballo.
+                                                                               Contra ataques a distancia protege todo el cuerpo.
+                                                                               Otorga un +10% a la Competencia de Escudos.
+Nombre: Nombre por el que es conocido el escudo.
+Resistencia: Puntos máximos de Resistencia que posee el escudo y que irá perdiendo conforme vaya recibiendo golpes.
+Fuerza Mínima: Puntos de Fuerza que debe poseer el portador como mínimo. Si no llega a ese mínimo, reducirá en -5% su competencia de Es-
+cudos por cada punto que tenga por debajo.
+Notas: Penalizadores, bonificadores y notas que recordar a la hora de usar el escudo.
+una espada desenvainada acompañada de un rugido cuando los via- prendido a Lope e Ignotus, así que a la hora de tirar Iniciativa éstos
+jeros se abalanzan de improviso contra ellos… dos últimos sumarán sólo 1D5 a su Agilidad. La Iniciativa de los com-
+Que mejor manera, pues, que utilizar esta infame emboscada para batientes queda, de la siguiente manera, ordenada de mayor a menor:
+ilustrar completamente las reglas aparecidas en este capítulo. Los par- Lope (23), Paje (22), Jinete (18), Ignotus (17). Comenzamos, pues,
+ticipantes en la batalla serán: con la declaración de intenciones, que se realiza en orden inverso: Ig-
+a Lope: Lleva encima su espada de mano, una daga, un escudo de metal, notus gastará sus dos acciones en sacar la espada y en realizar un
+una coracina y un bacinete. Su Agilidad es de 20, su competencia de ataque normal; el Jinete realizará una acción extendida, una carga
+Espada es de 30% (en realidad es 40%, pero le baja -10% por que a caballo contra Lope; el Paje realizará un movimiento normal para
+tiene Fuerza 10, dos puntos por debajo de la Fuerza mínima de la es- acercarse a Ignotus y un ataque normal; Lope, por último, gastará
+pada de mano, que es 12, y además le reduce en 2 las tiradas de Ini- una acción en sacar su espada y en esquivar la carga a caballo que se
+ciativa), la de Escudos y de Cuchillos es de 15% (el mínimo que le da le acerca.
+su Habilidad, pues nunca la había subido), un 20% en Esquivar Ahora procedemos con las acciones por orden de iniciativa. El primero
+(también el mínimo) y tiene 15 PV. en actuar es Lope, que a pesar de ser sorprendido, gracias a su rapidez,
+a Ignotus: Al igual que Lope lleva un escudo de metal, una espada de consigue desenvainar la espada antes de ser atacado. Su siguiente ac-
+mano y un bacinete, aunque su armadura es una loriga de malla. ción, la de Esquivar, la retrasa hasta que le ataque el Jinete.
+También lleva enfundada una extraña espada, aunque Lope nunca Le sigue el Paje que se acerca hasta Ignotus con su acción de movimiento
+ha visto que la haya desenvainado. Su Agilidad es de 15, su com- y le ataca con su bracamante: consigue un 14 en la tirada de Cuchillos
+petencia de Espada es de 90% y de Escudos 75%, y sus PV son 20. y alcanza al viejo soldado, que debido a la sorpresa, no puede defen-
+a Jinete: Porta una maza de armas, una loriga de malla y un baci- derse —tampoco había declarado una defensa—. El golpe alcanza a
+nete. Tiene una Agilidad de 15, una competencia de Mazas de 60%, Ignotus en la pierna derecha, haciendo un total de daño de 7 PD. Como
+en Cabalgar de 50% y 15 PV. Ignotus lleva una loriga de malla, que le ofrece una protección de 5
+a Paje: Lleva un gambesón, un gorro de cuero y un bracamante. Tiene puntos, el golpe sólo le inflige 1 PD —los 2 PD se dividen por la mitad
+una Agilidad de 20, una competencia en Cuchillos de 40%, en Es- al golpear una pierna—, y restamos además 5 puntos de Resistencia
+quivar de 45%, una Resistencia de 15 y 15 PV. a la loriga de malla.
+Comienza pues el combate… A continuación, llega el turno del Jinete que se abalanza contra Lope
+Primer Asalto: En este asalto, el jinete y el paje han sor- con la maza en la mano, espoleando su caballo. Aunque su porcentaje
+140
+=== PAGE 143 ===
+ParsIV  04/10/13  14:33  Página 141
+Pars 4: De Re Militari
+de Mazas es de 60%, se reduce a 50%, pues se encuentra (21+5), con lo que lo ejecuta antes que el Jinete. Su por-
+combatiendo sobre un caballo, pero al tratarse de un ataque centaje es de 90%, pero se reduce en -50% ya que es un
+por sorpresa (+25%) y desde un entorno superior (pues va sobre ataque rápido: tira los dados y obtiene un 19, un éxito.
+un caballo y Lope no) (+25%) aumentando en un +50%, haciendo un El Jinete decide usar su parada con el fin de detener
+total de 100% para impactar. Tira los dados y obtiene en la tirada un dicho ataque y hace una tirada por Mazas (que recordemos
+62%, lo que indica un éxito: Lope debe llevar a cabo su acción de Es- que se reduce a 50%, su porcentaje en Cabalgar): 08, más
+quivar si no quiere ser golpeado —y posiblemente destrozado— por que suficiente para parar el ataque. Además, al tratarse de un
+la carga, pero como además es atacado desde una posición superior, arma de tamaño medio en contra de un tamaño similar, nadie
+su esquivar de 20 queda reducida a -5%, por lo que la única manera pierde su arma.
+posible de tener éxito es teniendo un resultado entre 1 y 5. Para no Ahora sí llega el turno del Jinete, que lanza su ataque contra Lope: su
+arriesgarse decide gastar Suerte en la tirada, anunciándolo antes de porcentaje es de 50%, que sube hasta 75% por encontrarse en una po-
+lanzar los dados. El resultado es un 33%, lo que significa que ha fallado sición superior (+25%). Lanza los dados y saca un 26, un éxito. Lope
+la acción de Esquivar por 28 puntos (recordemos que con un 5 o menos, decide usar ahora su parada, que es un simple 5% (tiene 30% en Es-
+se obtiene un éxito automático en la tirada), pero como ha gastado padas, que se reducen en -25% por defender de un ataque desde una
+Suerte se quita 28 puntos de ésta y consigue evitar el espadazo del posición inferior): tira los dados y obtiene un 50%, un fallo. El ataque
+Jinete por los pelos. impacta sobre el pecho de Lope —te recordamos que el Jinete, al atacar
+Por último, le toca actuar a Ignotus: desenvaina su espada de mano desde un caballo tira 1D5 para determinar la localización de im-
+y le atiza un golpe al Paje. Tira los dados y obtiene un 09… ¡Un pacto—, y le hace 8 PD. Como Lope lleva una coracina, que tiene 5
+éxito crítico! El Paje no había declarado ninguna defensa, así que puntos de Protección —reducidos a 3, por usar una maza contra una
+el golpe es directo, impactando en el abdomen de su enemigo y re- armadura metálica— el daño total es de 5 PD, que resta de sus 15
+alizando el daño máximo sin tener en cuenta la armadura: el Paje PV. Los otros 3 los resta de los puntos de Protección de la coracina.
+acaba de recibir la nada despreciable cantidad de 13 PD, redu- Por último llega el turno de Ignotus con su ataque normal, que
+ciendo sus PV en la misma cantidad, con lo que queda con 2 PV, ahora tiene a 90%: ¡hoy está de suerte! ¡Un 06! ¡Otro éxito crítico!
+alcanzando el nivel de malherido y obligándole a llevar a cabo Y como el Jinete había gastado ya todas sus acciones para este asalto
+una tirada de RESx4 para no caer inconsciente: tira los dados y no puede defenderse, así que el golpe, que le impacta en el brazo
+saca un 77. Por poco, pero no lo suficiente: el Paje cae al suelo in- derecho, le provoca 13 PD sin tener en cuenta su armadura (que,
+consciente con una enorme herida que le atraviesa el estómago y por cierto, pierde también 13 puntos de Resistencia): el daño que
+que le provoca además una secuela (una cicatriz). Además, su recibe el Jinete es de 7 PD, reduciendo sus PV de 15 a 8, que aunque
+gambesón pierde también 13 puntos de Resistencia, pues acaba de no es suficiente para alcanzar el nivel de herido sí que le provoca
+sufrir también un ataque crítico. una secuela en la pierna, dejándosela malherido y sin posibilidad
+Termina así este primer asalto con el Paje fuera de combate y con de usarla durante varios días, e imposibilitándolo además para
+Lope e Ignotus enfrentados al Jinete. atacar. Al estar sobre el caballo, el DJ le pide que haga una tirada
+Segundo Asalto: Volvemos a repetir las tiradas de Iniciativa, ahora de Cabalgar para evitar caerse del caballo: tiene éxito y continúa
+de la forma normal, y los resultados son: Lope (28), Jinete (22) e sobre su montura.
+Ignotus (21). La declaración de intenciones se realiza pues en orden El asalto termina, por tanto, con el Jinete claramente en desventaja,
+inverso: Ignotus decide llevar a cabo dos ataques, uno normal y el otro pues la grave herida recibida en la pierna le impide desenvolverse
+rápido; el Jinete apuesta por un ataque normal y una parada; y Lope bien sobre su montura.
+decide también llevar a cabo un ataque normal y una parada. Co- En los siguientes asaltos, el Jinete abandona el combate, huyendo
+mienza el asalto en este orden: a lomos de su caballo mientras se agianta el dolor de la pierna.
+Primero Lope, con su 28 en Iniciativa. Lleva a cabo la tirada de ataque, Ignotus, mientras tanto, se pregunta quiénes eran estos dos ex-
+que es de 30%, y obtiene un 62, un fallo. Su parada la guarda para traños viajeros que les han atacado de improviso, y tras com-
+cuando sea necesaria. probar que la herida de Lope no es de gran importancia, se acerca
+Ahora debería ir el Jinete, con su Iniciativa 22, pero como Ignotus al Paje inconsciente, al que a buen seguro conseguirá sacarle un
+lleva a cabo un ataque rápido, su Iniciativa para dicho ataque es 26 nombre.
+141
+=== PAGE 144 ===
+ParsV  04/10/13  14:36  Página 142
+ 
+=== PAGE 145 ===
+ParsV  04/10/13  14:36  Página 143
+Liber 2:
+Metaphisica
+=== PAGE 146 ===
+ParsV  04/10/13  14:36  Página 144
+Aquelarre: Juego de rol demoníaco medieval
+Pars 5: 
+Mundus Rationalis
+et Irrationalis
+onde se hablará de la visión justa et equi-
+tativa de aqueste nuestro verdadero
+D mundo al tiempo que se comenta su distor-
+sión en el espejo de lo ilógico y la superstición.
+144
+=== PAGE 147 ===
+ParsV  04/10/13  14:36  Página 145
+Pars 5: Mundus Rationalis et Irrationalis
+—Ve a ver a un viejo sabio moro llamado Mijail Al-Aceytun. Está aquí
+El que acecha en la oscuridad
+mismo, en Burgos. Él tendrá las respuestas que buscas.
+La muchacha cogió la bandeja con la copa y, antes de dirigirse a la estancia de Lope,
+buscó lugar discreto, al abrigo de ojos inoportunos. Desconfiada, miró a izquierda y
+*    *    *
+derecha, y sólo entonces vertió la pócima en la copa. Removió un poco para que nada
+quedara raro en el vino, y ya iba a retomar su camino cuando notó el frío acero en su
+No quiso Lope ir solo ni Bonishah quiso que lo hiciera, que al olerse hechicería
+garganta y el susurro de una voz cascada junto a su oreja:
+pronto que se sumó a la aventura, en parte por amistad y en parte por su nada
+—Siempre me he preguntado qué pasaría si una mujer se tomara este bebedizo, creado
+secreto afán de aprender de las artes prohibidas. Vivía el moro junto con otros de
+para que las hembras dominen sobre los hombres… ¿Crees que te volverías necia,
+su condición, en la pequeña aljama de la ciudad, que es otro nombre para llamar a la
+mujer, como tantos otros a los que esta pócima del diablo ha revuelto las entendederas?
+morería, o barrio de los moros. Era hombre menudo, de barbita escasa y ojos vivos, a
+¿O simplemente morirías? Quizá andaras con suerte y nada sucediera, pero no sé yo
+los que la edad no había quitado el brillo de la astucia. Con todo, y pese a venir de
+si quieres hacer la cata…
+parte de Ignotus, se le empañaron ligeramente al ver el objeto que portaban, así como
+El natural bravío de la muchacha la incitaba a revolverse contra el que la amenazaba.
+el nombre que dijeron.
+Pero algo la contuvo. No había amenaza implícita en la voz, ni siquiera en el cuchillo,
+—Carmela Rodrigo… —suspiró— su nombre trae el hedor de la muerte. Muchos
+que de tan afilado le estaba arañando el cuello sólo por tragar saliva. No. Lo que en
+la tienen por bruja, pero no es tal, sino una hija del Diablo. Fruto de una unión
+verdad la aquietó es que el hombre no se andaba con bravuconerías. Mostraba a las
+contra natura, con un pie en la Tierra y otro en el Infierno, y por eso la reco-
+claras su jugada y sus intenciones: si ella no le complacía, simplemente le rebanaría el
+noceréis, pues su pie izquierdo no es tal, sino pata de pezuña hendida, a la
+cuello. Así que se mantuvo bien quieta y susurró:
+manera de los machos cabríos.
+—¿Qué queréis de mí? 
+—Y esta cuerda… ¿Qué es?
+—Para empezar, la verdad, María a la que llaman de Cañas, ladronzuela probada
+—Lo llaman “nudo maléfico”. Con el ritual adecuado, y fabricando con él una pequeña
+y ahora recién descubierta hechicera. Quiero saber todo sobre el negocio que te traes con
+soga se puede…
+la hechicería y con don Lope, y por qué lo tienes hechizado.
+No pudo decir más. Las sombras del rincón parieron algo más negro que la oscuridad
+—Por decir la verdad en estas tierras te queman, mi señor…
+misma, una especie de sombra de aspecto corpóreo que se lanzó contra el viejo musulmán
+—Y a los que me dicen mentiras, yo los desuello vivos. No quieras saber qué les hago
+y empezó sin transición a despedazarle. Los dos amigos quedaron horrorizados, mientras
+a los que permanecen mudos.
+el que les había hablado moría de modo tan horrible. Quiso Lope sacar su arma, pero
+Micael le retuvo el brazo:
+*    *    *
+—¡He leído sobre estas criaturas! ¡Es una sombra y sólo la magia puede herirla!
+Dicho esto, tiró de su amigo hacia fuera y él se dejó hacer…, pero se llevó antes de un
+—¿Hechizado? ¿Yo he andado hechizado?
+zarpazo la cuerda de pelo. Si tanta sangre había costado…, ¡que le costara a la bruja
+—Por mi fe que así ha sido, Lope —le hizo réplica Ignotus—. La tal María de Cañas
+un poco más!
+le robó a una bruja llamada Carmela Rodrigo, de la que era aprendiza, un objeto por
+La sombra se alzó sobre los restos ensangrentados de Mijail, olfateó el rastro de los dos
+ella muy apreciado, y viendo que sólo traía desventuras a su portador, a ti que te lo
+amigos, supo cómo localizarles y se dispuso a entrar en la oscuridad para comunicárselo
+endosó, colándose en palacio como una sirvienta más y dándote bebedizo que te sorbiera
+a su ama. Una voz lo detuvo.
+las entendederas, de modo que no te extrañaras de tenerlo entre tus cosas. Así, a ti te
+—Me parece que no, criatura del Infierno.
+han ido las desgracias que a ella le hubieran sucedido, tú has pasado por los peligros
+La sombra se giró. Había un humano en el umbral. Un humano con dos espadas, una
+que ella debía sufrir y has estado a punto de morir por lo que ella hizo.
+en el costado, otra en el hombro. Reaccionó como hacen los de su raza: sintiéndose in-
+—¿Y qué objeto es ése?
+vulnerable al no oler magia, se lanzó contra su nueva víctima, para entregar un alma
+Ignotus no respondió enseguida. Se dirigió al arcón de Lope y lo revolvió hasta dar con
+más al Infierno. 
+un trozo de cuerda, una cuerda muy extraña, pues era demasiado corta para hacer
+La espada surgió como un rayo de luz, que la hirió físicamente y la paralizó, antes de
+gran servicio y parecía tejida a base de pelo humano.
+partirla en dos. La sombra murió sin entender qué había sucedido. 
+—Éste es el objeto de tu desgracia. Tú has de decidir qué hacer con él.
+Ignotus guardó rápidamente la espada en su vaina, sobre el hombro. Por un segundo,
+—¿Sólo esto? —se sorprendió Lope—. No parece objeto poderoso…
+los susurros y siseos estuvieron muy, muy cerca.  
+—Te sorprenderías de las formas que adoptan los objetos realmente poderosos. Dicen
+en Génova que tienen el Santo Grial, y te muestran muy ufanos una copa de cristal
+verde, sin duda tallada a partir de una enorme esmeralda, o eso dicen. Pero yo, que
+L mundo de Aquelarre es muy parecido al nuestro,
+he visto el verdadero Grial, te digo que no era más que una simple copa de barro cocido,
+exactamente igual en muchos de sus aspectos: vivie-
+cosa natural cuando quien de ella bebía no era más que el hijo de un humilde carpintero. 
+ron los mismos reyes que en nuestra Edad Media, tu-
+—¿Visteis el Grial? —se sorprendió Lope.
+E vieron lugar las mismas batallas, se acordaron las
+—Lo tuve en las manos unos instantes, antes de entregárselo al Diablo. Pero ésa es
+mismas treguas y se extendieron las mismas plagas. Pero en
+historia vieja, y el problema que tienes en las manos es en cambio nuevo. Y como tuyo
+Aquelarre también han tomado forma todas las supersticiones y
+es, tuya es la decisión: ¿qué vas a hacer?
+las leyendas que anidaron en la mente de nuestros antepasados:
+Lope dudó un momento, y cuando lo hizo, sentenció su vida para siempre: en los bosques se ocultan las mandrágoras, las brujas se reúnen
+durante las noches entre las viejas piedras de claros olvidados y
+—No me agrada haber sido utilizado, pero menos aún que por culpa dello hayan
+el Diablo mantiene su vieja partida de ajedrez por las almas de
+tratado de matarme. ¿Quién puede darme razón de la tal Carmela Rodrigo?
+la humanidad. El mundo de Aquelarre se encuentra pues a caba-
+Ignotus sonrió con mueca lobuna. No se había engañado de la madera de la que estaba
+llo entre dos reinos, sirve a dos reyes al mismo tiempo: por un
+tallado el jovenzuelo, al igual que tampoco andaba errada sor Recareda. De tal palo,
+lado, la Historia, lo humano, la Racionalidad; por el otro, la
+tal astilla, y todo eso, y algunos han de cargar con maldiciones y trabajos, para que
+Fantasía, lo mágico, la Irracionalidad.
+otros puedan vivir en la ignorancia. Así que no se le quebró la voz cuando contestó:
+145
+=== PAGE 148 ===
+ParsV  04/10/13  14:36  Página 146
+Aquelarre: Juego de rol demoníaco medieval
+Racionalidad e Irracionalidad
+ODOS los personajes, jugadores o no, de Aquelarre Media, Santo Tomás de Aquino, afirmaba que existía una
+poseen dos características secundarias denomina- serie de “verdades naturales” a las que se podía acceder
+das Racionalidad (RR) e Irracionalidad (IRR), aun- por la razón y que la existencia de Dios era la mayor mues-
+T
+que se trata en realidad de una sola, pues el valor tra de “verdad natural” que podía haber; la cosa no termi-
+de ambas características se basa el uno en el otro: si sube uno naría aquí, pues cuatro siglos después, Descartes demostró
+de los dos, el otro se reduce en la misma cantidad. El valor con su famoso Cogito, ergo sum (“Pienso, luego existo”) que
+que se posee nos indica la posición o la postura que man- Dios existía, y no sería hasta bien entrado el siglo XIX que
+tiene el personaje ante la dualidad Historia-Fantasía que el positivismo científico desterrara a la religión y a la fe del
+rodea el mundo de Aquelarre. Entre los humanos, la suma de mundo racional.
+RR e IRR es siempre constante, un 100%; da igual la puntua-
+Debe quedar claro, por tanto, que todos los personajes ju-
+ción que tengamos en las dos, siempre y cuando la suma de
+gadores de Aquelarre conocen la existencia de Dios, pues al
+ambas sea 100. Las criaturas irracionales, los ángeles y los
+tratarse todos ellos de criaturas racionales —en contrapo-
+demonios no poseen un mínimo ni un máximo estipulado
+sición a las irracionales, de las que luego hablaremos— no
+en sus valores de RR o IRR, y la única regla que siguen es
+pueden negar verdad tan evidente. Otra cosa es que el PJ
+que la suma de ambas debe ser del 100% —un demonio
+decida ponerse del lado de Dios, que se una a las legiones
+puede tener, por tanto, un 250% en IRR, aunque eso impli-
+infernales o que, como solía ocurrir en la mayor parte de
+caría tener un -150% en RR—. En el caso de los humanos, sin
+los casos, adopte una actitud escéptica no ante la existencia
+embargo, sí que existen unos valores máximos y mínimos
+de Dios, sino ante la idea de un Dios que se inmiscuya en
+que no podrán sobrepasar sin recurrir a la magia o a la fe: la
+la vida de los hombres. Por tanto, todos los personajes con
+RR nunca podrá aumentarse por encima del 100% ni redu-
+un alto porcentaje en Racionalidad pueden ser o no perso-
+cirse por debajo del -100%; la IRR, por otra parte, no ofrece
+nas devotas, pero lo que está claro es que consideran la
+tantos problemas, ya que puede aumentarse hasta el 200%,
+magia y la superstición el producto de una mente igno-
+aunque no puede reducirse por debajo del 0%. Esta diferen-
+rante, débil o directamente demente, lo que les proporciona
+cia se debe a la propia naturaleza humana, que pertenece al
+una gran resistencia a la magia, producto de su misma in-
+mundo Racional, lo que, además, les impide lanzar hechizos
+credulidad hacia ella.
+sin utilizar componentes —véase el capítulo de Magia, pág.
+En el otro lado de la escala se encuentra su contrapartida,
+155—, una imposición que no poseen las criaturas irraciona-
+la Irracionalidad, que representa una visión completamente
+les, pues para ellas el uso de la magia es algo natural e in-
+alejada de lo racional, una mirada ilógica, misteriosa y caó-
+trínseco y no necesitan, por tanto, usar componentes en sus
+tica al mundo que le rodea, capaz de presentir lo mágico y
+hechizos.
+fantástico en cada uno de los aspectos del mundo, reve-
+Sabemos, por tanto, los valores que pueden tener nuestros per-
+lando verdades que van más allá de lo que nuestros senti-
+sonajes en RR y en IRR pero ¿qué significan realmente estas
+dos son capaces de percibir, pues detrás de lo que nuestro
+características? Es una cuestión complicada, pues su verda-
+raciocinio puede ver, oír o tocar se oculta un mundo difícil-
+dero alcance trasciende las propias reglas y se adentra en los
+mente alcanzable para nosotros, humanos hijos de la razón,
+peligrosos campos de la Filosofía. De todas formas, trataremos
+pero que gracias a determinadas herramientas, como los he-
+de resumírtelo lo mejor que podamos.
+chizos y sus componentes mágicos podemos llegar a con-
+La Racionalidad representa una visión lógica de la vida, templar e incluso a utilizar.
+una concepción del mundo razonable, ordenada, científica,
+Debe quedar claro que dentro del campo de la Irracionali-
+histórica y humana: todo lo que rodea al personaje puede
+dad podemos encontrar no sólo la magia, sino también la
+ser medido utilizando sus sentidos, y lo único verdadero
+locura, el mito, la noche y, como contraposición a un Dios
+es lo que podemos tocar, lo cotidiano, lo que nos han ense-
+racional, nos encontramos a un Diablo irracional, que
+ñado nuestros mayores, verdades tan evidentes que sería
+campa a sus anchas por el mundo de la IRR, congregando a
+imposible no creer en ellas: tras la noche llega el día, tras
+su alrededor a demonios, diablillos, criaturas infernales va-
+el otoño el invierno, tras la vida la muerte. Y dentro del ám-
+rias, acólitos y, como no podía ser menos, aquelarres. Por
+bito de la Racionalidad se acoge la noción de la luz, del día
+tanto, aquellos humanos que deseen recorrer el camino de
+y, por tanto, de Dios —o de Allah o Yahveh—, del cielo, el
+la magia y la brujería deberían ir pensando en aumentar su
+paraíso y la fe. Para nosotros, lectores del siglo XXI, puede
+Irracionalidad, pues una mayor creencia supone también
+parecer un tanto extraño ese hermanamiento entre religión
+un mayor control sobre ella, aunque también implica —todo
+y razón, acostumbrados como estamos buena parte de nos-
+gran poder posee un reverso tenebroso— una mayor vulne-
+otros a la inclusión de la religión en el campo de lo metafí-
+rabilidad a sus efectos.
+sico, lo mitológico o incluso lo imaginario, pero no ocurría
+Por último, debemos advertir al lector que en ningún mo-
+así en el Medievo, ni mucho menos. En la Edad Media la
+mento hemos hablado de nociones absolutas del bien y del
+existencia de un Dios era considerada una verdad tan evi-
+mal, pues las características de Racionalidad e Irracionali-
+dente que era inverosímil pensar lo contrario. Por ejem-
+dad no tienen nada que ver con ellas: ni los seguidores de
+plo, uno de los más grandes filósofos de la Alta Edad
+146
+=== PAGE 149 ===
+ParsV  04/10/13  14:36  Página 147
+Pars 5: Mundus Rationalis et Irrationalis
+la RR son todos unos santos ni aquéllos que si-
+guen la senda de la IRR son gente perversa y ma-
+ligna. La bondad y la maldad la representa el
+jugador mediante las acciones de su personaje y
+no puede medirse ni con estas características ni
+con ninguna otra.
+GANANCIAS Y PÉRDIDAS
+DE RR/IRR
+Las características de RR e IRR no son fijas, sino variables —en
+ocasiones, muy variables— y, al ser contrapuestas, la ganancia
+de porcentaje en una de ellas implica, inevitablemente, una pér-
+dida en la otra. Y viceversa, claro. Lo que también significa,
+como puedes imaginar, que aquellos motivos que producen
+una modificación en una de las dos características son inversa-
+mente proporcionales a los que modifican la otra, como vas a
+poder observar ahora mismo.
+La Irracionalidad aumenta siendo testigo de las maravillas
+de su campo: constatando la existencia de criaturas irracio-
+nales, observando —o sufriendo— los efectos de los hechi-
+zos mágicos, asistiendo a celebraciones del mundo irracional
+—como aquelarres o invocaciones— o tropezándose con una
+caterva de demonios. Por otro lado, la Racionalidad aumen-
+tará siempre que nos demos una vuelta por el lado más di-
+vino y racional del mundo: contemplando extasiados la
+celebración de un milagro, asistiendo estupefactos a la apa-
+rición de una criatura angelical, visitando lugares con una
+fuerte impronta divina —que no son, ni mucho menos, co-
+rrientes— o incluso eliminando a las criaturas irracionales
+de una manera civilizada y ordenada —o sea, sin magias ni
+brujerías—. Para que puedas hacerte una idea de las ganan-
+cias que obtendremos en una u otra característica, consulta
+la tabla de la página siguiente, que el Director de Juego de-
+bería utilizar como guía para asignar otro tipo de ganancias
+en sus aventuras si así lo considera conveniente; advierte
+además que algunas ganancias no son automáticas, sino que
+exigen que el PJ tenga una puntuación mínima en la carac-
+terística afectada o incluso que falle una tirada de la misma
+(una manera como otra cualquiera de comprobar si al per-
+sonaje le afecta lo suficiente la visión observada como para
+modificar su RR/IRR).
+Queremos hacer constar, para finalizar, tres notas importantes
+sobre la ganancia y la pérdida de puntos en RR/IRR. La pri-
+mera de ellas es obvia: sólo aquellos hechizos, rituales de fe o
+criaturas que sean visibles como tales modificarán la RR o la
+IRR. De nada serviría, por tanto, contemplar a un brujo llevar
+a cabo un hechizo si éste no tiene efectos visibles que puedan
+hacernos variar nuestras opiniones. Por ejemplo, si vemos a
+una vieja curandera aplicar un ungüento sobre un herido y
+éste mejora ligeramente, nada visible nos indica que hay un
+hechizo de por medio; otra cosa sería que viéramos a la
+misma curandera echarse un ungüento por todo el cuerpo
+para salir volando a continuación, ya que en este caso sí que
+se vería reforzada nuestra IRR. De la misma manera, encon-
+trarnos con una criatura irracional que no lo parece a simple
+vista tampoco conllevaría aumento de IRR ni de RR en caso
+de acabar con ella sin utilizar la magia; otra cosa sería que a
+continuación la criatura demostrara poderes o rasgos que
+no es posible que pueda poseer un ser humano, en cuyo
+147
+=== PAGE 150 ===
+ParsV  04/10/13  14:36  Página 148
+Aquelarre: Juego de rol demoníaco medieval
+Tabla de Ganancias de RR/IRR
+Ganancias de RR:
+Ser testigo de un Ritual de Fe de Niveles 1 al 5.                            + 5 RR si se tiene RR 80 o menos
+Ser testigo de un Milagro (Ritual de Fe de Nivel 6).                     + 10 RR
+Ser testigo de un Exorcismo exitoso.                                               + 1D10 RR
+Ver a una criatura angelical (sólo las que pertenecen a una        + 1D10 RR si se falla una tirada de RR
+triada de la jerarquía celestial o a la hueste angélica).
+Eliminar a una criatura irracional utilizando sólo los rituales    + 2D10 RR
+de Confrontación o Exorcismo (sin armas ni magia).
+Resistir los efectos de un hechizo.                                                   + 5 RR
+Ser testigo o partícipe de la eliminación de una criatura             + 1D10 RR
+irracional sin utilizar la magia.
+Ganancias de IRR:
+Ver los efectos de un hechizo de vis 1 ó 2.                                      + 1 IRR si se tiene IRR 40 o menos
+Ver los efectos de un hechizo de vis 3 ó 4.                                      + 3 IRR si se tiene IRR 65 o menos
+Ver los efectos de un hechizo de vis 5.                                            + 5 IRR si se tiene IRR 80 o menos
+Ver los efectos de un hechizo de vis 6.                                            + 10 IRR si se tiene IRR 95 o menos
+Ver los efectos de un hechizo de vis 7.                                            + 15 RR si se tiene IRR 125 o menos
+Ver a una criatura del mundo Irracional.                                       + 1D10 IRR si se falla una tirada de IRR
+Ver a un demonio elemental.                                                            + 1D10 IRR si se falla una tirada de IRR con un penalizador de -50%
+Ver a un engendro del Infierno.                                                       + 1D10+2 IRR si se falla una tirada de IRR con un penalizador de -25%
+Ver a un Demonio Menor.                                                                 +2D10 IRR si se falla una tirada de IRR con un penalizador de -50%
+Ver a un Demonio Superior o al mismísimo Lucifer.                   +2D10 IRR si se falla una tirada de IRR con un penalizador de -100%
+148

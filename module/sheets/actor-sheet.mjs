@@ -135,8 +135,9 @@ export class AquelarreActorSheet extends foundry.appv1.sheets.ActorSheet {
 
     context.displayStatusEffects = (combat.statusEffects ?? []).map(effect => ({
       ...effect,
-      label: getStatusEffectLabel(effect.type),
-      locationLabel: getCombatLocationLabel(effect.location)
+      label: effect.label || getStatusEffectLabel(effect.type),
+      locationLabel: getCombatLocationLabel(effect.location),
+      durationLabel: Number.isFinite(Number(effect.remainingTurns)) ? `${Number(effect.remainingTurns)} asaltos` : ""
     }));
 
     context.combatPenaltySummary = this.actor.getCombatPenaltySummary?.() ?? [];
@@ -533,7 +534,14 @@ function getStatusEffectLabel(type) {
   const labels = {
     aturdido: "Aturdido",
     brazo_inutilizado: "Brazo inutilizado",
+    incapacitado_temporal: "Incapacitado",
+    inconsciente_temporal: "Inconsciente",
+    corazon_danado: "Corazón dañado",
     pierna_inutilizada: "Pierna inutilizada",
+    herido: "Herido",
+    malherido: "Malherido",
+    inconsciente: "Inconsciente",
+    muerto: "Muerto",
     incapacitado: "Incapacitado",
     moribundo: "Moribundo"
   };

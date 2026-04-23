@@ -6,7 +6,7 @@ import {
   postSimpleMessage,
   clampPercent,
   DIFFICULTY_MODS,
-  applyCriticalDamageBonus
+  getMaximumFormulaDamage
 } from "../combat/rolls.mjs";
 
 import {
@@ -245,6 +245,86 @@ function normalizeLocationKey(value) {
     .replaceAll("-", "_");
 }
 
+const HEALTH_STATE_EFFECT_TYPES = [
+  "herido",
+  "malherido",
+  "inconsciente",
+  "muerto",
+  "incapacitado",
+  "moribundo"
+];
+
+function getRawHealthStateData(currentPv, maxPv) {
+  const pv = Number(currentPv ?? 0);
+  const max = Math.max(0, Number(maxPv ?? 0));
+
+  if (max <= 0) {
+    return {
+      state: "sano",
+      label: "Sano",
+      lostPv: 0,
+      movementDivisor: 1,
+      damageBonusFactor: 1,
+      unableToAct: false
+    };
+  }
+
+  const lostPv = Math.max(0, max - pv);
+
+  if (pv <= -max) {
+    return {
+      state: "muerto",
+      label: "Muerto",
+      lostPv,
+      movementDivisor: null,
+      damageBonusFactor: 0,
+      unableToAct: true
+    };
+  }
+
+  if (pv <= 0) {
+    return {
+      state: "inconsciente",
+      label: "Inconsciente",
+      lostPv,
+      movementDivisor: null,
+      damageBonusFactor: 0,
+      unableToAct: true
+    };
+  }
+
+  if (lostPv >= Math.ceil((max * 3) / 4)) {
+    return {
+      state: "malherido",
+      label: "Malherido",
+      lostPv,
+      movementDivisor: 4,
+      damageBonusFactor: 0,
+      unableToAct: false
+    };
+  }
+
+  if (lostPv >= Math.ceil(max / 2)) {
+    return {
+      state: "herido",
+      label: "Herido",
+      lostPv,
+      movementDivisor: 2,
+      damageBonusFactor: 0.5,
+      unableToAct: false
+    };
+  }
+
+  return {
+    state: "sano",
+    label: "Sano",
+    lostPv,
+    movementDivisor: 1,
+    damageBonusFactor: 1,
+    unableToAct: false
+  };
+}
+
 function isMeleeEligibleWeapon(weapon) {
   if (!weapon || weapon.type !== "weapon") return false;
 
@@ -277,6 +357,202 @@ function getLocalizedInjuryFromHit(locationKey, finalDamage) {
   }
 
   return null;
+}
+
+async function evaluateFormulaTotal(formula = "1d10") {
+  const roll = await (new Roll(formula)).evaluate({ async: true });
+  return Number(roll.total ?? 0);
+}
+
+async function getSequelaFromHit(actor, locationKey, rawDamage, maxPv) {
+  const damage = Math.max(0, Number(rawDamage ?? 0));
+  const pvMax = Math.max(0, Number(maxPv ?? 0));
+  const threshold = Math.ceil(pvMax / 2);
+
+  if (!pvMax || damage < threshold) return null;
+
+  const location = normalizeLocationKey(locationKey);
+  const res = Math.max(1, Number(actor.system.characteristics?.res?.value ?? 10));
+  const roll = await evaluateFormulaTotal("1d10");
+
+  const result = {
+    triggered: true,
+    threshold,
+    roll,
+    location,
+    label: "Secuela",
+    description: "",
+    statusEffects: [],
+    setPvValue: null,
+    updates: {},
+    appliedChanges: []
+  };
+
+  const currentHab = Math.max(1, Number(actor.system.characteristics?.hab?.value ?? 10));
+  const currentAgi = Math.max(1, Number(actor.system.characteristics?.agi?.value ?? 10));
+  const currentFue = Math.max(1, Number(actor.system.characteristics?.fue?.value ?? 10));
+  const currentCul = Math.max(1, Number(actor.system.characteristics?.cul?.value ?? 10));
+  const currentCom = Math.max(1, Number(actor.system.characteristics?.com?.value ?? 10));
+  const currentAspect = Number(actor.system.secondary?.aspect?.value ?? 0);
+
+  const setCharacteristic = (key, currentValue, nextValue, label) => {
+    const finalValue = Math.max(1, Math.trunc(nextValue));
+    result.updates[`system.characteristics.${key}.value`] = finalValue;
+    result.appliedChanges.push(`${label}: ${currentValue} → ${finalValue}`);
+  };
+
+  const setAspect = (nextValue, label = "Aspecto") => {
+    const finalValue = Math.trunc(nextValue);
+    result.updates["system.secondary.aspect.value"] = finalValue;
+    result.appliedChanges.push(`${label}: ${currentAspect} → ${finalValue}`);
+  };
+
+  switch (location) {
+    case "brazo_derecho":
+    case "brazo_izquierdo":
+      if (roll <= 4) {
+        result.label = "Cicatriz";
+        result.description = "El golpe deja una cicatriz permanente en el brazo.";
+      } else if (roll <= 6) {
+        result.label = "Brazo malherido";
+        result.description = `El brazo queda inutilizado durante ${Math.max(1, 25 - res)} días.`;
+        result.statusEffects.push({ type: "brazo_inutilizado", label: "Brazo malherido", location });
+      } else if (roll <= 8) {
+        result.label = "Tendones rotos";
+        result.description = "Secuela permanente: -1 HAB.";
+        setCharacteristic("hab", currentHab, currentHab - 1, "HAB");
+      } else if (roll === 9) {
+        result.label = "Mano cortada";
+        result.description = "El personaje queda manco en esa mano.";
+      } else {
+        result.label = "Brazo cortado";
+        result.description = "El brazo queda amputado permanentemente. HAB se reduce a la mitad.";
+        result.statusEffects.push({ type: "brazo_inutilizado", label: "Brazo cortado", location });
+        setCharacteristic("hab", currentHab, Math.floor(currentHab / 2), "HAB");
+      }
+      break;
+
+    case "pierna_derecha":
+    case "pierna_izquierda":
+      if (roll <= 4) {
+        result.label = "Cicatriz";
+        result.description = "El golpe deja una cicatriz permanente en la pierna.";
+      } else if (roll <= 6) {
+        result.label = "Pierna malherida";
+        result.description = `La pierna queda inutilizada durante ${Math.max(1, 25 - res)} días.`;
+        result.statusEffects.push({ type: "pierna_inutilizada", label: "Pierna malherida", location });
+      } else if (roll <= 8) {
+        result.label = "Tendones rotos";
+        result.description = "Secuela permanente: el personaje queda cojo.";
+      } else if (roll === 9) {
+        result.label = "Pie cortado";
+        result.description = "Secuela permanente: -3 AGI y movimiento a la mitad.";
+        setCharacteristic("agi", currentAgi, currentAgi - 3, "AGI");
+      } else {
+        result.label = "Pierna cortada";
+        result.description = "La pierna queda amputada permanentemente. AGI se reduce a la mitad.";
+        result.statusEffects.push({ type: "pierna_inutilizada", label: "Pierna cortada", location });
+        setCharacteristic("agi", currentAgi, Math.floor(currentAgi / 2), "AGI");
+      }
+      break;
+
+    case "cabeza": {
+      if (roll <= 2) {
+        const rounds = await evaluateFormulaTotal("2d6");
+        result.label = "Conmoción";
+        result.description = `El objetivo queda aturdido durante ${rounds} asaltos y pierde la iniciativa automáticamente.`;
+        result.statusEffects.push({ type: "aturdido", label: "Conmoción", location, remainingTurns: rounds, notes: "Pierde la iniciativa automáticamente." });
+      } else if (roll <= 4) {
+        const aspectLoss = await evaluateFormulaTotal("1d6");
+        result.label = "Cicatriz";
+        result.description = `Secuela permanente: cicatriz facial (-${aspectLoss} Aspecto).`;
+        setAspect(currentAspect - aspectLoss);
+      } else if (roll === 5) {
+        result.label = "Nariz rota";
+        result.description = "Secuela permanente: -2 Aspecto y -25% Degustar.";
+        setAspect(currentAspect - 2);
+      } else if (roll === 6) {
+        result.label = "Lengua cortada";
+        result.description = "El personaje no puede hablar con normalidad.";
+      } else if (roll === 7) {
+        result.label = "Pierde una oreja";
+        result.description = "Secuela permanente: sordera parcial.";
+      } else if (roll === 8) {
+        result.label = "Pierde un ojo";
+        result.description = "Secuela permanente: tuerto o ceguera.";
+      } else if (roll === 9) {
+        const rounds = Math.max(1, 25 - res);
+        result.label = "Conmoción cerebral grave";
+        result.description = `El objetivo queda inconsciente durante ${rounds} asaltos; además sufre secuelas permanentes en Cultura y Comunicación.`;
+        result.statusEffects.push({ type: "inconsciente_temporal", label: "Conmoción cerebral grave", location, remainingTurns: rounds, notes: "No puede actuar mientras dure." });
+        setCharacteristic("cul", currentCul, Math.floor(currentCul / 2), "CUL");
+        setCharacteristic("com", currentCom, Math.floor(currentCom / 2), "COM");
+      } else {
+        result.label = "Muerte instantánea";
+        result.description = "El golpe en la cabeza mata al objetivo en el acto.";
+        result.setPvValue = -pvMax;
+      }
+      break;
+    }
+
+    case "torso":
+      if (roll <= 3) {
+        result.label = "Cicatriz";
+        result.description = "El golpe deja una cicatriz permanente en el pecho.";
+      } else if (roll <= 6) {
+        result.label = "Costillas rotas";
+        result.description = "Hasta sanar: movimiento y esfuerzos al 50%.";
+      } else if (roll === 7) {
+        result.label = "Daños internos";
+        result.description = "Secuela permanente: -1 RES.";
+        setCharacteristic("res", res, res - 1, "RES");
+      } else if (roll === 8) {
+        result.label = "Pulmones dañados";
+        result.description = "Secuela permanente: -2 RES y -2 FUE.";
+        setCharacteristic("res", res, res - 2, "RES");
+        setCharacteristic("fue", currentFue, currentFue - 2, "FUE");
+      } else if (roll === 9) {
+        result.label = "Corazón dañado";
+        result.description = "Si no recibe Sanar, morirá en 3 asaltos.";
+        result.statusEffects.push({ type: "corazon_danado", label: "Corazón dañado", location, remainingTurns: 3, notes: "Morirá al expirar si no recibe Sanar." });
+      } else {
+        result.label = "Lesión de columna";
+        result.description = "Herida catastrófica: puede provocar muerte instantánea o parálisis según el arma.";
+      }
+      break;
+
+    case "abdomen":
+      if (roll <= 4) {
+        result.label = "Cicatriz";
+        result.description = "El golpe deja una cicatriz permanente en el abdomen.";
+      } else if (roll <= 6) {
+        const rounds = Math.max(1, 25 - res);
+        result.label = "Desgarro";
+        result.description = `El objetivo queda incapacitado durante ${rounds} asaltos.`;
+        result.statusEffects.push({ type: "incapacitado_temporal", label: "Desgarro", location, remainingTurns: rounds, notes: "No puede actuar mientras dure." });
+      } else if (roll === 7) {
+        result.label = "Genitales destrozados";
+        result.description = "Secuela grave y permanente.";
+      } else if (roll === 8) {
+        result.label = "Daños internos";
+        result.description = "Secuela permanente: -1 RES.";
+        setCharacteristic("res", res, res - 1, "RES");
+      } else if (roll === 9) {
+        result.label = "Pelvis fracturada";
+        result.description = "Secuela permanente: -2 FUE, -2 AGI y el personaje queda cojo.";
+        setCharacteristic("fue", currentFue, currentFue - 2, "FUE");
+        setCharacteristic("agi", currentAgi, currentAgi - 2, "AGI");
+      } else {
+        result.label = "Columna afectada";
+        result.description = "Herida catastrófica: puede provocar muerte instantánea o parálisis según el arma.";
+      }
+      break;
+
+    default:
+      return null;
+  }
+
+  return result;
 }
 
 function getLocationLabel(locationKey) {
@@ -542,24 +818,70 @@ export class AquelarreActor extends Actor {
     return this.items.filter(i => i.type === "armor" && i.system.equipped);
   }
 
-  getArmorProtectionForLocation(location) {
-    const armors = this.getEquippedArmors();
-    if (!armors.length) return 0;
-
+  getEquippedArmorsForLocation(location) {
     const normalized = normalizeLocationKey(location);
+
+    return this.getEquippedArmors().filter(item => {
+      const armorLocation = normalizeLocationKey(item.system.location ?? "general");
+
+      return armorLocation === "general"
+        || armorLocation === normalized
+        || (armorLocation === "brazos" && ["brazo_izquierdo", "brazo_derecho"].includes(normalized))
+        || (armorLocation === "piernas" && ["pierna_izquierda", "pierna_derecha"].includes(normalized));
+    });
+  }
+
+  getPrimaryArmorForLocation(location) {
+    const matchingArmors = this.getEquippedArmorsForLocation(location);
+    if (!matchingArmors.length) return null;
+
+    return [...matchingArmors].sort((left, right) => {
+      const protectionDiff = Number(right.system.protection ?? 0) - Number(left.system.protection ?? 0);
+      if (protectionDiff !== 0) return protectionDiff;
+
+      return Number(right.system.resistance ?? 0) - Number(left.system.resistance ?? 0);
+    })[0];
+  }
+
+  getArmorProtectionForLocation(location) {
+    const armors = this.getEquippedArmorsForLocation(location);
+    if (!armors.length) return 0;
 
     return armors.reduce((sum, item) => {
       const protection = Number(item.system.protection ?? 0);
-      const armorLocation = normalizeLocationKey(item.system.location ?? "general");
-
-      const matches =
-        armorLocation === "general" ||
-        armorLocation === normalized ||
-        (armorLocation === "brazos" && ["brazo_izquierdo", "brazo_derecho"].includes(normalized)) ||
-        (armorLocation === "piernas" && ["pierna_izquierda", "pierna_derecha"].includes(normalized));
-
-      return sum + (matches ? protection : 0);
+      return sum + protection;
     }, 0);
+  }
+
+  async applyArmorWearForLocation(location, amount = 0) {
+    const armor = this.getPrimaryArmorForLocation(location);
+    if (!armor) return null;
+
+    const wear = Math.max(0, Number(amount ?? 0));
+    if (wear <= 0) {
+      return {
+        armor,
+        lost: 0,
+        broken: false,
+        resistanceAfter: Math.max(0, Number(armor.system.resistance ?? 0))
+      };
+    }
+
+    const currentResistance = Math.max(0, Number(armor.system.resistance ?? 0));
+    const resistanceAfter = Math.max(0, currentResistance - wear);
+    const broken = resistanceAfter <= 0;
+
+    await armor.update({
+      "system.resistance": resistanceAfter,
+      ...(broken && armor.system.equipped ? { "system.equipped": false } : {})
+    });
+
+    return {
+      armor,
+      lost: currentResistance - resistanceAfter,
+      broken,
+      resistanceAfter
+    };
   }
 
   getDefenseBonusFromEquipment(defenseSkillKey = "") {
@@ -579,16 +901,6 @@ export class AquelarreActor extends Actor {
     }
 
     return bonus;
-  }
-
-  addOrReplaceLocalizedStatusEffect(type, location = "general", label = "") {
-    const effects = this.getStatusEffects().filter(effect => {
-      if (effect.type !== type) return true;
-      return false;
-    });
-
-    effects.push(this.buildStatusEffect(type, location, label));
-    return effects;
   }
 
   getDifficultyMod() {
@@ -932,22 +1244,32 @@ export class AquelarreActor extends Actor {
     }
 
     const formula = String(weapon.system.damage || "1d3").trim() || "1d3";
-    const damageRoll = await rollFormula(this, formula, `Daño: ${weapon.name}`);
-
-    let total = Number(damageRoll.total ?? 0);
+    let damageRoll = null;
+    let total = 0;
     let criticalBonus = 0;
+    let criticalMaxDamage = null;
 
     if (critical) {
-      criticalBonus = applyCriticalDamageBonus(total);
-      total += criticalBonus;
+      criticalMaxDamage = getMaximumFormulaDamage(formula);
+      total = criticalMaxDamage;
+
+      await postSimpleMessage(this, `Daño crítico: ${weapon.name}`, [
+        `<strong>Fórmula:</strong> ${formula}`,
+        `<strong>Resultado:</strong> daño máximo (${criticalMaxDamage})`,
+        "La armadura no protege frente al impacto crítico."
+      ]);
+    } else {
+      damageRoll = await rollFormula(this, formula, `Daño: ${weapon.name}`);
+      total = Number(damageRoll.total ?? 0);
     }
 
     return {
       weapon,
       formula,
-      roll: damageRoll.roll,
-      baseDamage: Number(damageRoll.total ?? 0),
+      roll: damageRoll?.roll ?? null,
+      baseDamage: critical ? total : Number(damageRoll?.total ?? 0),
       criticalBonus,
+      criticalMaxDamage,
       totalDamage: total
     };
   }
@@ -1041,7 +1363,7 @@ export class AquelarreActor extends Actor {
 
       if (!canDefend) {
         defenseStateText = targetActor.isUnableToActInCombat?.()
-          ? "No se defiende (incapacitado)"
+          ? `No se defiende (${targetActor.getCurrentHealthStateData?.().label?.toLowerCase() ?? "fuera de combate"})`
           : "No se defiende (sin acciones)";
       } else {
         const wantsToDefend = await Dialog.confirm({
@@ -1227,12 +1549,20 @@ export class AquelarreActor extends Actor {
           return this.rollWeaponDamage(fakeWeapon, { critical: attackRoll.critical });
         })()
       : await this.rollWeaponDamage(weapon, { critical: attackRoll.critical });
-    const applied = await targetActor.applyDamageToLocation(damageData.totalDamage, hitLocation);
+    const applied = await targetActor.applyDamageToLocation(
+      damageData.totalDamage,
+      hitLocation,
+      { ignoreArmor: Boolean(attackRoll.critical) }
+    );
 
     const appliedStatusList = Array.isArray(applied.statusEffects)
       ? applied.statusEffects
           .map(effect => `<li>${effect.label ?? effect.type}${effect.location ? ` (${getLocationLabel(effect.location)})` : ""}</li>`)
           .join("")
+      : "";
+
+    const sequelaChangesList = Array.isArray(applied.sequela?.appliedChanges) && applied.sequela.appliedChanges.length
+      ? applied.sequela.appliedChanges.map(change => `<li>${change}</li>`).join("")
       : "";
 
     await ChatMessage.create({
@@ -1269,13 +1599,17 @@ export class AquelarreActor extends Actor {
               <tr><th>🎯 Ataque apuntado</th><td>${aimedLocation ? `${getLocationLabel(aimedLocation)} (${aimedAttackMod})` : "No"}</td></tr>
               <tr><th>📍 Localización</th><td>${getLocationLabel(hitLocation)}</td></tr>
               <tr><th>⚔️ Daño bruto</th><td>${damageData.totalDamage}</td></tr>
-              <tr><th>🛡️ Armadura absorbida</th><td>${applied.armorAbsorbed}</td></tr>
+              <tr><th>🛡️ Armadura absorbida</th><td>${attackRoll.critical ? "Ignorada por crítico" : applied.armorAbsorbed}</td></tr>
               <tr><th>🔥 Daño final</th><td>${applied.finalDamage}</td></tr>
               <tr><th>❤️ PV</th><td>${applied.pvBefore} → ${applied.pvAfter}</td></tr>
+              ${applied.sequela ? `<tr><th>🩹 Secuela</th><td>${applied.sequela.label} (1d10: ${applied.sequela.roll})</td></tr>` : ""}
+              ${applied.armorWear ? `<tr><th>⛓️ RES armadura</th><td>${applied.armorWear.armor.name}: -${applied.armorWear.lost} (restante: ${applied.armorWear.resistanceAfter})${applied.armorWear.broken ? " - rota" : ""}</td></tr>` : ""}
               ${shieldWear ? `<tr><th>🛡️ RES escudo</th><td>-${shieldWear.lost} (restante: ${shieldWear.resistanceAfter})${shieldWear.broken ? " - roto" : ""}</td></tr>` : ""}
               <tr><th>⚠️ Estado</th><td>${applied.state}</td></tr>
             </tbody>
           </table>
+          ${applied.sequela?.description ? `<p><strong>Detalle de secuela:</strong> ${applied.sequela.description}</p>` : ""}
+          ${sequelaChangesList ? `<div class="status-summary"><p><strong>Cambios permanentes aplicados</strong></p><ul>${sequelaChangesList}</ul></div>` : ""}
           ${appliedStatusList ? `<div class="status-summary"><p><strong>Estados aplicados</strong></p><ul>${appliedStatusList}</ul></div>` : ""}
         </div>
       `
@@ -1291,6 +1625,7 @@ export class AquelarreActor extends Actor {
       hitLocation,
       damageData,
       applied,
+      armorWear: applied.armorWear,
       shieldWear
     };
   }
@@ -1299,26 +1634,126 @@ export class AquelarreActor extends Actor {
     return this.getStatusEffects().some(effect => effect.type === type);
   }
 
+  getStatusEffect(type) {
+    return this.getStatusEffects().find(effect => effect.type === type) ?? null;
+  }
+
+  getCurrentHealthStateData() {
+    const currentPv = Number(this.system.secondary?.pv?.value ?? 0);
+    const maxPv = Number(this.system.secondary?.pv?.max ?? currentPv);
+
+    return getRawHealthStateData(currentPv, maxPv);
+  }
+
   isUnableToActInCombat() {
+    const healthState = this.getCurrentHealthStateData();
+
+    if (healthState.unableToAct) {
+      return true;
+    }
+
+    if (this.hasStatusEffect("inconsciente_temporal") || this.hasStatusEffect("incapacitado_temporal")) {
+      return true;
+    }
+
     if (this.hasStatusEffect("incapacitado") || this.hasStatusEffect("moribundo")) {
       return true;
     }
 
-    const currentPv = Number(this.system.secondary?.pv?.value ?? 0);
-    return currentPv <= 0;
+    return false;
   }
 
   getCombatPenaltySummary() {
     const summaries = [];
+    const healthState = this.getCurrentHealthStateData();
+
+    if (healthState.state === "herido") {
+      summaries.push({
+        key: "herido",
+        label: "Herido",
+        effects: [
+          "Movimiento a la mitad",
+          "Bonificador de daño a la mitad"
+        ]
+      });
+    }
+
+    if (healthState.state === "malherido") {
+      summaries.push({
+        key: "malherido",
+        label: "Malherido",
+        effects: [
+          "Movimiento a una cuarta parte",
+          "Sin bonificador de daño",
+          "Cada golpe: RES x4 o desmayo"
+        ]
+      });
+    }
+
+    if (healthState.state === "inconsciente") {
+      summaries.push({
+        key: "inconsciente",
+        label: "Inconsciente",
+        effects: [
+          "No puede actuar",
+          "Pierde 1 PV por asalto"
+        ]
+      });
+    }
+
+    if (healthState.state === "muerto") {
+      summaries.push({
+        key: "muerto",
+        label: "Muerto",
+        effects: [
+          "No puede actuar"
+        ]
+      });
+    }
+
+    const temporaryUnconscious = this.getStatusEffect("inconsciente_temporal");
+    if (temporaryUnconscious) {
+      summaries.push({
+        key: "inconsciente_temporal",
+        label: temporaryUnconscious.label ?? "Inconsciente",
+        effects: [
+          "No puede actuar",
+          Number.isFinite(Number(temporaryUnconscious.remainingTurns)) ? `Quedan ${temporaryUnconscious.remainingTurns} asaltos` : "Duración variable"
+        ]
+      });
+    }
+
+    const temporaryIncapacitated = this.getStatusEffect("incapacitado_temporal");
+    if (temporaryIncapacitated) {
+      summaries.push({
+        key: "incapacitado_temporal",
+        label: temporaryIncapacitated.label ?? "Incapacitado",
+        effects: [
+          "No puede actuar",
+          Number.isFinite(Number(temporaryIncapacitated.remainingTurns)) ? `Quedan ${temporaryIncapacitated.remainingTurns} asaltos` : "Duración variable"
+        ]
+      });
+    }
+
+    const heartDamage = this.getStatusEffect("corazon_danado");
+    if (heartDamage) {
+      summaries.push({
+        key: "corazon_danado",
+        label: heartDamage.label ?? "Corazón dañado",
+        effects: [
+          Number.isFinite(Number(heartDamage.remainingTurns)) ? `Morirá en ${heartDamage.remainingTurns} asaltos si no recibe Sanar` : "Mortal sin tratamiento"
+        ]
+      });
+    }
 
     if (this.hasStatusEffect("aturdido")) {
       summaries.push({
         key: "aturdido",
         label: "Aturdido",
         effects: [
-          "-25 al ataque",
-          "-25 a la defensa",
-          "-25 a esquivar"
+          "-50 al ataque",
+          "-50 a la defensa",
+          "-50 a esquivar"
         ]
       });
     }
@@ -1343,26 +1778,6 @@ export class AquelarreActor extends Actor {
       });
     }
 
-    if (this.hasStatusEffect("incapacitado")) {
-      summaries.push({
-        key: "incapacitado",
-        label: "Incapacitado",
-        effects: [
-          "Estado crítico"
-        ]
-      });
-    }
-
-    if (this.hasStatusEffect("moribundo")) {
-      summaries.push({
-        key: "moribundo",
-        label: "Moribundo",
-        effects: [
-          "Estado crítico"
-        ]
-      });
-    }
-
     return summaries;
   }
 
@@ -1372,9 +1787,9 @@ export class AquelarreActor extends Actor {
     let dodgeMod = 0;
 
     if (this.hasStatusEffect("aturdido")) {
-      attackMod -= 25;
-      defenseMod -= 25;
-      dodgeMod -= 25;
+      attackMod -= 50;
+      defenseMod -= 50;
+      dodgeMod -= 50;
     }
 
     if (this.hasStatusEffect("pierna_inutilizada")) {
@@ -1394,24 +1809,78 @@ export class AquelarreActor extends Actor {
       : [];
   }
 
-  buildStatusEffect(type, location = "general", label = "") {
+  buildStatusEffect(type, location = "general", label = "", options = {}) {
     return {
       type,
       location,
-      label: label || type
+      label: label || type,
+      remainingTurns: Number.isFinite(Number(options.remainingTurns)) ? Number(options.remainingTurns) : null,
+      notes: options.notes ?? ""
     };
   }
 
-  addOrReplaceStatusEffect(type, location = "general", label = "") {
+  addOrReplaceStatusEffect(type, location = "general", label = "", options = {}) {
     const effects = this.getStatusEffects().filter(effect => effect.type !== type);
 
-    effects.push(this.buildStatusEffect(type, location, label));
+    effects.push(this.buildStatusEffect(type, location, label, options));
 
+    return effects;
+  }
+
+  addOrReplaceLocalizedStatusEffect(type, location = "general", label = "", options = {}) {
+    const effects = this.getStatusEffects().filter(effect => effect.type !== type);
+
+    effects.push(this.buildStatusEffect(type, location, label, options));
     return effects;
   }
 
   removeStatusEffect(type) {
     return this.getStatusEffects().filter(effect => effect.type !== type);
+  }
+
+  async tickTimedCombatEffects() {
+    const effects = this.getStatusEffects();
+    if (!effects.length) {
+      return { expired: [], lethalExpired: [] };
+    }
+
+    const remainingEffects = [];
+    const expired = [];
+    let changed = false;
+
+    for (const effect of effects) {
+      const turns = Number(effect.remainingTurns);
+
+      if (Number.isFinite(turns) && turns > 0) {
+        const nextTurns = turns - 1;
+        changed = true;
+
+        if (nextTurns > 0) {
+          remainingEffects.push({ ...effect, remainingTurns: nextTurns });
+        } else {
+          expired.push(effect);
+        }
+
+        continue;
+      }
+
+      remainingEffects.push(effect);
+    }
+
+    if (changed) {
+      await this.update({ "system.combat.statusEffects": remainingEffects });
+    }
+
+    const lethalExpired = expired.filter(effect => effect.type === "corazon_danado");
+    if (lethalExpired.length) {
+      const maxPv = Number(this.system.secondary?.pv?.max ?? 0);
+      await this.update({ "system.secondary.pv.value": -Math.max(1, maxPv) });
+    }
+
+    return {
+      expired,
+      lethalExpired
+    };
   }
 
   async applyDamageToLocation(rawDamage, location, { ignoreArmor = false } = {}) {
@@ -1420,22 +1889,25 @@ export class AquelarreActor extends Actor {
 
     const armorAbsorbed = ignoreArmor ? 0 : this.getArmorProtectionForLocation(hitLocation);
     const finalDamage = Math.max(0, damage - armorAbsorbed);
+    const armorWearAmount = ignoreArmor ? damage : armorAbsorbed;
+    const armorWear = await this.applyArmorWearForLocation(hitLocation, armorWearAmount);
 
     const currentPv = Number(this.system.secondary?.pv?.value ?? 0);
     const maxPv = Number(this.system.secondary?.pv?.max ?? currentPv);
-    const newPv = Math.max(-999, currentPv - finalDamage);
+    let newPv = Math.max(-999, currentPv - finalDamage);
 
-    let state = "ileso";
-    if (newPv <= 0) state = "moribundo";
-    else if (newPv <= Math.ceil(maxPv / 4)) state = "incapacitado";
-    else if (finalDamage > 0) state = "herido";
+    const sequela = await getSequelaFromHit(this, hitLocation, damage, maxPv);
+    if (Number.isFinite(Number(sequela?.setPvValue))) {
+      newPv = Math.min(newPv, Number(sequela.setPvValue));
+    }
 
-    let statusEffects = this.getStatusEffects();
+    const healthState = getRawHealthStateData(newPv, maxPv);
+    const state = healthState.state;
 
-    if (state === "incapacitado") {
-      statusEffects = this.addOrReplaceStatusEffect("incapacitado", "general", "Incapacitado");
-    } else if (state === "moribundo") {
-      statusEffects = this.addOrReplaceStatusEffect("moribundo", "general", "Moribundo");
+    let statusEffects = this.getStatusEffects().filter(effect => !HEALTH_STATE_EFFECT_TYPES.includes(effect.type));
+
+    if (state !== "sano") {
+      statusEffects.push(this.buildStatusEffect(state, "general", healthState.label));
     }
 
     const localizedInjury = getLocalizedInjuryFromHit(hitLocation, finalDamage);
@@ -1447,13 +1919,28 @@ export class AquelarreActor extends Actor {
       );
     }
 
+    if (sequela?.statusEffects?.length) {
+      for (const effect of sequela.statusEffects) {
+        statusEffects = this.addOrReplaceLocalizedStatusEffect(
+          effect.type,
+          effect.location ?? hitLocation,
+          effect.label ?? effect.type,
+          {
+            remainingTurns: effect.remainingTurns,
+            notes: effect.notes
+          }
+        );
+      }
+    }
+
     await this.update({
       "system.secondary.pv.value": newPv,
       "system.combat.lastHitLocation": hitLocation,
       "system.combat.lastArmorAbsorbed": armorAbsorbed,
       "system.combat.lastRawDamage": damage,
       "system.combat.lastFinalDamage": finalDamage,
-      "system.combat.statusEffects": statusEffects
+      "system.combat.statusEffects": statusEffects,
+      ...Object.fromEntries(Object.entries(sequela?.updates ?? {}))
     });
 
     return {
@@ -1465,6 +1952,9 @@ export class AquelarreActor extends Actor {
       pvAfter: newPv,
       pvMax: maxPv,
       state,
+      healthState,
+      armorWear,
+      sequela,
       statusEffects,
       localizedInjury
     };
@@ -1494,7 +1984,11 @@ export class AquelarreActor extends Actor {
           await currentShield.update({ "system.equipped": false });
         }
       } else if (item.type === "armor") {
-        // Permitir múltiples armaduras, pero validar localizaciones si es necesario
+        const resistance = Math.max(0, Number(item.system.resistance ?? 0));
+        if (resistance <= 0) {
+          ui.notifications?.warn(`No puedes equipar ${item.name}: la armadura está rota (RES 0).`);
+          return;
+        }
       }
     }
 

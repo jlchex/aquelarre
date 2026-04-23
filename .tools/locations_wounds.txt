@@ -1,0 +1,1628 @@
+﻿=== PAGE 96 ===
+ParsII  04/10/13  14:24  Página 94
+Aquelarre: Juego de rol demoníaco medieval
+Tabla de Eventos
+1D100 Evento 1D100 Evento
+01 Encuentro Divino: El PJ ha sido testigo de un verdadero 71 – 80 Nube de Infortunio: Debido a una época de hambruna,
+milagro o de un hecho que ha sido tenido por tal en la re- carestía, epidemias o catástrofes de otra índole, los ingre-
+gión. Sea como sea, eso ha reforzado su fe y su RR au- sos mensuales del PJ se dividen entre 2 en este año (re-
+menta en +1D10. dondeando hacia abajo).
+02 – 03 Riquezas: El PJ aumenta de la noche a la mañana sus po- 81 – 84 Muerte en la Familia: Uno de los miembros de la familia
+sesiones, ya sea por una herencia, por un estupendo botín, del PJ (alguno de sus padres, hermanos o incluso su es-
+el encuentro casual de un tesoro, viejas deudas que son posa o uno de sus hijos, si es que los tiene) muere en este
+pagadas finalmente, etc. Lo importante es que el PJ suma intervalo de tiempo.
+1D10x500 maravedíes a su capital.
+85 – 87 Enemistad: El PJ se enfrenta a una persona con cierto
+04 – 05 Gran Amistad: El PJ hace buenas migas con una persona poder en la región (el cura, el tabernero del pueblo, un ca-
+con mucho poder en la zona en la que se encuentra, como pitán de la guardia, un mercader adinerado…) y se con-
+un alto cargo eclesiástico, el corregidor del rey o el señor vierte en su enemigo jurado.
+feudal de la región, y se convierte directamente en amigo 88 – 89 Gran Enemistad: Al igual que el evento Enemistad con la
+suyo. diferencia de que, en este caso, se trata de una persona con
+mucho poder, probablemente un alto cargo eclesiástico, el
+06 – 08 Aventura Amorosa: El PJ conoce a una persona especial
+corregidor del rey o el señor feudal de la región.
+—o al menos eso le parece a él—, así que si así lo desea el
+jugador (en este caso el DJ no puede imponer su criterio), 90 – 91 Descendencia: Si el PJ es de sexo masculino, deja emba-
+puede contraer nupcias y casarse. La esposa o marido pa- razada a una chica de la zona; si es mujer, la que se queda
+sará a ser generado como un PJ normal y corriente, pero embarazada es ella misma. Antes de que finalice el año,
+sólo se reparten 75 puntos entre sus características y no el PJ ya tiene otra boca que alimentar y posiblemente que
+tendrá puntos que asignar a sus competencias. El PJ ad- cuidar (si el personaje se hace cargo de él, usa la vergüenza
+quiere la vergüenza Compañero de Infortunios (pág. 63), Compañero de Infortunios para criar al bebé).
+pero también recibe como “dote” los ingresos mensuales
+92 – 93 Encuentro Irracional: El PJ se ha topado con una criatura
+de la pareja multiplicados x 5.
+irracional, ha contemplando los efectos de un hechizo o in-
+09 – 11 Maestro: El PJ conoce a una persona que está dispuesta a
+cluso ha asistido a un verdadero aquelarre, lo que ha refor-
+servir como maestro para mostrarle los secretos de una
+zado su creencia en la magia y su IRR aumenta en +1D10.
+competencia poco común (Alquimia, Conocimiento Má-
+94 – 95 Accidente: El PJ ha sufrido un grave accidente que le ha
+gico, Seducción, Escamotear, Juego, etc.), que pasará a en-
+dejado una cicatriz o algo peor. Tira 1D10 para determinar
+señarle una vez terminado el año de ejercicio de la
+la localización que sufre la secuela (pág. 100 para más in-
+profesión. Encontrar a un maestro no quiere decir que éste
+formación sobre secuelas).
+no pueda solicitar un pago por la enseñanza impartida.
+96 – 97 Guerra: La zona en la que vive el PJ ha sido asediada, ata-
+12 – 13 Conocimientos Lingüísticos: Además de empaparse
+cada o incluso destruida por soldados de otros reinos, al
+del idioma local, el PJ se relaciona con comerciantes,
+servicio de un noble enemigo o incluso por simples y crue-
+marineros o viajeros de otras ciudades o reinos, apren-
+les bandidos. En todo caso, el personaje perderá todas sus
+diendo a chapurrear sus lenguas. El personaje obtiene
+posesiones inmuebles (casas, granjas, tierras cultivables…)
+10 PAp para aumentar el idioma que decida el DJ y que
+y la mitad del dinero en metálico que atesore.
+todavía no conozca.
+98 – 99 Problemas con la Justicia: El PJ ha sido acusado de un de-
+14 - 15 Tiempo Libre: Durante este año, el PJ ha tenido
+lito, sea o no el verdadero culpable. Es apresado y juzgado:
+tiempo suficiente para entrenarse en una habilidad que
+consulta el apartado sobre justicia medieval (pág. 437), y
+no tiene nada que ver con su profesión. Ganas 10 PAp
+añade un modificador de +2 a la tirada de Juicio si el PJ
+adicionales para gastar exclusivamente en una compe-
+posee una profesión que pueda acarrear problemas de
+tencia a tu elección, siempre que cuentes con el bene-
+este tipo (ladrón, prostituta, brujo, pirata, bandido…). El
+plácito del DJ y expliques cómo la has entrenado o
+delito exacto por el que ha sido juzgado lo decidirá el DJ
+estudiado (nada de aumentarte Conocimiento Mágico
+basándose en la profesión del personaje y en la zona en la
+por la cara, por ejemplo).
+que se encuentra.
+16 – 20 Amistad: Similar al evento Gran Amistad, pero ahora se
+100 Enfermedad: El PJ contrae una enfermedad durante este
+trata de una persona que sólo cuenta con cierto grado de
+periodo: se considera que ha sido contagiado de forma
+poder en la región (el párroco, el tabernero del pueblo, un
+automática, así que deberá realizar la tirada de RESx3 de
+capitán de la guardia, un mercader adinerado…).
+manera inmediata y aplicar el resultado obtenido (con-
+21 – 30 Golpe de Fortuna: Debido a una buena cosecha, a la
+sulta el capítulo sobre salud y heridas para más informa-
+suerte, a la voluntad divina o al designio del Diablo, los
+ción, pág. 103). Tira otro 1D100 para averiguar de qué
+ingresos mensuales del PJ se multiplican por 2 en este año.
+enfermedad se trata exactamente:
+31 – 70 Tranquilidad absoluta: No ha ocurrido nada fuera de lo 01 – 50 Pulmonía.
+normal en estos días, lo que puede inquietar sobremanera 51 – 70 Enfermedad Venérea (siempre que la profesión
+al PJ, preguntándose si no será la calma antes de la tem- y los ánimos del PJ lo permitan; si no es así, será
+pestad. Y puede que así sea, ya que si el jugador ha con- una pulmonía).
+seguido este evento obteniendo un 66 en los dados, 71 – 80 Tétanos.
+¡felicidades! ¡La Suerte del Loco!: tira de nuevo y dobla los 81 – 90 Cólera.
+efectos del resultado obtenido (recordamos que nada mul- 91 – 98 Tifus.
+tiplicada por dos sigue siendo nada). 99 – 100 Peste Bubónica.
+94
+=== PAGE 97 ===
+ParsII  04/10/13  14:24  Página 95
+Pars 2: De Re Ludica
+o cómo ha ocurrido un Accidente) y establecer exacta-
+mente el contenido del evento para aquellos casos que
+permitan una elección entre varias opciones (como la
+competencia exacta que enseña el evento Maestro o
+quién se convierte exactamente en enemigo del PJ en el
+evento Enemistad).
+En determinados casos, la profesión que el personaje desem-
+peñe en este periodo de tiempo puede ser diferente a su profe-
+sión habitual, ya sea por las circunstancias que rodearan la última
+aventura que ha jugado —el noble local los convierte en soldados,
+los PJs se han echado al monte acosados por sus enemigos y viven
+como bandidos o cazadores, han terminado estudiando con un al-
+quimista que les está enseñando los secretos de la profesión…— o
+porque el jugador haya decidido cambiar de profesión de forma
+voluntaria —“Se acabó esto de ser prostituta. A partir de ahora voy
+a dedicarme a menesteres más honrados. Me haré ladrón…”—. En
+estos casos, los PAp conseguidos durante el periodo de ejercicio de
+la profesión se gastarán en las características primarias y secunda-
+rias de la profesión que actualmente posee, no la que tenían antes,
+y lo mismo ocurre con los ingresos mensuales. Pero nos gustaría
+dar un toque de atención a los DJ, ya que deben tener mucho cui-
+dado a la hora de autorizar a los jugadores a que decidan por su
+cuenta un cambio de profesión sin ofrecer una muy buena razón
+que lo permita, ya que la sociedad medieval era firme e inflexible:
+uno solía vivir y morir realizando el trabajo que había hecho toda
+su vida y, en la mayor parte de las ocasiones, toda la vida de sus
+ascendientes. Por ejemplo, como hemos dicho antes, una prostituta
+podía perfectamente pasar a ejercer de ladrón, un marinero podía
+convertirse en pirata de la noche a la mañana —muchos alternaban
+estos oficios según les convenía—, o un pastor o cazador arruinado
+podía liarse la manta a la cabeza y asaltar a los viajeros de los ca-
+minos para poder sobrevivir; pero otros cambios de profesiones
+no podían llevarse a cabo sin más, ya que requerían determinados
+conocimientos o contactos para ejercerlos: por ejemplo, se requiere
+cierto entrenamiento para desempeñar la profesión de médico, de
+alquimista o de bruja, y para poder entrar en un ejército, en un mo-
+nasterio o en la corte, también se necesita a conocidos que, al
+menos, sirvan de aval. Por eso, el Director de Juego siempre tendrá
+la última palabra en lo concerniente a cambios de profesión y sólo
+en circunstancias muy, pero que muy especiales, se debería permi-
+tir que un personaje pueda cambiar su profesión por otra que per-
+tenezca a una posición social diferente a la suya, exceptuando
+villano y campesino, cuyas profesiones se consideran, casi a todos
+los efectos, de la misma clase social.
+Exemplum: 
+El DJ informa al jugador que lleva a Lope de que va a pasar todo un
+año antes de comenzar la siguiente aventura que le tiene preparada, así que
+éste decide ejercer la profesión de cortesano de Lope durante este periodo de
+tiempo. Pasados los doce meses, Lope ha ganado 10 PAp que puede gastar en
+las competencias primarias y secundarias de cortesano y decide usarlos todos
+para aumentar un poco su porcentaje en Cabalgar, que tiene a su nivel más
+bajo, 15%: tras gastar los 10 PAp, ahora tiene 25%, que ya está un poco mejor.
+Pero claro, el DJ le indica al jugador que debe hacer una tirada en la Tabla de
+Eventos, para comprobar si este tiempo que ha pasado en la corte de Burgos le
+ha ocurrido algo importante a Lope: el jugador lanza los dados y obtiene un
+18, Amistad. El Director de Juego le informa de que en estos seis meses el cor-
+tesano ha entablado una especie de relación de amistad con una monja cis-
+terciense del monasterio de Las Huelgas que tiene cierta fama de santera y
+beata y que responde al nombre de sor Recareda Ibarréñez.
+95
+=== PAGE 98 ===
+ParsIII  09/10/13  17:20  Página 96
+Aquelarre: Juego de rol demoníaco medieval
+Pars 3: 
+Ars Medica
+onde se habla de la maravillosa arquitec-
+tura humana y de las muy grandes et posi-
+D bles formas de mandar las almas hacia las
+grandezas de la divinidad o a las profundidades del
+abismo insondable.
+96
+=== PAGE 99 ===
+ParsIII  09/10/13  17:20  Página 97
+Pars 3: Ars Medica
+Sombras de Mala Fortuna fuera mala compañía después de todo, que los
+amigos que se arriesgan a partirse la crisma pro-
+Ignotus andaba aparentemente ocioso como sesteando en
+pia para mirar de sanar la ajena, en verdad que
+el patio de armas. En realidad, andaba ojo avizor como
+son escasos.
+un aguilucho, estudiando a Lope, que entrenaba con un
+—Le salvó la vida. ¿Lo sabes? —le dijo más tarde
+soldado del castillo con espadas de madera. La cosa iba
+sor Recareda, monja hombruna ancha de hombros y
+como iba, que ninguno de los dos eran maestros de armas.
+larga de cuerpo, que tan viril la había hecho Dios que
+Con todo, el mozuelo se defendía, y devolvía al mesna-
+hasta sombra de barba tenía en las mejillas, y más bigotes
+dero casi tantos golpes como recibía, que bien llenos de-
+que un rey godo lucía—. El zagal hubiera muerto, de no
+berían andar ya ambos de cardenales. El soldado lanzó
+andar listo el judío.
+entonces un rugido como de animal, y los que aquello
+—¿Sanará?  —quiso saber Ignotus.
+presenciaban (incluido Lope), creyeron que era cosa de
+—Está en las manos de Dios… y en las mías, y ten por se-
+un golpe mal recibido, o que andaba ya harto el soldado
+guro que yo haré mi parte. Pero, Ignotus…
+de que un cortesanuelo lo vapulease. Hasta se asomó al-
+—¿Sí?
+guna que otra sonrisa. 
+—Tanta mala fortuna no es casual, y bien que lo sabes, que
+No fue así en el rostro de Ignotus. Pues la magia tiene un
+de estas cosas conoces más que yo. El zagal ha enfurecido a
+olor, como de metal quemado, que puede ser olfateado por
+alguien o algo, o simplemente se ha tropezado con quien no
+quien tiene las narices ya hechas al negocio. Y a magia
+debía. 
+apestaba, allí y en ese momento.
+—¿Puedes hacer algo por él?
+Aún rugía el soldado cuando, para pasmo de todos, dio un
+—Puedo rezar, que no es poco. Pero si lo que le ronda es lo
+par de pasos atrás, tambaleándose como borracho, soltó su
+que me temo, mejor búscale protección entre los herejes.
+espada de madera y desenvainó la buena, la de hierro, que
+—Hablaré con los cofrades. Gracias, vieja amiga.
+portaba en el cinto. Y con ella atacó al pobre Lope, que se
+—Ignotus… —susurró la monja a sus espaldas, cuando ya
+defendió más bien que mal, que aunque salió rasguñado
+iba a cruzar el umbral.
+logró a su vez desnudar su arma y responder al ataque. Los
+—¿Quieres algo más de mí?
+del patio reaccionaron a su vez, que siempre es mejor tarde
+—Quiero algo más para él. Parece hecho de la misma pasta
+que nunca, lanzándose contra el enajenado, y abatiéndolo
+que su padre… y que tú… y que yo en otros tiempos. De esa
+por la simple fuerza de su número.
+materia que te provoca una vida corta y una muerte dolo-
+Quedó pensativo Lope, y aún más Ignotus, el primero por
+rosa. No hace falta que me digas que su padre te ha enviado
+saber poco, el segundo por saber demasiado. Quiso el pri-
+para protegerle. Aplícate entonces, pues en verdad está en
+mero consultar con ese diablo de judío, pero andaba ence-
+peligro.
+rrado en la judería, con los otros asesinos de Cristo, que
+había cogido no sé qué enfermedad mala, y los muccadim
+que custodiaban la puerta no dejaban pasar a un gentil por
+L mundo de Aquelarre es un lugar cruel, implacable
+las buenas. Sanó el judío, y en ese tiempo se le olvidó a
+y violento, una época de grandes epidemias, de
+Lope el incidente, con la inconsciencia que da la juventud.
+guerras interminables, de escasez y hambruna, un
+Por suerte para él, no le pasó por alto al viejo Ignotus. mundo dominado por la muerte, siempre dispuesta
+E
+a bailar su macabra danza con obispos y herejes, con reyes y
+Fue días después, que el que fuera que andaba detrás de
+campesinos, con judíos y cristianos, pues ella es la conclusión
+tales hechicerías supo ser sutil. Y con ello, casi logra su ob-
+de todas las cosas y la que todo lo equilibra. Al fin y al cabo, la
+jetivo. Tuvo el caballo de Lope un sobresalto en una cacería,
+justicia no existe; sólo existe ella.
+como si viera algo invisible para los ojos de los demás, que
+Por todo ello, nuestros personajes deberán aprender a con-
+no es mala cosa producir ilusiones en los animales cuando
+vivir con la penuria, la enfermedad y la muerte, a la que
+contemplarán más de una vez en los ojos vacíos de los ca-
+no es la menor de sus virtudes el que no puedan hablar. La
+dáveres que pueblan los campos de batalla, en la piel des-
+cuestión es que Lope no supo mantenerse a lomos de su ate-
+carnada de los ahorcados en las encrucijadas de caminos,
+rrorizada montura, que bien que lo arrojó a tierra, con tan
+en el hedor que sobrevuela las carretas de los apestados o,
+mala fortuna que se despeñó el muchacho por una torren-
+de igual forma, en el filo de una espada, en la corrupción
+de los alimentos o en el olor amargo y ponzoñoso de un ve-
+tera, con gran descalabro por su parte. Acudió en su ayuda
+neno, pues también ellos pueden ser víctimas de la gua-
+el judío, con la presteza y la alarma que sólo dan la amis-
+daña de la señora muerte, como demostraremos a lo
+tad, y hubo Ignotus, a su pesar, de reconocer que quizá no
+largo de este capítulo.
+97
+=== PAGE 100 ===
+ParsIII  09/10/13  17:20  Página 98
+Aquelarre: Juego de rol demoníaco medieval
+Puntos de Vida
+OMO ya vimos en los capítulos anteriores, todos Para ayudarte a determinar de forma rápida en qué nivel de
+los personajes en Aquelarre poseen una caracterís- salud se encuentra exactamente un personaje, puedes consul-
+tica secundaria denominada Puntos de Vida —o tar la siguiente tabla, en la que ya aparecen calculados. En la
+C PV para abreviar—, cuyo valor inicial es igual a la Hoja de Personaje anota, junto a cada estado, los PV a los que
+Resistencia y que trata de reflejar el estado de salud del per- el personaje alcanza dicho estado: cuando los PV del personaje
+sonaje: si los tiene todos, estará sano como una manzana, y igualen o bajen lo indicado actualiza el estado del personaje
+conforme vaya perdiéndolos, su nivel de salud irá empeo- haciendo una marca en la Hoja de Personaje.
+rando hasta llegar a ese punto sin retorno que separa la Me-
+dicina de la Teología.
+Puntos de Vida   Sano  Herido  Malherido  Inconsciente Muerto
+          30               30       15             7                  0              -30
+Por tanto, cada vez que el personaje sufra algún tipo de herida,
+lesión o daño, proceda de la fuente que proceda—una caída,          29               29       14             7                  0              -29
+una quemadura, un veneno, la garra de un animal, el arma de
+          28               28       14             7                  0              -28
+un contrincante—, recibirá una cantidad determinada de Pun-
+          27               27       13             6                  0              -27
+tos de Daño (PD), más cuanto mayor fuera la herida recibida.
+          26               26       13             6                  0              -26
+Cada uno de esos PD elimina un PV, por lo que conforme vaya
+          25               25       12             6                  0              -25
+recibiendo PD se irán mermando paulatinamente sus capaci-
+dades, su movimiento y su salud de la siguiente forma:          24               24       12             6                  0              -24
+          23               23       11             5                  0              -23
+a Sano: El personaje tiene todos sus PV intactos y todavía no
+          22               22       11             5                  0              -22
+ha perdido ninguno.
+          21               21       10             5                  0              -21
+a Herido: El personaje ha perdido ya la mitad de sus PV, re-
+          20               20       10             5                  0              -20
+dondeando hacia arriba. A partir de ahora, su movimiento
+se verá reducido a la mitad, y lo mismo ocurre con la boni-          19               19        9              4                  0              -19
+ficación al daño, cuyas tiradas también se reducen a la
+          18               18        9              4                  0              -18
+mitad, redondeando hacia abajo (por ejemplo, si tiene +1D4
+          17               17        8              4                  0              -17
+de bonificación al daño y obtiene en su tirada un 2, se re-
+          16               16        8              4                  0              -16
+ducirá directamente a 1).
+          15               15        7              3                  0              -15
+a Malherido: El personaje ha perdido tres cuartas partes de
+          14               14        7              3                  0              -14
+sus PV, redondeando hacia arriba. En el momento de alcan-
+          13               13        6              3                  0              -13
+zar el nivel de malherido y cada vez que reciba más PD, de-
+          12               12        6              3                  0              -12
+berá realizar una tirada de RESx4: si la falla, se desmayará,
+          11               11        5              2                  0              -11
+perdiendo completamente el sentido durante 30 minutos
+          10               10        5              2                  0              -10
+menos su valor en RES —por ejemplo, si tiene 15 en RES, se-
+           9                 9         4              2                  0               -9
+rían 15 minutos— o hasta que una fuerte impresión —una
+           8                 8         4              2                  0               -8
+bofetada, un cubo de agua fría en la cabeza o una sacudida—
+le haga volver en sí. Si tiene éxito en la tirada podrá seguir
+           7                 7         3              1                  0               -7
+consciente, pero mientras se encuentre en el nivel de malhe-
+           6                 6         3              1                  0               -6
+rido su movimiento se verá reducido a una cuarta parte y
+           5                 5         2              1                  0               -5
+perderá completamente su bonificación al daño.
+           4                 4         2              1                  0               -4
+a Inconsciente: El PJ ha perdido todos sus PV y se encuentra
+LOCALIZACIONES DE IMPACTO
+a 0 o a un valor negativo. Cae inconsciente de forma auto-
+mática y, si sus PV son negativos, perderá 1 PV adicional
+En la mayor parte de las ocasiones, las heridas que recibe el per-
+cada asalto debido a las hemorragias internas o externas
+sonaje impactarán en una parte concreta de su cuerpo —por
+provocadas por las heridas. La pérdida de PV no se deten-
+ejemplo, un puñetazo en la mandíbula, una garra que rasga un
+drá hasta que no reciba las atención necesarias con la com-
+muslo o un hacha que corta un brazo—, lo que tiene una espe-
+petencia Sanar (véase más adelante el apartado sobre
+cial importancia, ya que algunas zonas de nuestro cuerpo son
+curación, pág. 110) o hasta su muerte. especialmente delicadas, mientras que otras pueden aguantar
+más daño sin ver resentida la salud general del personaje, y eso
+a Muerto: El personaje ha llegado a un nivel de PV negativos
+sin hablar de que podemos haber protegido más una zona que
+igual a su número máximo de PV positivos —por ejemplo,
+otra con una armadura o parapetándonos detrás de algún tipo
+si tenía 15 PV ha llegado a -15 PV—, momento en el que su
+de protección. Por tanto, para determinar exactamente dónde
+cuerpo se colapsa debido a la pérdida de sangre o a los
+tiene lugar una herida se debe tirar 1D10 y consultar la siguiente
+graves traumatismos y muere.
+tabla de Localizaciones de Impacto —hay una igual en tu Hoja
+98
+=== PAGE 101 ===
+ParsIII  09/10/13  17:20  Página 99
+Pars 3: Ars Medica
+exacto donde impacta, obtiene un 5, pecho. El soldado rasga
+de un espadazo la vestimenta de Lope y le cruza un costado
+CONSILIUM ARBITRO:
+con una herida no muy importante, pero sí dolorosa.
+El cortesano se ve obligado a dejar de lado también el arma
+ÚLTIMAS PALABRAS
+de madera y sacar su propia espada, con la que consigue herir
+Como puedes ver, y con las reglas en la mano, la
+al soldado en el brazo derecho: el daño realizado es de 10 PD, bas-
+muerte de un personaje siempre llegará mientras se
+tante bueno, pero al tratarse de un brazo, se reduce a 5 PD, y el sol-
+encuentra inconsciente, pero si el DJ lo considera
+oportuno puede permitir que un PJ o PNJ recupere
+dado pierde esa misma cantidad de PV. Por suerte para Lope, en el
+la consciencia segundos antes de fallecer para decir
+siguiente asalto consigue volver a acertarle, esta vez en el otro brazo, ha-
+sus últimas palabras, para ayudar con cierta infor-
+ciéndole sólo 6 PD, que se reducen a 3 PD al tratarse de una localización
+mación al resto de PJ o simplemente para maldecir
+de brazo. El soldado, que tiene 15 PV, ha perdido ya 8 con esas dos heridas,
+a los que lo mataron. En todo caso, el DJ no debería
+por lo que se encuentra a 8 PV: se considera que está herido, por lo que su
+abusar de ello y utilizarlo sólo en momentos espe-
+movimiento se ve reducido a la mitad, y sus tiradas de bonificación al
+cialmente dramáticos.
+daño se reducen a la mitad también. Pero además, al haber recibido en
+ambos brazos más PD que la mitad de su total de PV, que es 15, todas las
+competencias que se basan en Habilidad —como la de Espadas— se ven
+de Personaje, para que la tengas siempre a mano—: el resultado reducidas a la mitad  debido a la acumulación de heridas.
+obtenido nos indicará la parte del cuerpo que ha recibido el im-
+Por suerte para el soldado, varios de sus compañeros consiguen detenerlo
+pacto del ataque.
+al ver su extraño comportamiento. Mientras tanto Lope  barrunta para
+sí si el ataque del soldado no habrá sido consecuencia de algún maléfico
+Tabla de Localizaciones de Impacto
+hechizo, en cuyo caso sería buena cosa ir a hablar con su amigo, el alqui-
+                  1D10                      Localización
+mista judío.
+                      1                              Cabeza
+                      2                        Brazo Derecho Aunque en la mayor parte de los casos la Tabla de Localización
+de Impactos se utiliza de la forma que hemos descrito, en deter-
+                      3                       Brazo Izquierdo
+minadas ocasiones, el DJ se verá obligado a modificar tanto la ti-
+                   4 - 6                             Pecho
+rada como la Tabla de Localizaciones para poder representar en
+                   7 - 8                         Abdomen
+el juego aquellos casos excepcionales que se producen durante
+                      9                       Pierna Derecha
+los combates. Algunas de las situaciones que lo requieren son:
+                     10                     Pierna Izquierda
+a Personaje semioculto: Si uno de los personajes tiene parte del
+cuerpo oculto o resguardado detrás de un objeto, de un animal
+En caso de que un personaje reciba un impacto en la cabeza, los
+o de otro personaje, en caso de que la tirada de Localizaciones
+PD recibidos en ella —los que hayan atravesado la armadura
+nos indique una zona del cuerpo oculta, el ataque o el daño se
+que tengamos en esa localización— se verán multiplicados por
+producirá sobre el objeto o ser que se encuentra delante. Por
+2. De la misma manera, todos los PD que se realicen sobre pier-
+nas y brazos, y tras restar la armadura que proteja esa zona, se ejemplo, si atacamos a un jinete no podremos nunca alcanzarle
+dividirán entre 2, redondeando hacia arriba. Los ataques dirigi- en la pierna que se encuentra al otro lado del caballo, así que si
+dos a pecho y abdomen quedarán tal y como estaban, causando
+la tirada de Localización nos indica esa pierna, le habremos al-
+los mismos PD en todos los casos.
+canzado al caballo; si le disparamos una flecha a un enemigo
+resguardado detrás de una cerca de piedra, y del que sólo
+Además, deberemos llevar la cuenta de los PD que recibe el per-
+vemos sus brazos, pecho y cabeza, en caso de obtener otro re-
+sonaje en sus extremidades, ya que pueden mermar las capaci-
+dades físicas del PJ, pues si en algún momento la cantidad de sultado que no sean esos en la Tabla de Localización, la flecha
+PD recibidos en ambos brazos supera la mitad de sus PV totales, se estrellaría contra la cerca sin causar ningún daño.
+todas las competencias que dependan de la Habilidad se verán
+a Ataques desde arriba: Si atacamos a un enemigo desde una
+reducidas a la mitad, redondeando hacia arriba. De la misma
+posición elevada (desde encima de un muro, desde las alme-
+forma, si los PD que haya recibido en las dos piernas llegan a su-
+nas de un castillo... un enemigo caído o un jinete contra un
+perar esa misma cantidad, la mitad de sus PV totales, todas las
+infante a pie...), la tirada de Localización se hará con 1D5 en
+competencias que se basen en la Agilidad también quedarán a
+vez de con 1D10.
+la mitad, redondeando hacia arriba.
+a Ataques desde abajo: Si atacamos a un enemigo que está en
+Exemplum: Lope se encuentra entrenando con uno de los soldados de guardia
+una posición elevada (hemos caído y el enemigo está de pie;
+en uno de los patios del castillo de Burgos, simulando un combate con es-
+un ataque a pie contra un jinete a caballo, etc.), la tirada de
+padas de madera. De buenas a primeras, el soldado tira el arma de en-
+Localización se hará con 1D5+5 en vez de con 1D10.
+trenamiento y desenvaina su espada, la buena, la de acero toledano,
+a Criaturas irracionales: La Tabla de Localización de Impactos
+lanzándose como un poseso —nunca mejor dicho— contra el sorprendido
+está pensada para enemigos humanoides, pero no todas las
+Lope. Este primer ataque, tan sorprendente, tiene éxito, y el soldado con-
+criaturas con las que nos enfrentemos serán humanos. Mu-
+sigue hacerle 4 PD a Lope. Tirando un dado para determinar el lugar
+chos ni siquiera tendrán forma humana. En estos casos,
+99
+=== PAGE 102 ===
+ParsIII  09/10/13  17:20  Página 100
+Aquelarre: Juego de rol demoníaco medieval
+consulta su descripción en el Bestiario o échale un
+Tabla de Secuelas
+vistazo a los Apéndices, donde encontrarás Tablas de
+- Cabeza -
+Localizaciones para criaturas no humanas.
+1D10 Secuela
+Éstas son las situaciones más comunes que pueden re-
+1 – 2 Conmoción: El ataque le produce un fuerte
+querir una modificación en la tirada de Localizaciones, pero
+dolor y una gran conmoción durante 2D6 asal-
+el Director de Juego es libre de realizar otras si lo ve conve-
+tos. Durante ese tiempo, pierde automática-
+niente, ya sea basándose en estas reglas o no.
+mente la Iniciativa y todas sus tiradas se verán
+modificadas en -50%.
+SECUELAS
+3 – 4 Cicatriz: Una vez curada, la herida dejará una
+Llegados a este punto ya sabrás cómo afecta el daño a los Puntos
+gran cicatriz en su rostro, desfigurándole la
+de Vida de un personaje, pero todavía tenemos que hablar de las
+secuelas, los efectos físicos que sobre el cuerpo de un personaje cara. Pierde 1D6 puntos de Aspecto.
+tienen aquellos golpes especialmente devastadores y poderosos:
+   5 Nariz Rota: El golpe le rompe el tabique
+muertes de un solo flechazo, miembros cortados de un hachazo
+nasal. Pierde 2 puntos de Aspecto y -25% en
+o cicatrices pavorosas que nos recuerdan que el mundo, espe-
+Degustar.
+cialmente en Aquelarre, es violento y cruel.
+   6 Lengua Cortada: El personaje pierde varios
+Siempre que un personaje reciba de un solo golpe o ataque tan-
+dientes y la lengua, o la garganta se ha visto
+tos PD o más que la mitad de sus PV —redondeando hacia
+afectada, privándole de la capacidad de articu-
+abajo y antes de que el daño se multiplique o divida según la
+lar más que gemidos y gritos incoherentes. Ob-
+localización afectada—, consideraremos que la herida habrá
+tiene la vergüenza Defecto Físico (Lengua
+sido de tal magnitud que le provocará inmediatamente una
+secuela. Haz una tirada de 1D10 en la sección correspondiente Cortada).
+de la Tabla de Secuelas, según la localización afectada por el
+   7 Pierde una oreja: El golpe le arranca una oreja
+ataque. Recuerda que ninguna característica puede reducirse
+y daña la zona interna del oído. Obtiene la ver-
+por debajo de 1, al contrario que las competencias, que sí pue-
+güenza Defecto Físico (Sordo de una Oreja). En
+den llegar a valores negativos.
+caso de que haya perdido las dos, el personaje
+quedará sordo de por vida: se le restan -5 pun-
+tos en Percepción y fallará de forma automática
+todas sus tiradas de Escuchar.
+   8 Pierde un ojo: El ataque le destroza uno de
+los ojos. Obtiene la vergüenza Defecto Físico
+(Tuerto). En caso de que haya perdido los
+dos ojos —que también es mala suerte—, el
+personaje queda ciego de por vida: se le res-
+tan -5 puntos en Percepción, fallará de forma
+automática todas sus tiradas de Descubrir y
+tendrá -50% en todas las tiradas que requie-
+ran al menos un mínimo de capacidad visual
+(desde Artesanía a Cabalgar, pasando por Al-
+quimia, Trepar, Correr, etc.). Sí, lo mejor es
+que retires a este personaje y te hagas uno
+nuevo…
+   9 Conmoción Cerebral Grave: El ataque ha da-
+ñado ligeramente el cerebro del personaje. El
+personaje cae inconsciente de forma automá-
+tica durante tantos días como 25 menos el nivel
+de Resistencia del PJ, tiempo en el que tendrá
+que ser alimentado y cuidado para que no fa-
+llezca. Cuando despierte —si despierta—, su
+nivel de Cultura y de Comunicación se verán
+reducidos de forma permanente a la mitad, re-
+dondeando hacia arriba.
+  10 Muerte: El golpe ha dañado gravemente el ce-
+rebro o el cuello, y el personaje muere de forma
+más o menos instantánea.
+100
+=== PAGE 103 ===
+ParsIII  09/10/13  17:20  Página 101
+Pars 3: Ars Medica
+- Brazos - - Abdomen -
+1D10 Secuela 1D10 Secuela
+ 1 – 4 Cicatriz: Una vez curada, la herida dejará una gran 1 – 4 Cicatriz: Una vez curada, la herida dejará
+cicatriz en el brazo afectado. una gran cicatriz en el abdomen, costados
+o espalda del personaje.
+ 5 – 6 Brazo Malherido: La rotura de varios huesos y el
+desgarro muscular inutiliza ese brazo durante tantos 5 – 6 Desgarro Abdominal: El golpe destroza el ab-
+días como 25 menos el nivel de Resistencia del per- domen del personaje, provocándole un intenso
+sonaje. Durante ese tiempo se considera que tiene el dolor. Durante tantos asaltos como 25 menos su
+Brazo Cortado. valor en Resistencia, el personaje no podrá hacer
+otra cosa que revolcarse por el suelo como si fuera
+ 7 – 8 Tendones Rotos: El ataque destroza varios tendones
+un poseso.
+de la mano, afectando al movimiento de la misma.
+El personaje pierde de forma permanente 1 punto de    7 Genitales Destrozados: La herida destroza los ór-
+Habilidad. ganos reproductores del personaje, incluso puede
+que seccionándolos, dejándolos inservibles de por
+    9 Mano Cortada: El golpe le corta la mano o se la in-
+vida.
+utiliza de forma permanente. Adquiere la vergüenza
+Defecto Físico (Manco).    8 Daños Internos: El ataque provoca la rotura de va-
+rios músculos y huesos, que no se curarán de forma
+   10 Brazo Cortado: El ataque secciona completamente
+adecuada. Reduce en 1 punto la Resistencia del per-
+el brazo o lo deja inútil de por vida. Reduce a la
+sonaje.
+mitad su nivel de Habilidad y todas las competen-
+cias que dependan de dicha característica o que re-    9 Pelvis Fracturada: El golpe destroza varios huesos
+quieran el uso de manos y brazos para utilizarla de la pelvis y la cadera. Reduce en 2 puntos la
+(como Arcos, Ballestas, etc.). Fuerza y la Agilidad del personaje, que adquiere
+además la vergüenza Defecto Físico (Cojo).
+- Pecho -
+   10 Columna Afectada: Si la herida se ha realizado con
+1D10 Secuela
+un arma de corte (como una espada o hacha), la co-
+ 1 – 3 Cicatriz: Una vez curada, la herida dejará una gran
+lumna quedará seccionada y la enorme hemorragia
+cicatriz en el pecho, espalda o costado del personaje.
+acabará con el personaje en segundos. Si ha sido
+ 4 – 6 Costillas Rotas: El golpe rompe una o varias de las
+una herida realizada con un arma perforante (como
+costillas del personaje, provocándole un intenso
+una flecha o lanza) o contundente (como una
+dolor cada vez que se mueve. Hasta que consigue
+maza), el personaje perderá la movilidad en las
+curarse por completo, el personaje tendrá un -50%
+piernas.
+en todas aquellas competencias que requieran mo-
+- Piernas -
+vimiento o esfuerzo físico (Correr, Saltar, Competen-
+1D10 Secuela
+cias de Armas, etc.).
+ 1 – 4 Cicatriz: Una vez curada, la herida dejará una gran
+    7 Daños Internos: El ataque provoca la rotura de
+cicatriz en la pierna afectada.
+huesos y músculos, que no consiguen curar de
+forma adecuada. Reduce en 1 punto la Resistencia 5 – 6 Pierna Malherida: La rotura de varios huesos y el
+del personaje. desgarro muscular inutiliza esa pierna durante tan-
+tos días como 25 menos el nivel de Resistencia del
+    8 Pulmones Dañados: La herida afecta a los pulmones,
+personaje. Durante ese tiempo se considera que
+que quedan dañados de forma permanente. Reduce en
+tiene la Pierna Cortada.
+2 puntos la Resistencia y la Fuerza del personaje. 
+ 7 – 8 Tendones Rotos: El ataque destroza varios tendones
+    9 Corazón Dañado: El golpe afecta al corazón. El
+del pie, afectando al movimiento. El personaje ad-
+personaje cae inconsciente al suelo de forma auto-
+quiere la vergüenza Defecto Físico (Cojo).
+mática, y morirá en 3 asaltos si no se consigue de-
+tener la enorme hemorragia que surge de su pecho.    9 Pie Cortado: El golpe le corta el pie o se lo inutiliza
+Si otro PJ tiene éxito en una tirada de Sanar parará para siempre. Pierde 3 puntos de forma permanente
+la hemorragia, aunque el personaje perderá de en Agilidad y su movimiento se ve reducido a la
+forma permanente 3 puntos de Resistencia y mitad, lo mismo que su porcentaje en Correr. Puede
+Fuerza. llevar muletas o sustituir el pie por una pata de palo
+o similar.
+   10 Columna vertebral afectada: Si la herida se ha rea-
+lizado con un arma de corte (como una espada o   10 Pierna Cortada: El ataque secciona completamente
+hacha), la columna quedará seccionada y la enorme la pierna o la deja inútil de por vida. Reduce a la
+hemorragia acabará con el personaje en segundos. mitad su nivel de Agilidad, al igual que todas las
+Si ha sido una herida realizada con un arma perfo- competencias que dependan de dicha caracterís-
+rante (como una flecha o lanza) o contundente tica o que requieran el uso de piernas para utili-
+(como una maza), el personaje perderá la movilidad zarla. El personaje deberá llevar muletas por el
+de brazos y piernas. resto de sus días.
+101
+=== PAGE 104 ===
+ParsIII  09/10/13  17:20  Página 102
+Aquelarre: Juego de rol demoníaco medieval
+Peligros
+N la mayor parte de los casos, la salud de los perso- áspera o accidentada —rocas bastante afiladas, por ejem-
+najes se verá mermada durante el combate, del que plo—. De todas formas, si el personaje tiene éxito en una ti-
+hablaremos en nuestro siguiente capítulo, pero no rada de Saltar, se considera que es capaz de aterrizar de una
+E siempre será así, ya que en el mundo de Aquelarre, manera más o menos elegante, reduciendo los PD recibidos
+al igual que en el nuestro, existen muchas maneras de perju- a la mitad, redondeando hacia abajo.
+dicar nuestra salud: venenos, enfermedades, caídas, hambre,
+Los PD recibidos se aplicarán a una localización concreta, con
+frío o incluso el propio paso del tiempo, que no perdona a
+lo que puede dividirse o multiplicarse según donde se haya
+nadie, son elementos y situaciones con las que un personaje
+producido la caída, y puede provocar una secuela en el perso-
+tendrá que aprender a lidiar en sus aventuras. En esta sección
+naje. La armadura que lleve el PJ no le protegerá en caso de
+hablaremos de todas ellas, para que tomes buena nota de lo
+caída; más aún, si la armadura es metálica o completa (véase
+que es conveniente evitar si quieres que el PJ tenga una larga
+págs. 135 y siguientes) ésta perderá una cantidad de puntos
+y próspera vida.
+de Resistencia igual a la mitad de los PD recibidos por el per-
+sonaje, redondeando hacia abajo.
+ASFIXIA
+CALOR Y FRÍO
+Cuando un personaje se encuentre en una situación en la que
+no le sea posible respirar, bien porque algo se lo impide —está
+Las temperaturas extremas también son especialmente perju-
+siendo estrangulado, por ejemplo— bien porque no le es po-
+diciales, y tendremos que aprender a evitarlas siempre que po-
+sible tomar aire —se encuentra bajo el agua o en una habita-
+damos. Si un personaje se encuentra a la intemperie con una
+ción llena de humo—, tendrá que comenzar a realizar tiradas
+temperatura superior a 50 grados centígrados, especialmente
+de Resistencia x10 para aguantar la respiración. Ese multipli-
+si está al sol, deberá hacer una tirada de Resistencia x10 cada
+cador se irá reduciendo en un x1 cada asalto posterior —en el
+hora, aunque por cada hora posterior a la primera, el multi-
+segundo asalto será RESx9, en el tercero RESx8, etc.—, hasta
+plicador se irá reduciendo en 1, hasta llegar a Resistencia x1,
+reducirse a Resistencia x1, en la que se mantendrá hasta que
+en que no podrá bajar más. Si el DJ lo considera oportuno, te-
+pueda respirar o la falle.
+niendo en cuenta la vestimenta o armadura que lleve el PJ o,
+En el momento en que no tenga éxito en alguna de esas tira- si la temperatura es muy alta, las tiradas de Resistencia pue-
+das de Resistencia, el personaje comenzará a asfixiarse y den incluso comenzar a x7, x5 o x3. Y aunque el personaje vaya
+cada asalto que pase sin respirar recibirá 2 PD. Esa pérdida sacando las tiradas, irá sintiéndose cada vez peor conforme se
+sólo se detendrá en el momento en que vuelva de nuevo a vaya reduciendo el multiplicador —mareos, vómitos, náu-
+respirar o muera por falta de aire. Naturalmente, se siguen seas…—, hasta el momento en que falle una de ellas, cuando
+las reglas habituales de inconsciencia y pérdida de PV nega- caerá inconsciente y comenzará a perder cada hora de exposi-
+tivos, lo que significa que una vez llegue a 0 PV, perderá au- ción al calor 2 PV, hasta que muera o se le refresque de alguna
+tomáticamente 3 PV cada asalto: 2 por la asfixia y 1 más por forma. Una vez que se encuentre en un lugar más fresco, el
+estar a PV negativos. personaje irá recuperando los PV perdidos a razón de 1 PV por
+hora.
+Si el personaje no tuvo tiempo de coger aire antes de comen-
+zar las tiradas de Resistencia —lo estrangulan por sorpresa, El frío, sin embargo, es aún más puñetero, pues es capaz de
+cae al agua sin darse cuenta, etc.—, las tiradas pueden co- dejar secuelas importantes en el personaje. Por cada hora —o
+menzar con un multiplicador menor (x7, x5 o incluso por incluso menos, si el personaje no va bien abrigado o la tempe-
+x3), según considere el Director de Juego teniendo en cuenta ratura es muy baja— expuesto a una temperatura inferior a los
+la situación concreta. 20 grados bajo cero el personaje perderá 1 PV y 1 punto de una
+característica primaria, que será elegida aleatoriamente entre
+Fuerza, Agilidad, Habilidad y Percepción —tira 1D4 para de-
+CAÍDAS
+cidir la característica que lo pierde—. Conforme vaya per-
+Siempre que un personaje caiga de una altura, hemos de cal-
+diendo PV y puntos de características, el personaje irá
+cular el daño que le produce el duro aterrizaje contra el
+sintiendo como sus dedos y miembros se entumecen, muchas
+suelo. Consideramos que si cae desde una altura menor a 3
+veces sin sentir dolor alguno, y la somnolencia le irá inva-
+varas, sólo recibirá contusiones menores —como máximo 1
+diendo progresivamente, hasta que llegue a 0 PV, momento en
+PD, si el DJ lo considera oportuno—, pero a partir de esa al-
+que el sueño lo alcanzará y quedará completamente incons-
+tura, el personaje recibirá 1D6 PD por cada 3 varas de altura
+ciente, perdiendo 1 PV por cada asalto posterior hasta morir
+o fracción. Por ejemplo, si cae de 3 varas serán 1D6 PD; si
+definitivamente. Si lo que llega primero a 0 fuera alguna de
+cae desde 4, 5 ó 6 varas, serán 2D6 PD; si la altura es de 7, 8
+las características, el personaje sufrirá además efectos diferen-
+ó 9 el daño será de 3D6, etc. Queda a discreción del DJ divi-
+tes, según la característica disminuida:
+dir los PD entre dos si el personaje cae sobre una superficie
+a Si se trata de la Fuerza, el personaje se desmayará agotado,
+relativamente blanda —agua, paja…—, aunque también
+incapaz de moverse del sitio.
+puede multiplicar el resultado por dos si es una zona
+102
+=== PAGE 105 ===
+ParsIII  09/10/13  17:20  Página 103
+Pars 3: Ars Medica
+a Si es la Agilidad, las piernas quedarán tan en-
+El porcentaje de contagio es del 35% y el jugador obtiene un 24,
+tumecidas que no podrá usarlas.
+así que el alquimista enferma de pulmonía. Tras dos días de
+incubación —el jugador obtiene un 2 en la tirada de 1D6—,
+a Si es la Habilidad, ocurrirá lo mismo con los brazos, que
+quedarán inertes y como muertos. Micael debe hacer una tirada de RESx3, y como tiene un valor
+de 15 en Resistencia, el porcentaje es del 45%, obteniendo en la
+a Si es la Percepción, el personaje quedará ciego.
+tirada un 48: por poco, pero ha fallado, lo que significa que sufrirá
+De todas formas, en el caso de que el personaje consiga llegar
+una convalecencia máxima. Claro que el alquimista tiene buenos amigos
+—por sí mismo o ayudado por otros— a una zona protegida y
+en la judería, entre los que se encuentra el propio médico del rey, que decide
+caldeada, podrá recuperarse a razón de 1 PV por hora y 1
+tratarle la pulmonía: hace una tirada exitosa de Medicina, y la convalecencia
+punto de cada una de las características afectadas por el frío
+máxima se convierte en una normal. Consultamos pues la descripción de la
+cada 4 horas. Claro que si alguna de las características llegó a
+pulmonía para saber lo que le ocurrirá al judío: deberá pasar 6 días —re-
+0, el personaje tendrá que hacer una tirada de Resistencia x3 o
+sólo recuperará la mitad de los puntos perdidos; la otra mitad sultado de 1D6+3— postrado en la cama y luego otros 8 días —resultado de
+los perderá para siempre.
+2D6— muy débil y acatarrado, con todas sus características físicas reducidas
+a 1. Pasado ese tiempo ya podrá levantarse como si no hubiera pasado nada.
+ENFERMEDAD
+Claro que al jugador no se le puede olvidar que si llega a sacar una pifia en
+la tirada de RESx3, Micael habría muerto debido a la pulmonía.
+Grandes plagas y epidemias azotaron Europa durante toda la
+Edad Media, por lo que no tendrá nada de raro que alguno de
+los personajes se las tenga que ver con alguna de las muchas en- Cólera
+fermedades que campaban por los reinos peninsulares durante
+Se trata de una enfermedad infecciosa que se extiende rápida-
+aquella época. A continuación describiremos algunas de las en-
+mente por lugares con evidentes carencias higiénicas, en zonas
+fermedades más comunes en la época en la que transcurre Aque-
+de hacinamiento o durante periodos de guerra o hambruna, y
+larre y en todas ellas verás un método de contagio, en el que
+que durante la Edad Media podía llegar a alcanzar el grado de
+aparece un porcentaje: en el caso de que el personaje se vea ex-
+epidemia muy rápidamente.
+puesto a una de las situaciones que puede provocar la enferme-
+Método de Contagio (45%): Por tomar alimentos o bebidas
+dad, deberá tirar por dicho porcentaje. Si la tirada es igual o
+contaminados por heces, saliva o sangre de enfermos de có-
+inferior a ese porcentaje, significará que su personaje se ha infec-
+lera, o por permanecer durante un tiempo determinado en una
+tado y ha contraído la enfermedad, así que tras un periodo de
+zona de epidemia.
+incubación de 1D6 días, deberá hacer una tirada de Resistencia
+x3, para determinar el tiempo de convalecencia que deberá su-
+Convalecencia:
+frir, tal y como se describe en cada una de las enfermedades:
+a Mínima: El personaje sufrirá una gran debilidad durante
+a Si obtiene un crítico en la tirada de RESx3, sufrirá la conva-
+1D6+1 días, con todas sus características y competencias re-
+lecencia mínima.
+ducidas a la mitad.
+a Si saca un éxito normal, padecerá una convalecencia
+a Normal: La enfermedad durará 2D6+3, y aunque al princi-
+normal.
+pio sufrirá una gran debilidad (como en la convalecencia
+mínima), a partir del quinto día, no podrá hacer absoluta-
+a Si falla la tirada, deberá sufrir una convalecencia máxima.
+mente nada. Tras reponerse deberá hacer una tirada de
+a Si la tirada es una pifia, la enfermedad matará al personaje
+RESx3 o perderá de forma definitiva 1 punto en Fuerza y
+o, en el caso de una enfermedad que no provoque mortali-
+otro en Resistencia.
+dad, sufrirá también una convalecencia máxima.
+a Máxima: El periodo de enfermedad durará 3D6+5 días, en
+Todos los personajes enfermos que sean tratados por un mé-
+los que sufrirá una gran debilidad (como en la convalecen-
+dico, pueden reducir su padecimiento: si el médico que los
+cia mínima), pero a partir del quinto día el PJ comenzará a
+trata tiene éxito en una tirada de Medicina, el periodo de con-
+alternar periodos de coma y delirios. Pasado ese tiempo,
+valecencia se reducirá en un grado (de máxima a normal, por
+existirá un 25% de posibilidades de que muera. Si no lo
+ejemplo), o en dos, si se obtiene un éxito crítico. Naturalmente,
+hace, se repondrá satisfactoriamente, aunque deberá hacer
+para que pueda beneficiarse de los conocimientos del médico,
+una tirada de RESx2 o perderá de forma definitiva 1D4
+éste deberá visitarlo de forma regular —cada tres o cuatro días
+está bien—, o volverá a recaer, sufriendo de nuevo el periodo puntos en Fuerza y otros 1D4 puntos en Resistencia.
+de convalecencia que obtuvo en un principio.
+a Muerte: Tras pasar 2D6 días agonizando entre violentos do-
+lores, el personaje morirá.
+Exemplum: Para poder llevar a cabo un experimento en el que lleva tra-
+bajando varias semanas, el alquimista Micael Bonishah tiene que recoger
+Enfermedades Venéreas
+flores de eléboro bañadas por la luz de la luna, así que sin pensárselo
+Durante toda la Edad Media, la propagación de enfermedades
+dos veces, el judío sale de madrugada de Burgos y pasa toda la noche en
+de transmisión sexual estaba a la orden del día y eran bastante
+busca de la planta. Por desgracia se le olvida echar ropajes de abrigo, y
+18
+comunes, siendo las más conocidas :
+al tratarse de una noche especialmente fría, el DJ le indica al jugador
+18
+Addenda: Como podrás observar, la sífilis no aparece, ya que el primer
+que cabe la posibilidad de que Micael coja una buena pulmonía.
+brote de sífilis del que se tiene constancia tuvo lugar en el año 1494
+en Nápoles.
+103
+=== PAGE 106 ===
+ParsIII  09/10/13  17:20  Página 104
+Aquelarre: Juego de rol demoníaco medieval
+a El herpes, en el que los genitales y el ano se
+cubren de pequeñas ampollas que provocan
+un escozor desesperante y en muchos casos
+vienen acompañados de gran dolor. El desarro-
+llo de la enfermedad en una mujer embarazada
+puede provocar malformaciones en su hijo o incluso
+su muerte.
+a Las purgaciones, también llamadas ladillas, en las que la
+zona genital se ve infectada por parásitos que provocan un
+gran picor.
+a La gonorrea produce una dolorosa sensación de escozor al
+orinar y provoca la expulsión de una secreción amarillenta
+en los hombres. En algunos casos graves la gonorrea pro-
+voca la esterilidad de la persona afectada.
+Método de contagio (entre 0% y 40%, según el compañero de
+cama): Por compartir lecho y goce con una persona que posea
+la enfermedad, especialmente si no cuida mucho su higiene o
+es especialmente promiscua.
+Convalecencia: En ninguno de los casos se puede morir por
+tener una enfermedad venérea, aunque sí que será una fuente
+de molestias continuas, pues no se conocía cura alguna para
+ellas, excepto para las purgaciones, en las que se afeitaba com-
+pletamente la zona genital del enfermo.
+Lepra
+Aunque a mediados del siglo XIV la lepra empieza a remitir
+en toda Europa, todavía son muchos los enfermos que la pa-
+decen, condenados de por vida a llevar una existencia ale-
+jada de la sociedad, recluidos en leproserías o lazaretos
+extramuros, vestidos con largos mantos oscuros que tapen
+los estragos de la enfermedad, grandes sombreros y capu-
+chas que oculten su rostro deforme y haciendo sonar cons-
+tantemente campanillas o tablillas que avisen a los sanos de
+la cercanía del leproso, pues tienen prohibida la entrada a
+las ciudades, la asistencia a la iglesia y, en general, todo con-
+tacto con sus congéneres.
+Método de Contagio (15%): Por contacto directo con un en-
+fermo de lepra, especialmente si es prolongado en el tiempo o
+realizado de forma habitual (es extremadamente raro que un
+simple roce produzca el contagio, aunque en la época no se
+pensaba de esa manera).
+Convalecencia: Si el personaje enferma de lepra, nada podrá
+curarlo ya. El enfermo irá perdiendo progresivamente sensi-
+bilidad y con el tiempo irán apareciendo por todo el cuerpo
+llagas ulcerantes, mientras la necrosis se extiende implacable-
+mente. Cada mes irá perdiendo 1 punto de una característica
+primaria elegida al azar y en el momento en que una de ellas
+llegue a 0, el personaje morirá. Durante este tiempo también
+perderá 1 punto de Aspecto cada mes, aunque esta caracterís-
+tica no podrá reducirse por debajo de 1.
+Mal de San Antón
+Producido por la ingesta de cereales infectados por el corne-
+zuelo del centeno, el mal de San Antón —llamado también
+fuego de San Antón, fuego del infierno y, en la actualidad, er-
+gotismo— fue una enfermedad relativamente común en la
+Edad Media, hasta tal punto que era común la existencia
+de hospitales dedicados en exclusiva al cuidado de estos
+104
+=== PAGE 107 ===
+ParsIII  09/10/13  17:20  Página 105
+Pars 3: Ars Medica
+enfermos, dirigidos por frailes de San Antonio, bubón negro en una de las axilas o en el cuello,
+vestidos con hábitos oscuros y un gran tau —una que tras 1D3+5 con los mismos síntomas, en un
+cruz en forma de “T”— colgando del pecho.
+estado cercano a la inconsciencia, estallará por
+sí solo. Tras pasar otros 3D6 días postrado en
+Método de Contagio (35%): Por la ingesta de harinas o pan
+la cama, el personaje recuperará la consciencia,
+contaminado por el cornezuelo del centeno, especialmente fre-
+aunque su Resistencia y Fuerza estarán a 0 puntos,
+cuente en las estaciones cálidas y húmedas.
+recuperando cada día (posterior) 1 punto de ambas
+Convalecencia:
+características.
+a Mínima, Normal y Máxima: El mal de San Antón es una
+a Máxima: El enfermo sufre los mismos síntomas que en la
+enfermedad sin cura posible, así que una vez contraída no
+convalecencia normal, pero cada día que pase con el bubón
+existen diferentes tipos de convalecencia. El enfermo sen-
+sin estallar, habrá un 45% de posibilidades de que muera.
+tirá ardores tremendos en las extremidades, orejas y nariz,
+Si consigue sobrevivir hasta que el bubón estalle, se recu-
+que poco a poco se le irán gangrenando, al tiempo que apa-
+perará de la forma normal, aunque habrá perdido de forma
+recen graves perturbaciones mentales acompañadas de ata-
+permanente 1D3 puntos en Fuerza, Agilidad y Resistencia.
+ques epilépticos y convulsiones. Cada mes de juego, el
+a Muerte: Tras sufrir 1D6 días de agonía, aquejado de fuertes
+enfermo perderá 1 punto de Habilidad, de Agilidad, de
+dolores y una fiebre extrema, el personaje muere.
+Cultura y de Aspecto (mínimo 1). Cuando llegue a 0 puntos
+de Habilidad habrá perdido las manos y con 0 de Agilidad
+Pulmonía
+las piernas, pero cuando su Cultura llegue a 0, el personaje
+Una enfermedad relativamente extendida en el Medievo, es-
+morirá. Además, todos los días deberá hacer una tirada de
+pecialmente en zonas frías y húmedas, y con graves conse-
+Suerte: si la falla, a lo largo del día sufrirá un ataque de
+cuencias entre niños y ancianos. Los síntomas que suele
+dolor, en el que se retorcerá y convulsionará como un po-
+presentar el enfermo son fiebre alta, una tos seca y constante,
+seso (el DJ decidirá cuándo ocurre exactamente el ataque,
+dolores por todo el cuerpo —especialmente en las articulacio-
+que no durará más de 15 minutos).
+nes— y graves dificultades para respirar; en casos extremos,
+a Muerte: La ingesta de cornezuelo provoca fuertes fiebres provoca la muerte del paciente.
+en el enfermo y sus miembros se paralizan rápidamente,
+Método de Contagio (35%): Por un contacto prolongado con
+matando al personaje en una sola noche.
+un enfermo o tras haber soportado un frío extremo.
+Peste Bubónica Convalecencia:
+Llegada a Europa a mediados del siglo XIV —y nunca erradi-
+a Mínima: El enfermo pasa 1D4+2 días con fiebre y con las
+cada del todo, pues la plaga se repite con mayor o menor vi-
+características primarias reducidas a la mitad.
+rulencia cada seis u ocho años—, la peste bubónica o peste
+a Normal: Tras pasar 1D6+3 días postrado en la cama en un
+negra afecta a buena parte de la población peninsular en las
+estado semicomatoso, el enfermo recuperará la consciencia
+épocas de epidemia. Al desconocerse la causa de la enferme-
+y sufrirá una extrema debilidad durante otros 2D6 días, en
+dad —ahora sabemos que la portaban las pulgas de rata—, al-
+los que todas sus características físicas se verán reducidas
+gunos la consideraban un castigo divino, mientras que otros
+a un valor de 1.
+pensaban que era causada por judíos o moriscos, por lo que
+era común asaltar la judería o la morería de la población en
+a Máxima: Sufre los mismos efectos que la convalecencia
+cuanto se detectaba el menor asomo de la enfermedad. Uno
+normal, pero existe un 45%de posibilidades de que el
+de los pocos tratamientos que podían llegar a ser efectivos con-
+personaje muera durante los días que se encuentra pos-
+sistía en sajar con un hierro al rojo los bubones de pus que pro-
+trado en la cama (sólo se deberá hacer la tirada una vez,
+ducía la enfermedad, lo que permitía que algunos
+no cada día).
+consiguieran curarse, aunque en una proporción insignifi-
+cante; de todas formas, en la mayor parte de los casos, el en-
+a Muerte: Tras 1D6+2 días semiinconsciente en la cama, el
+fermo era encerrado en su casa a la espera de que curara por
+personaje muere.
+sí mismo o muriera sin contagiar al resto de la población.
+Rabia
+Método de Contagio (75%): Por contacto con un enfermo, por
+el mordisco de una rata infectada o por la cercanía de pulgas Conocida también como “hidrofobia” —por el terror al agua
+que asalta a los enfermos—, la rabia es una enfermedad que
+de ratas apestadas.
+sólo se transmite por la saliva, normalmente a consecuencia
+Convalecencia:
+del mordisco de un animal infectado o de un enfermo rabioso.
+a Mínima: Tras pasar 2D6 días en un estado semicomatoso,
+Tras un largo periodo de incubación de 3D6x10 días, el en-
+con fiebre alta y delirios, el enfermo despertará con su Re- fermo comienza a sentirse más y más obsesionado, sufriendo
+sistencia y su Fuerza a la mitad. En los días siguientes irá graves crisis de locura, alejándose del agua, hacia la que siente
+una gran repulsión, y muriendo finalmente por asfixia debido
+recuperando 1 punto de cada una de las características por
+a la obstrucción de las vías respiratorias.
+día de reposo.
+Método de contagio (60%): Por la mordedura de un animal
+a Normal: Después de 1D3 días con una gran fiebre y gra-
+—normalmente perro, zorro, lobo o murciélago— o de una
+ves dolores abdominales, al personaje le aparecerá un
+persona infectados.
+105
+=== PAGE 108 ===
+ParsIII  09/10/13  17:20  Página 106
+Aquelarre: Juego de rol demoníaco medieval
+Convalecencia: Al no conocerse ningún trata-
+a Muerte: Tras 1D4 días postrado en la cama, con
+miento en la Edad Media contra la rabia, es una
+frecuentes ataques y convulsiones, el personaje
+enfermedad mortal de necesidad. Antes de
+muere por asfixia durante uno de éstos.
+morir, el enfermo pasará 2D10+20 días sumido en
+la locura: al principio sólo serán reacciones inusuales
+Tifus
+y extrañas, pero a los 10 días se volverá agresivo y pa-
+El tifus, o fiebre tifoidea, es una enfermedad infecciosa que
+ranoico y a los 20 se sucederán graves crisis de locura, en
+se propaga en lugares de gran hacinamiento y poca higiene,
+las que el enfermo echará espumarajos por la boca y tratará
+ya que lo transmite un germen que se localiza en los excre-
+de atacar a mordiscos a todo aquél que se encuentre en las
+mentos, en el agua o en alimentos contaminados por éstos y
+cercanías.
+en las ropas sucias. Debido a las escasas condiciones higié-
+nicas de la época, eran frecuentes las epidemias de tifus en
+Sarna
+los reinos peninsulares, especialmente en épocas de carestía
+Causado por el parásito llamado “arador de la sarnilla”, un
+o de guerra.
+ácaro que penetra en la piel del enfermo para desovar, provo-
+Método de contagio (70%): Por permanencia en zonas de epi-
+cando una reacción alérgica, que se traduce en enormes pico-
+demia o en lugares de gran hacinamiento de personas y poca
+res, ampollas y úlceras con costras. Debido a la insalubridad
+higiene.
+que impera en la época, el parásito de la sarna está muy ex-
+tendido, especialmente en lugares de gran hacinamiento,
+Convalecencia:
+transmitiéndose muy rápidamente entre los enfermos.
+a Mínima: El enfermo sufre una ligera fiebre, una erup-
+Método de contagio (60%): Por contacto directo con la piel de
+ción cutánea por todo el cuerpo —excepto cara, manos
+un sarnoso o con alguno de los objetos que haya estado en con-
+y pies— y una sensación de debilidad en la que sus va-
+tacto con él, o por habitar en un lugar con muy escasas condi-
+lores de Fuerza y Resistencia quedarán reducidos a la
+ciones higiénicas, incluso para la época.
+mitad durante 1D6 días.
+Convalecencia: Esta enfermedad no produce la muerte, pero
+a Normal: Tras pasar 2D6 días postrado en la cama sufriendo
+tampoco posee diferentes niveles de convalecencia. En el
+delirios, fiebre, dolores abdominales y diarreas sanguino-
+cuerpo del enfermo aparecerán unas pústulas que le causarán
+lentas, el personaje se recupera, aunque tiene todas sus ca-
+tremendos picores —especialmente durante la noche o en am-
+racterísticas a un valor de 1. Por cada día adicional de
+bientes cálidos—, que, si no se tratan, se convertirán en úlce-
+reposo absoluto, sus características aumentarán en 1 punto
+ras. El personaje sufrirá un -25% en todas sus competencias
+hasta alcanzar sus valores normales.
+mientras posea la enfermedad, que sólo puede ser tratada con
+el afeitado completo de cabello y vello corporal y un lavado a
+a Máxima: El enfermo pasa 3D6+3 días con fuertes dolores
+base de fuertes friegas con emplastos de trementina, palomina,
+abdominales y graves diarreas. Tras ese tiempo, el enfermo
+ajo, llantén, enebro o eléboro.
+se recuperará con una gran debilidad, con todas sus carac-
+terísticas a un valor de 1. Por cada día adicional de reposo
+Tétanos
+absoluto, sus características aumentarán en 1 punto hasta
+Producido por una bacteria que habita en la tierra y en los ex-
+alcanzar sus valores normales, excepto la Fuerza que per-
+crementos, el tétanos es una grave enfermedad que puede lle-
+derá de forma permanente 1D3 puntos.
+gar a producir la muerte del paciente. Tras penetrar en el
+cuerpo del enfermo mediante el torrente sanguíneo, la bacteria
+a Muerte: Tras pasar 2D6 días de terrible agonía, el personaje
+ocasiona fuertes espasmos, fiebre muy alta, periodos de se-
+muere.
+miinconsciencia y una gran dificultad al respirar que termina
+asfixiando al paciente. Viruela
+Método de contagio (45%): Tras recibir heridas profundas pro- Una grave enfermedad infecciosa que provocaba frecuentes
+epidemias en determinadas poblaciones de los reinos medie-
+ducidas por metales herrumbrosos, sucios o llenos de tierra.
+vales peninsulares. La viruela provoca erupciones en el cuerpo
+Convalecencia:
+del enfermo que se van convirtiendo en pequeños bultos lle-
+a Mínima: El personaje sufre 1D6 días de molestias y contrac- nos de un liquido espeso y opaco, para poco antes de remitir
+la enfermedad —si se sobrevive a ella— transformarse en cos-
+ciones musculares leves, especialmente en la zona infectada
+tras que al caer dejan cicatrices en el paciente, marcándole para
+por la herida. Durante este tiempo todas las competencias de
+toda la vida.
+Agilidad y Habilidad tendrán un penalizador de -50%.
+Método de contagio (15%): Por un contacto prolongado con
+a Normal: El enfermo pasará 1D6+2 días postrado en cama
+un enfermo o con un objeto que haya sido contaminado por
+con pequeñas contracciones musculares, y sufrirá cada uno
+éste (mantas, ropas, etc.).
+o dos días un ataque de fiebre, semiinsconciencia y espas-
+Convalecencia:
+mos musculares. Pasado ese tiempo, se recuperará con la
+Resistencia a 1 punto, aunque irá recuperando 1 punto de
+a Mínima: Durante 1D4 días, el enfermo presenta una fiebre
+ésta cada día posterior.
+muy alta, además de náuseas y malestar general. A conti-
+a Máxima: Sufre los mismos síntomas que en la convalecen- nuación aparecen llagas en la boca que luego se extienden
+cia normal, pero cada vez que sufra un ataque hay un por todo el cuerpo —especialmente cara, pecho y piernas—
+40% de posibilidades de que muera de asfixia. y que en los siguientes 1D6+5 días se transforman en pús-
+106
+=== PAGE 109 ===
+ParsIII  09/10/13  17:20  Página 107
+Pars 3: Ars Medica
+tulas grandes y desagradables, que se van cu-
+briendo de costras, para después secarse y caer.
+Durante todo este tiempo, el enfermo sufre una
+gran debilidad, lo que conlleva un penalizador
+de -50% a todas sus competencias de carácter fí-
+sico. Una vez que las costras han caído, el enfermo
+se recupera y queda inmunizado de por vida a la en-
+fermedad, aunque deberá aprender a convivir con las ci-
+catrices que le quedan en todo el cuerpo, reduciéndole el
+Aspecto en 1D3 puntos.
+a Normal: Posee los mismos efectos que la convalecencia
+mínima, pero las pústulas tardarán 1D10+5 días en secarse
+y caer, durante los cuales le será imposible realizar ningún
+tipo de acción física o mental debido a la fiebre. Una vez
+pasado ese tiempo, la Resistencia queda reducida a 1
+punto, que se recuperará a un ritmo de 1 punto por cada
+día de reposo.
+a Máxima: Posee los mismos efectos que la convalecencia
+normal, pero una vez aparecidas las pústulas, el paciente
+sufrirá delirios en los que intentará arrancárselas del
+cuerpo. Tiene una posibilidad del 30% de morir durante
+uno de estos ataques.
+a Muerte: Además de las pústulas y llagas, el enfermo sufre
+hemorragias internas, que acaban con su vida en 1D4 días,
+tras intensos dolores en el vientre y la cabeza.
+ENVEJECIMIENTO
+Como ya hemos dicho antes, el tiempo es, a largo plazo, el
+mayor enemigo de un personaje, pues lo que quizá no han
+conseguido hacer sus numerosos enemigos o las bestias con
+las que se ha topado en sus aventuras, está claro que lo conse-
+guirá la parca Átropos más tarde o más temprano. Para repre-
+sentar los efectos del envejecimiento, cuando el personaje
+cumpla los 35 años deberá hacer una tirada en la siguiente
+tabla y aplicar el resultado obtenido. En los años posteriores
+se repetirá la tirada, pero sumando un +2 al resultado de los
+dados por cada año que tenga el personaje por encima de 35
+—por ejemplo, al cumplir 38, tendrá que hacer una tirada de
+1D100 sumándole +6 al resultado—. Además, está prohibido
+utilizar la Suerte en esta tirada: nada podemos hacer contra el
+destino, que ya está escrito.
+Tabla de Envejecimiento
+1D100 Resultado
+01 – 40 No ocurre nada.
+41 – 50 El personaje pierde 1 punto de Fuerza de forma per-
+manente. Si se le reduce a 0 puntos, muere.
+51 – 60 El personaje pierde 1 punto de Agilidad de forma
+permanente. Si se le reduce a 0 puntos, muere.
+61 – 70 El personaje pierde 1 punto de Habilidad de forma
+permanente. Si se le reduce a 0 puntos, muere.
+71 – 80 El personaje pierde 1 punto de Percepción de forma
+permanente. Si se le reduce a 0 puntos, muere.
+81 – 95 El personaje pierde 2 puntos de Resistencia de forma
+permanente. Si se le reduce a 0 puntos, muere.
+96 – 00 El personaje muere por causas naturales.
+107
+=== PAGE 110 ===
+ParsIII  09/10/13  17:20  Página 108
+Aquelarre: Juego de rol demoníaco medieval
+Por último sólo resta decir que si los treinta y o menos ponzoñosos y utilizarán multiplicadores
+cinco te parece una edad demasiado temprana diferentes —como podrás ver más adelante—. El éxito
+para sufrir los estragos de la vejez te recordamos de la tirada indica el daño que produce el veneno en el
+que en la Edad Media la esperanza de vida era organismo del personaje, de la siguiente forma:
+mucho menor que la que disfrutamos en la actualidad.
+a Con un éxito crítico el personaje resistirá el veneno y no se
+verá afectado.
+FUEGO
+a Con un éxito normal sufrirá los efectos del veneno de forma
+El daño causado por el fuego depende del tamaño de la llama
+atenuada, y sólo recibirá la mitad de PD que éste provoque
+y del tiempo que permanezca en contacto con el cuerpo del
+normalmente.
+personaje. Ser golpeado por una antorcha suponen 1D6 Puntos
+a Con un fallo el personaje perderá los PD normales que pro-
+de Daño por cada ataque, mientras que ser quemado en una
+hoguera serían 3D6 PD por asalto, y permanecer en medio de voque el veneno.
+una habitación en llamas serían 5D6 PD o incluso más. En todo
+a Con una pifia el personaje sufrirá una grave intoxicación y
+caso, el daño por fuego afectará siempre a los PV generales del
+el veneno le provocará el doble de daño de lo normal.
+personaje, no a una localización concreta —aunque la quema-
+dura sólo se aplique a una zona del cuerpo, no hará más o Esta tirada de Resistencia se irá repitiendo cada cierto
+tiempo según el tipo de veneno con el que se haya intoxi-
+menos daño por alcanzar esa parte concreta—. Además, la ar-
+cado —lo normal es repetirla cada hora, aunque hay vene-
+madura deja de proteger contra las llamas a partir del segundo
+asalto, aunque si se trata de una armadura blanda o ligera que nos que actúan de forma más o menos rápida—, al menos
+esté bien empapada en agua, otorga una protección de 3 pun- hasta que saque un éxito crítico y se salve, o pierda todos
+sus PV, momento en que caerá fulminado al suelo para morir
+tos durante 2D6 asaltos, tras lo cual quedará consumida por
+el fuego. escasos asaltos después. Pero si, antes de que esto suceda, el
+personaje recibe los cuidados de un médico —quien tendrá
+que obtener una tirada exitosa de Medicina—, las tiradas de
+HAMBRE Y SED
+Resistencia que realice el personaje obtendrán un bonifica-
+La falta total de alimentos irá degradando progresivamente al
+dor de +20%. Y, por otro lado, si el envenenador ha decidido
+personaje, hasta provocarle la muerte. Debido a ello, por cada
+utilizar dosis extras de veneno sobre el PJ, la tirada de Re-
+día completo que pase el personaje sin alimentarse perderá 1
+sistencia de éste disminuirá su multiplicador en un x1 (por
+punto de Fuerza, Agilidad y Resistencia. En el momento en
+ejemplo, si era x3 bajará a x2), aunque le será imposible di-
+que alguna de estas características llegue a 0, el PJ se desma-
+simular de forma alguna el sabor del veneno, por lo que será
+yará y morirá pocas horas después. Si recibe alimentos antes
+más fácil de detectar.
+de que ocurra esto, el personaje podrá recuperar los puntos
+A continuación te presentamos algunos de los venenos más
+perdidos a un ritmo de 1 punto en cada característica por día
+comunes durante la época de Aquelarre, aunque el Director de
+de reposo.
+Juego es libre de crear los suyos propios. Además, en el capí-
+La falta de agua es, sin embargo, más peligrosa, ya que el
+tulo X dedicado al bestiario (véase pág. 326) encontrarás algu-
+cuerpo humano necesita entre uno y tres litros diarios de
+nas criaturas que son capaces de inocular venenos muy
+agua para evitar la deshidratación y poder funcionar. Por
+particulares.
+todo ello, cada día que el personaje pase sin beber perderá 2
+puntos en las características de Fuerza, Agilidad y Resisten- Acónito
+cia hasta el momento en que alguna de las características lle-
+Planta de flores azules o violetas que crece junto a los manan-
+gue a 0, momento en el que el personaje caerá al suelo
+tiales y cursos de agua. Su ingestión es tremendamente tóxica,
+inconsciente y morirá pocas horas después. Si consigue
+produciendo mareos, ojos llorosos, temblores y finalmente la
+beber antes de que se produzca la muerte, el personaje recu-
+muerte por fallo respiratorio y sanguíneo. A pesar de todo se
+perará los puntos perdidos a un ritmo de 2 puntos por cada
+trata de una planta con un sabor muy amargo, por lo que es
+día de reposo.
+fácil detectarla con una tirada de Degustar.
+Efectos: Se debe hacer una tirada de Resistencia x2 y el daño
+VENENOS
+que produce es de 5 PD. La tirada debe repetirse cada hora y
+Por si fueran pocas las situaciones que pueden herir o per- si el enfermo llega a 0 PV, caerá en coma y morirá dos o tres
+judicar a un personaje, todavía falta añadir una más: el en- días después.
+venenamiento. Ya sea suministrado con fines dañinos,
+Adormidera
+utilizado como defensa por ciertos animales y criaturas o
+consumido de forma totalmente involuntaria, lo cierto es
+Planta de flores rojas o blancas de la que se obtiene el opio. En
+que los personajes tendrán que vérselas en multitud de oca-
+dosis pequeñas provoca un ligero adormecimiento, pero con
+siones con los perniciosos efectos del veneno, así que ya pue- una dosis mayor —una onza, unos 30 gramos— al envene-
+den empezar a subir su porcentaje en Degustar y en los
+nado se le enturbia la visión, la cara adquiere un tono amari-
+diferentes conocimientos si no quieren terminar sus días con
+llento, los labios se tornan verdosos y las uñas se ennegrecen,
+la cara sumergida en la escudilla de sopa caliente que esta-
+hasta acabar muriendo lentamente por falta de oxígeno y con
+ban saboreando.
+los miembros rígidos.
+Cuando un personaje es envenenado deberá hacer una ti-
+Efectos: La tirada de Resistencia es la normal, x3, y produce
+rada de RESx3, aunque ciertos venenos pueden ser más 1 PD cada dos horas, por lo que es posible encontrar a
+108
+=== PAGE 111 ===
+ParsIII  09/10/13  17:20  Página 109
+Pars 3: Ars Medica
+tiempo un galeno que nos ayude a superar el en-
+venenamiento.
+Albayalde
+Pigmento de color blanco fabricado con plomo deshecho en
+vinagre muy fuerte, y que es utilizado en pintura y en cosmé-
+tica, donde recibe también el nombre de “blanco de plomo” o
+“cerusa”. Si se ingiere, ya sea por error o de forma intencio-
+nada, la lengua y el paladar se tornan blancos y causa seque-
+dad, dolores de estómago e hinchazón del vientre, hasta que
+poco a poco se van viendo afectadas las extremidades, que se
+vuelven frías, y por último alcanza los pulmones, que se de-
+tienen causando la muerte.
+Efectos: La tirada de Resistencia es la normal, x3, y produce 2
+PD cada día.
+Arsénico
+Mineral que puede adquirir un tono blanco y transparente (de-
+nominado “rejalgar”), amarillo (“oropimente”) o rojo (“sandá-
+raca”). Si se administra con tino y conocimiento es considerado
+un buen medicamento pero, en la mayor parte de las ocasio-
+nes, se utiliza como veneno debido a su alta toxicidad, pues
+provoca en todo aquél que lo ingiere la muerte de forma tan
+rápida y fulminante que pocos son los que se dan cuenta de lo
+que ocurre.
+Efectos: Media hora después de ingerirlo el personaje tendrá
+que hacer una tirada de Resistencia x1. Si falla, muere inme-
+diatamente, y si saca la tirada perderá la mitad de sus PV, pero
+sobrevivirá a la experiencia.
+Beleño
+Denominado también “hierba loca” o “beleño negro”, es una
+planta muy común en toda Castilla, habitual en terraplenes,
+baldíos y zonas arenosas, de hojas grandes y flores ocres que
+despiden un olor desagradable. En pequeñas cantidades, el be-
+leño provoca somnolencia, pero suministrado en dosis eleva-
+das produce una gran debilidad, abscesos de pus en la lengua,
+abundante espuma en la boca, enturbiamiento de la visión,
+pérdida de oído y finalmente estado de inconsciencia previo a
+la muerte.
+Efectos: La tirada de Resistencia se realiza, como es habitual,
+a x3, pero sólo provoca un daño de 1 PD cada día.
+Cantáridas
+El polvo de cantáridas procede de unos pequeños insec-
+tos llamados abadejos que habitan en los brotes de los oli-
+vos, fresnos y sauces, todos ellos árboles de hojas tiernas.
+Para obtener el producto, los insectos deben recogerse
+antes de que salga el sol agitando los árboles en los que
+viven, se sumergen a continuación en vinagre hasta que
+estén secos y se los tritura para conseguir el polvo vene-
+noso, que se debe guardar en un recipiente sellado para
+que no pierda sus propiedades. Es una sustancia afrodi-
+siaca, siempre y cuando se tome en pequeñas cantidades,
+ya que si se consume una dosis elevada provoca inflama-
+ción del hígado, gran dolor al expulsar la orina, que apa-
+rece mezclada con sangre, y finalmente desmayos que
+terminan con la vida.
+Efectos: La tirada de Resistencia se realiza a x3 y causa 1 PD
+cada hora.
+109
+=== PAGE 112 ===
+ParsIII  09/10/13  17:20  Página 110
+Aquelarre: Juego de rol demoníaco medieval
+veneno tremendamente tóxico, que produce en todo
+Cicuta
+aquél que la bebe espasmos en el cuerpo y en el rostro
+Planta muy parecida al perejil y al hinojo, aunque
+—que se contrae formando una sonrisa forzada— , ma-
+de olor desagradable, que crece en lugares frescos y
+tándole de forma lenta y dolorosa.
+húmedos, como la orilla de los ríos. Posee flores blan-
+Efectos: La tirada de Resistencia se realiza a x3 y provoca 1 PD
+cas y semillas negruzcas de donde se obtiene un zumo ex-
+cada tres horas.
+tremadamente venenoso con un fuerte olor a orina. La
+cicuta, un veneno casi fulminante, provoca en el envenenado
+Setas Venenosas
+sollozos y un frío intenso en las extremidades que va subiendo
+Es creencia común que sólo las setas de colores llamativos
+hacia el pecho, provocando la muerte por asfixia al detener los
+y olores desagradables son venenosas, pero nada más ale-
+pulmones.
+jado de la realidad, pues muchas que nos parecen a simple
+Efectos: La tirada de Resistencia debe hacerse a x1 y causa la
+vista inofensivas pueden ser terriblemente perjudiciales.
+pérdida de 8 PD cada media hora.
+Las más tóxicas son la “oronja verde”, la “cicuta blanca” o
+el “cortinario de la montaña”, que pueden acabar con aquél
+Escorpión
+que las consuma en unos días tras sufrir una muerte agó-
+El veneno del escorpión, arácnido muy extendido en la Penín-
+nica con vómitos, terribles dolores abdominales y una se-
+sula, produce una gran inflamación en la zona afectada, alter-
+vera diarrea.
+nándose periodos de calor con otros de frío, pero aparte de eso
+Efectos: La tirada de Resistencia se realizará a x2 y provoca 1
+y un tremendo dolor en la zona afectada, no tiene otro efecto
+PD cada cuatro horas.
+sobre el hombre.
+Efectos: La tirada de Resistencia se realiza a x3 y el veneno
+Víbora
+sólo produce dolor (que puede provocar un penalizador de
+El veneno de víbora, serpiente muy común en los reinos pe-
+-15% a cualquier tirada de Habilidad, si la picadura tuvo
+ninsulares, especialmente en su variedad de víbora áspid, fue
+lugar en un brazo, o a la competencia de Agilidad, si fue
+probablemente el más utilizado durante el Medievo, sobre
+en un pie).
+todo mezclado como ponzoña en la comida de un rival. El in-
+fortunado que recibe el veneno de víbora irá palideciendo
+Mandrágora
+poco a poco, sufriendo pequeñas sangrías en las encías, infla-
+La mandrágora —el vegetal, no la criatura irracional— es una
+mación del hígado, dolores en el vientre, vómitos, somnolencia
+planta de hojas dentadas que crece en zonas sombrías y hú-
+y un frío extremo que poco a poco irá destruyendo sus fuer-
+medas donde no llega la luz del sol, con frutos parecidos a la
+zas.
+manzana —aunque de olor fétido— y con una raíz que adopta
+Efectos: Para enfrentarse a los efectos del veneno de víbora de-
+extrañas formas, recordando muchas veces a un cuerpo hu-
+bemos tirar Resistencia x2, provocando el veneno 1 PD cada
+mano. Precisamente, la raíz de mandrágora hervida en vino o
+hora.
+masticada directamente provoca un profundo sueño en todo
+aquél que la consume.
+Zaragatona
+Efectos: La mandrágora no produce la muerte, pero todo aquél
+Llamada también “psilio”, es una hierba parecida al heno con
+que coma de su raíz y falle una tirada de Resistencia x3 caerá
+flores blancas que aparecen en forma de espigas. Si se consume
+en un profundo sueño que durará varias horas.
+en abundante cantidad —lo que le suele ocurrir más al ganado
+que a las personas—, produce graves dificultades respiratorias
+Sardonia
+y problemas circulatorios que terminan matando al que lo toma.
+La “yerba sardonia” o “apio sardónico” es una planta de color
+Efectos: La tirada de Resistencia se realiza de la forma normal,
+verde brillante, con hojas dentadas y flores de color amarillo.
+a x3, provocando 1 PD cada dos horas.
+Crece en lugares húmedos y arenosos, y de ella se obtiene un
+Curación
+LEVAMOS todo el capítulo hablando de heridas, evitarlo es que otro personaje —un compañero, un PNJ, etc.—
+daños y lesiones, así que, antes de pasar al siguiente intente estabilizar la pérdida realizando unas curas de urgen-
+capítulo, llega el momento de explicar cómo puede cia, toscas pero rápidas: taponando la herida, entablillando
+L
+recuperar la salud nuestro personaje. Para saberlo una fractura, deteniendo la hemorragia, etc. Para ello, la per-
+debemos comprobar si el PJ se encuentra con PV negativos o sona que realiza esas curas debe hacer una tirada de Sanar y,
+positivos, ya que la manera de curarse es muy diferente en si tiene éxito, el personaje recuperará ese asalto 1D4 PV, a los
+cada caso. que todavía tendrá que restar el PV que pierde por estar en
+números negativos. La tirada de Sanar se puede repetir en
+Como dijimos al comienzo del capítulo, un personaje con PV
+cada asalto hasta que el PJ herido consiga llegar a 0 PV —mo-
+negativos perderá 1 PV adicional cada asalto hasta que al-
+mento en que queda estabilizado y deja de perder PV—, o
+cance un número de PV negativos iguales a sus PV máxi-
+hasta que pierda tantos PV que muera.
+mos, momento en el que muere. La única manera de
+110
+=== PAGE 113 ===
+ParsIII  09/10/13  17:20  Página 111
+Pars 3: Ars Medica
+Recordamos, de todas formas, que un crítico en Claro que, al mismo tiempo que el cuerpo trabaja
+una tirada de Sanar permitirá recuperar el doble para curar las heridas recibidas, el sangrado de
+de PV para ese asalto —o sea, 2D4 menos 1 que éstas, las posibles infecciones, los parásitos o las
+pierde ese asalto—, mientras que una pifia dañará aún más malas condiciones higiénicas de la estancia en la
+al personaje, causándole 2 PD adicionales, además del que se encuentre el personaje pueden retardar o in-
+punto que pierde ese asalto. Asimismo, con Sanar nunca cluso empeorar el estado de salud del PJ, lo que se re-
+podremos recuperar PV positivos, así que el nivel máximo fleja con la pérdida semanal de 1D4 PV. Para evitar esta
+al que podemos llegar con ella es a 0 PV. pérdida el personaje deberá recibir los cuidados y las
+atenciones especializadas de un curandero o de un médico,
+Exemplum: Durante una cacería en las afueras de Burgos, Lope tiene la
+reflejándose en una tirada de Medicina, que deberá efec-
+mala suerte de caer por un terraplén y la caída lo deja baldado, pues
+tuarse todas las semanas que sea visitado por el médico: si
+sus PV quedan reducidos a -1 PV. Micael, que se encuentra junto a
+se tiene éxito, esa semana no habrá pérdida de PV, y el PJ re-
+cuperará lo que establece su Resistencia. En caso de obtener
+él, corre hacia el cortesano para tratar de sanar las muchas magu-
+un éxito crítico, el médico habrá conseguido que el personaje
+lladuras recibidas. En el asalto en el que el alquimista llega hasta
+recupere el doble de la cantidad normal durante esa semana,
+Lope, éste ve reducidos sus PV en un punto, bajando de -1 a -2. En
+mientras que una pifia hará que esa semana pierda el doble
+el segundo asalto, Micael comienza a limpiar las heridas y obstruir
+de PV de lo habitual, o sea, 2D4.
+las más grandes: hace una tirada de Sanar con éxito, con lo que Lope
+Exemplum: Lope es llevado a su habitación para recuperarse de las he-
+recupera 1D4 PV. Saca un 2, lo que lo dejaría a 0 PV, pero como en
+ridas recibidas en la cacería. Durante la primera semana ha guardado
+ese asalto vuelve a perder otro punto, sus PV se quedan a -1. El al-
+un reposo absoluto, por lo que recupera 1D4 PV —su Resistencia es
+quimista continúa con las atenciones en el tercer asalto y vuelve a
+de 15—, pero la infección puede hacer que también pierda otros 1D4
+sacar un éxito: en este caso, la tirada del 1D4 nos ofrece un 3, al que
+PV esa misma semana. Por suerte Lope cuenta con los servicios de sor
+le restamos el PV que se pierde ese asalto, y Lope queda a 1 PV, pero
+Recareda, que posee algunos conocimientos en medicina práctica, y ya
+ya que Sanar no cura PV positivos, el cortesano se queda en 0, esta-
+que durante toda esa semana la monja ha visitado a Lope de forma
+bilizado y fuera de peligro. Micael comienza a llamar a gritos a los
+frecuente, administrándole comidas fortalecedoras y limpiando las
+demás cazadores para que le ayuden a llevar a Lope al castillo de
+heridas, el jugador que lleva a sor Recareda hace una tirada de Me-
+Burgos.
+dicina con éxito, por lo que esa semana no hay pérdida de PV, sólo
+Si las heridas de nuestro personaje no han llegado a reducir
+ganancia. Lope tira el 1D4 y obtiene un 3, con lo que aumentan sus
+los PV a niveles negativos —o si hemos conseguido estabili-
+PV en 3 puntos.
+zarlo usando la competencia de Sanar—, el PJ deberá recu-
+perar los PV perdidos reposando, descansando todo lo
+En el caso de que el personaje no guarde el reposo debido
+posible y evitando cualquier tipo de ejercicio físico violento
+para que su cuerpo se restablezca, puede sufrir una recaída
+o moderado. Si es así, cada semana que mantenga un abso-
+durante esa semana. Por eso, si un PJ comete algún tipo de
+luto reposo, el personaje recuperará una cantidad determi-
+acción o actividad física antes de que haya conseguido recu-
+nada de PV, según la Resistencia del PJ, tal y como aparece
+perar al menos la mitad de sus PV totales, tendrá que hacer
+en la siguiente tabla:
+una tirada de Resistencia o esa semana no curará ningún
+punto, sino al contrario, perderá 1 PV —si pifia la pérdida
+será de 1D4 PV—. El multiplicador que deberemos aplicar a
+Tabla de Curación Natural
+la tirada de Resistencia será equivalente al tipo de acción aco-
+                  Resistencia                  PV Recuperados
+metida por el personaje:
+                         1 – 5                                    1D2
+a Disparar un arco, cabalgar al trote, correr durante poco
+                        6 – 10                                   1D3
+tiempo, trepar por una escala, etc.: tirada de Resistencia x3.
+                       11 – 15                                  1D4
+a Correr durante un tiempo prolongado, trepar por una
+                       16 – 20                                  1D5
+cuerda, cabalgar deprisa: tirada de Resistencia x2.
+                       21 – 25                                  1D6
+a Combatir, escalar, etc.: tirada de Resistencia x1.
+                       26 – 30                              1D6 + 1
+111
+=== PAGE 114 ===
+ParsIV  04/10/13  14:32  Página 112
+Aquelarre: Juego de rol demoníaco medieval
+Pars 4: 
+De Re Militari
+onde se describirán con todo el detalle que se
+merecen las muchas y provechosas formas
+D del ars bellica, oficio del caballero y defensa
+del villano, con sus muchos pertrechos y sus pocas
+esperanzas.
+112
+=== PAGE 115 ===
+ParsIV  04/10/13  14:32  Página 113
+Pars 4: De Re Militari
+le daba la espalda, Ignotus dejó que el otro escapara.
+Primera Sangre
+—Has luchado bien —dijo el viejo a Lope—, pero mejor
+En un claro, al abrigo de miradas indiscretas, Ignotus y Lope des-
+harías en cambiar esa espada por un saif moro. Pe-
+envainaron sus espadas. Que quería ver el viejo guerrero cómo se
+learías mejor.
+desenvolvía el cortesano en lo del cuerpo a cuerpo. Se mantuvo a
+Lope lo miró como si acabara de lanzarse una ventosidad
+la defensiva, parándole los golpes y estudiándole mientras tanto.
+en lugar sagrado:
+Cuando se cansó de jugar, lanzó estocada con mucho oficio, ras-
+—¡La espada tiene forma de cruz, y está consagrada a los ca-
+gando el jubón del joven y arañándole la piel. Que no era Ignotus
+balleros cristianos para usarla con sabiduría! ¡Ningún noble que
+amigo de justar con espadas romas o de madera, cuando podía ha-
+se precie llevaría otra arma, que ésta señala su rango y sus votos!
+cerse con las de verdad. Cierto es que era entrenamiento y no duelo,
+Ignotus suspiró.
+así que derramadas las primeras gotas de sangre, dio paso atrás.
+—Sí, claro… Recuérdalo en el próximo combate, todo eso de la ca-
+El muchacho lo miró con cierto rencor, e Ignotus supo valorarlo. El
+ballerosidad. Pero ya que eres piadoso, en verdad que vamos a
+zagal ya sabía lo bastante para darse cuenta de que había estado
+serlo ahora —se giró hacia los heridos, que yacían quejosos en el
+jugando con él, y que podía haberle herido y aun matado antes
+suelo y les dijo—: el que pueda caminar, que deje aquí sus armas
+siquiera de sacar la espada. No se dijeron nada, pero el viejo sol-
+y se vaya. El que se quede… ya sabéis lo que le espera.
+dado se sintió satisfecho. 
+Un par alcanzaron a ponerse en pie e irse renqueando. El resto se
+De regreso a donde habían dejado las monturas, el ojo experto de
+quedó. Alguno les pidió ayuda y los maldijo por no recibirla. Ig-
+Ignotus se fijó en que andaban inquietas. Paró al joven poniendo
+notus empuñó de nuevo su espada y dijo a Lope:
+la mano en su pecho y dijo en alta voz:
+—Sé piadoso con los de la izquierda, que yo lo seré con los de la
+—Os tendríais que haber conformado con las monturas…
+derecha.
+Se oyeron risotadas, y el claro se llenó de hombres mal armados
+Y sin más hundió su arma en el corazón del más cercano, que
+y peor protegidos: para algunos, bandidos, para otros, desespera-
+murió al punto, sin lanzar ni un “¡ay!”.
+dos. Para todos, la escoria de la tierra. Esgrimieron sus armas ro-
+—Pero…  —balbuceó Lope.
+badas, y protegidos por restos de armaduras oxidadas se acercaron
+—¿Prefieres dejarlos aquí, y que los cuervos les devoren los ojos estando
+a sus presas con menos cautela de la que debieran, pues vieron sólo
+aún vivos? ¿Quieres llevarlos a la justicia para que los arrojen en una
+a un viejo y a un muchacho, y ambos sin armadura.
+celda y mueran allí, entre la agonía de sus heridas, y si por desventura
+—Podéis iros con vida ahora… o quedaros y morir —les advirtió
+alguno se salva que lo ahorquen para que vaya pataleando y ahogándose
+Ignotus.
+lentamente, hasta que se orine encima y muera? Si tan piadoso y noble
+Su voz era una pura amenaza, como el gruñido del perro de caza
+eres, dales la muerte rápida que no nos habrían dado a nosotros. ¡Y recoge
+cuando se siente acorralado. Sin embargo, no había desenfundado
+sus armas! Por muy oxidadas que estén, cualquier labriego que se las en-
+la espada, cosa que sí que había hecho, con atolondramiento y ex-
+cuentre puede hacerse con ellas y caer en la tentación de convertirse en
+citación, el más joven. El jefe de los bandidos se permitió una son-
+otra bestia del camino. Quizá así salves la vida de alguien.
+risa desdentada y contestó con una bravata:
+—Tengo yo mejor oferta que haceros, mis señores: entregadnos
+vuestras armas, vuestros dineros y vuestras ropas y os daremos
+OR paradójico que parezca ya que hemos decidido
+una muerte rápida. Que en los negocios que nos traemos, y os lo
+dedicarle todo un capítulo, no pretendemos que el
+digo por si no sois gente avisada, no hay que dejar quien dé tes-
+combate se convierta en el pilar central de tus par-
+timonio, que la clemencia de hoy puede ser la muerte para ma-
+P
+tidas de Aquelarre, y aunque muchas veces se con-
+ñana.
+vertirá en una parte importante de las aventuras, la mayoría
+—Sea, pues —asintió Ignotus como si fuera cosa hecha y ya no de las situaciones que se den durante el transcurso de una par-
+tida deberían resolverse de una forma menos violenta, ya sea
+hubiera marcha atrás. No habrá perdón… ni piedad. Y a conti-
+con la astucia y la inteligencia del jugador o con las competen-
+nuación palmeó la espalda de Lope, como quien azuza a un caballo.
+cias del personaje.
+No le hizo falta más al muchacho, que se lanzó contra el más cer-
+De todas formas, tarde o temprano llegará un momento en que
+cano de los bandidos, lanzándole certero espadazo. A su vez, Ig-
+no quedará sino batirse, saldrán a relucir las espadas y las hachas,
+notus se sacó un cuchillo oculto y lo lanzó con buena maña contra
+se gritarán los nombres de reyes, reinos y dioses, y comenzará el
+otro. Se acercó un hombrón con un hacha a dos manos a ultimar
+combate. Y será en ese momento cuando descubras de qué pasta
+el negocio con el viejo, pero Ignotus, con sonrisa atravesada, se sacó
+están hechos los personajes, pues no serán otra cosa que personas
+una daga de palmo y medio de detrás de los riñones, se apretó al
+corrientes y molientes en el centro de la vorágine de violencia y
+muerte que conlleva la guerra, de la que saldrán victoriosos y for-
+gigante como si de una tusona se tratara y lo rajó desde las ingles
+talecidos o, lo más probable, malheridos e incluso muertos. Por
+hasta el cuello, como si fuera un cerdo por San Martín.
+eso, piénsatelo bien antes de iniciar un combate: en Aquelarre no
+La pelea fue corta pero sangrienta. Pronto sólo quedaron dos ene-
+existen los héroes capaces de aguantar más de una vez el impacto
+migos en pie. Y ambos, viendo cómo las cañas se habían vuelto
+de una carga de caballería enemiga ni el soplo enfurecido de
+lanzas, se dieron la vuelta para huir. Lope abatió al suyo mientras
+las legiones infernales lanzadas al ataque.
+113

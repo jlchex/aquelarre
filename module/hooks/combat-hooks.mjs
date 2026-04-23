@@ -50,6 +50,36 @@ async function applyStartOfTurnEffects(actor) {
 
   await applyNegativePvDrain(actor);
 
+  if (typeof actor.tickTimedCombatEffects === "function") {
+    const timing = await actor.tickTimedCombatEffects();
+
+    if (timing?.expired?.length) {
+      const lines = timing.expired.map(effect => `${effect.label ?? effect.type}${effect.location ? ` (${effect.location})` : ""} termina.`);
+
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `
+          <div class="aquelarre-chat bleed">
+            <h3>⏳ Fin de efectos</h3>
+            ${lines.map(line => `<p>${line}</p>`).join("")}
+          </div>
+        `
+      });
+    }
+
+    if (timing?.lethalExpired?.length) {
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `
+          <div class="aquelarre-chat bleed">
+            <h3>☠️ Secuela letal</h3>
+            <p>${actor.name} sucumbe a una herida mortal no tratada.</p>
+          </div>
+        `
+      });
+    }
+  }
+
   if (!effects.length) return;
 
   for (const effect of effects) {

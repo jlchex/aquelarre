@@ -100,6 +100,18 @@ export class AquelarreItem extends Item {
       system.protection = 0;
     }
 
+    if (system.maxResistance == null || Number(system.maxResistance) < 0) {
+      system.maxResistance = 10;
+    }
+
+    if (system.resistance == null || Number(system.resistance) < 0) {
+      system.resistance = Number(system.maxResistance);
+    }
+
+    if (Number(system.resistance) > Number(system.maxResistance)) {
+      system.resistance = Number(system.maxResistance);
+    }
+
     // Localización por defecto
     if (!system.location) {
       system.location = "torso";
